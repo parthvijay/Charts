@@ -1,0 +1,26 @@
+{
+    "selected": "",
+    "values": [
+        {
+            "id": -1,
+            "title": "All",
+            "value": "*"
+        }, {
+            "id": 0,
+            "title": "COMMERCIAL CAN",
+            "value": "COMMERCIAL CAN"
+        }, {
+            "id": 1,
+            "title": "ENTERPRISE CAN",
+            "value": "ENTERPRISE CAN"
+        }, {
+            "id": 2,
+            "title": "MISC CAN",
+            "value": "MISC CAN"
+        }, {
+            "id": 3,
+            "title": "PUBLIC SECTOR CAN",
+            "value": "PUBLIC SECTOR CAN"
+        }
+    ]
+}

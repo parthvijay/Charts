@@ -1,0 +1,108 @@
+
+    <!-- Page Content -->
+		<div class="clearfix" style="position:relative;" ng-show="!$root.accessIssue || $root.accessIssue == 'nodata'">
+                <div class="container-fluid filter-switch" style="margin-top:50px;">
+                    <!-- Opportunities/Performance switch -->
+                    <div class="row marginT20">
+						<div class="col-xs-12">
+							<a href="javascript:void(0)" class="refresh-back-btn" ng-click="goBackToRefresh()"><span class="ico-back"></span><span>Back to {{isComingFromRenew() | capitalize}} by Customer</span></a>
+						</div>
+                    </div>
+					<div class="acct-area">
+						<div class="accnt-head">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="accnt-head-left">
+										<a href="javascript:void(0)">Health Quest</a>
+									</div>
+									<div class="accnt-head-right">
+										<!--<div class="search-sec"><input type="text" placeholder="Search"><span class="ico-search"></span></div>-->
+										<ul class="filter-opt filter-opt-list view-filter paddingT5">
+											<li><a href="javascript:void(0)">Available</a></li>                                    
+											<li class="active"><a href="javascript:void(0)">Pipeline</a></li>									
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accnt-detail progress-del">
+							<div class="row">						
+								<div class="col-sm-12">
+									<div class="usd-value marginR0 marginT0">Price shown in USD</div>
+									<!--<div class="list-filter filter-list pull-right marginT0">
+										<ul class="opp-per-list marginT0">
+											<li class="left-tab"><a href="">List</a></li>                                    
+											<li class="right-tab active"><a href="">Net</a></li>									
+										</ul>
+									</div>-->
+									<ul class="progress-val">
+										<li>$60M</li>
+										<li>117 Line Items</li>
+										<li class="pull-right">$104M</li>
+									</ul>
+									<img src="images/pipeline.png" alt="pipeline">
+									<h6 class="table-head progress-head no-border-head">Opportunities</h6>
+									<div class="table-responsive expanded popup-table">
+										<table class="table opp-by progress-tab table-fixed1 striped-table marginB0">
+											<thead> 
+												<tr>
+													<th style="width:33%;" class="fix-long-word"><input type="checkbox" id="14" name="product-check"><label for="14"><span></span></label><span class="product-list-txt paddingL10">Name</span></th>
+													<th style="width:33.5%;"><span class="product-list-txt">Filters</span></th>
+													<th style="width:33.5%;"><span class="product-list-txt">Value</span></th>
+												</tr>
+											</thead>
+											<tbody> 
+												<tr>
+													<td class="text-left"><input type="checkbox" id="16" name="product-check">
+																<label for="16"><span></span></label><span class="product-list-txt paddingL10"><a href="javascript:void(0)"><strong>1524954</strong></a>  
+																	<span style="display:block;" class="product-list-txt"><strong>IB Health Quest Refresh Q4 FY16</strong><br>Created on Nov 25, 2016</span>
+																</span>
+																</td>
+													<td class="text-left"><span class="product-list-txt">Collaboration, Computing Systems,
+Computing Systems 1, Computing Systems 2,
+Health Quest GU1, Health Quest Site1 <span class="view-progress">View more
+													<div class="dropdown-menu progress-dropdown">
+														<div class="filters-tabs">															
+															<div class="clearfix"></div>
+																<div class="tab-content">
+																	<h5>Filters</h5>
+																	<div class="applied-filter">
+																		<span>Architecture</span>
+																		<ul>
+																			<li>Collaboration</li>
+																			<li>Computing Systems</li>
+																			<li>Data Center Switching</li>
+																			<li>Enterprise Routing</li>
+																			<li>Enterprise Switching</li>
+																			<li>IOT</li>
+																			<li>Mobility</li>
+																		</ul>
+																		 <span>Sub-Architecture</span>
+																		<ul>
+																			<li>Computing System 1</li>
+																			<li class="borderB0">Computing System 2</li>
+																		</ul>	 
+																	</div>
+																</div>
+															</div>
+													</div>
+</span></span></td>
+													<td><span class="product-list-txt">
+														<label class="marginR30"><strong>Product</strong></label><span>$60,000,000.00</span><br>
+														<label class="marginR30"><strong>Service</strong></label><span>$44,000,000.00</span> </span></td> 
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>							
+							</div>
+						</div>
+					</div>
+					
+					<div class="clearfix marginT10 marginB30 text-right view-detail-btn">
+						<a href="javascript:void(0);" class="button stroke-btn blue marginR10 marginB10" ng-click="cancel()">Download</a>
+					</div>
+					
+                </div>					
+            </div>
+		

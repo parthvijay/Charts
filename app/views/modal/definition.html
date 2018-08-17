@@ -1,0 +1,461 @@
+<div class="modal-body definition-popup">
+    <a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    <h1>Digital Ready Scorecard Definition</h1>
+    <ul class="popup-tabs">
+        <img class="white-shadow" src="images/white-shadow.png" />
+        <li ng-class="{'active' : activeTab == 0}" ng-click="selectTab(0);"><a href="">Opportunity Definition</a></li>
+        <li ng-class="{'active' : activeTab == 1}" ng-click="selectTab(1);"><a href="">Action Metric Definition</a></li>
+        <li ng-class="{'active' : activeTab == 2}" ng-click="selectTab(2);"><a href="">How to use Action Metrics</a></li>
+    </ul>
+    <!-- sunitayadav - added and changed content of this table according to new pdf file -->
+    <div class="tab-content expanded">
+        <div class="table-responsive campaign-table lg-height" ng-show="activeTab == 0">
+            <table class="table opp-by table-fixed1 striped-table">
+                <thead>
+                    <tr>
+                        <th>Group/Conditions</th>
+                        <th colspan="3" class="alignCenter">Enterprise Network</th>
+                        <th colspan="2" class="alignCenter">Security</th>
+                        <th class="alignCenter">Collaboration</th>
+                        <th colspan="3" class="alignCenter">DCV</th>
+                        <th colspan="4" class="alignCenter">SP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Set</td>
+                        <td><span class="dotdot">All Covered + If uncovered, 28 quarters of shipment + Last 12 months collection data</span></td>
+                        <td><span class="dotdot">All Covered + If uncovered, 28 quarters of shipment + Last 12 months collection data</span></td>
+                        <td><span class="dotdot">All Covered + If uncovered, 28 quarters of shipment + Last 12 months collection data</span></td>
+                        <td><span class="dotdot">All Covered + If uncovered, 28 quarters of shipment + Last 12 months collection data</span></td>
+                        <td><span class="dotdot">All Covered + If uncovered, 28 quarters of shipment + Last 12 months collection data</span></td>
+                        <td><span class="dotdot">All Covered + If uncovered, 28 quarters of shipment + Last 12 months collection data</span></td>
+                        <td><span class="dotdot">All Covered + If uncovered, 20 quarters of shipment + Last 12 months collection data</span></td>
+                        <td><span class="dotdot">All Covered + If uncovered, 20 quarters of shipment + Last 12 months collection data</span></td>
+                        <td><span class="dotdot">All Covered + If uncovered, 20 quarters of shipment + Last 12 months collection data</span></td>
+                        <td><span class="dotdot">All Covered + If uncovered, 20 quarters of shipment = Last 12 months of collection data</span></td>
+                        <td><span class="dotdot">All Covered + If uncovered, 20 quarters of shipment = Last 12 months of collection data</span></td>
+                        <td><span class="dotdot">All Covered + If uncovered, 20 quarters of shipment = Last 12 months of collection data</span></td>
+                        <td><span class="dotdot">All Covered + If uncovered, 20 quarters of shipment = Last 12 months of collection data</span></td>
+                    </tr>
+                    <tr>
+                        <td>Architecture</td>
+                        <td>Enterprise Routing</td>
+                        <td>Enterprise Switching</td>
+                        <td>Wireless</td>
+                        <td>Security</td>
+                        <td>Security</td>
+                        <td>Collaboration</td>
+                        <td>Computing Systems</td>
+                        <td colspan="2">Data Center Switching</td>
+                        <td>Service Provider Routing</td>
+                        <td>Mobility</td>
+                        <td>Other</td>
+                        <td>SP Video Software and Solution</td>
+                    </tr>
+                    <tr>
+                        <td>Sub Architecture</td>
+                        <td>Ent. Access Routing
+                            <br> Ent. Edge Routing</td>
+                        <td>Ent. Switching - Access
+                            <br> Ent. Switching - Core</td>
+                        <td>Ent. - Wireless</td>
+                        <td>Network Security (Next Gen Firewall)</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>Servers</td>
+                        <td>NX3K
+                            <br> NX2/4/5/6K
+                            <br> NX7K
+                        </td>
+                        <td>SAN</td>
+                        <td>All</td>
+                        <td>Packet Core</td>
+                        <td>Cloud Platform and Services(Name Change)</td>
+                        <td>All</td>
+                    </tr>
+                    <tr>
+                        <td>Product Family</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>ASALOW, ASAMID, ASAHIGH</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>Selected PIDs</td>
+                        <td>Selected PIDs</td>
+                        <td>Selected PIDs</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                    </tr>
+                    <tr>
+                        <td>Product ID</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>UCS - M1 and M2 Pids</td>
+                        <td>DCS - Nexus Pids </td>
+                        <td>MDS - SAN Pids</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                    </tr>
+                    <tr>
+                        <td>LDoS</td>
+                        <td>LDOS FY16 (that has a contract expiry date in FY16, or Collected in FY'16 irrespective of when the contract is expired) or LDOS FY17-FY19</td>
+                        <td>LDOS FY16 (that has a contract expiry date in FY16, or Collected in FY'16 irrespective of when the contract is expired) or LDOS FY17-FY19</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>LDOS FY16 (that has a contract expiry date in FY16, or Collected in FY'16 irrespective of when the contract is expired) or LDOS FY17-FY19</td>
+                        <td>LDOS FY16 (that has a contract expiry date in FY16, or Collected in FY'16 irrespective of when the contract is expired) or LDOS FY17-FY19</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>LDOS FY16 (that has a contract expiry date in FY16, or Collected in FY'16 irrespective of when the contract is expired) or LDOS FY17-FY19</td>
+                        <td>LDOS FY16 (that has a contract expiry date in FY16, or Collected in FY'16 irrespective of when the contract is expired) or LDOS FY17-FY19</td>
+                        <td>LDOS FY16 (that has a contract expiry date in FY16, or Collected in FY'16 irrespective of when the contract is expired) or LDOS FY17-FY19</td>
+                        <td>LDOS FY16 (that has a contract expiry date in FY16, or Collected in FY'16 irrespective of when the contract is expired) or LDOS FY17-FY19</td>
+                    </tr>
+                    <tr>
+                        <td>Ship Date</td> 
+                        <td>NA</td> 
+                        <td>NA</td> 
+                        <td>= &lt; FY2012</td> 
+                        <td>&gt;= 2008 and &lt;=2 013</td> 
+                        <td>NA</td> 
+                        <td>NA</td> 
+                        <td> &lt;=2 014</td> 
+                        <td> &lt;=2 012</td> 
+                        <td> &lt;=2 012</td> 
+                        <td>NA</td> 
+                        <td>NA</td> 
+                        <td>NA</td> 
+                        <td>NA</td>
+                    </tr>
+                    <tr>
+                        <td>Coverage</td>
+                        <td>Covered + Uncovered</td>
+                        <td>Covered + Uncovered</td>
+                        <td>Covered and Uncovered</td>
+                        <td>Covered and Uncovered</td>
+                        <td>Covered and Uncovered</td>
+                        <td>Covered and Uncovered</td>
+                        <td>Covered</td>
+                        <td>Covered</td>
+                        <td>Covered</td>
+                        <td>Covered and Uncovered</td>
+                        <td>Covered and Uncovered</td>
+                        <td>Covered and Uncovered</td>
+                        <td>Covered and Uncovered</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- sunitayadav - added and changed content of this table according to new pdf file -->
+        <div class="table-responsive campaign-table" ng-show="activeTab == 1">
+            <table class="table opp-by table-fixed1 striped-table">
+                <thead>
+                    <tr>
+                        <th>Group/Conditions</th>
+                        <th colspan="6" class="alignCenter">Enterprise Network</th>
+                        <th colspan="4" class="alignCenter">Security</th>
+                        <th colspan="4" class="alignCenter">Collaboration</th>
+                        <th colspan="6" class="alignCenter">DCV</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Set</td>
+                        <td colspan="6"><span class="dotdot">Refresh Opportunity Data Set</span></td>
+                        <td colspan="4"><span class="dotdot">Refresh Opportunity Data Set</span></td>
+                        <td colspan="4"><span class="dotdot">Refresh Opportunity Data Set</span></td>
+                        <td colspan="6"><span class="dotdot">Refresh Opportunity Data Set</span></td>
+                    </tr>
+                    <tr>
+                        <td>Formula Name</td>
+                        <td colspan="2">ISR4K Penetration</td>
+                        <td colspan="2">LAN Capability (TrustSec Readiness)</td>
+                        <td colspan="2">.11ac WLAN (Adv Analytics Readiness)</td>
+                        <td colspan="2">Naked ASA</td>
+                        <td colspan="2">Legacy ASA</td>
+                        <td colspan="2">Your Collab Index</td>
+                        <td colspan="2">Theather Collab Index (same as your collab index but for SL2)</td>
+                        <td colspan="2">Modern UCS</td>
+                        <td colspan="2">Modern DCS</td>
+                        <td colspan="2">Modern MDS</td>
+                    </tr>
+                    <tr>
+                        <td>Formula Attributes</td>
+                        <td>Numerator (Product Net $)</td>
+                        <td>Denominator (Product Net $)</td>
+                        <td>Numerator (Product Net $)</td>
+                        <td>Denominator (Product Net $)</td>
+                        <td>Numerator (Product Net $)</td>
+                        <td>Denominator (Product Net $)</td>
+                        <td>Numerator(Chassis Count=Next Gen FP Firewall PID - FP License PID)</td>
+                        <td>Denominator(Chassis Count)</td>
+                        <td>Numerator (Chassis Count)</td>
+                        <td>Denominator(Chassis Count)</td>
+                        <td>Numerator (Product Net $)</td>
+                        <td>Denominator (Product Net $)</td>
+                        <td>Numerator (Product Net $)</td>
+                        <td>Denominator (Product Net $)</td>
+                        <td>Numerator (Product Net $): 1 - Value</td>
+                        <td>Denominator (Product Net $)</td>
+                        <td>Numerator (Product Net $): 1 - Value</td>
+                        <td>Denominator (Product Net $)</td>
+                        <td>Numerator (Product Net $): 1 - Value</td>
+                        <td>Denominator (Product Net $)</td>
+                    </tr>
+                    <tr>
+                        <td>Architecture</td>
+                        <td colspan="2">Enterprise Routing</td>
+                        <td colspan="2">Enterprise Switching</td>
+                        <td colspan="2">Wireless</td>
+                        <td colspan="2">Security</td>
+                        <td colspan="2">Security</td>
+                        <td colspan="2">Collaboration</td>
+                        <td colspan="2">Collaboration</td>
+                        <td colspan="2">Computing Systems</td>
+                        <td colspan="2">Data Center Switching</td>
+                        <td colspan="2">Data Center Switching</td>
+                    </tr>
+                    <tr>
+                        <td>Sub Architecture</td>
+                        <td colspan="2">Ent. Access Routing </td>
+                        <td colspan="2">Ent. Switching - Access </td>
+                        <td colspan="2">Ent. - Wireless</td>
+                        <td colspan="2">Network Security (Next Gen Firewall)</td>
+                        <td colspan="2">Network Security (Next Gen Firewall)</td>
+                        <td>UC Endpoints, UC Infrastructure Applications</td>
+                        <td>All</td>
+                        <td>UC Endpoints, UC Infrastructure Applications</td>
+                        <td>All</td>
+                        <td colspan="2">Servers</td>
+                        <td colspan="2">NX3K NX2/4/5/6K NX7K, NX9K</td>
+                        <td colspan="2">SAN</td>
+                    </tr>
+                    <tr>
+                        <td>Product Family</td>
+                        <td>4300ISR, 4400ISR</td>
+                        <td>All</td>
+                        <td>C3650, C3850, C4500</td>
+                        <td>All</td>
+                        <td>AIR3700, AIR2700, AIR1850, AIR1700</td>
+                        <td>Product like (AIR*AP*)</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>ASALOW, ASAMID, ASAHIGH</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td colspan="2">UCSB, UCSC, UCSME, UCSV, UCSX</td>
+                        <td colspan="2">All</td>
+                        <td colspan="2">All</td>
+                    </tr>
+                    <tr>
+                        <td>Product ID</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All Chassis C3650 and C3850, Card with Sup8 (C4500)</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>Next Gen FP Firewall PID and FP License PID (see tabs)</td>
+                        <td>All</td>
+                        <td>PIDs that are not in Next Gen FP Firewall List</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>UCS (M1 & M2) Pids</td>
+                        <td>All</td>
+                        <td>Nexus (DCS) Pids</td>
+                        <td>All</td>
+                        <td>SAN (MDS) Pids</td>
+                        <td>All</td>
+                    </tr>
+                    <tr>
+                        <td>Product Type</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>Chassis C3650 and C3850, Card (C4500)</td>
+                        <td>Chassis</td>
+                        <td>Chassis</td>
+                        <td>Chassis</td>
+                        <td>Chassis, Software</td>
+                        <td>Chassis</td>
+                        <td>Chassis</td>
+                        <td>Chassis</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                        <td>All</td>
+                    </tr>
+                    <tr>
+                        <td>LDoS</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                    </tr>
+                    <tr>
+                        <td>Ship Date</td>
+                        <td colspan="2">Between 2012- Current Quarter</td>
+                        <td colspan="2">Between 2012- Current Quarter</td>
+                        <td colspan="2">Between 2012- Current Quarter</td>
+                        <td colspan="2">Between 2012- Current Quarter</td>
+                        <td colspan="2">Between 2012- Current Quarter</td>
+                        <td colspan="2">All up to Current Quarter</td>
+                        <td colspan="2">All up to Current Quarter</td>
+                        <td>
+                            &lt;=2013</td>
+                                <td>All up to Current Quarter</td>
+                                <td>
+                                    &lt;=2011</td>
+                                        <td>All up to Current Quarter</td>
+                                        <td>
+                                            &lt;=2011</td>
+                                                <td>All up to Current Quarter</td>
+                    </tr>
+                    <tr>
+                        <td>Coverage</td>
+                        <td colspan="2">Covered + Uncovered</td>
+                        <td colspan="2">Covered + Uncovered</td>
+                        <td colspan="2">Covered + Uncovered</td>
+                        <td colspan="2">Covered and Uncovered</td>
+                        <td colspan="2">Covered and Uncovered</td>
+                        <td colspan="2">Covered and Uncovered</td>
+                        <td colspan="2">Covered and Uncovered</td>
+                        <td colspan="2">Covered</td>
+                        <td colspan="2">Covered</td>
+                        <td colspan="2">Covered</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div ng-show="activeTab == 2">
+            <p class="marginB15">A number that represents a capability tied to a specific outcome in the active Install Base. This is a complement to the Install Base that will be reaching LDoS.</p>
+            <div class="table-responsive campaign-table">
+                <table class="table opp-by table-fixed1 striped-table">
+                    <thead>
+                        <tr>
+                            <th>Architectures</th>
+                            <th>Categories</th>
+                            <th class="description-col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3" class="white-td">Enterprise Networking</td>
+                            <td>LAN Metric (TrustSec Readiness):</td>
+                            <td class="description-col"><span class="dotdot">The penetration of the Doppler ASIC platforms in the account's access layer. An account that is 35% TrustSec Ready means 35% of the access layer consists of Catalyst 3650, 3850, or Cat 4500 with the Sup8.<br><br>
+
+How do I use this metric? Using the example above 35% of the access layer can enable the full TrustSec network segmentation strategy. 35% of the access layer can enable Network As A Sensor with Lancope.  Both of these are cross-architecture plays with the Security team. If a customer derives value from that 35% of the network, the remaining 65% of the network needs to be refreshed to derive the same value. This 65% of the network is usually LDoS and is always older generation capability.
+</span></td>
+                        </tr>
+                        <tr>
+                            <td>802.11ac (Advanced Analytics Readiness): </td>
+                            <td>This is the penetration of 802.11ac capability in the network. Advanced capabilities such as the Cisco-Apple relationship, hyperlocation, CMX Analytics, require a modern and robust WLAN. The higher the percentage, the greater the customer’s ability to enable an outcome.
+                                <br>
+                                <br> How do I use this metric? Likewise, if a desired outcome is realized on this “Ready” portion of the network, the remainder of the network is now a refresh target. Not because of age or capability; but because of value the customer has realize elsewhere in the network.
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>iWAN/ISR4K: </td>
+                            <td>iWAN/ISR4K: The penetration of the ISR4K and the measure of a WAN’s ability to implement the full iWAN suite of capabilities.</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="white-td">Security</td>
+                            <td>Naked ASA: </td>
+                            <td>The percentage of the active ASA install base that is current generation ASA (post 2014); but does not have SourceFire attached.</td>
+                        </tr>
+                        <tr>
+                            <td>Legacy ASA: </td>
+                            <td>The percentage of the active ASA install base that is either reaching LDOS and/or is sold from 2008-2013.</td>
+                        </tr>
+                        <tr>
+                            <td>How do I use this metric? </td>
+                            <td>An ASA implementation that is 10% Naked ASAs means that 10% of the ASA kit can realize additional value by attaching SourceFire. The remaining ASA kit, and therefore the rest of the customer's Security presence, can only realize that same value with both an ASA AND SourceFire upgrade.</td>
+                        </tr>
+                        <tr>
+                            <td>Collaboration</td>
+                            <td>The Collaboration Index:</td>
+                            <td>The Collaboration Index measures the account's adoption of the broader Collaboration portfolio. The smaller the number, the more heavily leveraged the customer is on dialtone and telephony. The higher the number, the more broadly the customer has invested in our portfolio.<br><br>
+
+                                The number is compared to the Theater Average. If it falls below the Theater Average, the Account Team is further inspected on their sales of WebEx, Video, and Contact Center. If any of those are in the active current year Install base or SFDC pipeline, they are flagged green. Any 'red' is the recommended sales motion.<br><br>
+
+                                For example, if a customer falls below the theater index and Video, WebEx, and Contact Center are inspected, it is expected that the Account Team lead with Contact Center to broaden out the portfolio.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="white-td">DCV</td>
+                            <td>Modern UCS:</td>
+                            <td>Modern UCS: The ratio of M3/M4 to the total UCS install base. The higher the number, the more modern the UCS kit</td>
+                        </tr>
+                        <tr>
+                            <td>Modern DCS: </td>
+                            <td>Modern DCS: The ratio of latest generation Nexus to the Install Base. The higher the number, the modern modern the Nexus install base.</td>
+                        </tr>
+                        <tr>
+                            <td>How do I use this metric? </td>
+                            <td>How to use: The penetrations for both ought to be inline with each other. A customer with a 30% Modern UCS footprint and a 90% modern DCS footprint might be lagging in compute capabilities.</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4" class="white-td">Suggested Cross Architecture Plays you can derive from these data:</td>
+                            <td>Cross Architecture Play 1:</td>
+                            <td>Network Segmentation, Network as a Sensor, Security-Driven Network Refresh: as explained above</td>
+                        </tr>
+                        <tr>
+                            <td>Cross Architecture Play 2: </td>
+                            <td>If a customer has a high index, and they are interested in the Cisco Apple Strategy, we can look at two things.
+                                <br>
+                                <br> a. A high index means they have the majority of the Collaboration pieces to move forward
+                                <br> b. We then look at their 802.11ac Readiness. If that number is low, it means the customer needs to enhance their WLAN to effectively adopt this solution.</td>
+                        </tr>
+                        <tr>
+                            <td>Cross Architecture Play 3:</td>
+                            <td> If a customer has a high Modern DCS footprint, leading with the Secure ACI / Secure DC strategy can drive security attach.</td>
+                        </tr>
+                        <tr>
+                            <td>Cross Architecture Play 4:</td>
+                            <td> If a customer has a DC-Cloud strategy and there are multiple branches, the APIC-EM, and SDN strategies impact both the WAN and the DC.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

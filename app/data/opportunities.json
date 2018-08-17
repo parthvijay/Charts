@@ -1,0 +1,67 @@
+[
+    {
+        "title": "All Opportunities",
+        "slug": "all",
+        "value": "400900000000"
+    },
+    {
+        "title": "Product Refresh",
+        "slug": "refresh",
+        "value": "270250000000",
+        "active": "ship",
+        "subtabs": [
+            {
+                "title": "Ship Timeline",
+                "slug": "ship"
+            },
+            {
+                "title": "EOS Timeline",
+                "slug": "eos"
+            },
+            {
+                "title": "LDOS Timeline",
+                "slug": "ldos"
+            }
+        ]
+    },
+    {
+        "title": "Renew",
+        "slug": "renew",
+        "value": "95180000000",
+        "active": "total",
+        "subtabs": [
+            {
+                "title": "Total Renew",
+                "slug": "total"
+            },
+            {
+                "title": "TS Renew",
+                "slug": "ts"
+            },
+            {
+                "title": "SWSS Renew",
+                "slug": "swss"
+            }
+        ]
+    },
+    {
+        "title": "Attach",
+        "slug": "attach",
+        "value": "35470000000",
+        "active": "total",
+        "subtabs": [
+            {
+                "title": "Total Attach",
+                "slug": "total"
+            },
+            {
+                "title": "TS Attach",
+                "slug": "ts"
+            },
+            {
+                "title": "SWSS Attach",
+                "slug": "swss"
+            }
+        ]
+    }
+]

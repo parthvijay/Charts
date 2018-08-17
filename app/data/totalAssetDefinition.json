@@ -1,0 +1,57 @@
+[
+	{
+	 "software_product1":"Collaboration – Webex" ,
+	 "software_product2":"Security – Cloud Email Security",
+	 "software_product3":"DC Switching – Tetration Analytics",
+	 "software_product4":"IOT DDP Fog"
+	},
+	{
+	 "software_product1":"Collaboration – Spark" ,
+	 "software_product2":"Security - AnyConnect",
+	 "software_product3":"DC Switching – C1 ECS Cliqr",
+	 "software_product4":"IOT – Energy Management"
+	},
+	{
+	 "software_product1":"Collaboration – HCS" ,
+	 "software_product2":"Security – Stealthwatch",
+	 "software_product3":"Metacloud",
+	 "software_product4":"IOT - Jasper"
+	},
+	{
+	 "software_product1":"Collaboration - Tropo" ,
+	 "software_product2":"Security - Cloudlock",
+	 "software_product3":"Routing (CSR1KV)",
+	 "software_product4":"SP VSS – NSO, VMS/ NFV"
+	},
+	{
+	 "software_product1":"Collaboration – Other" ,
+	 "software_product2":"Security - Umbrella/CWS/WSA",
+	 "software_product3":"Enterprise Switching (C1 / DNA (Nyquist))",
+	 "software_product4":"SP VSS – Infinite Video/Home/Broadcast"
+	},
+	{
+	 "software_product1":"Security – NGFW + Advanced Threat" ,
+	 "software_product2":"Security – Cloud Web Security",
+	 "software_product3":"Computing Systems (UCS Hyperflex)",
+	 "software_product4":"SP VSS – Cloud DVR"
+	},
+	{
+	 "software_product1":"Security - Email Security" ,
+	 "software_product2":"Security – C1 Advance Security",
+	 "software_product3":"",
+	 "software_product4":"Viptela"
+	},
+	{
+	 "software_product1":"Security - ISE" ,
+	 "software_product2":"Security – Amp on Meraki",
+	 "software_product3":"",
+	 "software_product4":"Meraki"
+	},
+	{
+	 "software_product1":"Security – AMP for Endpoints" ,
+	 "software_product2":"SP Routing (ASR 9K)",
+	 "software_product3":"",
+	 "software_product4":"App D"
+	}
+	
+]

@@ -1,0 +1,31 @@
+<div class="modal-body paddingL0 paddingR0 saleskit-popup">
+    <a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    <h1>Sales Kit: Migration Information</h1>
+    <div class="shadow-container">
+        <div class="row no-gutter">
+            <div class="col-md-4 col-sm-6" ng-repeat="c in salesKit">
+                <div class="link-wrapper">
+                    <div class="clearfix">
+                        <img ng-src="{{c.image}}" class="pull-left"/>
+                        <div class="link-head-wrap">
+                            <!--baljinderkaur - href and target attribute included --->
+                            <a ng-href="{{c.link}}" target="_blank" class="link-head">{{c.title}}</a><br>
+                            <span class="link-cat">{{c.category}}</span>
+                            <div class="star-wrap star-rating"><div class="stars starReview"><div class="star-ratingPerc dropdown-toggle"><div class="activeStart" data-ng-attr-style="width:{{getRatingPerc(c)}}%"></div></div><span class="count">({{c.ratings.length}})</span></div></div>
+                        </div>
+                    </div>
+                    <span class="marginT10">Website</span>
+                    <span>Last Updated: {{c.updated}}</span>
+                    <span>{{c.language}}</span>
+                    <span>Source: {{c.source}}</span>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="shadow-overall"></div>
+    </div>
+    <div class="clearfix sk-footer">
+        <a href="" target="_blank" class="button filled-btn blue" ng-click="ok()">Done</a>
+        <div class="shadow"></div>
+    </div>
+</div>

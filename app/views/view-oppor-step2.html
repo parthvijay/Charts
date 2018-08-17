@@ -1,0 +1,237 @@
+
+<div id="page-content-wrapper">
+        <div class="freezed-container">
+            <div class="grey-background">
+<!-- Page Content -->
+<div class="clearfix" style="position:relative;" ng-show="!$root.accessIssue || $root.accessIssue == 'nodata'">
+    <div class="container-fluid filter-switch" style="margin-top:50px;">
+        <!-- Opportunities/Performance switch -->
+        <div class="row marginT10 marginB10">
+            <div class="col-xs-12">
+                <a href="javascript:void(0)" class="refresh-back-btn marginT5" ng-click="goBackToRefresh()"><span class="ico-left-arrow-sm hvr-icon-pop"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                    <span class="back-btn-txt" ng-if="isComingFromRenew() !== 'drs'">{{isComingFromRenew() | capitalize}} by Customer</span>
+                    <span class="back-btn-txt" ng-if="isComingFromRenew() === 'drs'">{{isComingFromRenew() | uppercase}} by Customer</span>
+                </a>
+            </div>
+        </div>
+     </div><!--filter-switch-->
+                </div>
+            </div><!--grey-background-->
+        </div><!--freezed-container-->
+        <div class="container-fluid tabContent">
+        <div class="steps-container">
+            <div class="steps-heading">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3>Convert to Pipeline - Step 2 of 3</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-detail">
+                <div class="block-left single-row" ng-form="myForm">
+                    <div class="usd-value marginR0 marginB10">Value shown in USD</div>
+                    <div class="single-col marginR5 step-input">
+                        <div class="form-group">
+                            <label for="ExpectedProduct">Expected Products ($000s)</label>
+                            <div class="input-block input-group exp-input" data-ng-class="{'focused highlighted' :(newOpurtunity.ExpectedProductValue==0 || newOpurtunity.ExpectedProductValue=='')}"><span class="highlight-bar"></span><span class="input-group-addon" >$</span><input type="text" name="ExpectedProductValue" ng-model="newOpurtunity.ExpectedProductValue" ng-init="validateExp('ExpectedProductValue');" ng-change="validateExp('ExpectedProductValue');" /></div>
+                            <p class="help-block" ng-show="(newOpurtunity.ExpectedProductValue==0 || newOpurtunity.ExpectedProductValue=='') && !getObjLength('technology')">If you are not adding products leave '0' inside the field.</p>
+                            <p class="help-block alert" ng-show="getObjLength('technology') && newOpurtunity.ExpectedProductValue==0"><span class="ico-danger"><span class="path1"></span><span class="path2"></span></span>Products added to the table below must have a dollar amount</p>
+                        </div>  
+                    </div>
+                    <div class="single-col marginR5 step-input">
+                        <div class="form-group">
+                            <label for="ExpectedService">Expected Services ($000s)</label>
+                            <div class="input-block input-group exp-input" data-ng-class="{'focused highlighted' :(newOpurtunity.ExpectedServiceValue==0 || newOpurtunity.ExpectedServiceValue=='')}"><span class="highlight-bar"></span><span class="input-group-addon">$</span><input type="text" name="ExpectedServiceValue" ng-model="newOpurtunity.ExpectedServiceValue" ng-init="validateExp('ExpectedServiceValue');" ng-change="validateExp('ExpectedServiceValue');" /></div>
+                            <p class="help-block" ng-show="(newOpurtunity.ExpectedServiceValue==0 || newOpurtunity.ExpectedServiceValue=='') && !getObjLength('service')">If you are not adding services leave '0' inside the field.</p>
+                            <p class="help-block alert" ng-show="getObjLength('service') && newOpurtunity.ExpectedServiceValue==0"><span class="ico-danger"><span class="path1"></span><span class="path2"></span></span>Services added to the table below must have a dollar amount</p>
+                        </div>
+                    </div>
+                    <h6 class="table-head">Technologies</h6>
+                    <script type="text/ng-template" id="customTemplateTech.html">
+                        <a>
+                        <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
+                        </a>
+                    </script>
+                    <ul class="table-top-list clearfix">
+                        <li><div class="table-search technologies" data-ng-class="{'highlighted' :showTechSearchFocusBar()}">
+                            <span class="highlight-bar"></span>
+                                <input type="text" ng-model="searchTech" placeholder="Search & Add BE/Product Family" uib-typeahead="state as state.businessProdFamily for state in techList | filter:{businessProdFamily:$viewValue}" typeahead-template-url="customTemplateTech.html" class="form-control" typeahead-min-length="0" typeahead-on-select="onTechSelect($item, $model, $label, $event)" />
+                                <span class="ico-search"></span></div>
+                                <span class="help-block relative-help technology-help" ng-show="!getObjLength('technology')">Use this search to add products to the table in order to proceed.</span>    
+                            </li>
+                        <li><a href="javascript:void(0)">Show All</a></li>
+                        <li><a ng-click="showTech();" href="javascript:void(0)">Show Technologies for My IB</a></li>
+                        <li class="pull-right">
+                            <span class="ico-delete services-delete-icon" data-ng-class="{'disable':!isDeleteEnabled(newOpurtunity.selectedTechnologies)}" ng-click="deleteTechnology()"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></li>
+                    </ul>
+                    
+                   
+                    <div class="fixedhead expanded">
+                        <table class="table border-table opp-by sav-table table-fixed1 striped-table marginB0 table-fixedheader" ng-class="{'table-scrolled':close}" fixed-header>
+                            <thead> 
+                                <tr>
+                                    <th class="col-thead-1"><input type="checkbox" id="checkbox" ng-model="checkAllBoxes"  ng-click="bIsOneTechSelected=checkAllBoxes;checkAll(checkAllBoxes,newOpurtunity.selectedTechnologies)"  />
+                                         <label for="checkbox"><span class="check"></span></label>Business Entity/Sub Entity</th>
+                                    <th class="col-thead-2">Product Family</th>
+                                    <th class="text-right col-thead-3">Allocation %</th>
+                                    <th class="text-right col-thead-4">Expected Products</th>
+                                </tr>
+                            </thead> 
+                            <tbody class="borderB0"> 
+                                <tr ng-repeat="(key,val) in newOpurtunity.selectedTechnologies | searchTechnologies : searchString">
+                                    <td class="col-tbody-1"><input id="checkbox-{{key}}" type="checkbox" ng-model="val.boxes" ng-change="checkParent(newOpurtunity.selectedTechnologies,'technology')">
+                                         <label for="checkbox-{{key}}"><span class="check"></span></label>{{key}}</td>
+                                    <td class="col-tbody-2">
+                                        <div ng-repeat="option in val.options">{{option.key}}<br>
+                                        </div>
+                                    </td>
+                                    <td class="text-right col-tbody-3" data-ng-class="{'highlight-td' : !val.value >0}">
+                                        <span class="highlight-bar"></span>
+                                        <div class="count-col">
+                                            <input type="count" ng-model="val.value" ng-change="validateNumber(val);">
+                                            <span>
+                                                <span ng-click="incrementVal(val);" class="ico-arrow_expand"></span>
+                                                <span ng-click="decrementVal(val);" class="ico-arrow_collapse"></span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="text-right col-tbody-4">
+                                        {{getAllocationValue(newOpurtunity.ExpectedProductValue, val.value) || currency}}
+                                    </td>
+                                </tr>
+                                <tr class="no-record" ng-show="!getObjLength('technology')"><td colspan="4" class="text-center borderR0">No products are selected. You can add it by search.</td></tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="grey-row" ng-show="getObjLength('technology')">
+                                    <td colspan="2" class="borderR0 col-tfoot-1"> </td>
+                                    <td class="middle-txt borderR0 col-tfoot-2" ng-show="!isTechAllocationValid()" >
+                                        <span class="red-txt">Allocations must add up to 100%</span></td>
+                                    <td class="middle-txt borderR0 total col-tfoot-3">
+                                        <span ng-show="isTechValid() && isTechAllocationValid() && newOpurtunity.ExpectedProductValue>0">Total &nbsp{{newOpurtunity.selectedTechnologies | sumByKey:'value'}}</span>
+                                        <span class="red-txt" ng-show="!isTechValid()">Allocations must add up to 100%</span>
+                                    </td>   
+                                    <td class="borderR0 col-tfoot-4"></td>
+                                </tr>
+                            </tfoot>                                
+                        </table>
+                    </div>
+
+                    <h6 class="table-head marginT20">Services</h6>
+                    <script type="text/ng-template" id="customTemplateServ.html">
+                        <a>
+                        <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
+                        </a>
+                    </script>
+                    <ul class="table-top-list clearfix">
+                        <li>
+                            <div class="table-search" data-ng-class="{'highlighted' : showServiceSearchFocusBar()}">
+                                <span class="highlight-bar"></span>
+                                <input type="text" ng-model="searchService" placeholder="Search & Add Service Program" uib-typeahead="state as state.name for state in serviceList | filter:{name:$viewValue}" typeahead-template-url="customTemplateServ.html" class="form-control" typeahead-min-length="0" typeahead-on-select="onServiceSelect($item, $model, $label, $event)" />
+                                <span class="ico-search"></span></div>
+                                <span class="help-block relative-help" ng-show="!getObjLength('service')">Use this search to add services to the table in order to proceed.</span>
+                        </li>
+                        <li><a ng-click="showAllServices();" href="javascript:void(0)">Show All</a></li>
+                        <li class="pull-right"><span class="ico-delete" data-ng-class="{'disable':!isDeleteEnabled(newOpurtunity.selectedServices)}" ng-click="deleteService()"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></li>
+                    </ul>
+            
+                    <!-- <div class="alert-danger" ng-show="!isServValid()"> <span class="ico-danger">
+                            <span class="path1"></span><span class="path2"></span>
+                        </span>
+                        <span>Total allocation should be 100% in order to proceed to the next step.</span> </div>
+                   <div class="alert-danger" ng-show="!isServRowsValid() && myForm.ExpectedServiceValue.$dirty">
+                        <span class="ico-danger">
+                            <span class="path1"></span><span class="path2"></span>
+                        </span>
+                        <span>Service Program is required in order to proceed to the next step.</span>
+                    </div>
+                    <div class="alert-danger" ng-show="!isServAllocationValid()"> <span class="ico-danger">
+                            <span class="path1"></span><span class="path2"></span>
+                        </span>
+                        <span>Expected Services should be greater than 0 in order to proceed to the next step.</span> </div>
+                    <div class="alert-danger" ng-show="!isServDropdownValid()"> <span class="ico-danger">
+                            <span class="path1"></span><span class="path2"></span>
+                        </span>
+                        <span>Service Level and Service Category should be selected in order to proceed to the next step.</span> </div>-->
+                    <div class="fixedhead expanded service-details marginB30">
+                        <table class="table border-table opp-by sav-table table-fixed1 striped-table marginB0 table-fixedheader" ng-class="{'table-scrolled':close}" fixed-header>
+                            <thead> 
+                                <tr>
+                                    <th class="col-thead-1"><input type="checkbox" id="serviceCheckbox" ng-model="serviceSelected"
+                                    ng-click="bIsOneServiceSelected=serviceSelected;checkAll(serviceSelected,newOpurtunity.selectedServices)">
+                                         <label for="serviceCheckbox"><span class="check"></span></label>Service Program</th>
+                                    <th class="col-thead-2">Service Level</th>
+                                    <th class="col-thead-3">Service Category</th>
+                                    <th class="text-right col-thead-4">Allocation %</th>
+                                    <th class="text-right col-thead-5">Expected Services</th>
+                                </tr>
+                            </thead> 
+                            <tbody class="borderB0"> 
+                                <tr ng-repeat="(key,val) in newOpurtunity.selectedServices">
+
+                                    <td><input type="checkbox" id="serviceCheckbox-{{key}}" ng-model="val.boxes" ng-change="checkParent(newOpurtunity.selectedServices,'service')">
+                                         <label for="serviceCheckbox-{{key}}"><span class="check"></span></label>{{key}}</td>
+
+                                    <td class="text-right highlight-td">
+                                        <span class="highlight-bar" ng-show="!val.serviceLevelSelected"></span>
+                                        <div class="form-group">
+                                            <div class="select-input select-sm input-block input-dropdown marginB0 service-dropdown" >
+                                                <ol class="nya-bs-select serviceLevelList" ng-model="val.serviceLevelSelected" data-title="Select">
+                                                    <li class="nya-bs-option" nya-bs-option="level in val.serviceLevelArray" data-value="level"><a>{{level}}</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-right highlight-td">
+                                        <span class="highlight-bar" ng-show="!val.serviceCategorySelected && val.serviceLevelSelected"></span>
+                                        <div class="form-group">
+                                            <div class="select-input select-sm input-block input-dropdown marginB0 service-dropdown">
+                                                <ol class="nya-bs-select" ng-model="val.serviceCategorySelected" data-title="Select">
+                                                    <li class="nya-bs-option" nya-bs-option="category in val.serviceCategoryArray" data-value="category"><a>{{category}}</a></li>                                                    
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-right highlight-td">
+                                        <span class="highlight-bar" ng-show="!val.value >0 && isServDropdownValid()" ></span>
+                                        <div class="count-col">
+                                            <input type="count" ng-model="val.value" ng-change="validateNumber(val);">
+                                            <span><span ng-click="incrementVal(val);" class="ico-arrow_expand"></span><span ng-click="decrementVal(val);" class="ico-arrow_collapse"></span></span></div>
+                                    </td>
+                                    <td class="text-right highlight-td">{{getAllocationValue(newOpurtunity.ExpectedServiceValue, val.value)}}</td>
+                                </tr>
+                                <tr class="no-record" ng-show="!getObjLength('service')"><td colspan="5" class="text-center borderR0">No services are selected. You can add it by search.</td></tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="grey-row" ng-show="getObjLength('service')">
+                                    <td colspan="3" class="middle-txt borderR0 col-tfoot-1" ng-show="isServDropdownValid()"></td>
+                                    <td colspan="3" class="middle-txt borderR0 col-tfoot-2" ng-show="!isServDropdownValid()">
+                                        Service Level and Service Category should be selected in order to proceed to the next step.</td>
+                                    <td class="middle-txt borderR0 col-tfoot-3" ng-show="!isServAllocationValid()" >
+                                       <span class="red-txt">Allocations must add up to 100%</span></td>
+                                    <td class="middle-txt borderR0 total col-tfoot-4">
+                                    <span ng-show="isServValid() && isServAllocationValid() && newOpurtunity.ExpectedServiceValue>0">Total &nbsp{{newOpurtunity.selectedServices | sumByKey:'value'}}</span>
+                                    <span ng-show="!isServValid()" class="red-txt">Allocations must add up to 100%</span>
+                                        </td>
+                                    <td class="middle-txt borderR0 col-tfoot-5">
+                                    </td>
+
+                                </tr>
+                            </tfoot>                                
+                        </table>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        
+
+        <div class="clearfix marginT10 marginB30 text-right view-detail-btn">
+            <a ng-click="changeLocation('/view-oppor-step1', showTotalAndSelected)" class="button filled-btn blue marginR10 marginB10">Previous</a>
+            <a ng-click="changeLocation('/view-account', showTotalAndSelected)" class="button stroke-btn blue marginR10 marginB10" ng-click="cancel()">Cancel</a>
+            <a ng-click="changeLocation('/view-oppor-step3', showTotalAndSelected)" class="button filled-btn blue marginB10" ng-show="isTechValid() && isTechRowsValid() && isServValid() && isServRowsValid() && isValuesValid() && isTechAllocationValid() && isServAllocationValid() && isServDropdownValid()">Next</a>
+            <a class="button filled-btn blue marginB10" ng-disabled="!isTechValid() || !isTechRowsValid() || !isServValid() || !isServRowsValid() || !isValuesValid() || !isTechAllocationValid() || !isServAllocationValid() || !isServDropdownValid()" ng-show="!isTechValid() || !isTechRowsValid() || !isServValid() || !isServRowsValid() || !isValuesValid() || !isTechAllocationValid() || !isServAllocationValid() || !isServDropdownValid()">Next</a>
+      </div>
+
+        </div><!--tabContent-->                 
+    </div>
+</div>

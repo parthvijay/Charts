@@ -1,0 +1,2774 @@
+[
+    {
+        "title": "Refresh by Architecture",
+        "description": "<p>Enterprise Routing's Total Actionable opportunity broken apart by Business Entity (BE) Rules:</p><p><b>EoS/LDoS</b> - All products shipped after 1997 that have End of Sale (EOS) or Last Day of Support (LDoS) announced that occure in current quarter plus 15 future quarters that meet one of the following criteria. If covered, include all. If not covered, include: from all ship years if discovered within 3 years, shipped FY07-12 if discovered over 3 years ago, or shipped FY11+ if never discovered. Based on Net Price.</p><p><b>Past LDoS</b> - No products that have already passed LDoS.</p>",
+        "type": "pie",
+        "keys": ["Collaboration", "Computing Systems", "Enterprise Routing", "IOT Software", "Mobility", "Security", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solution", "Switching", "Wireless", "Other"],
+        "colors": {
+            "Collaboration": "#238A45",
+            "Computing Systems": "#CA181D",
+            "Enterprise Routing": "#0570AF",
+            "IOT Software": "#AD017E",
+            "Mobility": "#CB4C02",
+            "Security": "#66C1A3",
+            "Service Provider Routing": "#FA6A4A",
+            "SP Video Infrastructure": "#74A8CE",
+            "SP Video Software and Solution": "#F668A0",
+            "Switching": "#FD9829",
+            "Wireless": "#B1E1E1",
+            "Other": "#8CDDA5"
+        },
+        "data": [
+            {
+                "quarter": "Q1FY16",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q2FY16",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q3FY16",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q4FY16",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q1FY17",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q2FY17",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Refresh by Period",
+        "description": "Total EOS/LDOS opportunity displayed by quarter. Each quarter represent the net total value of the products reaching Last Date of Support plus the net total value of the products that will be announced End of Sale within the same quarter.",
+        "type": "bar_stacked",
+        "keys": ["Collaboration", "Computing Systems", "Enterprise Routing", "IOT Software", "Mobility", "Security", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solution", "Switching", "Wireless", "Other"],
+        "colors": {
+            "Collaboration": "#238A45",
+            "Computing Systems": "#CA181D",
+            "Enterprise Routing": "#0570AF",
+            "IOT Software": "#AD017E",
+            "Mobility": "#CB4C02",
+            "Security": "#66C1A3",
+            "Service Provider Routing": "#FA6A4A",
+            "SP Video Infrastructure": "#74A8CE",
+            "SP Video Software and Solution": "#F668A0",
+            "Switching": "#FD9829",
+            "Wireless": "#B1E1E1",
+            "Other": "#8CDDA5"
+        },
+        "data": [
+            {
+                "quarter": "Q1FY16",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q2FY16",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q3FY16",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q4FY16",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q1FY17",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q2FY17",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Collaboration": 45000000000,
+                            "Computing Systems": 9000000000,
+                            "Enterprise Routing": 25000000000,
+                            "IOT Software": 40000000000,
+                            "Mobility": 40000000000,
+                            "Security": 40000000000,
+                            "Service Provider Routing": 40000000000,
+                            "SP Video Infrastructure": 40000000000,
+                            "SP Video Software and Solution": 40000000000,
+                            "Switching": 40000000000,
+                            "Wireless": 40000000000,
+                            "Other": 40000000000
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Refresh by",
+        "description": "<p><b>Sales Level</b> - Enterprise Routing's Total Actionable Opportunity for each sales level according to the sales hierarchy.</p><p><b>Partner</b> - Enterprise Routing's Total Actionable Opportunity for the top 100 Partners.</p><p><b>Customer</b> - Enterprise Routing's Total Actionable Opportunity for the top Sales Account View (SAV) names.</p>",
+        "type": "bar_stacked_horizontal",
+        "keys": ["Collaboration", "Computing Systems", "Enterprise Routing", "IOT Software", "Mobility", "Security", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solution", "Switching", "Wireless", "Other"],
+        "colors": {
+            "Collaboration": "#238A45",
+            "Computing Systems": "#CA181D",
+            "Enterprise Routing": "#0570AF",
+            "IOT Software": "#AD017E",
+            "Mobility": "#CB4C02",
+            "Security": "#66C1A3",
+            "Service Provider Routing": "#FA6A4A",
+            "SP Video Infrastructure": "#74A8CE",
+            "SP Video Software and Solution": "#F668A0",
+            "Switching": "#FD9829",
+            "Wireless": "#B1E1E1",
+            "Other": "#8CDDA5"
+        },
+        "tabs": {
+            "Sales Level": [
+                {
+                    "quarter": "Q1FY16",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q2FY16",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q3FY16",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q4FY16",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q1FY17",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q2FY17",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                }
+            ],
+            "Partner": [
+                {
+                    "quarter": "Q1FY16",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 950000000000,
+                                "Computing Systems": 2000000000,
+                                "Enterprise Routing": 15000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q2FY16",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q3FY16",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q4FY16",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q1FY17",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q2FY17",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                }
+            ],
+            "Customer": [
+                {
+                    "quarter": "Q1FY16",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 95000000000,
+                                "Computing Systems": 2000000000,
+                                "Enterprise Routing": 35000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q2FY16",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q3FY16",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q4FY16",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q1FY17",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                },
+                {
+                    "quarter": "Q2FY17",
+                    "areas": [
+                        {
+                            "state": "US_Enterprise (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Canada (AMER)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "India_Area (APJ)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_Central (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        },
+                        {
+                            "state": "Emear_North (EMEAR)",
+                            "freq": {
+                                "Collaboration": 45000000000,
+                                "Computing Systems": 9000000000,
+                                "Enterprise Routing": 25000000000,
+                                "IOT Software": 40000000000,
+                                "Mobility": 40000000000,
+                                "Security": 40000000000,
+                                "Service Provider Routing": 40000000000,
+                                "SP Video Infrastructure": 40000000000,
+                                "SP Video Software and Solution": 40000000000,
+                                "Switching": 40000000000,
+                                "Wireless": 40000000000,
+                                "Other": 40000000000
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+]

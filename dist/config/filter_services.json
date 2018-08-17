@@ -1,0 +1,36 @@
+[
+    {
+        "title": "Sales",
+        "slug": "sales",
+        "active": true,
+        "progressive": false,
+        "type": "dropdown",
+        "levels_name": ["Sales Level 1", "Sales Level 2"],
+        "searchable": [false, false],
+        "selected": [],
+        "levels": [[], [{"keys": "All"}]
+        ]
+    },
+    {
+        "title": "Architecture",
+        "slug": "architecture",
+        "active": false,
+        "progressive": false,
+        "type": "dropdown",
+        "levels_name": ["Architecture"],
+        "searchable": [],
+        "selected": [],
+        "levels": [[]]
+    },
+    {
+        "title": "Organization",
+        "slug": "organization",
+        "active": false,
+        "progressive": false,
+        "type": "dropdown",
+        "levels_name": ["Organization"],
+        "searchable": [false],
+        "selected": [],
+        "levels": [[]]
+    }
+]

@@ -1,0 +1,163 @@
+[
+    {
+        "title": "Collaboration",
+        "content": "<span>Opportunity</span><ul><li> All Collaboration</li><li> FYLDOS FY17-FY19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li> Total Collab pipeline in SFDC</li><li> Commit/Upside (stages 2-5)</li><li> Tagged as Cisco Refresh</li><li> Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Enterprise Networking",
+        "content": "<span>Opportunity</span><ul><li> Enterprise Networking: Ent. Access Routing and Ent. Edge Routing</li><li> EN Switching: Ent. Switching - Access and Ent. Switching - Core</li><li> LDOS FY17-FY19 </li><li> +</li><li> Wireless: Ent. - Wireless</li><li> shipped < FY2013</li><li> All Covered and Uncovered</li></ul><span>Pipeline </span><ul><li> EN Routing/EN Switching/Wireless in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li> Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Security",
+        "content": "<span>Opportunity</span><ul><li> Security: Network Security: ASALOW, ASAMID, ASAHIGH</li><li> Shipped between 2008 and 2013</li><li> +</li><li> All Security</li><li> FYLDOS 2017-2019</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li> Security in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li> Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "DCV",
+        "content": "<span>Opportunity</span><ul><li> UCS - M1 and M2 Pids</li><li> Shipped <= 2014</li><li> +</li><li> DCS - Nexus Pids</li><li> Shipped <= 2012</li><li> +</li><li> MDS - SAN Pids</li><li> Shipped <= 2012</li><li> All Covered</li></ul><span>Pipeline</span><ul><li> Total DC pipeline in SFDC</li><li> Commit/Upside (stages 2-5)</li><li> Tagged as Cisco Refresh</li><li> Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "Service Provider",
+        "content": "<span>Opportunity</span><ul><li> All Service Provider Routing</li><li> Mobility: Packet Core</li><li> All SP Video Software and Solutions</li><li> Other: Cloud Platform and Services</li><li> FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li> Total SP Routing pipeline in SFDC</li><li> Mobility:Packet Core pipeline in SFDC</li><li> SP Video Software and Solutions pipeline in SFDC</li><li> Other: Cloud Platform and Services pipeline in SFDC</li><li> Commit/Upside (stages 2-5)</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - Packet Core",
+        "content": "<span>Opportunity</span><ul><li> All Service Provider Routing</li><li> Mobility: Packet Core</li><li> All SP Video Software and Solutions</li><li> Other: Cloud Platform and Services</li><li> FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li> Total SP Routing pipeline in SFDC</li><li> Mobility:Packet Core pipeline in SFDC</li><li> SP Video Software and Solutions pipeline in SFDC</li><li> Other: Cloud Platform and Services pipeline in SFDC</li><li> Commit/Upside (stages 2-5)</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - Cable Access & Infra (CMTS, QAM, HFC)",
+        "content": "<span>Opportunity</span><ul><li>Cable Access & Infra</li><li>FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>Cable Access & Infra in SFDC</li><li>Commit/Upside stages 2-5</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - Cloud Platform and Services",
+        "content": "<span>Opportunity</span><ul><li>Cloud Platform and Services</li><li>FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>Cloud Platform and Services in SFDC</li><li>Commit/Upside stages 2-5</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - SP Access & Aggregation",
+        "content": "<span>Opportunity</span><ul><li>SP Access & Aggregation</li><li>FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>SP Access & Aggregation in SFDC</li><li>Commit/Upside stages 2-5</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - SP Cloud",
+        "content": "<span>Opportunity</span><ul><li>SP Cloud</li><li>FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>SP Cloud in SFDC</li><li>Commit/Upside stages 2-5</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - SP Core Routing",
+        "content": "<span>Opportunity</span><ul><li>Service Provider Core Routing</li><li>FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>Service Provider Core Routing in SFDC</li><li>Commit/Upside stages 2-5</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - SP Edge Routing",
+        "content": "<span>Opportunity</span><ul><li>Service Provider Edge Routing</li><li>FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>Service Provider Edge Routing in SFDC</li><li>Commit/Upside stages 2-5</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - SP Segment Mobility Solutions",
+        "content": "<span>Opportunity</span><ul><li>SP Segment Mobility</li><li>FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>SP Segment Mobility in SFDC</li><li>Commit/Upside stages 2-5</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - SP Video Software and Solutions",
+        "content": "<span>Opportunity</span><ul><li>SP Video Software and Solutions</li><li>FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>SP Video Software and Solutions in SFDC</li><li>Commit/Upside stages 2-5</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - Optical",
+        "content": "<span>Opportunity</span><ul><li>Optical</li><li>FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>Optical in SFDC</li><li>Commit/Upside stages 2-5</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - Optics - SP Routing Allocation",
+        "content": "<span>Opportunity</span><ul><li>Optics</li><li>FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>Optics in SFDC</li><li>Commit/Upside stages 2-5</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - Other Routing",
+        "content": "<span>Opportunity</span><ul><li>Other SP Routing</li><li>FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>Other SP Routing in SFDC</li><li>Commit/Upside stages 2-5</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Service Provider - Other Routing",
+        "content": "<span>Opportunity</span><ul><li>Other SP Routing</li><li>FYLDOS 17-19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>Other SP Routing in SFDC</li><li>Commit/Upside stages 2-5</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "Security - Email Security",
+        "content": "<span>Opportunity</span><ul><li> Email Security</li><li> FYLDOS 2017-2019 </li><li>All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li> Email Security in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "Security - Policy & Access",
+        "content": "<span>Opportunity</span><ul><li> Policy & Access</li><li> FYLDOS 2017-2019 </li><li>All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li> Policy & Access in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "Security - Web Security",
+        "content": "<span>Opportunity</span><ul><li> Web Security</li><li> FYLDOS 2017-2019 </li><li>All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li> Web Security in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "Collaboration - Conferencing",
+        "content": "<span>Opportunity</span><ul><li> Conferencing</li><li> FYLDOS 2017-2019 </li><li>All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li> Conferencing in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "Collaboration - Contact Center",
+        "content": "<span>Opportunity</span><ul><li> Contact Center</li><li> FYLDOS 2017-2019 </li><li>All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li> Contact Center in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "Collaboration - Other Collaboration",
+        "content": "<span>Opportunity</span><ul><li> Other Collaboration as Other</li><li>IOT CSS as Other</li><li> FYLDOS FY17-FY19 </li><li>All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li> Other Collaboration as Other</li><li>IOT CSS as Other in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Collaboration - TP Endpoints",
+        "content": "<span>Opportunity</span><ul><li>TP Endpoints as Video</li><li> FYLDOS FY17-FY19 </li><li>All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>TP Endpoints as Video</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "Collaboration - TP Multiparty Conferencing",
+        "content": "<span>Opportunity</span><ul><li> TP Multiparty Conferencing</li><li> FYLDOS FY17-FY19 </li><li>All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>TP Multiparty Conferencing in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Collaboration - UC Endpoints",
+        "content": "<span>Opportunity</span><ul><li>UC Endpoints as UC</li><li> FYLDOS FY17-FY19 </li><li>All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>UC Endpoints as UC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Collaboration - UC Infrastructure Applications",
+        "content": "<span>Opportunity</span><ul><li>UC Infrastructure Applications as UC</li><li> FYLDOS FY17-FY19 </li><li>All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>UC Infrastructure Applications as UC in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "DCV - NX2/4/5/6K",
+        "content": "<span>Opportunity</span><ul><li>NX2/4/5/6K as NX2-6K</li><li>Nexus Pids </li><li> Shipped <= 2012</li><li>All Covered</li></ul><span>Pipeline</span><ul><li> NX2/4/5/6K as NX2-6K in SFDC</li><li> Commit/Upside (stages 2-5)</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "DCV - NX3K",
+        "content": "<span>Opportunity</span><ul><li> NX3K</li><li>Nexus Pids</li><li>Shipped <= 2012</li><li>All Covered</li></ul><span>Pipeline</span><ul><li> NX3K in SFDC</li><li> Commit/Upside (stages 2-5)</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "DCV - NX7K",
+        "content": "<span>Opportunity</span><ul><li> NX7K</li><li>Nexus Pids</li><li>Shipped <= 2012</li><li>All Covered</li></ul><span>Pipeline</span><ul><li> NX7K in SFDC</li><li> Commit/Upside (stages 2-5)</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+	{
+        "title": "DCV - SAN",
+        "content": "<span>Opportunity</span><ul><li> SAN</li><li>SAN Pids</li><li>Shipped <= 2014</li><li>All Covered</li></ul><span>Pipeline</span><ul><li> SAN in SFDC</li><li> Commit/Upside (stages 2-5)</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "DCV - Servers",
+        "content": "<span>Opportunity</span><ul><li>UCS</li><li>Computing Systems</li><li>M1 and M2 Pids</li><li>Shipped <= 2014</li><li>All Covered UCS</li><li>Computing Systems</li><li>M1 and M2 Pids</li><li>Shipped <= 2014</li><li>All Covered</li></ul><span>Pipeline</span><ul><li>Computing Systems in SFDC</li><li>Commit/Upside (stages 2-5)</li><li>Tagged as Cisco Refresh</li><li>Active 12 month pull Computing Systems in SFDC</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Enterprise Networking - Ent. Edge Routing",
+        "content": "<span>Opportunity</span><ul><li>Enterprise Routing: Ent. Edge Routing</li><li> All Covered and Uncovered</li></ul><span>Pipeline </span><ul><li>EN Edge Routing in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li> Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Enterprise Networking - Ent. Access Routing",
+        "content": "<span>Opportunity</span><ul><li> Enterprise Routing: Ent. Access Routing</li><li> All Covered and Uncovered</li></ul><span>Pipeline </span><ul><li>EN Access Routing in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li> Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Enterprise Networking - Ent. Switching - Access",
+        "content": "<span>Opportunity</span><ul><li> Switching: Ent. Switching - Access</li><li> LDOS FY17-FY19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li> EN Switching - Access in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Enterprise Networking - Ent. Switching - Core",
+        "content": "<span>Opportunity</span><ul><li>Switching:  Ent. Switching - Core</li><li> LDOS FY17-FY19</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>EN Switching - Core in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Enterprise Networking - Ent. - Wireless",
+        "content": "<span>Opportunity</span><ul><li> Wireless: Ent. - Wireless</li><li> Shipped < FY2013</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li> Wireless in SFDC</li><li> Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Security - Advanced Threat Security",
+        "content": "<span>Opportunity</span><ul><li>Advanced Threat Security</li><li>FYLDOS 2017-2019</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>Advanced Threat Security in SFDC</li><li>Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    },
+    {
+        "title": "Security - Network Security",
+        "content": "<span>Opportunity</span><ul><li>Network Security: ASALOW, ASAMID, ASAHIGH</li><li>Shipped between 2008 and 2013</li><li>+</li><li>Network Security</li><li>FYLDOS 2017-2019</li><li> All Covered and Uncovered</li></ul><span>Pipeline</span><ul><li>Network Security in SFDC</li><li>Commit/Upside stages 2-5</li><li> Tagged as Cisco Refresh</li><li>Active 12 month pull</li></ul>"
+    }
+	
+]

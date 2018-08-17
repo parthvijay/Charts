@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Verizon Cloud",
+        "total_value": 75700000,
+        "add_value": 26800000,
+        "add_lineitems": 1900,
+        "upgrade_value": 26800000,
+        "upgrade_lineitems": 1400,
+        "new_value": 22100000,
+        "new_lineitems": 160000
+    },
+    {
+        "name": "Comcast Jiturral Xfinity Internet Connection",
+        "total_value": 91700000,
+        "add_value": 16800000,
+        "add_lineitems": 1900,
+        "upgrade_value": 26800000,
+        "upgrade_lineitems": 1300,
+        "new_value": 42100000,
+        "new_lineitems": 160000
+    },
+    {
+        "name": "US Telecom",
+        "total_value": 66700000,
+        "add_value": 78600000,
+        "add_lineitems": 1900,
+        "upgrade_value": 26800000,
+        "upgrade_lineitems": 1400,
+        "new_value": 33100000,
+        "new_lineitems": 2600000
+    },
+    {
+        "name": "Cisco Internal East Enterprise Region",
+        "total_value": 22300000,
+        "add_value": 67800000,
+        "add_lineitems": 1900,
+        "upgrade_value": 26800000,
+        "upgrade_lineitems": 1400,
+        "new_value": 22100000,
+        "new_lineitems": 160000
+    },
+    {
+        "name": "China Telecom",
+        "total_value": 12300000,
+        "add_value": 32100000,
+        "add_lineitems": 4500,
+        "upgrade_value": 26800000,
+        "upgrade_lineitems": 7800,
+        "new_value": 22100000,
+        "new_lineitems": 178000
+    },
+    {
+        "name": "British Telecom",
+        "total_value": 12700000,
+        "add_value": 65600000,
+        "add_lineitems": 4500,
+        "upgrade_value": 26800000,
+        "upgrade_lineitems": 8900,
+        "new_value": 23300000,
+        "new_lineitems": 870000
+    }
+]

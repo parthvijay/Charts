@@ -1,0 +1,22 @@
+[
+    {
+      "customer": "Customers",
+      "list_annual": "List Price",
+      "total": "",
+      "net_annual": "Net Price",
+      "multiyear": "",
+      "total_contracts": "",
+      "total_line_items": "",
+      "converted_to_pipeline": ""
+    },
+    {
+      "customer": "",
+      "list_annual": "Annualized",
+      "total": "Total",
+      "net_annual": "Annual",
+      "multiyear": "Multi Year",
+      "total_contracts": "Total Contracts",
+      "total_line_items": "Total Line Items",
+      "converted_to_pipeline": "Converted to Pipeline"
+    }
+  ]

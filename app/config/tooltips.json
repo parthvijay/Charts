@@ -1,0 +1,76 @@
+[
+    {
+        "all": {
+            "list": "Product List Price (Hardware/Perpetual)",
+            "net": "Product Net Price (Hardware/Perpetual)"
+            },
+        "refresh": {
+            "ship": {
+                "list": "Product List Price",
+                "net": "Product Net Price"
+            },
+            "eos": {
+                "list": "Product List Price",
+                "net": "Product Net Price"
+            },
+            "ldos": {
+                "list": "Product List Price",
+                "net": "Product Net Price"
+            }
+        },
+        "renew": {
+            "total": {
+                "list": "",
+                "net": "Contract Line Net Amount"
+            },
+            "ts": {
+                "list": "Annualized Contract Line",
+                "net": "Contract Line Net Amount"
+            },
+            "swss": {
+                "list": "Default Services List Price",
+                "net": "Contract Line Net Amount"
+            },
+            "as": {
+                "list": "",
+                "net": "Expiring Renewal Contract Amount"
+            }
+        },
+        "subscription": {
+            "security": {
+                "list": "Product/Service Price for T&C Booking Price for SaaS",
+                "net": "Product/Service Price for T&C Booking Price for SaaS"
+            },
+            "collaboration": {
+                "list": "Product/Service Price for T&C Booking Price for SaaS",
+                "net": "Product/Service Price for T&C Booking Price for SaaS"
+            },
+            "other": {
+                "list": "Product/Service Price for T&C Booking Price for SaaS",
+                "net": "Product/Service Price for T&C Booking Price for SaaS"
+            }
+        },
+        "attach": {
+            "total": {
+                "list": "Default Services List Price",
+                "net": ""
+            },
+            "ts": {
+                "list": "Default Services List Price",
+                "net": ""
+            },
+            "swss": {
+                "list": "Default Services List Price",
+                "net": ""
+            }
+        },
+        "co": {
+            "list": "Product List Price",
+            "net": ""
+        },
+        "drs": {
+            "list": "Product List Price",
+            "net": "Product Net Price"
+        }
+    }
+]

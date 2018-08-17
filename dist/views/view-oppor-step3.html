@@ -1,0 +1,115 @@
+<!-- Page Content -->
+<div id="page-content-wrapper">
+        <div class="freezed-container">
+            <div class="grey-background">
+<div class="clearfix" style="position:relative;" ng-show="!$root.accessIssue || $root.accessIssue == 'nodata'">
+    <div class="container-fluid filter-switch" style="margin-top:50px;">
+        <!-- Opportunities/Performance switch -->
+        <div class="row marginT10">
+            <div class="col-xs-12">
+                <a href="javascript:void(0)" class="refresh-back-btn marginT5" ng-click="goBackToRefresh()"><span class="ico-left-arrow-sm hvr-icon-pop"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                    <span class="back-btn-txt" ng-if="isComingFromRenew() !== 'drs'">{{isComingFromRenew() | capitalize}} by Customer</span>
+                    <span class="back-btn-txt" ng-if="isComingFromRenew() === 'drs'">{{isComingFromRenew() | uppercase}} by Customer</span>
+                </a>
+            </div>
+        </div>
+		</div><!--filter-switch-->
+                </div>
+            </div><!--grey-background-->
+        </div><!--freezed-container-->
+        <div class="container-fluid tabContent">
+        <div class="steps-container">
+            <div class="steps-heading">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3>Convert to Pipeline - Step 3 of 3</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-detail">
+                <div class="block-left single-row">
+                    <div class="usd-value marginR0 marginB10">Value shown in USD</div>
+                    <p class="marginB20">Review your selections</p>
+                    <div class="review-opp-detail"><label>Opportunity Name:</label><span>{{steps.formFirstStep.opp_name}}</span></div>
+                    <div class="review-opp-detail"><label>Opportunity Stage:</label><span>{{steps.formFirstStep.selectedStage}}</span></div>
+                    <div class="review-opp-detail" ng-if="steps.formFirstStep.selectedStage == '2 - Qualification'"><label>Forecasting Status:</label><span>{{steps.formFirstStep.selectedStatus}}</span></div>
+                    <div class="review-opp-detail"><label>Account Name:</label><span>{{steps.formFirstStep.accDetails.accountName}}</span></div>
+                    <div class="review-opp-detail"><label>Account Owner:</label><span>{{steps.formFirstStep.accOwner}}</span></div>
+                    <div class="review-opp-detail"><label>Opportunity Owner:</label><span>{{steps.formFirstStep.selectedOwner.firstName}} {{steps.formFirstStep.selectedOwner.lastName}}</span></div>
+                    <div class="review-opp-detail"><label>Forecasting Position:</label><span>{{steps.formFirstStep.selectedOwner.forecastingPos}}</span></div>
+                    <div class="review-opp-detail"><label>Expected Book Date:</label><span>{{steps.formFirstStep.dt| date:'longDate'}}</span></div>
+                    <div class="review-opp-detail"><label>Expected Product Amount ($000s):</label><span ng-show="newOpurtunity.ExpectedProductValue">${{newOpurtunity.ExpectedProductValue}}</span><span ng-show="!newOpurtunity.ExpectedProductValue">$0</span></div>
+                    <div class="review-opp-detail"><label>Expected Service Amount ($000s):</label><span ng-show="newOpurtunity.ExpectedServiceValue">${{newOpurtunity.ExpectedServiceValue}}</span><span ng-show="!newOpurtunity.ExpectedServiceValue">$0</span></div>
+                    <div class="review-opp-detail"><label>Install Base Type:</label><span>{{newOpurtunity.installBaseType}}</span></div>
+                    <h6 class="table-head no-border-head paddingT10">Technologies</h6>								
+                    <div class="table-responsive expanded">
+                        <table class="table border-table table-fixedheader opp-by sav-table table-fixed1 striped-table marginB0
+                               step-table">
+                            <thead> 
+                                <tr>
+                                    <th style="width:35%">Business Entity/Sub Entity</th>
+                                    <th class="text-right" style="width:15%">Allocation %</th>
+                                    <th style="width:23%">Product Family</th>
+                                    <th style="width:27%" class="text-right">Expected Products ($000s)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="borderB0">
+                                <tr ng-repeat="(key,val) in newOpurtunity.selectedTechnologies">
+                                    <td>{{key.split(":")[0]}}</td>
+                                    <td class="paddingL60 text-right">{{val.productMixPercent | number:0}}</td>
+                                    <td><div ng-repeat="option in val.options">{{option.key}}<br></div></td>
+                                    <td class="text-right">{{getAllocationValue(newOpurtunity.ExpectedProductValue, val.value)}}</td>
+                                </tr>
+                                <tr class="no-record" ng-show="!getObjLength('technology')"><td colspan="4" class="text-center borderR0">No Records</td></tr>
+                                <tr class="grey-row" ng-show="getObjLength('technology')">											
+                                    <td colspan="2" class="text-right middle-txt right-value borderR0">Total &nbsp;{{newOpurtunity.selectedTechnologies| sumByKey:'value'}}</td>
+                                    <td colspan="2" class="borderR0"></td>
+                                </tr>
+                            </tbody>								
+                        </table>
+                    </div>
+
+
+                    <h6 class="table-head marginT15 no-border-head">Services</h6>								
+                    <div class="table-responsive expanded paddingB30">
+                        <table class="table border-table opp-by sav-table table-fixedheader table-fixed1 striped-table marginB0">
+                            <thead> 
+                                <tr>
+                                    <th>Service Program</th>
+                                    <th>Service Level</th>
+                                    <th>Service Category</th>
+                                    <th  class="text-right">Allocation %</th>
+                                    <th class="text-right">Expected Services ($000s)</th>
+                                </tr>
+                            </thead> 
+                            <tbody class="borderB0">
+                                <tr ng-repeat="(key,val) in newOpurtunity.selectedServices">
+                                    <td>{{key}}</td>
+                                    <td>{{val.serviceLevel}}</td>
+                                    <td>{{val.serviceCategory}}</td>
+                                    <td class="paddingL60 text-right">{{val.serviceMixPercent | number:0}}</td>
+                                    <td class="text-right">{{getAllocationValue(newOpurtunity.ExpectedServiceValue, val.value)}}</td>
+                                </tr>
+                                <tr class="no-record" ng-show="!getObjLength('service')"><td colspan="5" class="text-center borderR0">No Records</td></tr>
+                                <tr class="grey-row" ng-show="getObjLength('service')">
+                                    <td colspan="4" class="text-right middle-txt right-value borderR0">Total &nbsp;{{newOpurtunity.selectedServices| sumByKey:'value'}}</td>
+                                    <td class="borderR0"></td>
+                                </tr>
+                            </tbody>								
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+       
+
+        <div class="clearfix marginT10 marginB30 text-right view-detail-btn">
+            <a ng-click="changeLocation('/view-oppor-step2', showTotalAndSelected)"    class="button filled-btn blue marginB10 floatL">Previous</a>
+            <a ng-click="changeLocation('/view-account', showTotalAndSelected)" class="button stroke-btn blue marginR10 marginB10 responsive-btn" ng-click="cancel()">Cancel</a>
+            <a ng-click="changeLocation('/create-pipeline', showTotalAndSelected)"   class="button filled-btn blue marginB10">Create New Pipeline</a>
+        </div>
+		 </div>
+        </div>
+    </div>					
+</div>

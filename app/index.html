@@ -1,0 +1,493 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Cisco Ready</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=11" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/nya-bootstrap-select/dist/css/nya-bs-select.css" />
+        <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
+        <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css" />
+        <link rel="stylesheet" href="bower_components/angularjs-slider/dist/rzslider.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/rzslider.css" />
+        <link rel="stylesheet" href="styles/angular-sham-spinner.css" />
+        <link rel="stylesheet" href="styles/svg-icon.css" />
+        <link rel="stylesheet" href="styles/animate.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/owl.carousel.min.css" />
+        <link rel="stylesheet" href="styles/global-filter.css" />
+        <link rel="stylesheet" href="styles/bookmarks.css" />
+        <!-- endbuild -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110059458-1"></script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){
+            dataLayer.push(arguments);
+              }
+          gtag('js', new Date());
+
+          gtag('config', 'UA-110059458-1');
+          //ga('set', 'userId', {{userData.user.fullName}});
+        </script>
+    </head>
+    <body id ="wrapper"  ng-cloak ng-controller="MainController" ng-init="navCollapsed = true" ng-class="{
+            'scrolled': scrolled, 'navbar-open' : !navCollapsed,  'asset-view': bHideFilterStrip && analysis != 'campaign', 'campaign' : analysis == 'campaign', 'serviceDash':dashboard == 'services', 'sales': dashboard != 'services', 'timeout-screen' : ($root.accessIssue && $root.accessIssue != 'nodata'),'no-net-toggle':$root.listNet=='performance'}" class="fixed-head 'srBody': dashboard == 'securityRefresh'">
+    <cisco-spinner></cisco-spinner>
+    <nav class="navbar navbar-default"  ng-class="{
+            'navbar-fixed-top'
+                    : scrolled}">
+        <div class="container-fluid" id="header">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" ng-click="navCollapsed = !navCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#/" class="navbar-brand" ng-if="dashboard != 'services'" ng-click="resetFilters()">
+                    <span class="site-logo"><img src="images/logo.svg" width="56" height="30"></span>
+                    <span class="site-title">
+                        <h2>CISCO READY</h2>
+                        <h3>CONNECTED EXPERIENCE</h3>
+                    </span>
+                </a>
+                <a href="" class="navbar-brand" ng-if="dashboard == 'services'">
+                    <span class="site-logo"><img src="images/logo.svg" width="56" height="30"></span>
+                    <span class="site-title">
+                        <h2>SERVICES</h2>
+                        <h3>LEADERSHIP DASHBOARD</h3>
+                    </span>
+                </a>
+                <!--<a ng-if="dashboard == 'sales'" class="navbar-brand hidden-xs" href="#/"><img src="images/logo_2.svg" width="230" height="36"></a>
+                <a ng-if="dashboard == 'sales'" class="navbar-brand visible-xs" href="#/"><img src="images/iphone-logo.png" width="151" height="31"></a>-->
+                <!--<a ng-if="dashboard == 'service'" class="navbar-brand hidden-xs" href="#/"><object style="width:221px; height:36px;" data="images/logo_ts.svg" type="image/svg+xml"></object></a>
+                <a ng-if="dashboard == 'service'" class="navbar-brand visible-xs" href="#/"><object style="width:116px; height:23px;" data="images/logo_ts_iphone.svg" type="image/svg+xml"></object></a>-->
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown profile">
+                    <a href="" role="button" ng-if="!UserServ.proxyUser"><span class="user-name">
+                        {{userData.user.fullName ? userData.user.fullName : UserServ.admin.fullName}}<span class="ico-dropdown"></span></a><a ng-if="UserServ.proxyUser"><span class="proxy-user-name"><span><strong>Proxy User</strong></span></span>:
+                    <span class="user-id">{{userData.user.userId}}</span><span class="ico-dropdown user-drop-ico"></span></span></a>
+                    <!-- SunitaYadav  added class of animated fadeIn -->
+                    <ul class="dropdown-menu admin animated animatedSlow fadeIn">
+                        <i class="tipsy"></i>
+                        <li class="dropdown-profile" ng-if="!UserServ.proxyUser">
+                            <span class="user-desname">{{userData.user.fullName}}</span>
+                        </li>
+                        <li class="dropdown-profile" ng-if="UserServ.proxyUser">
+                            <span class="user-desname"><strong>{{userData.user.userId}}</strong></span>
+                        </li>
+                        <li ng-click="login()" ng-if="!UserServ.proxyUser && userData.proxyPermission"><a href="#/proxy-user" class="proxy-admin">Proxy Login</a></li>
+                        <li ng-if="UserServ.proxyUser"><a href="#/proxy-user">Change Proxy</a></li>
+                        <li ng-click="logout()"><a href="">Sign Out</a></li>
+                        <li ng-if="UserServ.proxyUser" class="admin-info">
+                            <div class="user-info">
+                                <span class="user-account">Your Account</span>
+                                <a href="#/sales/analysis/asset" ng-click="removeProxyUser();"><span><strong>{{UserServ.admin.fullName}}</strong></span></a>
+                                <span>Administrator</span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown apps">
+                    <a href="" class="help-link">
+                        <span class="ico-app hvr-icon-pop" style = "color:#00bceb">
+                            <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                            
+                        </span>
+                        <span class="icon-txt" link-title="Apps">Apps</span>
+                    </a>
+                    <ul class="dropdown-menu animated animatedSlow fadeIn">
+                        <i class="tipsy app-tipsy"></i>
+                        <li ng-class="{
+                                'active' : dashboard == 'sales'}" ng-click="viewPath('sales/analysis/asset');resetFilters();"><span class="app-details"><span class="app-img"><img src="images/app-block.png" /></span><span class="app-heading"><h5><span>Cisco Ready Connected Experience</span> <span class="ico-trending_chart"></span></h5><p>Provides a comprehensive view and analytic to Sales Leaders and Sales Teams on their Installed Base Opportunities and Performance related to Product Refresh, Services Renew and Attach</p></span></span></li>
+                        <li ng-click="viewLink('http://disebi/BOE/BI');"><span class="app-details"><span class="app-img"><img src="images/app-block.png" /></span><span class="app-heading"><h5><span>Cisco Ready Business Objects</span> <span class="ico-trending_chart"></span></h5><p>Provides adhoc analysis and data exploration capabilities on Installed Base data; track and report on Services Metrics</p></span></span></li>
+
+                        <li ng-click="openCompetitiveDashboard();"><span class="app-details "><span class="app-img"><img src="images/app-block.png" /></span><span class="app-heading"><h5><span>SFDC Competitive Dashboard</span> <span class="ico-trending_chart"></span></h5><p>Provides Sales leadership the ability to quickly inspect the SFDC competitive landscape</p></span></span> </li>
+                         <li ng-if="userData.sldPermission" ng-class="{
+                                'active' : dashboard == 'services'}" ng-click="viewPath('services/analysis/tsRenew/overview');"><span class="app-details borderB0"><span class="app-img"><img src="images/app-block.png" /></span><span class="app-heading"><h5><span>Services Leadership Dashboard</span> <span class="ico-trending_chart"></span></h5><p>Provides a comprehensive view of Services installed base Opportunities for TS Renew & TS Attach.</p></span></span></li>
+                        <li ng-click="viewLink('http://qli-web-003-p.cisco.com/QvAJAXZfc/opendoc.htm?document=Reporting%20Center.qvw&host=QVS%40qli-app-006-p');"><span class="app-details borderB0"><span class="app-img"><img src="images/app-block.png" /></span><span class="app-heading"><h5><span>Reporting Center</span> <span class="ico-trending_chart"></span></h5><p>Provides fast and easy way to request Smart IB for Customer, Partner or Distributor.</p></span></span> </li>
+                        <li ng-click="viewLink(' https://cr-analytics.cisco.com/#/site/CDOanalytics/views/ASDG/Landing?:iid=1');"><span class="app-details"><span class="app-img"><img src="images/app-block.png" /></span><span class="app-heading"><h5><span> AS Demand Gen</span> <span class="ico-trending_chart"></span></h5><p> Sales Prospecting Tool for Advanced Services Offers with Services Recommendation</p></span></span></li>        
+                    </ul>
+                </li>
+
+                <li class="dropdown help bookmarks" ng-if="dashboard !== 'services'">
+                    <a href="#/bookmarks" class="help-link notification">
+                        <span class="icon-with-badge">
+                            <!-- <span class="badge up bg-success">1</span> -->
+                            <span class="ico-bookmark_round hvr-icon-pop" style = "color:#00bceb">
+                                <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                            </span>
+                        </span>
+                        <span class="icon-txt" link-title="Bookmarks">Bookmarks</span>
+                        <span class="badge up bg-success">{{newBookmarkCount>=1?newBookmarkCount:''}}</span>
+                    </a>
+                    <ul class="dropdown-menu animated animatedSlow fadeIn" ng-if="GlobalBookmarkServ.globalBookmarks.bookmarks.length>0">
+                        <i class="tipsy"></i>
+                        <li data-ng-class="{'active': isGlobalOpen}">
+                            <div class="bookmark-dropdown" ng-show="isGlobalOpen">
+                                <ul class="sub-menu">
+                                    <li ng-repeat="bookmark in GlobalBookmarkServ.globalBookmarks.bookmarks">
+                                        <a href="" ng-click="selectBookmark(bookmark)">{{bookmark.name}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!-- <li class="dropdown announcements" ng-if="dashboard == 'services'">
+                    <a href="" class="help-link">
+                        <span class="ico-announcement hvr-icon-pop">
+                            <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                        </span>
+                        <span class="icon-txt" link-title="Announcements">Announcements</span>
+                    </a>
+                </li> -->
+                <li class="dropdown feedback">
+                    <a href="" onclick="WalkMePlayerAPI.toggleMenu()" class="help-link" target="_blank">
+                      
+                      <span class="ico-guidMe hvr-icon-pop" style = "color:#00bceb">
+		                <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+		                </span>
+                        <span class="icon-txt feedback-txt" link-title="Feedback">Guide Me</span>
+                    </a>
+                </li>
+                <li class="dropdown help">
+                    <a href="" class="help-link">
+                        <span class="ico-help hvr-icon-pop" style = "color:#00bceb">
+                            <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                        </span>
+                        <span class="icon-txt" link-title="help">Help</span>
+                    </a>
+                    <!-- SunitaYadav  added class of animated fadeIn -->
+                    <ul class="dropdown-menu animated animatedSlow fadeIn">
+                        <i class="tipsy"></i>                        
+                        <li class="hidden"><a href="">Help</a></li>
+                        <li><a target="_blank" href="https://salesconnect.cisco.com/open.html?h=PAGE-5569" class="jive borderB0 clearfix"><span class="learn-more">Learn More On </span> <img src="images/SalesConnect.svg"/></a>
+                        </li>
+                        <li class=""><a class="no-border" target="_blank" href="https://cisco.service-now.com/sp?id=search&bt=t&q=*&filter_string=serviceoffering:%27Cisco%20Ready%27">Report a problem</a></li>
+                        <!--<li class=""><a class="no-border" href="" onclick = "WalkMePlayerAPI.toggleMenu()">Guided Walk-thrus</a></li>-->
+                        <li><a target="_blank" href="https://pwc018.cloudapps.cisco.com/wsrp/pwc018/mobile/view/service/291050" class="jive borderB0 feedback-img clearfix"><span class="learn-more">Feedback</span><img src="images/feedback.svg"/></a></li>
+                        <li><a href="mailto:ciscoready_training@cisco.com" class=" borderB0 clearfix"><span>Need some training?</span></a></li>
+                        <!-- <li><a href="mailto:ciscoready_support@cisco.com" class=" borderB0 clearfix"><span>Cisco Ready team</span></a></li> -->
+                        <div class="clearfix"></div>
+                        <li class="sub-item">
+                            <div class="last-date">
+                                <p>Last Data Refresh</p>
+                                <span><strong>{{userData.dataLastRefreshedOn}}</strong></span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="navbar" class="navbar-collapse collapse mobile-view" ng-if="dashboard !== 'services'">
+                <ul class="nav navbar-nav collapse-nav">
+                    <li class="add-proxy-admin" ng-show="!UserServ.proxyUser" data-ng-class="{'proxy-info':UserServ.proxyUser}">
+                        <a href="">{{userData.user.fullName}}<span class="ico-close_bg" aria-expanded="false" aria-controls="navbar" ng-click="navCollapsed = closeNavBar()"><span class="path1"></span><span class="path2"></span></span></a>
+                        <!-- ngIf: !UserServ.proxyUser -->
+                        <div class="proxy-login ng-scope" ng-if="!UserServ.proxyUser"><a href="#/proxy-user">Proxy Login</a></div><!-- end ngIf: !UserServ.proxyUser -->
+                    </li>
+                     <li class="dropdown main-nav-dropdown profile add-proxy-admin" ng-class="{
+                            'expanded'
+                                    : dropProfileActive, 'active' : analysis == 'profile'}" ng-show="dashboard!=='services' && UserServ.proxyUser">
+                        <div class="close-icon">
+                            <a href=""><span class="ico-close_bg" aria-expanded="false" aria-controls="navbar" ng-click="navCollapsed = true"><span class="path1"></span><span class="path2"></span></span></a>
+                        </div>
+                        <div class="proxy-nav">
+                                <span class="user-desname">{{UserServ.proxyUser.userid}}</span><span class="admin-info">NonAM-Mgr</span>
+                                <div class="proxy-login" ng-if="UserServ.proxyUser">
+                                    <a href="#/proxy-user">Change Proxy</a>
+                                </div>
+                                <!-- ngIf: UserServ.proxyUser -->
+
+                                <ul class="dropdown-menu animated animatedSlow fadeIn">
+                                    <li class="dropdown-main-head" ng-if="UserServ.proxyUser" class="admin-info">
+                                        <div class="user-info">
+                                            <span class="user-account">Your Account</span>
+                                            <a href="#/sales/analysis/asset" ng-click="UserServ.removeProxyUser();"><span>{{userData.user.fullName}}</span></a>
+                                            <span>Administrator</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                </div>
+                        <span ng-click="dropProfileActive = !dropProfileActive; dropAppActive = false; dropHelpActive = false;" class="ico-arrow_collapse" ng-show="!dropProfileActive"></span>
+                        <span ng-click="dropProfileActive = !dropProfileActive; dropAppActive = false; dropHelpActive = false;" class="ico-arrow_expand" ng-show="dropProfileActive"></span>
+                        <!-- SunitaYadav  added class of animated fadeIn -->
+                    </li>
+
+                    <li ng-class="{'active': analysis=='analysis'}" ng-click="resetFilters()"><a href="#/sales/analysis/asset"><span>Analysis </span></a><span class="info-icon" uib-popover-template="'templates/analysis-tooltip.html'"></span></li>
+                    <li><a href="{{exploreLink}}"><span>Explore </span></a><span class="info-icon" uib-popover-template="'templates/explore-tooltip.html'"></span></li>
+                    <li class="dropdown main-nav-dropdown campaigns" ng-class="{'expanded': dropCampActive, 'active' : analysis=='campaign'}" ng-show="dashboard!=='services'">
+                        <div class="campaign-nav">
+                        <a href="" ng-click="dropCampActive = !dropCampActive;dropAppActive = false;dropHelpActive = false;" ><span>Campaigns </span>
+                        </a>
+
+                        <ul class="dropdown-menu animated animatedSlow fadeIn campaign-dropdown">
+                            <li class="dropdown-main-head"><a href="">All Campaigns</a>
+                                <ul>
+                                    <li class="dropdown-sub-head"><a href="">Recent Campaigns</a>
+                                        <ul class="dropdown-options">
+                                            <li ng-class="{
+                                                'active' : opportunitiesActive == 'drs'}" ng-click="resetFilters()"><a href="#/campaigns/securityRefresh">Security Refresh</a></li>
+												<li ng-class="{
+                                                'active' : opportunitiesActive == 'drs'}" ng-click="resetFilters()"><a href="#/campaigns/collaborationRefresh">Collaboration Refresh</a></li>
+                                            
+                                            <li ng-class="{
+                                                    'active' : opportunitiesActive == 'drs'}" ng-click="resetFilters()"><a href="#/sales/campaign/drs">Digital Ready Scorecard</a></li>
+                                            <li ng-class="{
+                                                    'active' : opportunitiesActive == 'ciscoOne'}" ng-click="resetFilters()"><a href="#/sales/campaign/ciscoOne">Cisco ONE</a></li>
+											<li><a href="#/campaigns/secondChance">Second Chance Attach/Renew</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                       </ul>
+                    </div>
+                        <span class="info-icon" uib-popover-template="'templates/campaign-tooltip.html'"></span>
+                        <span ng-click="dropCampActive = !dropCampActive; dropAppActive = false; dropHelpActive = false;" class="ico-arrow_collapse" ng-show="!dropCampActive"></span>
+                        <span ng-click="dropCampActive = !dropCampActive; dropAppActive = false; dropHelpActive = false;" class="ico-arrow_expand" ng-show="dropCampActive"></span>
+                    </li>
+                    <li><a href={{qandcLink}}><span>Qualifications </span></a><span class="info-icon" uib-popover-template="'templates/qualifications-tooltip.html'"></span></li>
+                    
+                </ul>
+                <ul class="nav navbar-nav collapse-nav bottom-fix">
+                    <li class="dropdown main-nav-dropdown app-dropup hidden-lg apps-mobile"  ng-class="{
+                            'expanded'
+                                    : dropAppActive}">
+                        <a href=""  ng-click="dropAppActive = !dropAppActive;
+                            dropCampActive = false;
+                            dropHelpActive = false;" >Apps
+                            <span class="ico-arrow_collapse" ng-if="!dropAppActive"></span>
+                            <span class="ico-arrow_expand" ng-if="dropAppActive"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-main-head" ng-class="{'active' : dashboard == 'sales'}" ng-click="viewPath('sales/analysis/asset');"><a target="_blank" href=""><span class="app-img"><img src="images/app-block.png" width="30"></span> <span class="app-heading"><h5>Cisco Ready Connected Experience</h5> <p>Provides a comprehensive view and analytic to Sales Leaders and Sales Teams on their Installed Base Opportunities and Performance related to Product Refresh, Services Renew and Attach</p></span></a></li>
+                            <li class="dropdown-main-head" ng-click="openCompetitiveDashboard();"><a target="_blank" href=""><span class="app-img"><img src="images/app-block.png" width="30"></span> <span class="app-heading"><h5>SFDC Competitive Dashboard</h5><p>Provides Sales leadership the ability to quickly inspect the SFDC competitive landscape</p></span></a></li>
+                            <li class="dropdown-main-head" ng-class="{'active' : dashboard == 'services'}" ng-click="viewPath('services/analysis/ts_renew/overview');"><a target="_blank" href=""><span class="app-img"><img src="images/app-block.png" width="30" /></span><span class="app-heading"><h5>Services Leadership Dashboard</h5><p>Provides a comprehensive view of Services installed base Opportunities for TS Renew & TS Attach.</p></span></a></li>
+                            <li class="dropdown-main-head"><a target="_blank" href="http://go2.cisco.com/CRReportingCenter"><span class="app-img"><img src="images/app-block.png" width="30" /></span><span class="app-heading"><h5>Reporting Center</h5><p>Provides fast and easy way to request Smart IB for Customer, Partner or Distributor.</p></span></a></li>
+                        </ul>
+                    </li>
+                    <li ng-class="{
+                            'active': analysis == 'bookmarks'}" ng-if="dashboard != 'services'"><a href="#/bookmarks">Bookmarks</a>
+                    </li>
+                    <li class="dropdown main-nav-dropdown announcements-dropup">
+                        <a  href="javascript:void(0)" class="help-link">
+                            Guide Me
+                        </a>
+                    </li>
+                    <li class="dropdown main-nav-dropdown help-dropup hidden-lg"  ng-class="{
+                            'expanded'
+                                    : dropHelpActive}">
+                        <a href=""  ng-click="dropHelpActive = !dropHelpActive;
+                            dropCampActive = false; dropAppActive = false;" >Help
+                            <span class="ico-arrow_collapse" ng-if="!dropHelpActive"></span>
+                            <span class="ico-arrow_expand" ng-if="dropHelpActive"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-main-head hidden"><a href="">Help</a></li>
+                            <li class="dropdown-sub-head"><a target="_blank" href="https://salesconnect.cisco.com/open.html?h=PAGE-5569" class="jive clearfix"><span class="learn-more">Learn More On</span> <img src="images/SalesConnect.svg"/></a></li>
+                            <li class="dropdown-sub-head"><a target="_blank" href="https://cisco.service-now.com/sp?id=search&bt=t&q=*&filter_string=serviceoffering:%27Cisco%20Ready%27">Report a problem</a></li>
+                            <li class="dropdown-sub-head"><a href="" onclick = "WalkMePlayerAPI.toggleMenu()">Guided Walk-thrus</a></li>
+                            <li class="dropdown-sub-head"><a href="mailto:ciscoready_training@cisco.com" class="borderB0 clearfix"><span>Need some training?</span></a></li>
+                            <li class="dropdown-sub-head"><a href="mailto:ciscoready_support@cisco.com" class="borderB0 clearfix"><span>Cisco Ready team</span></a></li>
+                            <li class="dropdown-sub-head">
+                                <div class="last-date">
+                                    <p>Last Data Refresh</p>
+                                    <span><strong>{{userData.dataLastRefreshedOn}}</strong> at <strong>17:15:24</strong>-<strong>PST</strong></span>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li class="dropdown main-nav-dropdown announcements-dropup" ng-if="dashboard == 'services'">
+                        <a href="" class="help-link">
+                            Announcements
+                        </a>
+                    </li> -->
+                    <li class="dropdown main-nav-dropdown announcements-dropup">
+                        <a href="https://pwc018.cloudapps.cisco.com/wsrp/pwc018/mobile/view/service/291050" class="help-link">
+                            Feedback
+                        </a>
+                    </li>
+                    <li ng-class="{
+                            'active': analysis == 'bookmarks'}" ng-if="dashboard != 'services'"><a href="#/bookmarks">Bookmarks</a></li>
+                    <li><a href="">Sign Out</a></li>
+
+                </ul>
+            </div><!--nav-collapse -->
+            <div ng-include src="'views/userAccess.html'">
+        </div><!--container-fluid -->
+    </nav>
+        <div class="headerdis overlay"></div>
+    <div ng-view></div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/d3-tip/d3-tip.js"></script>
+    <script src="bower_components/nya-bootstrap-select/dist/js/nya-bs-select.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="bower_components/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
+    <script src="bower_components/angular-click-outside/clickoutside.directive.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+    <script src="bower_components/table-to-json/lib/jquery.tabletojson.min.js"></script>
+    <script src="bower_components/angular-sessionstorage/angular-sessionstorage.js"></script>
+    <script src="bower_components/angularjs-slider/dist/rzslider.js"></script>
+    <script src="bower_components/tinycolor/tinycolor.js"></script>
+    <script src="bower_components/js-xlsx/dist/xlsx.core.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <!-- endbuild -->
+
+    <script src="scripts/owl.carousel.min.js"></script>
+     <script src="scripts/ag-grid-enterprise.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/script.js"></script>
+
+    <script src="scripts/controllers/ActionMetricsController.js"></script>
+    <script src="scripts/controllers/BookmarkController.js"></script>
+    <script src="scripts/controllers/BookmarksController.js"></script>
+    <script src="scripts/controllers/BookmarksDefinitionController.js"></script>
+    <script src="scripts/controllers/CiscoOneDefinitionController.js"></script>
+    <script src="scripts/controllers/ClearBookmarkController.js"></script>
+    <script src="scripts/controllers/DeleteBookmarkController.js"></script>
+    <script src="scripts/controllers/CompetitiveDashboardController.js"></script>
+    <script src="scripts/controllers/ContractController.js"></script>
+    <script src="scripts/controllers/ConvertOpportunityStepOneController.js"></script>
+    <script src="scripts/controllers/ConvertOpportunityStepTwoController.js"></script>
+    <script src="scripts/controllers/CreateEstimateCtrl.js"></script>
+    <script src="scripts/controllers/ConvertOpportunityStepThreeController.js"></script>
+    <script src="scripts/controllers/DefinitionController.js"></script>
+    <script src="scripts/controllers/MainController.js"></script>
+    <script src="scripts/controllers/OpportunityController.js"></script>
+    <script src="scripts/controllers/ModalInstanceCtrl.js"></script>
+    <script src="scripts/controllers/CampaignController.js"></script>
+    <script src="scripts/controllers/ProgressViewController.js"></script>
+    <script src="scripts/controllers/PresentationController.js"></script>
+    <script src="scripts/controllers/ProxyUserController.js"></script>
+    <script src="scripts/controllers/RequestReportController.js"></script>
+    <script src="scripts/controllers/SalesKitController.js"></script>
+    <script src="scripts/controllers/SaveBookmarkController.js"></script>
+    <script src="scripts/controllers/SecondChanceController.js"></script>
+    <script src="scripts/controllers/SecurityRefreshController.js"></script>
+    <script src="scripts/controllers/CollaborationRefreshController.js"></script>
+    <script src="scripts/controllers/allServicesController.js"></script>
+    <script src="scripts/controllers/ShareBookmarkController.js"></script>
+    <script src="scripts/controllers/ShowAllTechnologiesController.js"></script>
+    <script src="scripts/controllers/ShowTechnologiesController.js"></script>
+    <script src="scripts/controllers/CreatePipelineController.js"></script>
+    <script src="scripts/controllers/filterComponent.js"></script>
+    <script src="scripts/controllers/TotalAssetDefinitionController.js"></script>
+    <script src="scripts/controllers/serviceFilterComponent.js"></script>
+    <script src="scripts/controllers/ServiceController.js"></script>
+    <script src="scripts/controllers/ViewAppliedController.js"></script>
+    <script src="scripts/controllers/viewAppliedFilterController.js"></script>
+    <script src="scripts/controllers/viewAppliedServiceFilterController.js"></script>
+    <script src="scripts/controllers/SuccessMessageController.js"></script>
+    <script src="scripts/controllers/ErrorMessageController.js"></script>
+    <script src="scripts/controllers/UploadPIDController.js"></script>
+	<script src="scripts/controllers/OpportunityRange.js"></script>
+    <script src="scripts/controllers/CollabReportSuccessController.js"></script>
+	<script src="scripts/controllers/CollaborationRefreshController.js"></script>
+    
+    <script src="scripts/controllers/SubscriptionDefinitionController.js"></script>
+
+    <script src="scripts/directives/squareBlock.js"></script>
+    <script src="scripts/directives/actionTable.js"></script>
+    <script src="scripts/directives/angular-nicescroll.js"></script>
+    <script src="scripts/directives/barChart.js"></script>
+    <script src="scripts/directives/barChartTarget.js"></script>
+    <script src="scripts/directives/barDoubleChart.js"></script>
+    <script src="scripts/directives/barDoubleHorizontal.js"></script>
+    <script src="scripts/directives/barDoubleHorizontalStacked.js"></script>
+    <script src="scripts/directives/barDoubleHorizontalDRS.js"></script>
+    <script src="scripts/directives/barStacked.js"></script>
+    <script src="scripts/directives/barStackedDoubleHorizontal.js"></script>
+    <script src="scripts/directives/barStackedDoubleVertical.js"></script>
+    <script src="scripts/directives/barStackedHorizontal.js"></script>
+    <script src="scripts/directives/barStackedHorizontalVertical.js"></script>
+    <script src="scripts/directives/customCurrency.js"></script>
+    <script src="scripts/directives/directiveWriter.js"></script>
+    <script src="scripts/directives/lineChart.js"></script>
+    <script src="scripts/directives/lineChartRR.js"></script>
+    <script src="scripts/directives/numbersOnly.js"></script> <!-- Changes for DE156212 and DE155128 -->
+    <script src="scripts/directives/modal-transclude.js"></script>
+    <script src="scripts/directives/onFinishRender.js"></script>
+    <script src="scripts/directives/pieChart.js"></script>
+    <script src="scripts/directives/pieChartCustomerDetail.js"></script>
+    <script src="scripts/directives/showErrorsDirective.js"></script>
+    <script src="scripts/directives/cisco-loader.js"></script>
+    <script src="scripts/directives/owlCarousel.js"></script>
+    <script src="scripts/directives/stringToNumber.js"></script>
+
+    <script src="scripts/filters/bookmarkfilter.js"></script>
+    <script src="scripts/filters/capitalize.js"></script>
+    <script src="scripts/filters/darken.js"></script>
+    <script src="scripts/filters/lighten.js"></script>
+    <script src="scripts/filters/digits.js"></script>
+    <script src="scripts/filters/dotdot.js"></script>
+    <script src="scripts/filters/encodeURI.js"></script>
+    <script src="scripts/filters/formatGridValue.js"></script>
+    <script src="scripts/filters/formatValue.js"></script>
+    <script src="scripts/filters/keyValueInArray.js"></script>
+    <script src="scripts/filters/objectTotal.js"></script>
+    <script src="scripts/filters/searchTechnologies.js"></script>
+    <script src="scripts/filters/sumArchRouting.js"></script>
+    <script src="scripts/filters/sumByKey.js"></script>
+    <script src="scripts/lib/angular-nicescroll.js"></script>
+    <script src="scripts/lib/nya-bs-select.js"></script>
+    <script src="scripts/lib/tableHeadFixer.js"></script>
+
+    <script src="scripts/services/BookmarkServ.js"></script>
+    <script src="scripts/services/onbeforeloadFactory.js"></script>
+    <script src="scripts/services/FiltersServ.js"></script>
+    <script src="scripts/services/OpportunitiesServ.js"></script>
+    <script src="scripts/services/SfdcServ.js"></script>
+    <script src="scripts/services/sldService.js"></script>
+    <script src="scripts/services/PerformanceServ.js"></script>
+    <script src="scripts/services/ApiDispatcherServ.js"></script>
+    <script src="scripts/services/SFDCApiDispatcher.js"></script>
+    <script src="scripts/services/ConfigServ.js"></script>
+    <script src="scripts/services/RestUri.js"></script>
+    <script src="scripts/services/SecurityServ.js"></script>
+    <script src="scripts/services/OpportunityRangeService.js"></script>
+    <script src="scripts/services/secondChanceServ.js"></script>
+    <script src="scripts/services/ShareDataServ.js"></script>
+    <script src="scripts/services/UserServ.js"></script>
+    <script src="scripts/services/Utilities.js"></script>
+    <script src="scripts/services/GlobalBookmarkServ.js"></script>
+    <script src="scripts/services/interceptorFactory.js"></script>
+    <script src="scripts/services/securityRefreshServ.js"></script>   
+    <script src="scripts/services/CollaborationRefreshServ.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alasql@0.4.5/dist/alasql.min.js"></script>
+	<!-- For image download -->
+    <script src="scripts/dom-to-image.js"></script>
+  
+    
+    </body>
+</html>

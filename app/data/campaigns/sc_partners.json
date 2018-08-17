@@ -1,0 +1,22 @@
+{
+  "subParticipants": [
+    {
+      "group": "World Wide Tech",
+      "totalOpportunity": 190666.24,
+      "tsRenew": 13643226.26,
+      "tsAttach": 12450927.26,
+      "swssAttach": 1132341.42,
+      "swssRenew": 1671347.24
+    },
+    {
+      "group": "CDW",
+      "totalOpportunity": 180564.00,
+      "tsRenew": 23643226.26,
+      "tsAttach": 82450927.26,
+      "swssAttach": 4132341.42,
+      "swssRenew": 4671347.24
+    }
+  ]
+}
+
+

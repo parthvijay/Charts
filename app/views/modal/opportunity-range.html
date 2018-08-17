@@ -1,0 +1,53 @@
+<div class="modal-header">
+    <h1>Opportunity Range
+        <a href="javascript:void(0)" class="modal-close" ng-click="cancel()">
+            <span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+        </a>
+    </h1>
+</div>
+<div class="modal-body">
+    <!-- <span class="pull-right">Values are in Percentages</span> -->
+    <div class="opportunityRange">
+        <ul>
+            <!-- <li class="form-group" ng-repeat="r in rangeList track by $index">
+                <h5>{{r.title}}</h5>
+                <div class="insight-range-slider">
+                    <rzslider rz-slider-model="r.minValue" rz-slider-high="r.maxValue" rz-slider-options="rangeOptions(rangeList, r.minValue, r.maxValue, $index)"></rzslider>
+                </div>
+                <!-- <div class="range-slider-value">
+                    <span class="">Min Value: <input class="form-control" type="count" ng-model="lowestValue[$index]" /></span>
+                    <span class="">Max Value: <input class="form-control" type="count" ng-model="highestValue[$index]" /></span>
+                </div> -->
+            <!--</li> -->
+
+            <li class="form-group">
+                <h5>TS Attach</h5>
+                <div class="insight-range-slider">
+                    <rzslider rz-slider-model="optionsTsAttach.minValue" rz-slider-high="optionsTsAttach.maxValue" rz-slider-options="optionsTsAttach.options"></rzslider>
+                </div>
+            </li>
+            <li class="form-group">
+                <h5>TS Renew</h5>
+                <div class="insight-range-slider">
+                    <rzslider rz-slider-model="optionsTsRenew.minValue" rz-slider-high="optionsTsRenew.maxValue" rz-slider-options="optionsTsRenew.options"></rzslider>
+                </div>
+            </li>
+            <li class="form-group">
+                <h5>SWSS Attach</h5>
+                <div class="insight-range-slider">
+                    <rzslider rz-slider-model="optionsSwssAttach.minValue" rz-slider-high="optionsSwssAttach.maxValue" rz-slider-options="optionsSwssAttach.options"></rzslider>
+                </div>
+            </li>
+            <li class="form-group">
+                <h5>SWSS Renew</h5>
+                <div class="insight-range-slider">
+                    <rzslider rz-slider-model="optionsSwssRenew.minValue" rz-slider-high="optionsSwssRenew.maxValue" rz-slider-options="optionsSwssRenew.options"></rzslider>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="clearfix modal-footer">
+    <a href="" class="button stroke-btn blue marginR10 marginB10" ng-click="cancel()">Cancel</a>
+    <a href="" class="button filled-btn blue" ng-click="close()">Apply</a>
+</div>

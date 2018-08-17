@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Account Manager",
+        "type": "",
+        "list_annual": "List Price",
+        "total": "",
+        "net_price": "Net Price",
+        "net_annual": "",
+        "multiyear": "",
+        "active": "Contract Line Status",
+        "expired": "",
+        "overdue": "",
+        "signed": ""
+    },
+    {
+        "name": "",
+        "type": "",
+        "list_annual": "Annualized",
+        "total": "Total",
+        "net_annual": "Annual",
+        "multiyear": "Multi Year",
+        "active": "Active",
+        "expired": "Expired",
+        "overdue": "Overdue",
+        "signed": "Signed"
+    }
+]

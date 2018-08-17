@@ -1,0 +1,40 @@
+<div id="wrapper" class="global-bookmarks sidebar-active">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper" class="bookmark-outer filter-tab">
+        <div class="navigation-col">
+            <h1>Bookmarks <span class="ico-dropdown"></span></h1>
+            <ul class="left-nav">   
+                <li class="active"><a href="javascript:void(0)">My Bookmarks<span>2</span></a></li>
+                <li><a href="javascript:void(0)">Favorite Bookmarks <span>1</span></a></li>
+                <li><a href="javascript:void(0)">Shared with Me <span>2</span></a></li>
+                <li><a href="javascript:void(0)">Global Bookmarks <span>1</span></a></li>
+            </ul>
+            <div class="recent-bookmark">
+            <h1>Recent Bookmarks</h1>
+            <ul class="left-nav">   
+                <li><a href="javascript:void(0)">Collab for Refresh FY17Q3</a></li>
+                <li><a href="javascript:void(0)">Security for Refresh FY17Q3</a></li>
+                <li><a href="javascript:void(0)">Collab for Renew FY17Q3</a></li>
+                <li><a href="javascript:void(0)">Collab for Attach FY17Q3</a></li>
+            </ul>
+        </div>
+        </div>     
+    </div>
+    <!-- sidebar-wrapper -->
+    <!-- Page Content -->
+    <div id="page-content-wrapper" class="global-bookmark">
+        <div class="container-fluid">
+            <div class="myBookmark-section">
+                <div class="bookmarks-list-view">
+                    <div class="tiles-heading">Recent</div>
+                    <div class="bookmark-tile" ng-repeat="bookmark in allBookmarks.bookmarks">
+                        <h1><a href="" ng-click="selectBookmark(bookmark.name, 'redirect')">{{bookmark.name}}</a></h1>
+                        <span class="by-name">By: {{bookmark.by}}</span><span class="fromTxt">From: {{bookmark.from.appUrl}}</span><span class="createdTxt">Created: {{bookmark.date}}</span>
+                        <div class="clearfix"></div>
+                        <p>{{bookmark.message}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- page-content-wrapper -->
+</div><!-- wrapper -->

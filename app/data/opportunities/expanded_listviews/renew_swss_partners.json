@@ -1,0 +1,26 @@
+[
+        {
+            "name": "Partners",
+            "type": "",
+            "list_price": "List Price",
+            "net_price": "Net Price",
+            "net_annual": "",
+            "multiyear": "",
+            "active": "Contract Line Status",
+            "expired": "",
+            "overdue": "",
+            "signed": ""
+        },
+        {
+            "name": "",
+            "type": "",
+            "net_annual": "Annualized",
+            "net_price": "Total",
+            "net_annual": "Annual",
+            "multiyear": "Multi Year",
+            "active": "Active",
+            "expired": "Expired",
+            "overdue": "Overdue",
+            "signed": "Signed"
+        }
+    ]

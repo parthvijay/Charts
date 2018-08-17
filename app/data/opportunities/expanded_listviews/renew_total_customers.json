@@ -1,0 +1,38 @@
+[
+    {
+      "tableItemName": "Customers",
+      "listPriceTotalRenew": "List Price",
+      "listPriceTSRenew": "",
+      "listPriceSWSSRenew": "",
+      "totalRenewNetPriceTotal": "Total Renew NET Price",
+      "totalRenewNetPriceAnnual": "",
+      "totalRenewNetPriceMultiYear": "",
+      "swssRenewNetPriceTotal": "SWSS Renew NET Price",
+      "swssRenewNetPriceAnnual": "",
+      "swssRenewNetPriceMultiYear": "",
+      "tsRenewNetPriceTotal": "TS Renew NET Price",
+      "tsRenewNetPriceAnnual": "",
+      "tsRenewNetPriceMultiYear": "",
+      "totalRenewTotalContracts": "Total Renew",
+      "totalRenewTotalLineItems": "",
+      "totalRenewConvertedToPipeline": ""
+    },
+    {
+      "tableItemName": "",
+      "listPriceTotalRenew": "Total Renew",
+      "listPriceTSRenew": "TS Renew",
+      "listPriceSWSSRenew": "SWSS Renew",
+      "totalRenewNetPriceTotal": "Total",
+      "totalRenewNetPriceAnnual": "Annual",
+      "totalRenewNetPriceMultiYear": "Multi Year",
+      "swssRenewNetPriceTotal": "Total",
+      "swssRenewNetPriceAnnual": "Annual",
+      "swssRenewNetPriceMultiYear": "Multi Year",
+      "tsRenewNetPriceTotal": "Total",
+      "tsRenewNetPriceAnnual": "Annual",
+      "tsRenewNetPriceMultiYear": "Multi Year",
+      "totalRenewTotalContracts": "Total Contracts",
+      "totalRenewTotalLineItems": "Total Line Items",
+      "totalRenewConvertedToPipeline": "Converted To Pipeline"
+    }
+  ]

@@ -1,0 +1,273 @@
+{
+  "header": {
+    "no_of_customers": 1160,
+    "opportunity_total": 1731301413
+  },
+  "slides": [
+    {
+      "title": "ASA LDOS/LEGACY",
+      "dataset": {
+        "opportunity": 871000000,
+        "sfdc pipeline": 112000000
+      }
+    },
+    {
+      "title": "IPS LDOS",
+      "dataset": {
+        "opportunity": 0,
+        "sfdc pipeline": 112000000
+      }
+    },
+    {
+      "title": "ASA5585",
+      "dataset": {
+        "opportunity": 0,
+        "sfdc pipeline": 0
+      }
+    },
+    {
+      "title": "ANY CONNECT",
+      "dataset": {
+        "opportunity": 871000000,
+        "sfdc pipeline": 0
+      }
+    },
+    {
+      "title": "EMAIL LDOS",
+      "dataset": {
+        "opportunity": 871000000,
+        "sfdc pipeline": 112000000
+      }
+    },
+    {
+      "title": "ASA LDOS/LEGACY",
+      "dataset": {
+        "opportunity": 871000000,
+        "sfdc pipeline": 112000000
+      }
+    },
+    {
+      "title": "IPS LDOS",
+      "dataset": {
+        "opportunity": 871000000,
+        "sfdc pipeline": 112000000
+      }
+    },
+    {
+      "title": "ASA5585",
+      "dataset": {
+        "opportunity": 871000000,
+        "sfdc pipeline": 112000000
+      }
+    },
+    {
+      "title": "ANY CONNECT",
+      "dataset": {
+        "opportunity": 871000000,
+        "sfdc pipeline": 112000000
+      }
+    },
+    {
+      "title": "EMAIL LDOS",
+      "dataset": {
+        "opportunity": 871000000,
+        "sfdc pipeline": 112000000
+      }
+    }
+  ],
+  "columnsData": [
+    {
+      "headerName": "SALES LEVEL (SAV NAME/ SAV ID)",
+      "headerClass": "alignCenterSalesLevel",
+      "width": 300,
+      "height": 100,
+      "pinned": "left",
+      "cellRenderer": "agGroupCellRenderer",
+      "field": "group",
+      "cellRendererParams": {
+        "suppressCount": true,
+        "checkbox":true
+        }
+    },
+    {
+      "headerName": "TOTAL (FY15-18) NET BOOKINGS",
+      "headerClass": "alignCenter",
+      "width": 170,
+      "pinned": "left",
+      "field": "totalNetBookings",
+      "cellClass": "net-bookings-col"
+    },
+    {
+      "headerName": "SECURITY ARCH REFRESH",
+      "headerClass": "topHead",
+      "children": [
+        {
+          "headerName": "ASA",
+          "headerClass": "middleHead",
+          "children": [
+            {
+              "headerName": "OPPORTUNITY",
+              "field": "sar_asa_opportunity",
+              "cellClass": "ag-numeric-cell",
+              "width": 150
+            },
+            {
+              "headerName": "SFDC PIPELINE",
+              "field": "sar_asa_pipeline",
+              "cellClass": "ag-numeric-cell",
+              "width": 150
+            }
+          ]
+        },
+        {
+          "headerName": "ACS",
+          "headerClass": "middleHead",
+          "children": [
+            {
+              "headerName": "OPPORTUNITY",
+              "field": "sar_acs_opportunity",
+              "cellClass": "ag-numeric-cell",
+              "width": 150
+            },
+            {
+              "headerName": "SFDC PIPELINE",
+              "field": "sar_acs_pipeline",
+              "cellClass": "ag-numeric-cell",
+              "width": 150
+            }
+          ]
+        },
+        {
+          "headerName": "IPS",
+          "headerClass": "middleHead",
+          "children": [
+            {
+              "headerName": "OPPORTUNITY",
+              "field": "sar_ips_opportunity",
+              "cellClass": "ag-numeric-cell",
+              "width": 150
+            },
+            {
+              "headerName": "SFDC PIPELINE",
+              "field": "sar_ips_pipeline",
+              "cellClass": "ag-numeric-cell",
+              "width": 150
+            }
+          ]
+        },
+        {
+          "headerName": "ASA5585",
+          "headerClass": "middleHead",
+          "children": [
+            {
+              "headerName": "OPPORTUNITY",
+              "field": "sar_asa5585_opportunity",
+              "cellClass": "ag-numeric-cell",
+              "width": 150
+            },
+            {
+              "headerName": "SFDC PIPELINE",
+              "field": "sar_asa5585_pipeline",
+              "cellClass": "ag-numeric-cell",
+              "width": 150
+            }
+          ]
+        },
+        {
+          "headerName": "ANY CONNECT",
+          "headerClass": "middleHead",
+          "children": [
+            {
+              "headerName": "OPPORTUNITY",
+              "field": "sar_anyconnect_opportunity",
+              "cellClass": "ag-numeric-cell",
+              "width": 150
+            },
+            {
+              "headerName": "SFDC PIPELINE",
+              "field": "sar_anyconnect_pipeline",
+              "cellClass": "ag-numeric-cell",
+              "width": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headerName": "SECURITY CROSS SELL",
+      "width": 400,
+      "headerClass": "topHead",
+      "children": [
+        {
+          "headerName": "AMP-EP (BOOKINGS)",
+          "headerClass": "secondHead",
+          "field": "scc_amp_ep",
+          "cellClass": "ag-numeric-cell",
+          "width": 150
+        },
+        {
+          "headerName": "STEALTH WATCH (BOOKINGS)",
+          "headerClass": "secondHead",
+          "field": "scc_stealth_watch",
+          "cellClass": "ag-numeric-cell",
+          "width": 150
+        },
+        {
+          "headerName": "UMBERELLA (BOOKINGS)",
+          "headerClass": "secondHead",
+          "field": "scc_umberella",
+          "cellClass": "ag-numeric-cell",
+          "width": 150
+        }
+      ]
+    }
+  ],
+  "rowsData": [
+    {
+      "group": "COMMERCIAL CANADA",
+      "totalNetBookings": 398456.24,
+      "sar_asa_opportunity": 23643226.26,
+      "sar_asa_pipeline": 2334382.42,
+      "sar_acs_opportunity": 85632826.26,
+      "sar_acs_pipeline": 23345382.42,
+      "sar_ips_opportunity": 82450927.26,
+      "sar_ips_pipeline": 4132341.42,
+      "sar_asa5585_opportunity": 345234.56,
+      "sar_asa5585_pipeline": 4671347.24,
+      "sar_anyconnect_opportunity": 345732.00,
+      "sar_anyconnect_pipeline": 46632.24,
+      "scc_amp_ep": 4562345.00,
+      "scc_stealth_watch": 45645621.00,
+      "scc_umberella": 0,
+      "participants": [
+        {}
+      ]
+    },
+    {
+      "group": "PUBLIC SECTOR",
+      "totalNetBookings": 74567562.24,
+      "sar_asa_opportunity": 4563562.26,
+      "sar_asa_pipeline": 45634567.42,
+      "sar_acs_opportunity": 6574762.26,
+      "sar_acs_pipeline": 78567824.42,
+      "sar_ips_opportunity": 98765785.26,
+      "sar_ips_pipeline": 6784345.42,
+      "sar_asa5585_opportunity": 3452345.32,
+      "sar_asa5585_pipeline": 436764.24,
+      "sar_anyconnect_opportunity": 7685634.00,
+      "sar_anyconnect_pipeline": 466573.24,
+      "scc_amp_ep": 3457632.00,
+      "scc_stealth_watch": 7865345.00,
+      "scc_umberella": 0,
+      "participants": [
+        {}
+      ]
+    }
+  ]
+}
+
+
+
+
+
+

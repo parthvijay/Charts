@@ -1,0 +1,412 @@
+<div id="sidebar-wrapper" class="filter-tab global-filter">
+    <div class="sidebar-brand clearfix">
+        <ul class="filter-tabs" ng-init="filterTabActive = 'filters'">
+            <li ng-class="{'active' : filterTabActive == 'filters'}">
+                <a href="" ng-click="filterTabActive = 'filters'">Filters</a>
+            </li>
+            <!--<li ng-class="{'active' : filterTabActive == 'insights'}"><a href="" ng-click="increaseCounterForPropFilters(); filterTabActive = 'insights'">Insights</a></li>-->
+        </ul>
+        <a href="">
+            <span ng-click="vm.sidebarActiveToggle(false);" class="ico-close_bg">
+                <span class="path1 hvr-icon-pop"></span>
+                <span class="path2"></span>
+            </span>
+        </a>
+    </div>
+
+    <ul class="sidebar-nav" ng-nicescroll nice-option="niceScrollOptions" ng-if="filterTabActive === 'filters'">
+        <li id="filters" class="form-group" ng-class="{'active': c.active, 'collapsed' : !c.active}" ng-repeat="c in vm.advancedFilters"
+            ng-hide="showDataSetFilters(c)">
+            <a href="" ng-click="vm.toggleVar($event, c);">{{c.title}}
+                <span ng-if="!c.active" class="ico-arrow_collapse"></span>
+                <span ng-if="c.active" class="ico-arrow_expand"></span>
+            </a>
+
+            <div class="selectbox-container dropdown-collapse" ng-if="c.type === 'dropdown'">
+                <div class="upload-file" ng-if="c.title === 'Product'">
+                    <a class="" ng-click="openPIDUpload()">Upload PID List</a>
+                </div>
+                <div ng-repeat="f in c.levels track by $index" ng-if="f.length && !hideFiltersForTab(c.levels_name[$index])" ng-init="multiple = vm.isMultiple(c, $index)"
+                    click-outside="checkIfSAV(c, $index)">
+                    <!-- Change for overlapping checkbox under territory coverage filter  -->
+                    <hr ng-if="vm.showBorder(c, $index)" />
+                    <div ng-hide="vm.filtersServ.disableFiltersForTab(c.levels_name[$index])">{{c.levels_name[$index]}}
+                        <span style="color: #efb73e" ng-if="c.levels_name[$index] === 'Product ID' && pidFiltersData.pidCount">
+                            <!-- ({{pidFiltersData.pidCount + " PIDs"}})-->({{c.selected[3].length + " PIDs"}})</span>
+                    </div>
+                    <!--Changes for Partner filter -->
+                    <ol class="nya-bs-select check-in " ng-class="{'open': (vm.isPartnerSearch && $index === 5 && c.slug === 'account') || (vm.isSavSearch && $index === 0 && c.slug === 'account')}"
+                        data-multiple="true" live-search="{{c.searchable[$index]}}" no-search-title="No Search Results" actions-box="true"
+                        ng-model="c.selected[$index]" ng-disabled="{{f[0].selected}}" ng-click="changeFilterSelection(c, $index)"
+                        ng-change="vm.isChanged(c, $index); vm.getFiltersCount(vm.advancedFilters)" data-size="5" disabled="c.disabled[$index]"
+                        ng-hide="vm.filtersServ.disableFiltersForTab(c.levels_name[$index])" data-title="Select {{c.levels_name[$index]}}">
+                        <div class="bs-searchbox bs-searchbox-partner" ng-if="c.search_api[$index]" ng-init="movePartnerSearchDiv()">
+                            
+                            <input ng-if="$index === 6" id="{{c.slug + 'Filters_' + $index}}" type="text" class="form-control" placeholder="Search for Partner"
+                                ng-model="c.partnerSearch" ng-model-options="{ debounce: 1000 }" ng-change="filterPartnerSearch(c, $index)">
+
+                            <input ng-if="$index === 0 && c.slug !== 'services'" id="{{c.slug + 'Filters_' + $index}}" type="text" class="form-control"
+                                placeholder="Search for GU Name" ng-model="c.searchStr" ng-model-options="{ debounce: 1000 }"
+                                ng-change="vm.productSearch(c, $index)">
+
+                            <input ng-if="$index === 1 && c.slug !== 'services'" id="{{c.slug + 'Filters_' + $index}}" type="text" class="form-control"
+                                placeholder="Search for SAV Account" ng-model="c.savSearch" ng-model-options="{ debounce: 1000 }"
+                                ng-change="filterSavSearch(vm.advancedFilters[0].selected[6],c, $index)">
+
+                            <input ng-if="$index === 2 && c.slug !== 'services'" id="{{c.slug + 'Filters_' + $index}}" type="text" class="form-control"
+                                placeholder="Search" ng-model="c.pfSearch" ng-model-options="{ debounce: 1000 }" ng-change="vm.productSearch(c,$index)">
+
+                            <input ng-if="$index === 3" id="{{c.slug + 'Filters_' + $index}}" type="text" class="form-control" placeholder="Search" ng-model="c.pidSearch"
+                                ng-model-options="{ debounce: 1000 }" ng-change="vm.productSearch(c,$index)">
+
+                            <input ng-if="$index === 0 && c.slug === 'services'" id="{{c.slug + 'Filters_' + $index}}" type="text" class="form-control"
+                                placeholder="Search Contract Type" ng-model="c.contractTypeSearch" ng-model-options="{ debounce: 1000 }"
+                                ng-change="vm.filterServiceSearch(c,$index)">
+
+                            <input ng-if="$index === 1 && c.slug === 'services'" id="{{c.slug + 'Filters_' + $index}}" type="text" class="form-control"
+                                placeholder="Search for Contract Number" ng-model="c.contractNumSearch" ng-model-options="{ debounce: 1000 }"
+                                ng-change="vm.filterServiceSearch(c,$index)">
+
+                            <input ng-if="$index === 2 && c.slug === 'services'" id="{{c.slug + 'Filters_' + $index}}" type="text" class="form-control"
+                                placeholder="Search for Service SO" ng-model="c.soNumSearch" ng-model-options="{ debounce: 1000 }"
+                                ng-change="vm.filterServiceSearch(c,$index)">
+
+                            <span class="ico-search form-control-search"></span>
+                        </div>
+                        <li class="nya-bs-option form-group sub-filter select-checkbox" data-value="" ng-if="!multiple">
+                            <input type="checkbox">
+                            <label>
+                                <a>Select {{c.levels_name[$index]}}</a>
+                            </label>
+                        </li>
+                        <li class="nya-bs-option form-group sub-filter select-checkbox " ng-class="{disabled: o.keys === 'No Search Results'}" data-nya-bs-option="o in f group by o.parent"
+                            data-value="o.keys">
+                            <span ng-if="o.parent" class="dropdown-header select-sub-heading">{{$group}}</span>
+                            <input type="checkbox" ng-if="o.keys != 'No Search Results'">
+                            <!-- removing Collaboration and Security from the list, when you are in (Subscr> Other) subTab -->
+                            <label ng-if="(activeSubTab === 'other' && !['Collaboration', 'Security'].includes(o.keys) || activeSubTab !== 'other')">
+                                <span></span><a>{{o.keys}}</a><b ng-if="o.name">{{o.name}}</b><i ng-if="o.location">{{o.location}}</i>
+                            </label>
+                        </li>
+                    </ol>
+                    <!-- End of Territory Coverage change -->
+                    <!--<ol class="nya-bs-select check-in " ng-if = "c.levels_name[$index]== 'Partner'" ng-model="c.selected[$index]" disabled = "true"  data-size="5" data-title="Select Partner">-->
+                </div>
+            </div>
+            <!-- Date filters -->
+            <div class="date-filter dropdown-collapse" ng-if="c.type === 'date'">
+                <ul>
+                    <li class="form-group" ng-class="{'active': d.active, 'collapsed' : !d.active}" ng-repeat="d in c.categories track by $index">
+                        <a href="" ng-click="vm.toggleVar($event, d);" ng-class="{'disabled':$root.dashboard === 'secondChanceController' && ($index === 1 || $index === 2 || $index === 3 )}">{{d.title}}
+                            <span class="info-popover-outer">
+                                <span class="info-popover">
+                                    <span class="info-icon" ng-if="$index === 2" uib-popover-template="'templates/bookingDate-tooltip.html'"></span>
+                                </span>
+                            </span>
+                            <span class="info-popover-outer">
+                                <span class="info-popover">
+                                    <span class="info-icon" ng-if="$index === 3" uib-popover-template="'templates/endDate-tooltip.html'"></span>
+                                </span>
+                            </span>
+                            <span ng-if="!d.active" class="ico-arrow_collapse"></span>
+                            <span ng-if="d.active" class="ico-arrow_expand"></span>
+                        </a>
+                        <div class="ldos-date">
+                            <ul class="opp-per-list">
+                                <!-- Changes for enabling Fixed dates -->
+                                <li class="left-tab" ng-model="fixedDate" ng-click="vm.datesToggle('fixedDate',d)" ng-class="{'active': d.dates == 'fixedDate'}">
+                                    <a>Fixed Date within</a>
+                                </li>
+                                <li class="right-tab" ng-model="relativeDate" ng-click="vm.datesToggle('relativeDate',d)" ng-class="{'active': d.dates == 'relativeDate'}">
+                                    <a>Relative Date within</a>
+                                </li>
+                            </ul>
+                            <div class="clearfix date-picker" ng-show="d.dates == 'fixedDate'">
+                                <div class="input-drop date-input first" data-ng-class="{'input-datepicker': d.startDate}">
+                                    <p class="input-group calender-input">
+                                        <input type="text" placeholder="Select a Date" uib-datepicker-popup="dd-MMM-yyyy" ng-model="d.fixedDate" ng-click="vm.startDate(d)"
+                                            is-open="d.startDate" readonly="readonly" datepicker-options="dateOptions.startDate"
+                                            close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" 
+                                            ng-change="vm.changeMinAndMaxDates(d);vm.getFiltersDropdown(c, $index + 1, $event, 'change')" />
+                                        <!-- <span class="input-group-btn"> -->
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default calender-btn" ng-click="vm.startDate(d)">
+                                                <i class="ico-calendar"></i>
+                                            </button>
+                                        </span>
+                                    </p>
+                                    <span class="filter-clear-date" ng-if="d.fixedDate" ng-click="clearStartDate(d)">Clear</span>
+                                </div>
+
+                                <div class="input-drop date-input end-date" data-ng-class="{'input-datepicker': d.endDate}">
+                                    <p class="input-group calender-input">
+                                        <input type="text" placeholder="Select a Date" uib-datepicker-popup="dd-MMM-yyyy" ng-model="d.relativeDate" ng-click="vm.endDate(d)"
+                                            is-open="d.endDate" readonly="readonly" datepicker-options="vm.dateOptions.endDate"
+                                            close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" 
+                                            ng-change="vm.getFiltersDropdown(c, $index + 1, $event, 'change')" />
+                                        <!-- <span class="input-group-btn"> -->
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default calender-btn" ng-click="vm.endDate(d)">
+                                                <i class="ico-calendar"></i>
+                                            </button>
+                                        </span>
+                                    </p>
+                                    <span class="filter-clear-date" ng-if="d.relativeDate" ng-click="clearEndDate(d)">Clear</span>
+                                </div>
+                            </div>
+                            <div class="clearfix value-int" ng-show="d.dates == 'relativeDate'">
+                                <form class="form-inline" id="myform">
+                                    <div class="form-group" style="position: relative;">
+                                        <label>Range</label>
+
+                                        <input type="text" ng-model="d.rangeFrom" placeholder="0" class="form-control" ng-change="vm.getFiltersDropdown(c, $index + 1, $event, 'change')"
+                                            ng-disabled="d.isRangeFrom === true" maxlength="{{d.rangeFrom < 0 ? 3 :2}}" numbers-only>
+
+                                        <div class="text">to</div>
+                                        <label class="sr-only"></label>
+                                        <!-- Change for date filter  -->
+                                        <input type="text" ng-model="d.rangeTo" placeholder="2" class="form-control" 
+                                        ng-class="{'message-border': vm.isDateError(d)}" ng-change="vm.getFiltersDropdown(c, $index + 1, $event, 'change')"
+                                            ng-disabled="d.isRangeTo === true" maxlength="{{d.rangeTo < 0 ? 3 :2}}" numbers-only>
+
+                                        <div class="popover bottom" ng-show="vm.isDateError(d)">
+                                            <div class="arrow"></div>
+                                            <div class="popover-inner">
+                                                <p>Cannot be less than start by</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group marginLR selectbox-container">
+                                        <label>Period</label>
+                                        <!-- <ol class="nya-bs-select" ng-model="d.period" data-size="5" data-title="Select" ng-change="vm.getFiltersDropdown(c, $index + 1, $event, 'change')" ng-disabled="d.isPeriod === true"> Change for date filter - Sindhu -->
+                                        <div class="sub-filter">
+                                            <!-- Changes for disabling period field for collab bookmarks -->
+                                            <ul class="nav nav-pills" ng-disabled="d.isPeriod === true" ng-style="vm.disablePeriodForCollabBkmrk(d)">
+                                                <li ng-repeat="a in d.period" ng-click="vm.period(a,d)" ng-class="{'active':d.selected === a} ">
+                                                    <a>{{a}}</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of Date filters -->
+            <!--Status Filters -->
+            <div class="coverage-status dropdown-collapse" ng-if="c.type === 'status'">
+                <ul class="sub-filter">
+                    <li class="form-group" ng-repeat="d in c.categories" ng-class="{'disableStatus': disableSweep(d.title)}">
+                        <label class="radio marginL" ng-class="{'disabled':$root.dashboard === 'secondChanceController' && $index === 0}">{{d.title}}</label>
+                        <ul class="nav nav-pills">
+                            <li class="border-right" ng-class="{'active': d.selected == e}" ng-click="d.selected = e; vm.getFiltersDropdown(c, $index + 1, $event, 'click')"
+                                ng-repeat="e in c.options">
+                                <a href="" ng-class="{'disabled':$root.dashboard === 'secondChanceController' && ($index === 0 || $index === 1 || $index === 2) && d.title === 'Coverage'}">{{e}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--End of Status Filters -->
+            <!--Dataset Filters -->
+            <div class="dataset-filter dropdown-collapse" ng-if="c.type == 'dataset'">
+                <a class="reset-data" href="javascript:void(0)" data-ng-click="resetYear(c)">Reset</a>
+                <ul class="sub-filter clearfix">
+                    <li class="form-group" ng-repeat="d in c.categories">
+                        <label class="radio marginL">{{d.title}}</label>
+                        <div class="count-col">
+                            <input type="number" name="d.years.from" string-to-number class="form-control" ng-model="d.years.from" ng-disabled="d.disabled[0]"
+                                maxlength="4" onkeydown="return false" ng-change="vm.getFiltersDropdown(c, $index + 1, $event, '');vm.isDatsetError(d)"
+                                data-ng-class="{'message-border': d.years.from < 0 || d.years.from ==='0000' || d.years.from === '-000' || !d.years.from.length || d.years.from <= '1995'}"
+                                numbers-only>
+                        </div>
+                        <div class="text">to</div>
+                        <div class="count-col">
+                            <input type="number" name="d.years.to" string-to-number class="form-control" ng-model="d.years.to" ng-disabled="d.disabled[0]"
+                                maxlength="4" onkeydown="return false" ng-change="vm.getFiltersDropdown(c, $index + 1, $event, '');vm.isDatsetError(d)"
+                                data-ng-class="{'message-border': d.years.to < 0 || d.years.to ==='0000' || d.years.to === '-000' || !d.years.to.length || d.years.to >= '2020'}"
+                                numbers-only>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--End of Dataset Filters -->
+            <!--Insight Filters -->
+            <div class="insight dropdown-collapse" ng-if="c.type == 'insights'">
+                <ul class="sub-filter">
+                    <li class="form-group" ng-class="{'active' : filtersServ.prop_1.active}" ng-init="filtersServ.prop_1.active = true">
+                        <a href="" ng-click="toggleVar($event, filtersServ.prop_1);">Propensity to Refresh
+                            <span ng-if="!filtersServ.prop_1.active" class="ico-arrow_collapse"></span>
+                            <span ng-if="filtersServ.prop_1.active" class="ico-arrow_expand"></span>
+                        </a>
+                        <div class="insight-filter">
+                            <div class="insight-range-slider">
+                                <rzslider rz-slider-model="propensityToRefresh.minValue" rz-slider-high="propensityToRefresh.maxValue" rz-slider-options="propensityToRefresh.options">
+                                </rzslider>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="form-group" ng-class="{'active': filtersServ.prop_2.active}" ng-init="filtersServ.prop_2.active = true">
+                        <a href="" ng-click="toggleVar($event, filtersServ.prop_2);">
+                            <span class="dbl-title">Propensity for TS Attach
+                                <br>
+                                <i>(US Commercial Only)</i>
+                            </span>
+                            <span ng-if="!filtersServ.prop_2.active" class="ico-arrow_collapse"></span>
+                            <span ng-if="filtersServ.prop_2.active" class="ico-arrow_expand"></span>
+                        </a>
+                        <div class="insight-filter">
+                            <div class="insight-range-slider">
+                                <rzslider rz-slider-model="propensityToTSAttach.minValue" rz-slider-high="propensityToTSAttach.maxValue" rz-slider-options="propensityToTSAttach.options">
+                                </rzslider>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <!-- for propensity-->
+
+        <li id="filters" class="form-group" ng-if="dashboard != 'services' && (vm.showRefreshInsightFilter || vm.showTSAttachInsightFilter) || fromBookmark"
+            ng-class="{'active': filtersServ.insightActive, 'collapsed' : !filtersServ.insightActive}" ng-init="filtersServ.insightActive = false">
+            <a href="" ng-click="filtersServ.insightActive = !filtersServ.insightActive">Insights
+                <span ng-if="!filtersServ.insightActive" class="ico-arrow_collapse"></span>
+                <span ng-if="filtersServ.insightActive" class="ico-arrow_expand"></span>
+            </a>
+
+            <div class="insight dropdown-collapse">
+                <ul class="sub-filter">
+                    <li class="form-group" ng-if="vm.showRefreshInsightFilter || fromBookmark" ng-class="{'active': prop_1.active}" ng-init="prop_1.active = false">
+                        <a href="" ng-click="vm.toggleVar($event, prop_1);">
+                            Propensity to Refresh
+                            <span ng-if="!prop_1.active" class="ico-arrow_collapse"></span>
+                            <span ng-if="prop_1.active" class="ico-arrow_expand"></span>
+                        </a>
+                        <div class="insight-filter">
+                            <div class="insight-range-slider">
+                                <rzslider rz-slider-model="vm.propensityToRefresh.minValue" rz-slider-high="vm.propensityToRefresh.maxValue" rz-slider-options="vm.propensityToRefresh.options">
+                                </rzslider>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="form-group" ng-if="vm.showTSAttachInsightFilter || fromBookmark" ng-class="{'active': prop_2.active}" ng-init="prop_2.active = false">
+                        <a href="" ng-click="vm.toggleVar($event, prop_2);">
+                            <span class="dbl-title">Propensity for TS Attach
+                                <br>(US Commercial Only)</span>
+                            <span ng-if="!prop_2.active" class="ico-arrow_collapse"></span>
+                            <span ng-if="prop_2.active" class="ico-arrow_expand"></span>
+                        </a>
+                        <div class="insight-filter">
+                            <div class="insight-range-slider">
+                                <rzslider rz-slider-model="vm.propensityToTSAttach.minValue" rz-slider-high="vm.propensityToTSAttach.maxValue" rz-slider-options="vm.propensityToTSAttach.options">
+                                </rzslider>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <!-- <ul class="sidebar-nav" ng-nicescroll nice-option="niceScrollOptions" ng-if="filterTabActive == 'insights'">
+             <li class="form-group allow-toggle" ng-class="{
+                'active'
+                        : prop_1.active}"  ng-init="prop_1.active = true">
+               <a href="" class="allow-toggle" ng-click="vm.toggleVar($event, prop_1);">Propensity to Refresh
+                    <span ng-if="!prop_1.active" class="ico-arrow_collapse" ></span>
+                    <span ng-if="prop_1.active" class="ico-arrow_expand" ></span>
+                </a>
+                <div class="insight-filter dropdown-collapse">
+
+                    <div class="insight-range-slider">
+                        <rzslider rz-slider-model="vm.propensityToRefresh.minValue"
+                                  rz-slider-high="vm.propensityToRefresh.maxValue"
+                                  rz-slider-options="vm.propensityToRefresh.options">
+                        </rzslider>
+                    </div>
+                </div>
+            </li>
+
+            <li class="form-group" ng-class="{
+
+                'active'
+                        : prop_2.active}"  ng-init="prop_2.active = true">
+               <a href="" class="allow-toggle" ng-click="vm.toggleVar($event, prop_2);"><span class="dbl-title">Propensity for TS Attach<br>(US Commercial Only)</span>
+                    <span ng-if="!prop_2.active" class="ico-arrow_collapse"></span>
+                    <span ng-if="prop_2.active" class="ico-arrow_expand"></span>
+                </a>
+                <div class="insight-filter dropdown-collapse">
+                    <div class="insight-range-slider">
+                        <rzslider rz-slider-model="vm.propensityToTSAttach.minValue"
+                                  rz-slider-high="vm.propensityToTSAttach.maxValue"
+                                  rz-slider-options="vm.propensityToTSAttach.options">
+                        </rzslider>
+                    </div>
+                </div>
+
+            </li>
+
+        </ul> -->
+    <ul class="sidebar-nav applied-filters" ng-nicescroll nice-option="niceScrollOptions">
+        <li class="applied-filters-head-ipad" ng-show="hasAppliedFilters(3);">Sales Level
+            <span class="pull-right" ng-click="clearFilters(1);">Clear</span>
+        </li>
+        <li ng-repeat="c in appliedFilters" ng-if="c.categoryId === 1">
+            <a>{{c.title}}
+                <span ng-if="c.level >= userInfo.salesLevel" class="ico-close" ng-click="removeFilter(c);">
+                    <span class="path1"></span>
+                    <span class="path2"></span>
+                </span>
+            </a>
+        </li>
+        <li ng-show="hasAppliedFilters(3);" class="applied-filters-head-ipad">Accounts
+            <span class="pull-right" ng-click="clearFilters(3)">Clear</span>
+        </li>
+        <li ng-repeat="c in appliedFilters" ng-if="c.categoryId === 3">
+            <a>{{c.title}}
+                <span class="ico-close" ng-click="removeFilter(c);">
+                    <span class="path1"></span>
+                    <span class="path2"></span>
+                </span>
+            </a>
+        </li>
+        <li class="applied-filters-head-ipad" ng-show="hasAppliedFilters(2);">Architecture
+            <span class="pull-right" ng-click="clearFilters(2)">Clear</span>
+        </li>
+        <li ng-repeat="c in appliedFilters" ng-if="c.categoryId === 2">
+            <a>{{c.title}}
+                <span class="ico-close" ng-click="removeFilter(c);">
+                    <span class="path1"></span>
+                    <span class="path2"></span>
+                </span>
+            </a>
+        </li>
+        <li class="applied-filters-head-ipad" ng-show="hasAppliedFilters(4);">Coverage
+            <span class="pull-right" ng-click="clearFilters(4)" ng-show="opportunitiesView !== 'performance'">Clear</span>
+        </li>
+        <li ng-repeat="c in appliedFilters" ng-if="c.categoryId === 4">
+            <a>{{c.title}}
+                <span class="ico-close" ng-click="removeFilter(c);">
+                    <span class="path1"></span>
+                    <span class="path2"></span>
+                </span>
+            </a>
+        </li>
+    </ul>
+    <div class="fixed-bottom shadow">
+        <!-- <div class="shadow"></div> -->
+        <!-- Disabling the apply button for subscription -->
+        <div class="apply">
+            <a href="" class="button filled-btn blue" ng-click="!vm.isFiltersChecked || vm.applyFilters('click');" ng-disabled="vm.isApplyEnabled()">
+                <span>Apply <span ng-show="vm.filtersChecked">({{vm.filtersChecked}})</span></span>
+            </a>
+        </div>
+        <div class="clear-filter">
+            <a href="" ng-click="!vm.filtersChecked || vm.clearFilters(0, true);  filterTabActive = 'filters'">Clear All</a>
+        </div>
+    </div>
+</div>

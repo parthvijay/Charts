@@ -1,0 +1,388 @@
+[
+    {
+        "title": "Cisco ONE Migration Opportunities by Suite",
+        "description": "<p>A la carte to Cisco ONE Migration TAO:<ul><li>10 years of Hardware in Installed Base that can ‘run’ Cisco ONE</li><li>Qualified by Hardware and ‘Anchor’ features sharing same product family in same CR_Party_ID ^</li><li>Hardware PID assigned to Cisco ONE PID</li><li>Prices are List prices</li><li>Provide an estimate on overall size of a la carte to Cisco ONE migration campaign</li></ul></p>",
+        "type": "pie",
+        "hasSub": true,
+        "data": [
+            {
+                "quarter": "Q3FY15",
+                "areas": [
+                    {
+                        "state": "APJ",
+                        "freq": {
+                            "Data Center-Networking": 2500000,
+                            "Data Center-Compute": 2100000,
+                            "Access-Switching": 3700000,
+                            "Access-Wireless": 1400000,
+                            "WAN": 2800000
+                        }
+                    },
+                    {
+                        "state": "EMEAR-Region",
+                        "freq": {
+                            "Data Center-Networking": 3700000,
+                            "Data Center-Compute": 4200000,
+                            "Access-Switching": 1700000,
+                            "Access-Wireless": 1500000,
+                            "WAN": 3600000
+                        }
+                    },
+                    {
+                        "state": "Global Service Provider",
+                        "freq": {
+                            "Data Center-Networking": 2500000,
+                            "Data Center-Compute": 2700000,
+                            "Access-Switching": 2500000,
+                            "Access-Wireless": 2600000,
+                            "WAN": 1700000
+                        }
+                    },
+                    {
+                        "state": "Americas",
+                        "freq": {
+                            "Data Center-Networking": 4500000,
+                            "Data Center-Compute": 4300000,
+                            "Access-Switching": 3400000,
+                            "Access-Wireless": 3000000,
+                            "WAN": 1300000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q4FY15",
+                "areas": [
+                    {
+                        "state": "APJ",
+                        "freq": {
+                            "Data Center-Networking": 3600000,
+                            "Data Center-Compute": 3000000,
+                            "Access-Switching": 2200000,
+                            "Access-Wireless": 4000000,
+                            "WAN": 2600000
+                        }
+                    },
+                    {
+                        "state": "EMEAR-Region",
+                        "freq": {
+                            "Data Center-Networking": 4300000,
+                            "Data Center-Compute": 4300000,
+                            "Access-Switching": 3500000,
+                            "Access-Wireless": 1700000,
+                            "WAN": 4200000
+                        }
+                    },
+                    {
+                        "state": "Global Service Provider",
+                        "freq": {
+                            "Data Center-Networking": 1300000,
+                            "Data Center-Compute": 3200000,
+                            "Access-Switching": 2800000,
+                            "Access-Wireless": 1700000,
+                            "WAN": 1800000
+                        }
+                    },
+                    {
+                        "state": "Americas",
+                        "freq": {
+                            "Data Center-Networking": 1100000,
+                            "Data Center-Compute": 2900000,
+                            "Access-Switching": 1400000,
+                            "Access-Wireless": 1600000,
+                            "WAN": 4500000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q1FY16",
+                "areas": [
+                    {
+                        "state": "APJ",
+                        "freq": {
+                            "Data Center-Networking": 4000000,
+                            "Data Center-Compute": 2100000,
+                            "Access-Switching": 1900000,
+                            "Access-Wireless": 4100000,
+                            "WAN": 2900000
+                        }
+                    },
+                    {
+                        "state": "EMEAR-Region",
+                        "freq": {
+                            "Data Center-Networking": 1100000,
+                            "Data Center-Compute": 2100000,
+                            "Access-Switching": 3500000,
+                            "Access-Wireless": 1700000,
+                            "WAN": 4500000
+                        }
+                    },
+                    {
+                        "state": "Global Service Provider",
+                        "freq": {
+                            "Data Center-Networking": 3600000,
+                            "Data Center-Compute": 4400000,
+                            "Access-Switching": 4400000,
+                            "Access-Wireless": 2400000,
+                            "WAN": 2100000
+                        }
+                    },
+                    {
+                        "state": "Americas",
+                        "freq": {
+                            "Data Center-Networking": 3000000,
+                            "Data Center-Compute": 2200000,
+                            "Access-Switching": 4400000,
+                            "Access-Wireless": 2500000,
+                            "WAN": 1000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q2FY16",
+                "areas": [
+                    {
+                        "state": "APJ",
+                        "freq": {
+                            "Data Center-Networking": 2800000,
+                            "Data Center-Compute": 4300000,
+                            "Access-Switching": 4200000,
+                            "Access-Wireless": 2000000,
+                            "WAN": 1000000
+                        }
+                    },
+                    {
+                        "state": "EMEAR-Region",
+                        "freq": {
+                            "Data Center-Networking": 4500000,
+                            "Data Center-Compute": 1200000,
+                            "Access-Switching": 4000000,
+                            "Access-Wireless": 4400000,
+                            "WAN": 2300000
+                        }
+                    },
+                    {
+                        "state": "Global Service Provider",
+                        "freq": {
+                            "Data Center-Networking": 3900000,
+                            "Data Center-Compute": 3200000,
+                            "Access-Switching": 4300000,
+                            "Access-Wireless": 3900000,
+                            "WAN": 2500000
+                        }
+                    },
+                    {
+                        "state": "Americas",
+                        "freq": {
+                            "Data Center-Networking": 1400000,
+                            "Data Center-Compute": 1100000,
+                            "Access-Switching": 2800000,
+                            "Access-Wireless": 3900000,
+                            "WAN": 2100000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q3FY16",
+                "areas": [
+                    {
+                        "state": "APJ",
+                        "freq": {
+                            "Data Center-Networking": 4100000,
+                            "Data Center-Compute": 1700000,
+                            "Access-Switching": 1900000,
+                            "Access-Wireless": 3400000,
+                            "WAN": 2900000
+                        }
+                    },
+                    {
+                        "state": "EMEAR-Region",
+                        "freq": {
+                            "Data Center-Networking": 1200000,
+                            "Data Center-Compute": 3300000,
+                            "Access-Switching": 1500000,
+                            "Access-Wireless": 3100000,
+                            "WAN": 4100000
+                        }
+                    },
+                    {
+                        "state": "Global Service Provider",
+                        "freq": {
+                            "Data Center-Networking": 2000000,
+                            "Data Center-Compute": 1700000,
+                            "Access-Switching": 1600000,
+                            "Access-Wireless": 3900000,
+                            "WAN": 1200000
+                        }
+                    },
+                    {
+                        "state": "Americas",
+                        "freq": {
+                            "Data Center-Networking": 4000000,
+                            "Data Center-Compute": 4000000,
+                            "Access-Switching": 3200000,
+                            "Access-Wireless": 2000000,
+                            "WAN": 2700000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q4FY16",
+                "areas": [
+                    {
+                        "state": "APJ",
+                        "freq": {
+                            "Data Center-Networking": 3600000,
+                            "Data Center-Compute": 2800000,
+                            "Access-Switching": 3900000,
+                            "Access-Wireless": 1500000,
+                            "WAN": 2300000
+                        }
+                    },
+                    {
+                        "state": "EMEAR-Region",
+                        "freq": {
+                            "Data Center-Networking": 1600000,
+                            "Data Center-Compute": 1000000,
+                            "Access-Switching": 1900000,
+                            "Access-Wireless": 4300000,
+                            "WAN": 4000000
+                        }
+                    },
+                    {
+                        "state": "Global Service Provider",
+                        "freq": {
+                            "Data Center-Networking": 3400000,
+                            "Data Center-Compute": 3900000,
+                            "Access-Switching": 4300000,
+                            "Access-Wireless": 1900000,
+                            "WAN": 1600000
+                        }
+                    },
+                    {
+                        "state": "Americas",
+                        "freq": {
+                            "Data Center-Networking": 2000000,
+                            "Data Center-Compute": 2800000,
+                            "Access-Switching": 3300000,
+                            "Access-Wireless": 2200000,
+                            "WAN": 3200000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q1FY17",
+                "areas": [
+                    {
+                        "state": "APJ",
+                        "freq": {
+                            "Data Center-Networking": 1800000,
+                            "Data Center-Compute": 3400000,
+                            "Access-Switching": 2900000,
+                            "Access-Wireless": 2000000,
+                            "WAN": 1800000
+                        }
+                    },
+                    {
+                        "state": "EMEAR-Region",
+                        "freq": {
+                            "Data Center-Networking": 3100000,
+                            "Data Center-Compute": 3200000,
+                            "Access-Switching": 1900000,
+                            "Access-Wireless": 1300000,
+                            "WAN": 1500000
+                        }
+                    },
+                    {
+                        "state": "Global Service Provider",
+                        "freq": {
+                            "Data Center-Networking": 4200000,
+                            "Data Center-Compute": 1100000,
+                            "Access-Switching": 4100000,
+                            "Access-Wireless": 2800000,
+                            "WAN": 1800000
+                        }
+                    },
+                    {
+                        "state": "Americas",
+                        "freq": {
+                            "Data Center-Networking": 2900000,
+                            "Data Center-Compute": 1700000,
+                            "Access-Switching": 2400000,
+                            "Access-Wireless": 4400000,
+                            "WAN": 1900000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q2FY17",
+                "areas": [
+                    {
+                        "state": "APJ",
+                        "freq": {
+                            "Data Center-Networking": 1500000,
+                            "Data Center-Compute": 1200000,
+                            "Access-Switching": 4200000,
+                            "Access-Wireless": 1600000,
+                            "WAN": 2200000
+                        }
+                    },
+                    {
+                        "state": "EMEAR-Region",
+                        "freq": {
+                            "Data Center-Networking": 1800000,
+                            "Data Center-Compute": 2600000,
+                            "Access-Switching": 3700000,
+                            "Access-Wireless": 4000000,
+                            "WAN": 1200000
+                        }
+                    },
+                    {
+                        "state": "Global Service Provider",
+                        "freq": {
+                            "Data Center-Networking": 2500000,
+                            "Data Center-Compute": 4400000,
+                            "Access-Switching": 1900000,
+                            "Access-Wireless": 2200000,
+                            "WAN": 1600000
+                        }
+                    },
+                    {
+                        "state": "Americas",
+                        "freq": {
+                            "Data Center-Networking": 1800000,
+                            "Data Center-Compute": 3400000,
+                            "Access-Switching": 1900000,
+                            "Access-Wireless": 2900000,
+                            "WAN": 3000000
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Cisco ONE Licenses Sold by Quarter",
+        "description": "<p>A la carte to Cisco ONE Migration TAO:<ul><li>10 years of Hardware in Installed Base that can ‘run’ Cisco ONE</li><li>Qualified by Hardware and ‘Anchor’ features sharing same product family in same CR_Party_ID ^</li><li>Hardware PID assigned to Cisco ONE PID</li><li>Prices are List prices</li><li>Provide an estimate on overall size of a la carte to Cisco ONE migration campaign</li></ul></p>",
+        "type": "bar_stacked",
+	"currentQuarter": "Q1FY15",
+        "data": 
+
+[{"quarter":"Q3FY15","areas":[{"state":"APJ","freq":{"Data Center-Networking":2500000,"Data Center-Compute":2100000,"Access-Switching":3700000,"Access-Wireless":1400000,"WAN":2800000}},{"state":"EMEAR-Region","freq":{"Data Center-Networking":3700000,"Data Center-Compute":4200000,"Access-Switching":1700000,"Access-Wireless":1500000,"WAN":3600000}},{"state":"Global Service Provider","freq":{"Data Center-Networking":2500000,"Data Center-Compute":2700000,"Access-Switching":2500000,"Access-Wireless":2600000,"WAN":1700000}},{"state":"Americas","freq":{"Data Center-Networking":4500000,"Data Center-Compute":4300000,"Access-Switching":3400000,"Access-Wireless":3000000,"WAN":1300000}}]},{"quarter":"Q4FY15","areas":[{"state":"APJ","freq":{"Data Center-Networking":3600000,"Data Center-Compute":3000000,"Access-Switching":2200000,"Access-Wireless":4000000,"WAN":2600000}},{"state":"EMEAR-Region","freq":{"Data Center-Networking":4300000,"Data Center-Compute":4300000,"Access-Switching":3500000,"Access-Wireless":1700000,"WAN":4200000}},{"state":"Global Service Provider","freq":{"Data Center-Networking":1300000,"Data Center-Compute":3200000,"Access-Switching":2800000,"Access-Wireless":1700000,"WAN":1800000}},{"state":"Americas","freq":{"Data Center-Networking":1100000,"Data Center-Compute":2900000,"Access-Switching":1400000,"Access-Wireless":1600000,"WAN":4500000}}]},{"quarter":"Q1FY16","areas":[{"state":"APJ","freq":{"Data Center-Networking":4000000,"Data Center-Compute":2100000,"Access-Switching":1900000,"Access-Wireless":4100000,"WAN":2900000}},{"state":"EMEAR-Region","freq":{"Data Center-Networking":1100000,"Data Center-Compute":2100000,"Access-Switching":3500000,"Access-Wireless":1700000,"WAN":4500000}},{"state":"Global Service Provider","freq":{"Data Center-Networking":3600000,"Data Center-Compute":4400000,"Access-Switching":4400000,"Access-Wireless":2400000,"WAN":2100000}},{"state":"Americas","freq":{"Data Center-Networking":3000000,"Data Center-Compute":2200000,"Access-Switching":4400000,"Access-Wireless":2500000,"WAN":1000000}}]},{"quarter":"Q2FY16","areas":[{"state":"APJ","freq":{"Data Center-Networking":2800000,"Data Center-Compute":4300000,"Access-Switching":4200000,"Access-Wireless":2000000,"WAN":1000000}},{"state":"EMEAR-Region","freq":{"Data Center-Networking":4500000,"Data Center-Compute":1200000,"Access-Switching":4000000,"Access-Wireless":4400000,"WAN":2300000}},{"state":"Global Service Provider","freq":{"Data Center-Networking":3900000,"Data Center-Compute":3200000,"Access-Switching":4300000,"Access-Wireless":3900000,"WAN":2500000}},{"state":"Americas","freq":{"Data Center-Networking":1400000,"Data Center-Compute":1100000,"Access-Switching":2800000,"Access-Wireless":3900000,"WAN":2100000}}]},{"quarter":"Q3FY16","areas":[{"state":"APJ","freq":{"Data Center-Networking":4100000,"Data Center-Compute":1700000,"Access-Switching":1900000,"Access-Wireless":3400000,"WAN":2900000}},{"state":"EMEAR-Region","freq":{"Data Center-Networking":1200000,"Data Center-Compute":3300000,"Access-Switching":1500000,"Access-Wireless":3100000,"WAN":4100000}},{"state":"Global Service Provider","freq":{"Data Center-Networking":2000000,"Data Center-Compute":1700000,"Access-Switching":1600000,"Access-Wireless":3900000,"WAN":1200000}},{"state":"Americas","freq":{"Data Center-Networking":4000000,"Data Center-Compute":4000000,"Access-Switching":3200000,"Access-Wireless":2000000,"WAN":2700000}}]},{"quarter":"Q4FY16","areas":[{"state":"APJ","freq":{"Data Center-Networking":3600000,"Data Center-Compute":2800000,"Access-Switching":3900000,"Access-Wireless":1500000,"WAN":2300000}},{"state":"EMEAR-Region","freq":{"Data Center-Networking":1600000,"Data Center-Compute":1000000,"Access-Switching":1900000,"Access-Wireless":4300000,"WAN":4000000}},{"state":"Global Service Provider","freq":{"Data Center-Networking":3400000,"Data Center-Compute":3900000,"Access-Switching":4300000,"Access-Wireless":1900000,"WAN":1600000}},{"state":"Americas","freq":{"Data Center-Networking":2000000,"Data Center-Compute":2800000,"Access-Switching":3300000,"Access-Wireless":2200000,"WAN":3200000}}]},{"quarter":"Q1FY17","areas":[{"state":"APJ","freq":{"Data Center-Networking":1800000,"Data Center-Compute":3400000,"Access-Switching":2900000,"Access-Wireless":2000000,"WAN":1800000}},{"state":"EMEAR-Region","freq":{"Data Center-Networking":3100000,"Data Center-Compute":3200000,"Access-Switching":1900000,"Access-Wireless":1300000,"WAN":1500000}},{"state":"Global Service Provider","freq":{"Data Center-Networking":4200000,"Data Center-Compute":1100000,"Access-Switching":4100000,"Access-Wireless":2800000,"WAN":1800000}},{"state":"Americas","freq":{"Data Center-Networking":2900000,"Data Center-Compute":1700000,"Access-Switching":2400000,"Access-Wireless":4400000,"WAN":1900000}}]},{"quarter":"Q2FY17","areas":[{"state":"APJ","freq":{"Data Center-Networking":1500000,"Data Center-Compute":1200000,"Access-Switching":4200000,"Access-Wireless":1600000,"WAN":2200000}},{"state":"EMEAR-Region","freq":{"Data Center-Networking":1800000,"Data Center-Compute":2600000,"Access-Switching":3700000,"Access-Wireless":4000000,"WAN":1200000}},{"state":"Global Service Provider","freq":{"Data Center-Networking":2500000,"Data Center-Compute":4400000,"Access-Switching":1900000,"Access-Wireless":2200000,"WAN":1600000}},{"state":"Americas","freq":{"Data Center-Networking":1800000,"Data Center-Compute":3400000,"Access-Switching":1900000,"Access-Wireless":2900000,"WAN":3000000}}]}]
+    },
+    {
+        "title": "Cisco ONE Migration Opportunities by Customers",
+        "description": "<p>A la carte to Cisco ONE Migration TAO:<ul><li>10 years of Hardware in Installed Base that can ‘run’ Cisco ONE</li><li>Qualified by Hardware and ‘Anchor’ features sharing same product family in same CR_Party_ID ^</li><li>Hardware PID assigned to Cisco ONE PID</li><li>Prices are List prices</li><li>Provide an estimate on overall size of a la carte to Cisco ONE migration campaign</li></ul></p>",
+        "type": "bar_stacked_horizontal",
+        "data": 
+
+[{"quarter":"Q3FY15","areas":[{"state":"Verizon Cloud","freq":{"Data Center-Networking":1300000,"Data Center-Compute":4400000,"Access-Switching":2400000,"Access-Wireless":1700000,"WAN":1700000}},{"state":"Comcast Jiturral Xfinity Internet Connection","freq":{"Data Center-Networking":2900000,"Data Center-Compute":3100000,"Access-Switching":3500000,"Access-Wireless":1000000,"WAN":4500000}},{"state":"China Telecom","freq":{"Data Center-Networking":4500000,"Data Center-Compute":4100000,"Access-Switching":4000000,"Access-Wireless":3800000,"WAN":3100000}},{"state":"Cisco Internal East Enterprise Region","freq":{"Data Center-Networking":4300000,"Data Center-Compute":2900000,"Access-Switching":4200000,"Access-Wireless":1200000,"WAN":3100000}},{"state":"British Telecom","freq":{"Data Center-Networking":2500000,"Data Center-Compute":3800000,"Access-Switching":2700000,"Access-Wireless":1200000,"WAN":2300000}},{"state":"US Telecom","freq":{"Data Center-Networking":2500000,"Data Center-Compute":2500000,"Access-Switching":1300000,"Access-Wireless":3600000,"WAN":2000000}}]},{"quarter":"Q4FY15","areas":[{"state":"Verizon Cloud","freq":{"Data Center-Networking":1000000,"Data Center-Compute":4200000,"Access-Switching":2100000,"Access-Wireless":2100000,"WAN":3900000}},{"state":"Comcast Jiturral Xfinity Internet Connection","freq":{"Data Center-Networking":1600000,"Data Center-Compute":2700000,"Access-Switching":1000000,"Access-Wireless":4400000,"WAN":1500000}},{"state":"China Telecom","freq":{"Data Center-Networking":1300000,"Data Center-Compute":2100000,"Access-Switching":4500000,"Access-Wireless":2900000,"WAN":2600000}},{"state":"Cisco Internal East Enterprise Region","freq":{"Data Center-Networking":3600000,"Data Center-Compute":1000000,"Access-Switching":3000000,"Access-Wireless":2600000,"WAN":1700000}},{"state":"British Telecom","freq":{"Data Center-Networking":3400000,"Data Center-Compute":4500000,"Access-Switching":2400000,"Access-Wireless":1700000,"WAN":1000000}},{"state":"US Telecom","freq":{"Data Center-Networking":4400000,"Data Center-Compute":1500000,"Access-Switching":3500000,"Access-Wireless":3200000,"WAN":1700000}}]},{"quarter":"Q1FY16","areas":[{"state":"Verizon Cloud","freq":{"Data Center-Networking":1100000,"Data Center-Compute":1500000,"Access-Switching":3200000,"Access-Wireless":4500000,"WAN":4300000}},{"state":"Comcast Jiturral Xfinity Internet Connection","freq":{"Data Center-Networking":3000000,"Data Center-Compute":3200000,"Access-Switching":4500000,"Access-Wireless":1500000,"WAN":2300000}},{"state":"China Telecom","freq":{"Data Center-Networking":3300000,"Data Center-Compute":2600000,"Access-Switching":2900000,"Access-Wireless":2900000,"WAN":2300000}},{"state":"Cisco Internal East Enterprise Region","freq":{"Data Center-Networking":1300000,"Data Center-Compute":2700000,"Access-Switching":3000000,"Access-Wireless":4000000,"WAN":1400000}},{"state":"British Telecom","freq":{"Data Center-Networking":3700000,"Data Center-Compute":2300000,"Access-Switching":3300000,"Access-Wireless":1800000,"WAN":3700000}},{"state":"US Telecom","freq":{"Data Center-Networking":2700000,"Data Center-Compute":4200000,"Access-Switching":3500000,"Access-Wireless":2000000,"WAN":4000000}}]},{"quarter":"Q2FY16","areas":[{"state":"Verizon Cloud","freq":{"Data Center-Networking":1700000,"Data Center-Compute":1600000,"Access-Switching":3600000,"Access-Wireless":4300000,"WAN":3200000}},{"state":"Comcast Jiturral Xfinity Internet Connection","freq":{"Data Center-Networking":4400000,"Data Center-Compute":4300000,"Access-Switching":3400000,"Access-Wireless":3800000,"WAN":3500000}},{"state":"China Telecom","freq":{"Data Center-Networking":1600000,"Data Center-Compute":3100000,"Access-Switching":3600000,"Access-Wireless":3300000,"WAN":2300000}},{"state":"Cisco Internal East Enterprise Region","freq":{"Data Center-Networking":3200000,"Data Center-Compute":1400000,"Access-Switching":2800000,"Access-Wireless":4000000,"WAN":1900000}},{"state":"British Telecom","freq":{"Data Center-Networking":1000000,"Data Center-Compute":2800000,"Access-Switching":2500000,"Access-Wireless":2500000,"WAN":1000000}},{"state":"US Telecom","freq":{"Data Center-Networking":2300000,"Data Center-Compute":2700000,"Access-Switching":3300000,"Access-Wireless":1600000,"WAN":2100000}}]},{"quarter":"Q3FY16","areas":[{"state":"Verizon Cloud","freq":{"Data Center-Networking":3900000,"Data Center-Compute":4100000,"Access-Switching":1500000,"Access-Wireless":1100000,"WAN":3900000}},{"state":"Comcast Jiturral Xfinity Internet Connection","freq":{"Data Center-Networking":2900000,"Data Center-Compute":4500000,"Access-Switching":3800000,"Access-Wireless":2000000,"WAN":3400000}},{"state":"China Telecom","freq":{"Data Center-Networking":2100000,"Data Center-Compute":2000000,"Access-Switching":3100000,"Access-Wireless":3400000,"WAN":1700000}},{"state":"Cisco Internal East Enterprise Region","freq":{"Data Center-Networking":3500000,"Data Center-Compute":3100000,"Access-Switching":3100000,"Access-Wireless":1900000,"WAN":3900000}},{"state":"British Telecom","freq":{"Data Center-Networking":3100000,"Data Center-Compute":3900000,"Access-Switching":3000000,"Access-Wireless":3800000,"WAN":2700000}},{"state":"US Telecom","freq":{"Data Center-Networking":2300000,"Data Center-Compute":3600000,"Access-Switching":2400000,"Access-Wireless":3000000,"WAN":3500000}}]},{"quarter":"Q4FY16","areas":[{"state":"Verizon Cloud","freq":{"Data Center-Networking":4000000,"Data Center-Compute":3900000,"Access-Switching":3500000,"Access-Wireless":3700000,"WAN":2700000}},{"state":"Comcast Jiturral Xfinity Internet Connection","freq":{"Data Center-Networking":3800000,"Data Center-Compute":1800000,"Access-Switching":1200000,"Access-Wireless":3600000,"WAN":2800000}},{"state":"China Telecom","freq":{"Data Center-Networking":1000000,"Data Center-Compute":2900000,"Access-Switching":1800000,"Access-Wireless":3600000,"WAN":2300000}},{"state":"Cisco Internal East Enterprise Region","freq":{"Data Center-Networking":3400000,"Data Center-Compute":1100000,"Access-Switching":3300000,"Access-Wireless":1600000,"WAN":2500000}},{"state":"British Telecom","freq":{"Data Center-Networking":3700000,"Data Center-Compute":4500000,"Access-Switching":3600000,"Access-Wireless":1900000,"WAN":2800000}},{"state":"US Telecom","freq":{"Data Center-Networking":4400000,"Data Center-Compute":4200000,"Access-Switching":1600000,"Access-Wireless":4000000,"WAN":2000000}}]},{"quarter":"Q1FY17","areas":[{"state":"Verizon Cloud","freq":{"Data Center-Networking":1100000,"Data Center-Compute":3100000,"Access-Switching":4100000,"Access-Wireless":1600000,"WAN":4500000}},{"state":"Comcast Jiturral Xfinity Internet Connection","freq":{"Data Center-Networking":2900000,"Data Center-Compute":1600000,"Access-Switching":2400000,"Access-Wireless":1200000,"WAN":2500000}},{"state":"China Telecom","freq":{"Data Center-Networking":4100000,"Data Center-Compute":1300000,"Access-Switching":1400000,"Access-Wireless":2000000,"WAN":2900000}},{"state":"Cisco Internal East Enterprise Region","freq":{"Data Center-Networking":1200000,"Data Center-Compute":2900000,"Access-Switching":2800000,"Access-Wireless":1900000,"WAN":2600000}},{"state":"British Telecom","freq":{"Data Center-Networking":1400000,"Data Center-Compute":1400000,"Access-Switching":3300000,"Access-Wireless":1000000,"WAN":1800000}},{"state":"US Telecom","freq":{"Data Center-Networking":3100000,"Data Center-Compute":3900000,"Access-Switching":4500000,"Access-Wireless":3500000,"WAN":4000000}}]},{"quarter":"Q2FY17","areas":[{"state":"Verizon Cloud","freq":{"Data Center-Networking":2100000,"Data Center-Compute":1100000,"Access-Switching":4200000,"Access-Wireless":2400000,"WAN":1900000}},{"state":"Comcast Jiturral Xfinity Internet Connection","freq":{"Data Center-Networking":2500000,"Data Center-Compute":3200000,"Access-Switching":1600000,"Access-Wireless":1800000,"WAN":4100000}},{"state":"China Telecom","freq":{"Data Center-Networking":1900000,"Data Center-Compute":3500000,"Access-Switching":2200000,"Access-Wireless":3000000,"WAN":3200000}},{"state":"Cisco Internal East Enterprise Region","freq":{"Data Center-Networking":4200000,"Data Center-Compute":1700000,"Access-Switching":1900000,"Access-Wireless":1200000,"WAN":1800000}},{"state":"British Telecom","freq":{"Data Center-Networking":4000000,"Data Center-Compute":1500000,"Access-Switching":2600000,"Access-Wireless":3500000,"WAN":4300000}},{"state":"US Telecom","freq":{"Data Center-Networking":4400000,"Data Center-Compute":1400000,"Access-Switching":3800000,"Access-Wireless":2700000,"WAN":4200000}}]}]
+
+    }
+]

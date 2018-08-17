@@ -1,0 +1,27 @@
+<div class="modal-body definition-popup">
+    <a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg action-metrics"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    <h1>Action Metrics</h1>	
+    <div class="tab-content expanded action-metrics">
+        <div class="table-responsive action-metrics-tbl left">	
+            <!--baljinderkaur - fixed columns removed and merged in one table-->
+            <table class="table opp-by table-fixed1 striped-table">
+                <thead>
+                    <tr>
+                        <th>SAV ID</th>
+                        <th>SAV Name</th>
+                        <th colspan="2" class="text-center" ng-repeat="c in metrics">{{c.title}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="c in rows" index="{{$index}}">
+                        <td ng-if="$index === 0">{{actionMetrics.savId}}</td>
+                        <td ng-if="$index > 0"></td>
+                        <td ng-if="$index === 0"><span class="dotdot">{{actionMetrics.savName}}</span></td>
+                        <td ng-if="$index > 0"><span class="dotdot"></span></td>
+                        <td action-table ng-repeat="d in metrics" rows="d" class="index-name"><a ng-href="{{getLink(d.rows[$parent.$index].title)}}" target="_blank"><span class="dotdot">{{d.rows[$parent.$index].title}}</span></a></td>
+                    </tr>                
+                </tbody>
+            </table><!--<div class="right-shadow ng-hide"></div>-->
+        </div>
+    </div>
+</div>

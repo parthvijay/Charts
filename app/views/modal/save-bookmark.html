@@ -1,0 +1,99 @@
+<div class="modal-header">
+    <h1>{{isEditModal === true ? 'Edit' : 'Save'}} Bookmark<a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a></h1>
+</div>
+<div class="modal-body paddingL0 paddingR0 global-bookmark-popup save-update-popup">
+    <div class="checked-view top">
+        <div class="change-switch clearfix">
+            <span data-ng-class="{'active':!bookmark.isPublic}">Private</span>
+            <label class="switch">
+                <input checked="checked" type="checkbox" ng-model="activeSlider" ng-change="isprivate()">
+                <div class="slider round"></div>
+            </label>
+            <span data-ng-class="{'active':bookmark.isPublic}">Searchable</span>                    
+        </div>
+    </div>
+    <div class="save-form">
+        <form name="form.saveBookmark" novalidate class="save-bookmark-form">
+            <div class="form-group"
+                 ng-class="{'has-error': form.saveBookmark.bookmarkName.$error.maxlength ||
+                                        (form.saveBookmark.bookmarkName.$error.required && form.saveBookmark.bookmarkName.$touched) ||
+                                        (!form.saveBookmark.bookmarkName.$valid && !form.saveBookmark.bookmarkName.$error.maxlength && !form.saveBookmark.bookmarkName.$error.required)}">
+                <label class="control-label">Name<span class="mandatory">*</span></label>
+                <input type="text" name="bookmarkName" placeholder="Enter Bookmark Name" class="form-control" ng-model="bookmark.name"  ng-maxlength="200" ng-pattern="namePattern" ng-change="enableSaveAsNew()" required/>
+                <div class="help-block-container">
+                    <p class="help-block" ng-hide="form.saveBookmark.bookmarkName.$error.maxlength || (form.saveBookmark.bookmarkName.$error.required && form.saveBookmark.bookmarkName.$touched) || (!form.saveBookmark.bookmarkName.$valid && !form.saveBookmark.bookmarkName.$error.required)">Characters that are allowed include: A-Z, a-z, 0-9 - _</p>
+                    <p class="help-block" ng-show="form.saveBookmark.bookmarkName.$error.required && form.saveBookmark.bookmarkName.$touched">Name is required.</p>
+                    <p class="help-block" ng-show="form.saveBookmark.bookmarkName.$error.maxlength">Max 200 characters allowed.</p>
+                    <p class="help-block" ng-show="!form.saveBookmark.bookmarkName.$valid && !form.saveBookmark.bookmarkName.$error.maxlength && !form.saveBookmark.bookmarkName.$error.required">Characters that are allowed include: A-Z, a-z, 0-9 - _ </p>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{'has-error': form.saveBookmark.bookmarkDescription.$error.maxlength || (form.saveBookmark.bookmarkDescription.$error.required && form.saveBookmark.bookmarkDescription.$touched)}">
+                <label class="control-label">Description<span class="mandatory">*</span></label>                
+                <textarea id="bookmarkDescription" name="bookmarkDescription" placeholder="Enter Description" class="form-control" ng-model="bookmark.description" ng-maxlength="1024" required></textarea>
+                <div class="help-block-container">
+                    <p class="help-block" ng-show="form.saveBookmark.bookmarkDescription.$error.required && form.saveBookmark.bookmarkDescription.$touched">Description is required.</p>
+                    <p class="help-block" ng-show="form.saveBookmark.bookmarkDescription.$error.maxlength">Max 1024 characters allowed.</p>
+                </div>
+            </div>
+            <div class="form-group calander-col clearfix">
+                <label class="control-label">Date<span class="mandatory">*</span></label>
+                <div class="clearfix">
+                    <div class="input-drop date-input first marginB0" ng-class="{'input-datepicker': popup2.opened}">
+                        <div class="input-group calender-input">
+                        <!-- selecting prev Expiration date than Start Date is not disabled -->
+                            <input type="text" name="bookmarkStartDate" uib-datepicker-popup="dd-MMM-yyyy" ng-model="bookmark.startDate" is-open="popup2.opened" ng-click="open2()" datepicker-options="dateOptionsStartDate" ng-required="true" ng-change="updateStartDate();updateDate()" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" readonly/>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default calender-btn" ng-click="open2()"><i class="ico-calendar"></i></button>
+                            </span>
+                        </div>
+                        <div class="help-block-container" ng-show="form.saveBookmark.$submitted || form.saveBookmark.bookmarkStartDate.$touched">
+                                <p class="help-block" ng-show="form.saveBookmark.bookmarkStartDate.$error.required">Start Date is required.</p>
+                        </div>
+                    </div>
+                    <div class="input-drop date-input end-date marginB0" ng-class="{'input-datepicker': popup3.opened}">
+                        <p class="input-group calender-input">
+                        <!-- selecting prev Expiration date than Start Date is not disabled -->
+                            <input type="text" name="bookmarkEndDate" placeholder="Expiration Date" class="" uib-datepicker-popup="dd-MMM-yyyy" ng-model="bookmark.endDate" ng-change="updateDate()" ng-click="open3()" is-open="popup3.opened" datepicker-options="dateOptionsEndDate" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" readonly />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default calender-btn" ng-click="open3()"><i class="ico-calendar"></i></button>
+                            </span>
+                        </p><span class="clear-date" ng-click="clear()">Clear</span>
+                    </div>
+                </div>
+            </div><!--form-group calander-col-->
+            <hr class="horizontal-line">
+            <div class="form-inline bookmark-type clearfix">
+                <div class="form-group">
+                    <input type="checkbox" id="regionalCheckbox" ng-model="bookmark.isRegional" ng-change="setBookmarkToSearchable()" ng-click="bookmark.isGlobal = false">
+                    <label for="regionalCheckbox" class="control-label bookmark-global"><span></span>Regional Bookmark<span class= "mandatory" ng-class="{'active':!bookmark.private}">*</span></label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="globalCheckbox" ng-model="bookmark.isGlobal" ng-change="setBookmarkToSearchable()" ng-click="bookmark.isRegional = false" ng-disabled="bookmark.isGlobalDisabled">
+                    <label for="globalCheckbox" class="control-label bookmark-global"><span></span>Global Bookmark<span class= "mandatory" ng-class="{'active':!bookmark.private}">*</span></label>
+                </div>
+            </div>
+            <div class="form-group" ng-show="bookmark.isGlobal || bookmark.isRegional" ng-class="{'has-error': !form.saveBookmark.salesColLink.$valid && form.saveBookmark.salesColLink.$touched}">
+                    <label class="control-label">Sales Collateral Link<span ng-class="{'mandatory':bookmark.isGlobal || bookmark.isRegional}">*</span></label>
+                    <input type="text" name="salesColLink" placeholder="Sales Collateral Link (Mandatory Field)" class="form-control" ng-pattern="urlPattern" ng-model="bookmark.urlDetails.salesHub" ng-required="activeSlider"/>
+                    <div class="help-block-container">
+                    <p class="help-block" ng-show="!form.saveBookmark.salesColLink.$valid && form.saveBookmark.salesColLink.$touched">Entered URL is invalid. Valid format: www.example.com</p>
+                </div>
+            </div>
+            <div class="form-group" ng-show="bookmark.isGlobal || bookmark.isRegional">
+                <label class="control-label">More Information</label>
+                    <input type="text" name="moreInfo" placeholder="Enter Additional Link  or Information" class="form-control" ng-model="bookmark.urlDetails.additionalInfo"/>
+                    <!-- <div class="help-block-container">
+                        <p class="help-block" ng-show="!form.saveBookmark.moreInfo.$valid && form.saveBookmark.moreInfo.$touched">Valid URL is required. Valid format: www.example.com</p>
+                    </div> -->
+            </div>
+
+        </form>
+    </div><!-- Save Form -->
+</div><!-- Modal Body -->
+    <div class="clearfix text-right modal-footer">
+    <div class="required-field pull-left"><span class="mandatory">* </span> Required Field</div>
+        <span class="pull-left save-as" ng-show="bookmark.id && showSaveAs" ng-class="{'disable':disableSaveAsNew}" ng-click="disableSaveAsNew?angular.noop():saveAsNewBookmark(form.saveBookmark.$valid)">Save as New</span>
+        <a href="javascript:void(0)" class="button stroke-btn blue marginR10 marginB10" ng-click="cancel()">Cancel</a>
+        <a href="javascript:void(0)" class="button filled-btn blue marginB10" ng-disabled="!form.saveBookmark.$valid" ng-hide="bookmark.id && bookmark.createdBy != userInfo.user.fullName" ng-click="saveBookmark(form.saveBookmark.$valid, bookmark.id)">{{bookmark.id?'Update':'Save'}}</a>
+        <a href="javascript:void(0)" class="button filled-btn blue marginB10" ng-disabled="!form.saveBookmark.$valid" ng-show="bookmark.id && bookmark.createdBy != userInfo.user.fullName" ng-click="saveAsNewBookmark(form.saveBookmark.$valid)">Save as New</a>
+    </div>

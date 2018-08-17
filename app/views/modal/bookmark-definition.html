@@ -1,0 +1,455 @@
+<div class="modal-body bookmarksdefinition-popup">
+    <a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    <h1>{{activeTabHeader}}</h1>
+    <div class="shadow">
+        <ul class="popup-tabs">
+            <li ng-class="{'active' : activeTab == 0}" ng-click="selectTab(0);"><a href="">Opportunity Definition</a></li>
+            <!-- <li ng-class="{'active' : activeTab == 1}" ng-click="selectTab(1);"><a href="">Product ID List</a></li> -->
+        </ul>
+        <img class="white-shadow" src="images/white-shadow.png" />
+    </div>
+    <!-- sunitayadav - added and changed content of this table according to new pdf file -->
+    <div class="tab-content expanded">
+        <div class="table-responsive campaign-table lg-height" ng-if="activeTab == 0">				
+            <table class="table opp-by table-fixed1 striped-table">
+                <thead>
+                    <tr>
+                        <th>Group/Conditions</th>
+                        <th colspan="3" class="alignCenter">Enterprise Networking, DCV, Security</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Set</td>
+                        <td><span class="dotdot">Refresh TAO</span></td>
+                    </tr>
+                    <tr>
+                        <td>Architecture</td>
+                        <td>All</td>
+                    </tr>
+                    <tr>
+                        <td>Sub Architecture</td>
+                        <td>All</td>
+                    </tr> 
+                    <tr>
+                        <td>Product Family</td>
+                        <td>1600, 1700, 1800, 1900ISR, 2600, 2800, 2900ISR, 3200, 3600, 3700, 3800, 3900ISR, 5350, 5400, 5900, 7000CMN, 7200, 7300, 7304, 800BB, ASRIOT, C1200, C1800BB, C1A1000, C1C296X, C1C356X, C1I1900, C1I2900, C1I3900, C1I4400, C1IOTGW, C1N3000, C1N3500, C1N5000, C1N6000, C1N7000, C1N9300, C1N9500, C2350, C2360, C2900, C2918, C2940, C2950, C2960, C2960C, C2960CX, C2960L, C2960P, C2960S, C2960SF, C296XED, C2970, C2975, C3000, C3550, C3560, C3560C, C3560CX, C3560E, C3650ED, C3750, C3750E, C4000, C4900M, C4KFXD, C4KTOR, C5000, C6000G, C6800IA, C3560CX, C3560E, C3650ED, C3750, C3750E, C4000, C4900M, C4KFXD, C4KTOR, C5000, C6000G, C6800IA, CE500, CE520, CGR1000, CGR2000, CGS2500, CNSWTCH, CNWRL, CSACS, CSP2100, DMMGT, DMP, E300, E340, ENCS, ENERGYW, ESS2000, ICV, IE1000, IE2000, IE3000, IE4000, IE5000, INDAPPL, IOG, L3FIXED, M2M800, N2000, N3000, N3500, N4000, N5000, N6000, N9300, N9500, SN5400, SR500, WAAS, WANLAN</td>
+                    </tr> 
+                    <tr>
+                        <td>LDoS</td>
+                        <td>NA</td>
+                    </tr> 
+                    <tr>
+                        <td>Ship Date</td>
+                        <td>All</td>
+                    </tr> 
+                    <tr>
+                        <td>Coverage</td>
+                        <td>Covered + Uncovered</td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-responsive campaign-table lg-height" ng-if="activeTab == 1">              
+            <table class="table opp-by table-fixed1 striped-table">
+                <thead>
+                    <tr>
+                        <th>Group/Conditions</th>
+                        <th colspan="3" class="alignCenter">Enterprise Networking, DCV, Security</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Set</td>
+                        <td><span class="dotdot">Refresh TAO</span></td>
+                    </tr>
+                    <tr>
+                        <td>Architecture</td>
+                        <td>All</td>
+                    </tr>
+                    <tr>
+                        <td>Sub Architecture</td>
+                        <td>All</td>
+                    </tr> 
+                    <tr>
+                        <td>Product Family</td>
+                        <td>C4500,C3750X,C3850,C2960X,C3650,C3560X,OS,C2960XR,DSBUOTH,C1C3850,C1C3650,C1C4500,3750X,C6000,3KAGG,C4500X,C6800MD,C6800FD,C1C450X,C1C68MD,C1C68FD,4400ISR,4300ISR,C1I4300,CSR1KV,4200ISR,ASR1000,N7000,CISE,SWATCH,N1000</td>
+                    </tr> 
+                    <tr>
+                        <td>LDoS</td>
+                        <td>NA</td>
+                    </tr> 
+                    <tr>
+                        <td>Ship Date</td>
+                        <td>FY'15, FY'16, FY'17</td>
+                    </tr> 
+                    <tr>
+                        <td>Coverage</td>
+                        <td>Covered + Uncovered</td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+        <!-- sunitayadav - added and changed content of this table according to new pdf file -->
+        <!-- <div class="table-responsive campaign-table lg-height" ng-show="activeTab == 1">	
+            <table class="table opp-by table-fixed1 striped-table">
+               <thead>
+                    <tr>
+                        <th>Product Family</th>
+                        <th colspan="" class="alignCenter">C1C296X</th>
+                        <th colspan="2" class="alignCenter">C1C3650</th>
+                        <th colspan="5" class="alignCenter">C1C3850</th>
+                        <th colspan="" class="alignCenter">C2960CX</th>
+                        <th colspan="" class="alignCenter">C2960C</th>
+                        <th colspan="5" class="alignCenter">C2960</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                       <td rowspan="20">Product ID</td>
+                       <td>C1-NAAS-24P-RTU</td>
+                       <td>C1AACAT3650150K9</td>
+                       <td>C1FACAT36501K9=</td>
+                       <td>C1AACAT375X1K9</td>
+                       <td>C1AACAT38504K9=</td>
+                       <td>C1FACAT38501K9</td>
+                       <td>C1FUCAT375X1K9=</td>
+                       <td>ELA2-C1-SWITCH-B</td>
+                       <td>CAB-TA-NA-LA</td>
+                       <td>CMP-CBLE-GRD</td>
+                       <td>C2960-8TC-S-SW</td>
+                       <td>NAL-2960-48TC-L</td>
+                       <td>WS-C2960-24TC-J1</td>
+                       <td>WS-C2960-48TT-S-RF</td>
+                       <td>WS-C2960XS-24TS-L</td>
+                    </tr>
+                    <tr>
+                        <td>C1-NAAS-48P-RTU</td>
+                        <td>C1AACAT36501K9</td>
+                        <td>C1FACAT36502K9</td>
+                        <td>C1AACAT375X2K9</td>
+                        <td>C1APCAT38501K9</td>
+                        <td>C1FACAT38501K9=</td>
+                        <td>C1FUCAT375X2K9</td>
+                        <td></td>
+                        <td>NAL-C2960CX-8PC-L</td>
+                        <td>CMP-CBLE-GRD=</td>
+                        <td>CBLGRD-C3560-8PC=</td>
+                        <td>NAL-2960-48TC-S</td>
+                        <td>WS-C2960-24TC-L</td>
+                        <td>WS-C2960-8TC-L</td>
+                        <td>WS-C2960XS-48FPD-L</td>
+                    </tr>
+                    <tr>
+                        <td>C1FACAT29001K9</td>
+                        <td>C1AACAT3650250K9</td>
+                        <td>C1FACAT36502K9=</td>
+                        <td>C1AACAT375X2K9=</td>
+                        <td>C1APCAT38502K9</td>
+                        <td>C1FACAT38502K9</td>
+                        <td>C1FUCAT375X2K9=</td>
+                        <td></td>
+                        <td>NAL-C2960CX-8TC-L</td>
+                        <td>CMP-DIN-MNT=</td>
+                        <td>CH-C2960-24PC-L-1</td>
+                        <td>NAL-2960-48TT-L</td>
+                        <td>WS-C2960-24TC-L-RF</td>
+                        <td>WS-C2960-8TC-L-RF</td>
+                        <td>WS-C2960XS-48FPS-L</td>
+                    </tr>
+                    <tr>
+                        <td>C1FACAT29001K9=</td>
+                        <td>C1AACAT36502K9</td>
+                        <td>C1FPCAT36501K9</td>
+                        <td>C1AACAT375X3K9</td>
+                        <td>C1APCAT38503K9</td>
+                        <td>C1FACAT38502K9=</td>
+                        <td>C1FUCAT38501K9</td>
+                        <td></td>
+                        <td>WS-C2960CX-8PC-L</td>
+                        <td>CMP-MGNT-TRAY</td>
+                        <td>CH-C2960-24PC-L-9</td>
+                        <td>PWR-A</td>
+                        <td>WS-C2960-24TC-S</td>
+                        <td>WS-C2960-8TC-S</td>
+                        <td>WS-C2960XS-48LPD-L</td>
+                    </tr>
+                    <tr>
+                        <td>C1FACAT29002K9</td>
+                        <td>C1AACAT36502K9=</td>
+                        <td>C1FPCAT36502K9</td>
+                        <td>C1AACAT375X4K9</td>
+                        <td>C1APCAT38504K9</td>
+                        <td>C1FACAT38503K9</td>
+                        <td>C1FUCAT38501K9=</td>
+                        <td></td>
+                        <td>WS-C2960CX-8PCL-RF</td>
+                        <td>CMP-MGNT-TRAY=</td>
+                        <td>CH-C2960-24TC-L-1</td>
+                        <td>PWR-A=</td>
+                        <td>WS-C2960-24TC-S-RF</td>
+                        <td>WS-C2960-8TC-S-RF</td>
+                        <td>WS-C2960XS-48LPS-L</td>
+                    </tr>
+                    <tr>
+                        <td>C1FACAT29002K9=</td>
+                        <td>C1APCAT36501K9</td>
+                        <td>C1FUCAT36501K9</td>
+                        <td>C1AACAT375X4K9=</td>
+                        <td>C1AUCAT375X2K9</td>
+                        <td>C1FACAT38503K9=</td>
+                        <td>C1FUCAT38502K9</td>
+                        <td></td>
+                        <td>WS-C2960CX-8TC-L</td>
+                        <td>NAL-2960C-12PC-L</td>
+                        <td>CH-C2960-24TC-L-24</td>
+                        <td>WS-C29560G-48TC-L</td>
+                        <td>WS-C2960-24TT-L</td>
+                        <td>WS-C2960G-24TC-L</td>
+                        <td>WS-C2960XS-48TD-L</td>
+                    </tr>
+                    <tr>
+                        <td>C1FACAT29004K9</td>
+                        <td>C1APCAT36502K9</td>
+                        <td>C1FUCAT36501K9=</td>
+                        <td>C1AACAT38501K9</td>
+                        <td>C1AUCAT38501K9</td>
+                        <td>C1FACAT38504K9</td>
+                        <td>C1FUCAT38502K9=</td>
+                        <td></td>
+                        <td>WS-C2960CX-8TCL-RF</td>
+                        <td>NAL-2960C-8PC-L</td>
+                        <td>CH-C2960-48TC-L-1</td>
+                        <td>WS-C2960-24-S</td>
+                        <td>WS-C2960-24TT-L-RF</td>
+                        <td>WS-C2960G-24TC-RF</td>
+                        <td>WS-C2960XS-48TS-L</td>
+                    </tr>
+                    <tr>
+                        <td>C1FPCAT29001K9</td>
+                        <td>C1AUCAT36501K9</td>
+                        <td>C1FUCAT36502K9</td>
+                        <td>C1AACAT38501K9=</td>
+                        <td>C1AUCAT38502K9</td>
+                        <td>C1FACAT38504K9=</td>
+                        <td>C1N1PNULL=</td>
+                        <td></td>
+                        <td></td>
+                        <td>NAL-2960C-8TC-L</td>
+                        <td>CH-C2960-48TC-L-24</td>
+                        <td>WS-C2960-24-S-RF</td>
+                        <td>WS-C2960-48PST-L</td>
+                        <td>WS-C2960G-24TCL-RF</td>
+                        <td>WS-C2960XS-STACK</td>
+                    </tr>
+                    <tr>
+                        <td>C1FPCAT29002K9</td>
+                        <td>C1AUCAT36501K9=</td>
+                        <td>C1FUCAT36502K9=</td>
+                        <td>C1AACAT3850250K9</td>
+                        <td>C1AUCAT38502K9=</td>
+                        <td>C1FPCAT38501K9</td>
+                        <td>ELA2-C1-CAT38501F</td>
+                        <td></td>
+                        <td></td>
+                        <td>NAL-2960C-8TC-S</td>
+                        <td>HPC-E-2960G-24</td>
+                        <td>WS-C2960-24LC-S</td>
+                        <td>WS-C2960-48PST-L-1</td>
+                        <td>WS-C2960G-48TC-L</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>C1FPCAT29003K9</td>
+                        <td>C1AUCAT36502K9</td>
+                        <td>ELA2-C1-CAT36501A</td>
+                        <td>C1AACAT38502K9</td>
+                        <td>C1FACAT375X1K9</td>
+                        <td>C1FPCAT38502K9</td>
+                        <td>ELA2-C1-CAT38502F</td>
+                        <td></td>
+                        <td></td>
+                        <td>NAL-2960CG-8TC-L</td>
+                        <td>HPC-E-2960G-48</td>
+                        <td>WS-C2960-24LC-S-RF</td>
+                        <td>WS-C2960-48PST-L-M</td>
+                        <td>WS-C2960G-48TCL-RF</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>C1FPCAT29004K9</td>
+                        <td>C1AUCAT36502K9=</td>
+                        <td>ELA2-C1-CAT36501F</td>
+                        <td>C1AACAT38502K9=</td>
+                        <td>C1FACAT375X2K9</td>
+                        <td>C1FPCAT38503K9</td>
+                        <td>ELA2-C1-CAT38503A</td>
+                        <td></td>
+                        <td></td>
+                        <td>NAL-2960CPD-8PT-L</td>
+                        <td>LL-C2960=</td>
+                        <td>WS-C2960-24LT-L</td>
+                        <td>WS-C2960-48PST-S</td>
+                        <td>WS-C2960G-8TC-L</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ELA2-C1-CAT29001F</td>
+                        <td>C1F13CT1P-3Y-ADVG=</td>
+                        <td>ELA2-C1-CAT36502A</td>
+                        <td>C1AACAT38503K9</td>
+                        <td>C1FACAT375X2K9=</td>
+                        <td>C1FPCAT38504K9</td>
+                        <td>ELA2-C1-CAT38503F</td>
+                        <td></td>
+                        <td></td>
+                        <td>NAL-2960CPD-8TT-L</td>
+                        <td>LL-C2960G=</td>
+                        <td>WS-C2960-24LT-L-RF</td>
+                        <td>WS-C2960-48PSTL-RF</td>
+                        <td>WS-C2960G-8TC-L-RF</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ELA2-C1-CAT29002F</td>
+                        <td>C1F1ACAT3650L</td>
+                        <td>ELA2-C1-CAT36502F</td>
+                        <td>C1AACAT38503K9=</td>
+                        <td>C1FACAT375X3K9</td>
+                        <td>C1FPCAT38505K9</td>
+                        <td>ELA2-C1-CAT38504F</td>
+                        <td></td>
+                        <td></td>
+                        <td>PWR-ADPT</td>
+                        <td>NAL-2960-24-S</td>
+                        <td>WS-C2960-24PC-BR</td>
+                        <td>WS-C2960-48PSTS-RF</td>
+                        <td>WS-C2960PD-8TT-L</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ELA2-NEW</td>
+                        <td>C1FACAT36501K9</td>
+                        <td></td>
+                        <td>C1AACAT38504K9</td>
+                        <td>C1FACAT375X4K9</td>
+                        <td>C1FUCAT375X1K9</td>
+                        <td>ELA2-C1-CAT38505F</td>
+                        <td></td>
+                        <td></td>
+                        <td>PWR-ADPT=</td>
+                        <td>NAL-2960-24LC-S</td>
+                        <td>WS-C2960-24PC-BR=</td>
+                        <td>WS-C2960-48TC-L</td>
+                        <td>WS-C2960PD-8TT-L-1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>PWR-CLP</td>
+                        <td>NAL-2960-24LT-L</td>
+                        <td>WS-C2960-24PC-L</td>
+                        <td>WS-C2960-48TC-L-RF</td>
+                        <td>WS-C2960PD-8TT-L-M</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>PWR-CLP=</td>
+                        <td>NAL-2960-24PC-L</td>
+                        <td>WS-C2960-24PC-L-RF</td>
+                        <td>WS-C2960-48TC-S</td>
+                        <td>WS-C2960PD-8TTL-RF</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>WS-C2960C-12PC-L</td>
+                        <td>NAL-2960-24PC-S</td>
+                        <td>WS-C2960-24PC-S</td>
+                        <td>WS-C2960-48TC-S-RF</td>
+                        <td>WS-C2960X-48TS-S</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>WS-C2960C-12PCL-RF</td>
+                        <td>NAL-2960-24TC-L</td>
+                        <td>WS-C2960-24PC-S-RF</td>
+                        <td>WS-C2960-48TT-L</td>
+                        <td>WS-C2960XS-24PD-L</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>WS-C2960C-8PC-L</td>
+                        <td>NAL-2960-24TC-S</td>
+                        <td>WS-C2960-24TC-BR</td>
+                        <td>WS-C2960-48TT-L-RF</td>
+                        <td>WS-C2960XS-24PS-L</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>WS-C2960C-8PC-L-RF</td>
+                        <td>NAL-2960-24TT-L</td>
+                        <td>WS-C2960-24TC-BR=</td>
+                        <td>WS-C2960-48TT-S</td>
+                        <td>WS-C2960XS-24TD-L</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>			
+            
+        </div> -->
+    </div>
+</div>

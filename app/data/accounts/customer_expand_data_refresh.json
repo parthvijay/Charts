@@ -1,0 +1,107 @@
+{       
+    "data_list": [
+        {
+            "name": "Kapstone",
+            "chassis": 3224,
+            "components": 234,        
+            "install_site": 20,
+            "net_price": 11009355007,
+            "list_price": 18009355009,        
+            "pipeline": 18009355007
+        },
+        {
+            "name": "Lenovo Group Limited",
+            "chassis": 2324,
+            "components": 214,
+            "install_site": 19,
+            "net_price": 256770242,
+            "list_price": 4567702549,
+            "pipeline": 4567702542
+        }, {
+            "name": "Health Quest",
+            "chassis": 4624,
+            "components": 134,
+            "install_site": 14,
+            "net_price": 139606,
+            "list_price": 179609,
+            "pipeline": 179606    
+        }, {
+            "name": "Gilbarco",
+            "chassis": 3213,
+            "components": 231,
+            "install_site": 18,
+            "net_price": 1555165422,
+            "list_price": 1655165429,
+            "pipeline": 1655165422
+        }, {
+            "name": "Coastal Federal Credit Union",
+            "chassis": 4524,
+            "components": 345,
+            "install_site": 13,         
+            "net_price": 150000,
+            "list_price": 170009,          
+            "pipeline": 170000
+        }, {
+            "name": "General Information Services LLC",
+            "chassis": 3214,
+            "components": 324,
+            "install_site": 16,
+            "net_price": 500000,
+            "list_price": 700009,
+            "pipeline": 700000
+        }
+    ],
+
+    "data_net": [
+        {
+            "name": "General Information Services LLC",
+            "chassis": 3224,
+            "components": 234,        
+            "install_site": 20,
+            "net_price": 11009355007,
+            "list_price": 18009355009,        
+            "pipeline": 18009355007
+        },
+        {
+            "name": "Coastal Federal Credit Union",
+            "chassis": 2324,
+            "components": 214,
+            "install_site": 19,
+            "net_price": 256770242,
+            "list_price": 4567702549,
+            "pipeline": 4567702542
+        }, {
+            "name": "Gilbarco",
+            "chassis": 4624,
+            "components": 134,
+            "install_site": 14,
+            "net_price": 139606,
+            "list_price": 179609,
+            "pipeline": 179606    
+        }, {
+            "name": "Health Quest",
+            "chassis": 3213,
+            "components": 231,
+            "install_site": 18,
+            "net_price": 1555165422,
+            "list_price": 1655165429,
+            "pipeline": 1655165422
+        }, {
+            "name": "Lenovo Group Limited",
+            "chassis": 4524,
+            "components": 345,
+            "install_site": 13,         
+            "net_price": 150000,
+            "list_price": 170009,          
+            "pipeline": 170000
+        }, {
+            "name": "Kapstone",
+            "chassis": 3214,
+            "components": 324,
+            "install_site": 16,
+            "net_price": 500000,
+            "list_price": 700009,
+            "pipeline": 700000
+        }
+    ]
+}

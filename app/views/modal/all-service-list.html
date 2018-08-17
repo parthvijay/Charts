@@ -1,0 +1,16 @@
+<div class="modal-body text-center">
+    <a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    <p class="model-head">All Services and Product Family List</p>
+    <ul class="select-option">
+        <li><a href="javascript:void(0)" ng-click="selectAll()">{{select?'Deselect All':'Select All'}}</a></li>
+    </ul>
+    <ul class="product-list">
+        <li ng-repeat="(key, val) in services"><input type="checkbox" id="{{key}}" ng-change="pushOrPopElement(val,key)" name="product-check" ng-model="val.selected">
+            <label for="{{key}}" ><span></span></label><span class="product-list-txt">{{key}}</span></li>
+    </ul>
+
+    <div class="clearfix marginT30 text-right">
+        <a href="javascript:void(0);" class="button stroke-btn blue marginR10 marginB10" ng-click="cancel()">Cancel</a>
+        <a href="javascript:void(0);" class="button filled-btn blue marginB10" ng-click="close()">Save</a>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+<div class="modal-body view-applied-popup" ng-class="{'bookmarks-view-popup' : (fromBookmark || filtersServ.filterTabActive === 'insights' )}">
+    <a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    <div class="view-applied-tab">
+        <h2 ng-class="{'active' : activeTab === 0}" ng-click="selectTab(0); filtersServ.filterTabActive = 'Applied_Filters'">Applied Filters</h2>
+    </div>
+    <div class="view-filter-clear"><a href="" ng-class="{'disabled': disableClearLink ,'hide': filtersServ.filterTabActive === 'insights'}" ng-click="clear()">Clear</a></div>
+    <div class="view-applied-container" ng-hide="filtersServ.filterTabActive === 'insights'">
+        <div class="view-applied-details" ng-show="bookmark.isGlobal">
+            <h5>Definition Description</h5>
+            <p>{{bookmark.definition}}</p>
+        </div>
+        <div class="expanded">
+            <div class="table-responsive view-applied-table">
+                <table class="table-width">
+                    <tbody>
+                        <tr class="primary-row" ng-repeat="c in filters" ng-if="hideInvalidFilters(c)" >
+                            <td>
+                                <table>
+                                    <tr class="sub-level-row" ng-if="!c.selected_levels.length">
+                                        <!-- Change for US136100 -->
+                                        <td rowspan="10" class="no-border view-filters-heading width20"><input ng-disabled="(c.title === 'Sales'? disableSales : true) || (c.title === 'Product'? disableProduct : true) || (c.title === 'Dates'? disableDate : true)" type="checkbox"><label><span class="check"></span></label>{{c.title}}</td>
+                                        <td class="width20"></td>
+                                        <td class="width60 td-width-tag"></td>
+                                    </tr>
+                                    <tr class="sub-level-row" ng-repeat="d in c.selected_levels track by $index">
+                                    <!-- Changes for DE136810 -->
+                                        <td rowspan="10" class="no-border view-filters-heading width20" ng-if="$index === 0"><input ng-disabled="(c.title === 'Sales'? disableSales : false) || (c.title === 'Product'? disableProduct : false) || (c.title === 'Dates'? disableDate : false) || (c.title === 'Dataset'? disableDataSet : false)" type="checkbox" id="checkbox_{{c.title}}" ng-model="checkedFilters[c.title].value" ng-click="changeCheckBox(checkedFilters[c.title].value,c.title)"/><label for="checkbox_{{c.title}} "><span class="check"></span></label>{{c.title}}</td> <!-- Change for US136100 -->
+                                        <td ng-class="{'width20' : $index === 0} "><input type="checkbox" id="checkbox_{{d}}"  ng-model="checkedFilters[c.title][d]" ng-disabled="c.disabled_values[$index] || (c.title === 'Dataset'? disableDataSet : false)" ng-click="changeCheckBox(checkedFilters[c.title][d], c.title, d)" /><label for="checkbox_{{d}}"><span class="check"></span></label>{{d}}</td>
+                                        <td class="td-width-tag" ng-class="{'width60' : $index === 0}">
+                                        <!-- Changes for DE136810 -->
+                                        <!-- Changes for removing the dependent filters on view applied - Sindhu -->
+                                            <span class="name-tag" ng-repeat="e in c.selected_values[$index] track by $index">{{e.key != null ? e.key : e}}<span class="ico-close" ng-hide="isDisabled(c,d);" ng-click="removeSelectedFilterHelper(c,d,$index)"></span></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--Start Applied Insights -->
+    <div class="view-applied-tab"
+            ng-if="dashboard != 'services' && (showRefreshInsightFilter || showTSAttachInsightFilter) || fromBookmark">
+        <h2 ng-class="{'active' : activeTab === 1}">Applied Insights</h2>
+    </div>
+    <div class="insight-filter-content"
+            ng-if="dashboard != 'services' && (showRefreshInsightFilter || showTSAttachInsightFilter) || fromBookmark">
+        <div class="expanded">
+            <div class="table-responsive view-applied-table">
+                <table class="table-width">
+                    <tbody>
+                        <tr class="primary-row">
+                            <td>
+                                <table>
+                                    <tr class="sub-level-row" ng-if="showRefreshInsightFilter || fromBookmark">
+                                        <td class="no-border view-filters-heading width20">Insights</td>
+                                        <td class="width20">Propensity to Refresh :</td>
+                                        <td class="width60 td-width-tag"><span class="name-tag" ng-repeat="f in insightFilters.propensityToRefresh">{{f}}</span></td>
+                                    </tr>
+                                    <tr class="sub-level-row" ng-if="showTSAttachInsightFilter || fromBookmark">
+                                        <td class="no-border view-filters-heading width20">{{!showRefreshInsightFilter && ! fromBookmark ? 'Insights':''}}</td>
+                                        <td class="width20">Propensity for TS Attach <br><i>(US Commercial Only)</i> :</td>
+                                        <td class="width60 td-width-tag"><span class="name-tag">{{insightFilters.propensityToTSAttach}}</span></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

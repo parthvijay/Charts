@@ -1,0 +1,61 @@
+<ul class="filter-opt pull-left">
+                                    <li ng-show="!isBookmarkActive()">
+                                        <a href="" id="menu-toggle" class="show-filter" ng-click="sidebarActive = true; sidebarActiveToggle(); mobileAppliedFiltersActive = false;" ng-show="!sidebarActive">
+                                            <span class="ico-filter_bg count" count="{{appliedFilters.length}}"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="opt-head"><span>Show</span> Filters</span>
+                                        </a>
+                                        <a href="" id="menu-toggle" class="show-filter" ng-click="sidebarActive = false; sidebarActiveToggle();" ng-show="sidebarActive">
+                                            <span class="ico-filter_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="opt-head"><span>Hide</span> Filters</span>
+                                        </a>
+                                    </li>
+                                    <li ng-show="!isBookmarkActive()"><span class="separater"></span></li>
+                                    <li class="dropdown">
+                                        <a href="" class="hidden-lg opt-head view-applied" ng-click="sidebarActive = true;sidebarActiveToggle(); mobileAppliedFiltersActive = true;">View Applied ({{appliedFilters.length}})</a>
+                                        <a href="" class="visible-lg opt-head view-applied">View Applied ({{appliedFilters.length}})</a>
+                                        <div class="dropdown-menu">
+                                            <i class="tipsy"></i>
+                                            <ul class="all-applied-filters">
+                                                <li ng-if="appliedFilters.length === 0" class="no-filter-head clearfix">No Filters Applied</li>
+                                                <li ng-if="appliedFilters.length > 0" class="filter-head clearfix">Applied Filters<a href="" class="pull-right" ng-click="clearFilters()" ng-show="!isBookmarkActive()">Clear All</a></li>
+                                                <li ng-if="(appliedFilters | filter:{categoryId: 1}).length > 0" class="main-filter clearfix">Sales Level<a class="pull-right" href="" ng-click="clearFilters(1)" ng-show="!isBookmarkActive()">Clear</a></li>
+                                                <li class="subfilter sales-subfilter" ng-class="{'enabled' : c.level >= userInfo.salesLevel}" data-category="1" ng-repeat="c in appliedFilters" ng-if="c.categoryId === 1"><a>
+                                                        <span class="ico-close black" ng-if="c.level >= userInfo.salesLevel" ng-click="removeFilter(c);">
+                                                            <span class="path1"></span><span class="path2"></span>
+                                                        </span>
+                                                        <span class="line_wrap"><!--<span class="line"></span>-->{{c.title}}</span>
+
+                                                    </a></li>
+                                                <li class="divider" ng-if="(appliedFilters | filter:{categoryId: 1}).length > 0 && (appliedFilters | filter:{categoryId: 3}).length > 0">
+                                                    <hr/>
+                                                </li>
+                                                <li ng-if="(appliedFilters | filter:{categoryId: 3}).length > 0" class="main-filter clearfix">Accounts<a class="pull-right" href="" ng-click="clearFilters(3)" ng-show="!isBookmarkActive()">Clear</a></li>
+                                                <li class="subfilter sales-subfilter" data-category="3" ng-repeat="c in appliedFilters" ng-if="c.categoryId === 3">
+                                                    <a>
+                                                        <span class="ico-close black" ng-click="removeFilter(c);">
+                                                            <span class="path1"></span><span class="path2"></span>
+                                                        </span>
+                                                        <span class="line_wrap"><span class="line"></span>{{c.title}}</span>
+                                                    </a>
+                                                </li>
+                                                <li class="divider" ng-if="(appliedFilters | filter:{categoryId: 1}).length > 0 && (appliedFilters | filter:{categoryId: 2}).length > 0">
+                                                    <hr/>
+                                                </li>
+                                                <li class="main-filter clearfix" ng-if="(appliedFilters | filter:{categoryId: 2}).length > 0">Architecture<a href="" class="pull-right" ng-click="clearFilters(2)" ng-show="!isBookmarkActive()">Clear</a></li>
+                                                <li class="subfilter" data-category="2" ng-repeat="c in appliedFilters" ng-if="c.categoryId === 2"><a><span class="ico-close black" ng-click="removeFilter(c);" ng-show="!isBookmarkActive()">
+                                                            <span class="path1"></span><span class="path2"></span>
+                                                        </span><span class="line_wrap"><span class="line"></span>{{c.title}}</span></a></li>
+                                                <li class="divider" ng-if="(appliedFilters | filter:{categoryId: 1}).length > 0 && (appliedFilters | filter:{categoryId: 2}).length > 0">
+                                                    <hr/>
+                                                </li>
+                                                <li ng-hide="!isBookmarkActive()" class="main-filter clearfix" >Status 
+                                                </li>
+
+                                                <li class="subfilter" ng-hide="!isBookmarkActive()"><a><span class="line_wrap">{{globalBookmarkServ.activeBookmark}}</a></span>
+                                                </li>
+                                                <li class="main-filter clearfix" ng-if="(appliedFilters | filter:{categoryId: 4}).length > 0" ng-show="opportunitiesView!=='performance'" ng-hide="isBookmarkActive()">Coverage<a href="" class="pull-right" ng-click="clearFilters(4)" ng-show="!isBookmarkActive()">Clear</a></li>
+                                                <li class="subfilter" data-category="4" ng-repeat="c in appliedFilters" ng-if="c.categoryId === 4" ng-show="opportunitiesView!=='performance'"><a><span class="ico-close black" ng-click="removeFilter(c);" ng-show="!isBookmarkActive()">
+                                                            <span class="path1"></span><span class="path2"></span>
+                                                        </span><span class="line_wrap"><span class="line"></span>{{c.title}}</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>

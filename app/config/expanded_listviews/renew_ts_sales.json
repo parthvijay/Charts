@@ -1,0 +1,22 @@
+[
+    {
+      "name": "Sales Levels",
+      "total": "",
+      "net_annual": "Contract Line Value",
+      "multiyear": "",
+      "active": "Contract Line Status",
+      "expired": "",
+      "overdue": "",
+      "signed": ""
+    },
+    {
+      "name": "",
+      "total": "Total",
+      "net_annual": "Annual",
+      "multiyear": "Multi Year",
+      "active": "Active",
+      "expired": "Expired",
+      "overdue": "Overdue",
+      "signed": "Signed"
+    }
+  ]

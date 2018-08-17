@@ -1,0 +1,2701 @@
+<div class="modal-header">
+    <h1>Definition
+        <a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+        </a>
+    </h1>
+</div>
+<div class="modal-body definition-popup collaboration-definition-popup">
+    <div class="shadow">
+        <ul class="popup-tabs">
+            <li ng-class="{'active' : activeTab == 0}" ng-click="selectTab(0);">
+                <a href="">Definition</a>
+            </li>
+            <li ng-class="{'active' : activeTab == 1}" ng-click="selectTab(1);">
+                <a href="">PID List</a>
+            </li>
+        </ul>
+        <img class="white-shadow" src="images/white-shadow.png" />
+    </div>
+    <!-- sunitayadav - added and changed content of this table according to new pdf file -->
+    <div class="tab-content expanded">
+        <div class="table-responsive campaign-table" ng-show="activeTab == 0">
+            <table class="table opp-by table-fixed1 striped-table">
+                <thead>
+                    <tr>
+                        <th>Technologies</th>
+                        <th style="width:46%;">Opportunity (Product Net Price)</th>
+                        <th>SFDC Pipeline (Expected Product Price (Converted))</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>UC</strong>
+                        </td>
+                        <td>
+                            <span class="dotdot">519 PIDs that have LDOS date ranging from Jan 1st 2010 - Dec 31st 2018 and covered under a services
+                                contract
+                            </span>
+                        </td>
+                        <td>
+                            <span class="dotdot">Active pipeline for UC Endpoints in SFDC tagged with Cisco Refresh</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Video</strong>
+                        </td>
+                        <td>40 PIDs that have LDOS date ranging from Jan 1st 2015 - Dec 31st 2018 and covered under a services
+                            contract
+                        </td>
+                        <td>Active pipeline for TP Endpoints in SFDC tagged with Cisco Refresh</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>MCU</strong>
+                        </td>
+                        <td>27 PIDs that have LDOS date ranging from Jan 1st 2015 - Dec 31st 2018 and covered under a services
+                            contract
+                        </td>
+                        <td>Active pipeline for TP Multiparty Conferencing in SFDC tagged with Cisco Refresh</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- sunitayadav - added and changed content of this table according to new pdf file -->
+        <div class="table-responsive campaign-table pid-list" ng-show="activeTab == 1">
+            <table class="table opp-by table-fixed1 striped-table">
+
+                <thead>
+                    <tr>
+                        <th>UC</th>
+                        <th>Video</th>
+                        <th>MCU</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CP-3905 </td>
+                        <td>CTS-3000 </td>
+                        <td>CTI-4205-MCU-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-3905= </td>
+                        <td>CTS-3010 </td>
+                        <td>CTI-4203-MCU-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-3905-RF </td>
+                        <td>CTS-1300-65 </td>
+                        <td>CTI-4210-MCU-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-6901-C-K9= </td>
+                        <td>CTS-3210 </td>
+                        <td>CTI-4215-MCU-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-6901-C-K9-RF </td>
+                        <td>CTS-3200 </td>
+                        <td>CTI-4220-MCU-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-6901-CL-K9= </td>
+                        <td>CTS-3000-10PK </td>
+                        <td>CTI-4501-MCU-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-6901-CL-K9-RF </td>
+                        <td>CTS-T3-K9 </td>
+                        <td>CTI-4505-MCU-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-6901-W-K9 </td>
+                        <td>CTS-3010-PROMO </td>
+                        <td>CTI-4510-MCU-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-6901-W-K9= </td>
+                        <td>CTS-3210-PROMO </td>
+                        <td>CTI-4515-MCU-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-6901-W-K9-RF </td>
+                        <td>CTS-3000-5PK </td>
+                        <td>CTI-4520-MCU-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-6901-WL-K9 </td>
+                        <td>CTS-6000CODEC-K9= </td>
+                        <td>CTI-7010-TPSRV-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-6901-WL-K9= </td>
+                        <td>CTS-INTP6000-K9 </td>
+                        <td>CTI-310-TS-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-6901-WL-K9-RF </td>
+                        <td>CTS-6000-K9 </td>
+                        <td>CTI-320-TS-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7945G </td>
+                        <td>CTS-MXP3000-K9 </td>
+                        <td>CTI-5310-MCU-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7945G++= </td>
+                        <td>CTS-3000CODEC-K9= </td>
+                        <td>CTI-5310-MCU04EK9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7945G= </td>
+                        <td>CTS-INTP3000-K9 </td>
+                        <td>CTI-5320-MCU-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7945G-CCME </td>
+                        <td>CTS-1700-K9 </td>
+                        <td>CTI-MPS-CHAS200K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7945G-CH1 </td>
+                        <td>CTS-MXP-1000-K9 </td>
+                        <td>CTI-MPS-CHAS800K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7945G-CN= </td>
+                        <td>CTS-500 </td>
+                        <td>CTI-8000-MSECH-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7945G-RF </td>
+                        <td>CTS-E20-K9 </td>
+                        <td>CTI-8420-MED-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7965G </td>
+                        <td>CTS-P52DC60-K9 </td>
+                        <td>CTI-8710-TS-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7965G++= </td>
+                        <td>CTS-P52C60-K9 </td>
+                        <td>CTI-8510-MED2-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7965G= </td>
+                        <td>CTS-P42C20-K9 </td>
+                        <td>CTI-820-Media-K9</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7965G-CCME </td>
+                        <td>CTS-1000 </td>
+                        <td>CTI-TMCU-112450INT</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7965G-CH1 </td>
+                        <td>CTS-P52MXP-K9 </td>
+                        <td>CTI-TMCU-112450US</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7965G-RF </td>
+                        <td>CTS-P52C40-K9 </td>
+                        <td>CTI-TMCU-112451INT</td>
+                    </tr>
+                    <tr>
+                        <td>CP-7975G </td>
+                        <td>CTS-P52DMXP-K9 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7975G++= </td>
+                        <td>CTS-1000-10PK </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7975G= </td>
+                        <td>CTS-1300-47 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7975G-CCME </td>
+                        <td>CTS-1000-5PK </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7975G-CFE </td>
+                        <td>CTS-EDGE95-K9 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7975G-CH1 </td>
+                        <td>CTS-EDGE75-K9 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7975G-CN= </td>
+                        <td>CTS-EDGE95-WP-K9 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7975G-RF </td>
+                        <td>CTS-EDGE75-WP-K9 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-3911 </td>
+                        <td>CTS-EDU-INTP-K9 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-3911= </td>
+                        <td>CTS-INTRN </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-3911-CCME </td>
+                        <td>CTS-MEDIA-P2-K9 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-3951 </td>
+                        <td>CTS-CA-K9 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-3951= </td>
+                        <td>CTS-CPS-DM-K9 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-3951-CH1 </td>
+                        <td>CTS-SCHOLAR-K9 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6911-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6911-C-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6911-CL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6911-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6911-W-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6911-WL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-C-K9-APACP </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-C-K9-LATAM </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-C-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-CL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-CL-K9-APAC </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-CLK9-APACP </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-CLK9-LATAM </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-CL-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-W-K9-APACP </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-W-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-WL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-WLK9-APACP </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-WL-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6941-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6941-C-K9-LATAM </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6941-C-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6941-CL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6941-CLK9-LATAM </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6941-CL-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6941-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6941-W-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6941-WL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6945-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6945-C-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6945-CL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6945-CL-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6945-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6945-WL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6945-WL-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6961-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6961-C-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6961-CL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6961-CL-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6961-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6961-W-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6961-WL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7811-3PCC-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7811-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7811-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7811-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7811-NC-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7821-3PCC-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7821-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7821-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7821-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7821-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7821-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7841-3PCC-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7841-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7841-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7841-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7841-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7841-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7861-3PCC-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7861-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7861-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7861-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7861-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7861-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7905G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7905G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7905G-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7905G-CCME= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7905G-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7905G-SP </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7906G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7906G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7906G-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7906G-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7906G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7910G+SW </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7910G+SW= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7910G+SW-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7910G+SW-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G-APAC </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G-APACSP </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G-CN= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G-LATAM </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G-NA </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G-NA= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G-NA-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G-NA-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G-A </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G-A= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G-A-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G-A-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G-BZ1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G-CCME= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G-CH1-A </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G-SP </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G-W </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7912G-W= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7914= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7915= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7915-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7916 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7916= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7916-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-AC-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-AE-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-A-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-A-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-EC-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-EE-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-E-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-E-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-PC-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-P-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-P-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-P-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-WC-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-WE-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-W-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7921G-W-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-AC-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-AE-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-A-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-A-K9-BUN </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-A-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-EC-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-EE-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-E-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-E-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-E-K9-BUN </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-E-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-EX-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-EX-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-EX-K9-BUN </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-EX-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-PE-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-P-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-P-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-P-K9-BUN </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-WC-CH1-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-W-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-W-K9-BUN </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7925G-W-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7926G-W-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7926G-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7926G-W-K9-BUN </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7926G-W-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7931G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7931G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7931G-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7931G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7936 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7936= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7936-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7936-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7937G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7937G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7937G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G-1SPB= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G-APAC </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G-APACSP </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G-BZ1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G-CCME= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G-PROMO </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G-SP </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7940G-SPB </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-1SPB= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-CCME= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-GE </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-GE= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-GE-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-GE-CCME= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-GE-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-GE-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-ITA-S2= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-ITA-S3= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-PROMO </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-SPB </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G-APACSP </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G-BULK </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G-CCME-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G-ITA-S2= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G-ITA-S3= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G-R= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7960G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7960G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7960G-BUN </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7960G-BZ1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7960G-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7960G-CCME= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7960G-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7960G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7960G-SP </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G-CCME= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G-GE </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G-GE= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G-GE-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G-GE-CCME= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G-GE-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G-GE-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G-ITA-S1= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7962G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7962G++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7962G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7962G-8PKG </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7962G-BULK </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7962G-CCME </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7962G-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7962G-ITA-S1= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7962G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7970G </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7970G= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7970G-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7970G-CH2 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7970G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7970G-SP </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7971G-GE </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7971G-GE= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7971G-GE-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7971G-GE-CH2 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7971G-GE-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7985-NTSC </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7985-NTSC= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7985-NTSC-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7985-PAL </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7985-PAL= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7985-PAL-CH1 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8811-3PCC-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8811-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8811-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8811-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8811-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8811-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8821-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8821-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8821-K9-BUN </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3P-BR-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3PCC-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3PCC-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3PD-BR-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3PD-EU-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3PD-J-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3PD-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3PD-LA-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3PD-TW-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3P-EU-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3P-J-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3P-LA-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-3P-TW-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-BASE-3PCC= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-BASE-S </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-BR-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-DC-BR-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-DC-EU-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-DC-J-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-DC-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-DC-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-DC-LA-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-DC-NR-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-DC-TW-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-EU-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-EU-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-J-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-LA-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-NR-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-S= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8831-TW-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8841-3PCC-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8841-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8841-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8841-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8841-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8841-R-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8841-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8845-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8845-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8845-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8845-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8845-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8851-3PCC-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8851-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8851-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8851-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8851-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8851-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8851NR-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8851NR-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8851-R-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8851-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8861-3PCC-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8861-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8861-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8861-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8861-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8861-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8865-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8865-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8865-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8865-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8865NR-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8865-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8941-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8941-L-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8945-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8945-A-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8945-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8945-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8945-L-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-C-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-C-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-C-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-CL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-CL-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-W-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-W-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-WL-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-WL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-C-A-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-C-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-C-CAM-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-CCAM-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-C-CH-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-CHSUS-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-C-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-C-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-CL-CAM-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-CLCAMK9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-CLHSUS-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-CL-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-CL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-CL-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-CL-OPT-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-C-OPT-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-W-A-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-W-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-W-CAM-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-W-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-W-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-WL-CAM-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-WL-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-WL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-A-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-A-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-CAM++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-CAM-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-CAMK9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-CHSUS-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-CL-CAM-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-CLCAMK9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-CLHSUS-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-CL-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-CL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-CL-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-OPT-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-CR-CAM-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-R-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-W-A-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-W-A-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-W-CAM-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-W-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-WL-CAM-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-WL-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-WL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-WL-OPT-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-BEKEM </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-BEKEM= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-BEKEM-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-BEKEM-W= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-CKEM-C </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-CKEM-C= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-CKEM-C-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-CKEM-W </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-CKEM-W= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-CKEM-W-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-DX650-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-DX650-K9++= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-DX650-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-DX650-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-DX650-NC-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-DX650-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-DX650-W-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6911-CL-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6911-WL-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-C-CN-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-CL-CN-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-W-CN-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-W-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-WL-CN-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6921-WL-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6941-W-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6941-WL-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6941-WL-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6945-W-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6945-W-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6961-W-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6961-WL-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-6961-WL-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7902 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7911 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7915 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP7940G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7941G-CFE </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7942G-CN= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7960-BUN </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP7960G-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7961 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7962G-CN= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7965 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7965= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7970 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7980 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7980= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-7985-NTSC-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8941-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8941-CL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8941-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8941-L-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8941-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8941-WL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8945-C-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8945-CL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8945-L-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8945-W-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8945-WL-K9= </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-C-A-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-8961-W-K9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9951-C-A-CK9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-C-A-CK9-RF </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>CP-9971-CL-OPT-K9 </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="clearfix sk-footer modal-footer" ng-show="activeT</tr>ab == 0">
+    <div class="note">
+        <span>Color code:</span>
+        <div>
+            <span class="color-code"></span>
+            <span>If there is a collab refresh opportunity and active SFDC pipeline is greater than opportunity total value</span>
+        </div>
+        <div>
+            <span class="color-code ready"></span>
+            <span>If there is a collab refresh opportunity and active SFDC pipeline is less than opportunity total value</span>
+        </div>
+        <div>
+            <span class="color-code no-active"></span>
+            <span>If there is a collab refresh opportuntiy but no active pipeline</span>
+        </div>
+        <span class="marginT15">Pricing:</span>
+        <div>
+            <span>Opportunity is on Product Net Price</span>
+        </div>
+        <div>
+            <span>SFDC Pipeline is on Expected Product total value</span>
+        </div>
+    </div>
+    <div class="shadow"></div>
+</div>

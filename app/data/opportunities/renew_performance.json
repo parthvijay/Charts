@@ -1,0 +1,272 @@
+[
+    {
+        "title": "Actionable Opportunity vs SFDC Pipeline",
+        "description": "Comparison of the Renew Opportunity with the opportunity entered into the SFDC Pipeline.",
+        "type": "bar_double",
+        "colors": {
+            "Actionable Opportunity": "#83B758",
+            "SFDC Pipeline": "#0570AF"
+        },
+        "data": 
+[{"quarter":"Q1FY16","areas":[{"state":"US_Enterprise (AMER)","freq":{"Actionable Opportunity":30000000,"SFDC Pipeline":42000000}}]},{"quarter":"Q2FY16","areas":[{"state":"US_Enterprise (AMER)","freq":{"Actionable Opportunity":36000000,"SFDC Pipeline":17000000}}]},{"quarter":"Q3FY16","areas":[{"state":"US_Enterprise (AMER)","freq":{"Actionable Opportunity":45000000,"SFDC Pipeline":28000000}}]},{"quarter":"Q4FY16","areas":[{"state":"US_Enterprise (AMER)","freq":{"Actionable Opportunity":23000000,"SFDC Pipeline":28000000}}]},{"quarter":"Q1FY17","areas":[{"state":"US_Enterprise (AMER)","freq":{"Actionable Opportunity":23000000,"SFDC Pipeline":43000000}}]},{"quarter":"Q2FY17","areas":[{"state":"US_Enterprise (AMER)","freq":{"Actionable Opportunity":38000000,"SFDC Pipeline":25000000}}]}]
+    },
+    {
+        "title": "Renew Breakdown ($)",
+        "description": "Total dollars of On Time, late, and missed renewals during a rolling 3-month period. This is the same 2-month period used to calculate the Renewal Rate. Timeline: Current month - 2 and + 3. The 3 future period show remaining opportunity. Based on normalized list dollars.",
+        "type": "bar_stacked",
+        "keys": ["On Time", "Late", "Missed", "Remaining"],
+        "colors": {
+            "On Time": "#0570AF",
+            "Late": "#AD017E",
+            "Missed": "#CB4C02",
+            "Remaining": "#238A45",
+			"Early" : "#BCBD22",
+			"Ontime":"#17BECF",
+			"Late1 Month":"#1F77B4",
+			"Late2 Months":"#9EDAE5",
+			"Late3 Months":"#1F5188"
+        },
+		"currentQuarter": "Q1FY15",
+		"categories":["Renew Breakdown ($)", "Renew Breakdown (%)"],
+        "data": 
+		[
+[{"quarter":"Q1FY14","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":460000000,"Late":800000000,"Missed":180000000,"Remaining":170000000}},{"state":"Canada (AMER)","freq":{"On Time":130000000,"Late":440000000,"Missed":460000000,"Remaining":100000000}},{"state":"India_Area (APJ)","freq":{"On Time":600000000,"Late":100000000,"Missed":650000000,"Remaining":590000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":400000000,"Late":730000000,"Missed":650000000,"Remaining":830000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":750000000,"Late":580000000,"Missed":710000000,"Remaining":430000000}}]},{"quarter":"Q2FY14","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":200000000,"Late":590000000,"Missed":710000000,"Remaining":120000000}},{"state":"Canada (AMER)","freq":{"On Time":730000000,"Late":540000000,"Missed":160000000,"Remaining":270000000}},{"state":"India_Area (APJ)","freq":{"On Time":120000000,"Late":590000000,"Missed":460000000,"Remaining":840000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":350000000,"Late":530000000,"Missed":350000000,"Remaining":670000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":720000000,"Late":530000000,"Missed":470000000,"Remaining":500000000}}]},{"quarter":"Q3FY14","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":180000000,"Late":370000000,"Missed":320000000,"Remaining":690000000}},{"state":"Canada (AMER)","freq":{"On Time":300000000,"Late":230000000,"Missed":540000000,"Remaining":440000000}},{"state":"India_Area (APJ)","freq":{"On Time":780000000,"Late":640000000,"Missed":640000000,"Remaining":130000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":180000000,"Late":260000000,"Missed":490000000,"Remaining":470000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":450000000,"Late":380000000,"Missed":360000000,"Remaining":320000000}}]},{"quarter":"Q4FY14","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":170000000,"Late":420000000,"Missed":120000000,"Remaining":400000000}},{"state":"Canada (AMER)","freq":{"On Time":530000000,"Late":160000000,"Missed":810000000,"Remaining":320000000}},{"state":"India_Area (APJ)","freq":{"On Time":840000000,"Late":530000000,"Missed":770000000,"Remaining":800000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":800000000,"Late":550000000,"Missed":270000000,"Remaining":690000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":490000000,"Late":400000000,"Missed":720000000,"Remaining":720000000}}]},{"quarter":"Q1FY15","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":340000000,"Late":610000000,"Missed":850000000,"Remaining":490000000}},{"state":"Canada (AMER)","freq":{"On Time":430000000,"Late":590000000,"Missed":550000000,"Remaining":730000000}},{"state":"India_Area (APJ)","freq":{"On Time":460000000,"Late":130000000,"Missed":830000000,"Remaining":280000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":500000000,"Late":160000000,"Missed":820000000,"Remaining":630000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":220000000,"Late":460000000,"Missed":780000000,"Remaining":630000000}}]},{"quarter":"Q2FY15","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":480000000,"Late":430000000,"Missed":590000000,"Remaining":250000000}},{"state":"Canada (AMER)","freq":{"On Time":190000000,"Late":630000000,"Missed":510000000,"Remaining":600000000}},{"state":"India_Area (APJ)","freq":{"On Time":200000000,"Late":470000000,"Missed":430000000,"Remaining":140000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":180000000,"Late":470000000,"Missed":590000000,"Remaining":750000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":220000000,"Late":830000000,"Missed":140000000,"Remaining":130000000}}]},{"quarter":"Q3FY15","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":760000000,"Late":550000000,"Missed":840000000,"Remaining":140000000}},{"state":"Canada (AMER)","freq":{"On Time":350000000,"Late":560000000,"Missed":290000000,"Remaining":770000000}},{"state":"India_Area (APJ)","freq":{"On Time":210000000,"Late":660000000,"Missed":290000000,"Remaining":850000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":410000000,"Late":240000000,"Missed":700000000,"Remaining":360000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":630000000,"Late":620000000,"Missed":280000000,"Remaining":420000000}}]},{"quarter":"Q4FY15","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":190000000,"Late":440000000,"Missed":420000000,"Remaining":230000000}},{"state":"Canada (AMER)","freq":{"On Time":310000000,"Late":250000000,"Missed":620000000,"Remaining":170000000}},{"state":"India_Area (APJ)","freq":{"On Time":280000000,"Late":210000000,"Missed":770000000,"Remaining":190000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":570000000,"Late":110000000,"Missed":360000000,"Remaining":670000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":490000000,"Late":110000000,"Missed":800000000,"Remaining":810000000}}]},{"quarter":"Q1FY16","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":480000000,"Late":760000000,"Missed":840000000,"Remaining":220000000}},{"state":"Canada (AMER)","freq":{"On Time":620000000,"Late":720000000,"Missed":340000000,"Remaining":380000000}},{"state":"India_Area (APJ)","freq":{"On Time":590000000,"Late":510000000,"Missed":330000000,"Remaining":140000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":470000000,"Late":320000000,"Missed":690000000,"Remaining":230000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":720000000,"Late":690000000,"Missed":170000000,"Remaining":240000000}}]},{"quarter":"Q2FY16","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":640000000,"Late":250000000,"Missed":170000000,"Remaining":160000000}},{"state":"Canada (AMER)","freq":{"On Time":680000000,"Late":330000000,"Missed":180000000,"Remaining":340000000}},{"state":"India_Area (APJ)","freq":{"On Time":150000000,"Late":320000000,"Missed":840000000,"Remaining":760000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":270000000,"Late":780000000,"Missed":150000000,"Remaining":240000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":350000000,"Late":340000000,"Missed":260000000,"Remaining":300000000}}]},{"quarter":"Q3FY16","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":840000000,"Late":310000000,"Missed":660000000,"Remaining":520000000}},{"state":"Canada (AMER)","freq":{"On Time":280000000,"Late":110000000,"Missed":490000000,"Remaining":120000000}},{"state":"India_Area (APJ)","freq":{"On Time":660000000,"Late":270000000,"Missed":770000000,"Remaining":220000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":510000000,"Late":210000000,"Missed":610000000,"Remaining":800000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":310000000,"Late":460000000,"Missed":270000000,"Remaining":680000000}}]},{"quarter":"Q4FY16","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":100000000,"Late":440000000,"Missed":410000000,"Remaining":610000000}},{"state":"Canada (AMER)","freq":{"On Time":350000000,"Late":690000000,"Missed":510000000,"Remaining":180000000}},{"state":"India_Area (APJ)","freq":{"On Time":370000000,"Late":620000000,"Missed":460000000,"Remaining":130000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":610000000,"Late":770000000,"Missed":520000000,"Remaining":810000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":370000000,"Late":560000000,"Missed":580000000,"Remaining":690000000}}]},{"quarter":"Q1FY17","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":120000000,"Late":520000000,"Missed":130000000,"Remaining":110000000}},{"state":"Canada (AMER)","freq":{"On Time":680000000,"Late":820000000,"Missed":570000000,"Remaining":580000000}},{"state":"India_Area (APJ)","freq":{"On Time":220000000,"Late":490000000,"Missed":650000000,"Remaining":160000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":330000000,"Late":460000000,"Missed":250000000,"Remaining":360000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":720000000,"Late":510000000,"Missed":390000000,"Remaining":780000000}}]},{"quarter":"Q2FY17","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":680000000,"Late":810000000,"Missed":190000000,"Remaining":620000000}},{"state":"Canada (AMER)","freq":{"On Time":660000000,"Late":380000000,"Missed":670000000,"Remaining":250000000}},{"state":"India_Area (APJ)","freq":{"On Time":750000000,"Late":150000000,"Missed":190000000,"Remaining":400000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":630000000,"Late":670000000,"Missed":530000000,"Remaining":660000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":360000000,"Late":580000000,"Missed":830000000,"Remaining":260000000}}]},{"quarter":"Q3FY17","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":420000000,"Late":430000000,"Missed":560000000,"Remaining":310000000}},{"state":"Canada (AMER)","freq":{"On Time":850000000,"Late":390000000,"Missed":390000000,"Remaining":780000000}},{"state":"India_Area (APJ)","freq":{"On Time":610000000,"Late":240000000,"Missed":560000000,"Remaining":520000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":510000000,"Late":140000000,"Missed":200000000,"Remaining":260000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":240000000,"Late":650000000,"Missed":340000000,"Remaining":350000000}}]},{"quarter":"Q4FY17","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":650000000,"Late":410000000,"Missed":840000000,"Remaining":770000000}},{"state":"Canada (AMER)","freq":{"On Time":660000000,"Late":730000000,"Missed":470000000,"Remaining":360000000}},{"state":"India_Area (APJ)","freq":{"On Time":340000000,"Late":250000000,"Missed":600000000,"Remaining":610000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":140000000,"Late":280000000,"Missed":750000000,"Remaining":360000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":140000000,"Late":220000000,"Missed":800000000,"Remaining":350000000}}]},{"quarter":"Q1FY18","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":780000000,"Late":630000000,"Missed":250000000,"Remaining":170000000}},{"state":"Canada (AMER)","freq":{"On Time":620000000,"Late":140000000,"Missed":500000000,"Remaining":560000000}},{"state":"India_Area (APJ)","freq":{"On Time":110000000,"Late":830000000,"Missed":290000000,"Remaining":350000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":840000000,"Late":580000000,"Missed":260000000,"Remaining":290000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":210000000,"Late":690000000,"Missed":680000000,"Remaining":720000000}}]},{"quarter":"Q2FY18","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":590000000,"Late":580000000,"Missed":660000000,"Remaining":100000000}},{"state":"Canada (AMER)","freq":{"On Time":150000000,"Late":790000000,"Missed":470000000,"Remaining":320000000}},{"state":"India_Area (APJ)","freq":{"On Time":470000000,"Late":720000000,"Missed":750000000,"Remaining":580000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":480000000,"Late":170000000,"Missed":230000000,"Remaining":480000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":260000000,"Late":810000000,"Missed":330000000,"Remaining":770000000}}]},{"quarter":"Q3FY18","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":260000000,"Late":150000000,"Missed":530000000,"Remaining":260000000}},{"state":"Canada (AMER)","freq":{"On Time":550000000,"Late":650000000,"Missed":730000000,"Remaining":470000000}},{"state":"India_Area (APJ)","freq":{"On Time":820000000,"Late":560000000,"Missed":420000000,"Remaining":230000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":380000000,"Late":820000000,"Missed":250000000,"Remaining":260000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":440000000,"Late":440000000,"Missed":470000000,"Remaining":180000000}}]},{"quarter":"Q4FY18","areas":[{"state":"US_Enterprise (AMER)","freq":{"On Time":320000000,"Late":360000000,"Missed":210000000,"Remaining":720000000}},{"state":"Canada (AMER)","freq":{"On Time":460000000,"Late":370000000,"Missed":490000000,"Remaining":700000000}},{"state":"India_Area (APJ)","freq":{"On Time":190000000,"Late":620000000,"Missed":440000000,"Remaining":120000000}},{"state":"Emear_Central (EMEAR)","freq":{"On Time":690000000,"Late":140000000,"Missed":300000000,"Remaining":840000000}},{"state":"Emear_North (EMEAR)","freq":{"On Time":540000000,"Late":630000000,"Missed":720000000,"Remaining":560000000}}]}],
+[{"quarter":"Q1FY14","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":1,"Ontime":3,"Late1 Month":1,"Late2 Months":2,"Late3 Months":2}},{"state":"Canada (AMER)","freq":{"Early":2,"Ontime":1,"Late1 Month":2,"Late2 Months":2,"Late3 Months":2}},{"state":"India_Area (APJ)","freq":{"Early":2,"Ontime":3,"Late1 Month":2,"Late2 Months":3,"Late3 Months":3}},{"state":"Emear_Central (EMEAR)","freq":{"Early":3,"Ontime":1,"Late1 Month":1,"Late2 Months":2,"Late3 Months":2}},{"state":"Emear_North (EMEAR)","freq":{"Early":3,"Ontime":2,"Late1 Month":3,"Late2 Months":2,"Late3 Months":2}},{"state":"Emear_South (EMEAR)","freq":{"Early":2,"Ontime":2,"Late1 Month":3,"Late2 Months":3,"Late3 Months":1}}]},{"quarter":"Q2FY14","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":2,"Ontime":3,"Late1 Month":2,"Late2 Months":3,"Late3 Months":1}},{"state":"Canada (AMER)","freq":{"Early":3,"Ontime":1,"Late1 Month":1,"Late2 Months":1,"Late3 Months":1}},{"state":"India_Area (APJ)","freq":{"Early":3,"Ontime":2,"Late1 Month":2,"Late2 Months":2,"Late3 Months":3}},{"state":"Emear_Central (EMEAR)","freq":{"Early":3,"Ontime":1,"Late1 Month":1,"Late2 Months":2,"Late3 Months":2}},{"state":"Emear_North (EMEAR)","freq":{"Early":1,"Ontime":2,"Late1 Month":2,"Late2 Months":2,"Late3 Months":1}},{"state":"Emear_South (EMEAR)","freq":{"Early":3,"Ontime":3,"Late1 Month":2,"Late2 Months":3,"Late3 Months":1}}]},{"quarter":"Q3FY14","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":1,"Ontime":3,"Late1 Month":2,"Late2 Months":3,"Late3 Months":3}},{"state":"Canada (AMER)","freq":{"Early":2,"Ontime":1,"Late1 Month":2,"Late2 Months":1,"Late3 Months":1}},{"state":"India_Area (APJ)","freq":{"Early":1,"Ontime":1,"Late1 Month":1,"Late2 Months":2,"Late3 Months":1}},{"state":"Emear_Central (EMEAR)","freq":{"Early":2,"Ontime":1,"Late1 Month":3,"Late2 Months":2,"Late3 Months":1}},{"state":"Emear_North (EMEAR)","freq":{"Early":2,"Ontime":2,"Late1 Month":2,"Late2 Months":3,"Late3 Months":1}},{"state":"Emear_South (EMEAR)","freq":{"Early":2,"Ontime":3,"Late1 Month":2,"Late2 Months":3,"Late3 Months":3}}]},{"quarter":"Q4FY14","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":3,"Ontime":3,"Late1 Month":1,"Late2 Months":1,"Late3 Months":1}},{"state":"Canada (AMER)","freq":{"Early":2,"Ontime":3,"Late1 Month":2,"Late2 Months":1,"Late3 Months":3}},{"state":"India_Area (APJ)","freq":{"Early":2,"Ontime":2,"Late1 Month":1,"Late2 Months":2,"Late3 Months":3}},{"state":"Emear_Central (EMEAR)","freq":{"Early":1,"Ontime":3,"Late1 Month":3,"Late2 Months":1,"Late3 Months":1}},{"state":"Emear_North (EMEAR)","freq":{"Early":2,"Ontime":1,"Late1 Month":2,"Late2 Months":2,"Late3 Months":3}},{"state":"Emear_South (EMEAR)","freq":{"Early":2,"Ontime":3,"Late1 Month":1,"Late2 Months":1,"Late3 Months":2}}]},{"quarter":"Q1FY15","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":3,"Ontime":2,"Late1 Month":3,"Late2 Months":3,"Late3 Months":1}},{"state":"Canada (AMER)","freq":{"Early":3,"Ontime":2,"Late1 Month":2,"Late2 Months":2,"Late3 Months":3}},{"state":"India_Area (APJ)","freq":{"Early":3,"Ontime":1,"Late1 Month":1,"Late2 Months":1,"Late3 Months":3}},{"state":"Emear_Central (EMEAR)","freq":{"Early":1,"Ontime":3,"Late1 Month":1,"Late2 Months":1,"Late3 Months":3}},{"state":"Emear_North (EMEAR)","freq":{"Early":1,"Ontime":1,"Late1 Month":2,"Late2 Months":3,"Late3 Months":1}},{"state":"Emear_South (EMEAR)","freq":{"Early":1,"Ontime":3,"Late1 Month":2,"Late2 Months":2,"Late3 Months":1}}]},{"quarter":"Q2FY15","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":1,"Ontime":1,"Late1 Month":2,"Late2 Months":2,"Late3 Months":3}},{"state":"Canada (AMER)","freq":{"Early":2,"Ontime":1,"Late1 Month":3,"Late2 Months":3,"Late3 Months":2}},{"state":"India_Area (APJ)","freq":{"Early":2,"Ontime":2,"Late1 Month":2,"Late2 Months":3,"Late3 Months":2}},{"state":"Emear_Central (EMEAR)","freq":{"Early":2,"Ontime":1,"Late1 Month":1,"Late2 Months":2,"Late3 Months":1}},{"state":"Emear_North (EMEAR)","freq":{"Early":2,"Ontime":3,"Late1 Month":1,"Late2 Months":1,"Late3 Months":1}},{"state":"Emear_South (EMEAR)","freq":{"Early":3,"Ontime":3,"Late1 Month":3,"Late2 Months":3,"Late3 Months":1}}]},{"quarter":"Q3FY15","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":2,"Ontime":1,"Late1 Month":1,"Late2 Months":3,"Late3 Months":1}},{"state":"Canada (AMER)","freq":{"Early":1,"Ontime":2,"Late1 Month":1,"Late2 Months":3,"Late3 Months":1}},{"state":"India_Area (APJ)","freq":{"Early":1,"Ontime":1,"Late1 Month":1,"Late2 Months":2,"Late3 Months":3}},{"state":"Emear_Central (EMEAR)","freq":{"Early":1,"Ontime":3,"Late1 Month":3,"Late2 Months":3,"Late3 Months":3}},{"state":"Emear_North (EMEAR)","freq":{"Early":1,"Ontime":3,"Late1 Month":3,"Late2 Months":2,"Late3 Months":3}},{"state":"Emear_South (EMEAR)","freq":{"Early":3,"Ontime":3,"Late1 Month":1,"Late2 Months":2,"Late3 Months":1}}]},{"quarter":"Q4FY15","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":3,"Ontime":1,"Late1 Month":3,"Late2 Months":1,"Late3 Months":1}},{"state":"Canada (AMER)","freq":{"Early":1,"Ontime":3,"Late1 Month":3,"Late2 Months":1,"Late3 Months":2}},{"state":"India_Area (APJ)","freq":{"Early":2,"Ontime":1,"Late1 Month":1,"Late2 Months":1,"Late3 Months":2}},{"state":"Emear_Central (EMEAR)","freq":{"Early":3,"Ontime":1,"Late1 Month":3,"Late2 Months":3,"Late3 Months":3}},{"state":"Emear_North (EMEAR)","freq":{"Early":1,"Ontime":2,"Late1 Month":3,"Late2 Months":1,"Late3 Months":3}},{"state":"Emear_South (EMEAR)","freq":{"Early":2,"Ontime":2,"Late1 Month":3,"Late2 Months":2,"Late3 Months":3}}]},{"quarter":"Q1FY16","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":1,"Ontime":3,"Late1 Month":3,"Late2 Months":1,"Late3 Months":3}},{"state":"Canada (AMER)","freq":{"Early":1,"Ontime":3,"Late1 Month":2,"Late2 Months":1,"Late3 Months":1}},{"state":"India_Area (APJ)","freq":{"Early":2,"Ontime":1,"Late1 Month":1,"Late2 Months":1,"Late3 Months":1}},{"state":"Emear_Central (EMEAR)","freq":{"Early":3,"Ontime":3,"Late1 Month":3,"Late2 Months":2,"Late3 Months":2}},{"state":"Emear_North (EMEAR)","freq":{"Early":3,"Ontime":3,"Late1 Month":2,"Late2 Months":3,"Late3 Months":1}},{"state":"Emear_South (EMEAR)","freq":{"Early":2,"Ontime":3,"Late1 Month":2,"Late2 Months":3,"Late3 Months":1}}]},{"quarter":"Q2FY16","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":3,"Ontime":3,"Late1 Month":2,"Late2 Months":3,"Late3 Months":2}},{"state":"Canada (AMER)","freq":{"Early":3,"Ontime":3,"Late1 Month":2,"Late2 Months":2,"Late3 Months":2}},{"state":"India_Area (APJ)","freq":{"Early":2,"Ontime":3,"Late1 Month":1,"Late2 Months":1,"Late3 Months":2}},{"state":"Emear_Central (EMEAR)","freq":{"Early":3,"Ontime":1,"Late1 Month":2,"Late2 Months":1,"Late3 Months":3}},{"state":"Emear_North (EMEAR)","freq":{"Early":2,"Ontime":3,"Late1 Month":3,"Late2 Months":2,"Late3 Months":2}},{"state":"Emear_South (EMEAR)","freq":{"Early":2,"Ontime":1,"Late1 Month":1,"Late2 Months":2,"Late3 Months":1}}]},{"quarter":"Q3FY16","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":1,"Ontime":3,"Late1 Month":1,"Late2 Months":2,"Late3 Months":2}},{"state":"Canada (AMER)","freq":{"Early":1,"Ontime":3,"Late1 Month":3,"Late2 Months":3,"Late3 Months":1}},{"state":"India_Area (APJ)","freq":{"Early":1,"Ontime":3,"Late1 Month":2,"Late2 Months":3,"Late3 Months":1}},{"state":"Emear_Central (EMEAR)","freq":{"Early":2,"Ontime":3,"Late1 Month":2,"Late2 Months":3,"Late3 Months":2}},{"state":"Emear_North (EMEAR)","freq":{"Early":2,"Ontime":2,"Late1 Month":2,"Late2 Months":2,"Late3 Months":2}},{"state":"Emear_South (EMEAR)","freq":{"Early":2,"Ontime":2,"Late1 Month":2,"Late2 Months":2,"Late3 Months":2}}]},{"quarter":"Q4FY16","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":1,"Ontime":2,"Late1 Month":2,"Late2 Months":3,"Late3 Months":2}},{"state":"Canada (AMER)","freq":{"Early":1,"Ontime":2,"Late1 Month":3,"Late2 Months":2,"Late3 Months":1}},{"state":"India_Area (APJ)","freq":{"Early":2,"Ontime":2,"Late1 Month":2,"Late2 Months":2,"Late3 Months":3}},{"state":"Emear_Central (EMEAR)","freq":{"Early":1,"Ontime":2,"Late1 Month":1,"Late2 Months":1,"Late3 Months":3}},{"state":"Emear_North (EMEAR)","freq":{"Early":2,"Ontime":1,"Late1 Month":2,"Late2 Months":2,"Late3 Months":2}},{"state":"Emear_South (EMEAR)","freq":{"Early":3,"Ontime":1,"Late1 Month":3,"Late2 Months":1,"Late3 Months":3}}]},{"quarter":"Q1FY17","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":2,"Ontime":3,"Late1 Month":3,"Late2 Months":3,"Late3 Months":2}},{"state":"Canada (AMER)","freq":{"Early":2,"Ontime":2,"Late1 Month":2,"Late2 Months":2,"Late3 Months":1}},{"state":"India_Area (APJ)","freq":{"Early":2,"Ontime":1,"Late1 Month":3,"Late2 Months":1,"Late3 Months":3}},{"state":"Emear_Central (EMEAR)","freq":{"Early":2,"Ontime":2,"Late1 Month":3,"Late2 Months":2,"Late3 Months":1}},{"state":"Emear_North (EMEAR)","freq":{"Early":1,"Ontime":2,"Late1 Month":1,"Late2 Months":1,"Late3 Months":1}},{"state":"Emear_South (EMEAR)","freq":{"Early":3,"Ontime":1,"Late1 Month":1,"Late2 Months":3,"Late3 Months":3}}]},{"quarter":"Q2FY17","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":3,"Ontime":2,"Late1 Month":1,"Late2 Months":3,"Late3 Months":1}},{"state":"Canada (AMER)","freq":{"Early":2,"Ontime":2,"Late1 Month":1,"Late2 Months":2,"Late3 Months":3}},{"state":"India_Area (APJ)","freq":{"Early":2,"Ontime":2,"Late1 Month":3,"Late2 Months":1,"Late3 Months":2}},{"state":"Emear_Central (EMEAR)","freq":{"Early":3,"Ontime":3,"Late1 Month":3,"Late2 Months":2,"Late3 Months":3}},{"state":"Emear_North (EMEAR)","freq":{"Early":2,"Ontime":3,"Late1 Month":3,"Late2 Months":2,"Late3 Months":2}},{"state":"Emear_South (EMEAR)","freq":{"Early":1,"Ontime":1,"Late1 Month":2,"Late2 Months":3,"Late3 Months":3}}]},{"quarter":"Q3FY17","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":1,"Ontime":3,"Late1 Month":2,"Late2 Months":3,"Late3 Months":1}},{"state":"Canada (AMER)","freq":{"Early":1,"Ontime":2,"Late1 Month":3,"Late2 Months":2,"Late3 Months":2}},{"state":"India_Area (APJ)","freq":{"Early":1,"Ontime":3,"Late1 Month":1,"Late2 Months":2,"Late3 Months":3}},{"state":"Emear_Central (EMEAR)","freq":{"Early":2,"Ontime":3,"Late1 Month":1,"Late2 Months":3,"Late3 Months":3}},{"state":"Emear_North (EMEAR)","freq":{"Early":1,"Ontime":2,"Late1 Month":1,"Late2 Months":2,"Late3 Months":3}},{"state":"Emear_South (EMEAR)","freq":{"Early":3,"Ontime":2,"Late1 Month":3,"Late2 Months":3,"Late3 Months":2}}]},{"quarter":"Q4FY17","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":1,"Ontime":1,"Late1 Month":1,"Late2 Months":2,"Late3 Months":1}},{"state":"Canada (AMER)","freq":{"Early":1,"Ontime":2,"Late1 Month":3,"Late2 Months":3,"Late3 Months":1}},{"state":"India_Area (APJ)","freq":{"Early":1,"Ontime":1,"Late1 Month":3,"Late2 Months":1,"Late3 Months":3}},{"state":"Emear_Central (EMEAR)","freq":{"Early":3,"Ontime":3,"Late1 Month":2,"Late2 Months":3,"Late3 Months":3}},{"state":"Emear_North (EMEAR)","freq":{"Early":3,"Ontime":3,"Late1 Month":2,"Late2 Months":1,"Late3 Months":3}},{"state":"Emear_South (EMEAR)","freq":{"Early":3,"Ontime":2,"Late1 Month":3,"Late2 Months":3,"Late3 Months":3}}]},{"quarter":"Q1FY18","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":1,"Ontime":1,"Late1 Month":2,"Late2 Months":3,"Late3 Months":2}},{"state":"Canada (AMER)","freq":{"Early":1,"Ontime":2,"Late1 Month":1,"Late2 Months":1,"Late3 Months":3}},{"state":"India_Area (APJ)","freq":{"Early":3,"Ontime":1,"Late1 Month":3,"Late2 Months":1,"Late3 Months":2}},{"state":"Emear_Central (EMEAR)","freq":{"Early":3,"Ontime":1,"Late1 Month":2,"Late2 Months":2,"Late3 Months":3}},{"state":"Emear_North (EMEAR)","freq":{"Early":3,"Ontime":1,"Late1 Month":2,"Late2 Months":2,"Late3 Months":1}},{"state":"Emear_South (EMEAR)","freq":{"Early":2,"Ontime":1,"Late1 Month":2,"Late2 Months":3,"Late3 Months":3}}]},{"quarter":"Q2FY18","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":3,"Ontime":1,"Late1 Month":2,"Late2 Months":3,"Late3 Months":3}},{"state":"Canada (AMER)","freq":{"Early":3,"Ontime":2,"Late1 Month":2,"Late2 Months":2,"Late3 Months":1}},{"state":"India_Area (APJ)","freq":{"Early":2,"Ontime":1,"Late1 Month":3,"Late2 Months":2,"Late3 Months":1}},{"state":"Emear_Central (EMEAR)","freq":{"Early":2,"Ontime":3,"Late1 Month":1,"Late2 Months":2,"Late3 Months":2}},{"state":"Emear_North (EMEAR)","freq":{"Early":1,"Ontime":2,"Late1 Month":3,"Late2 Months":2,"Late3 Months":1}},{"state":"Emear_South (EMEAR)","freq":{"Early":2,"Ontime":2,"Late1 Month":1,"Late2 Months":2,"Late3 Months":2}}]},{"quarter":"Q3FY18","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":2,"Ontime":2,"Late1 Month":2,"Late2 Months":1,"Late3 Months":3}},{"state":"Canada (AMER)","freq":{"Early":1,"Ontime":3,"Late1 Month":3,"Late2 Months":2,"Late3 Months":1}},{"state":"India_Area (APJ)","freq":{"Early":3,"Ontime":3,"Late1 Month":3,"Late2 Months":1,"Late3 Months":3}},{"state":"Emear_Central (EMEAR)","freq":{"Early":1,"Ontime":2,"Late1 Month":1,"Late2 Months":1,"Late3 Months":2}},{"state":"Emear_North (EMEAR)","freq":{"Early":3,"Ontime":3,"Late1 Month":3,"Late2 Months":2,"Late3 Months":3}},{"state":"Emear_South (EMEAR)","freq":{"Early":1,"Ontime":3,"Late1 Month":3,"Late2 Months":2,"Late3 Months":1}}]},{"quarter":"Q4FY18","areas":[{"state":"US_Enterprise (AMER)","freq":{"Early":3,"Ontime":3,"Late1 Month":3,"Late2 Months":2,"Late3 Months":2}},{"state":"Canada (AMER)","freq":{"Early":1,"Ontime":1,"Late1 Month":2,"Late2 Months":3,"Late3 Months":3}},{"state":"India_Area (APJ)","freq":{"Early":1,"Ontime":1,"Late1 Month":2,"Late2 Months":3,"Late3 Months":3}},{"state":"Emear_Central (EMEAR)","freq":{"Early":1,"Ontime":2,"Late1 Month":1,"Late2 Months":3,"Late3 Months":1}},{"state":"Emear_North (EMEAR)","freq":{"Early":2,"Ontime":1,"Late1 Month":3,"Late2 Months":2,"Late3 Months":1}},{"state":"Emear_South (EMEAR)","freq":{"Early":3,"Ontime":2,"Late1 Month":2,"Late2 Months":1,"Late3 Months":2}}]}]
+]
+    },
+    {
+        "title": "Total Missed ($)",
+        "description": "<p><b>Total</b> - The Renew opportunity that was missed (not renewed) based on normalized list price for the Sales level currently being viewed.</p><p><b>Benchmark</b> - The Renew opportunity that was missed (not renewed) based on normalized list price for all sales areas within the level currently being viewed.</p>",
+        "type": "line",
+        "colors": {
+            "All Nodes": "#CA181D",
+            "APJ": "#CA181D",
+            "Americas": "#0570AF",
+			"EMEAR-REGION": "#83B758"
+        },
+		"categories":["Total Missed ($)", "Benchmark Missed ($)", "Total Renew Rate (%)", "Benchmark Renew Rate (%)"],
+        "data":[
+	[
+                {
+                    "state": "Q1FY15",
+                    "freq": {
+                        "All Nodes": 6000000000
+                    }
+                }
+                , {
+                    "state": "Q2FY15",
+                    "freq": {
+                        "All Nodes": 8000000000
+                    }
+                }
+                , {
+                    "state": "Q3FY15",
+                    "freq": {
+                        "All Nodes": 5000000000
+                    }
+                }
+                , {
+                    "state": "Q4FY15",
+                    "freq": {
+                        "All Nodes": 9000000000
+                    }
+                },
+                {
+                    "state": "Q1FY16",
+                    "freq": {
+                        "All Nodes": 6000000000
+                    }
+                }
+                , {
+                    "state": "Q2FY16",
+                    "freq": {
+                        "All Nodes": 8000000000
+                    }
+                }
+                , {
+                    "state": "Q3FY16",
+                    "freq": {
+                        "All Nodes": 5000000000
+                    }
+                }
+                , {
+                    "state": "Q4FY16",
+                    "freq": {
+                        "All Nodes": 9000000000
+                    }
+                }
+            ],
+          [
+                {
+                    "state": "Q1FY15",
+                    "freq": {
+                        "APJ": 18000000000,
+                        "Americas": 12000000000,
+						"EMEAR-REGION": 22000000000
+                    }
+                }
+                , {
+                    "state": "Q2FY15",
+                    "freq": {
+                        "APJ": 1900000000,
+                        "Americas": 22000000000,
+						"EMEAR-REGION": 12000000000
+                    }
+                }
+                , {
+                    "state": "Q3FY15",
+                    "freq": {
+                        "APJ": 40000000000,
+                        "Americas": 30000000000,
+						"EMEAR-REGION": 12000000000
+                    }
+                }
+                , {
+                    "state": "Q4FY15",
+                    "freq": {
+                        "APJ": 22000000000,
+                        "Americas": 12000000000,
+						"EMEAR-REGION": 18000000000
+                    }
+                },
+                {
+                    "state": "Q1FY16",
+                    "freq": {
+                        "APJ": 18000000000,
+                        "Americas": 12000000000,
+						"EMEAR-REGION": 22000000000
+                    }
+                }
+                , {
+                    "state": "Q2FY16",
+                    "freq": {
+                        "APJ": 1900000000,
+                        "Americas": 22000000000,
+						"EMEAR-REGION": 12000000000
+                    }
+                }
+                , {
+                    "state": "Q3FY16",
+                    "freq": {
+                        "APJ": 40000000000,
+                        "Americas": 30000000000,
+						"EMEAR-REGION": 12000000000
+                    }
+                }
+                , {
+                    "state": "Q4FY16",
+                    "freq": {
+                        "APJ": 22000000000,
+                        "Americas": 12000000000,
+						"EMEAR-REGION": 18000000000
+                    }
+                }
+            ],
+[
+                {
+                    "state": "Q1FY15",
+                    "freq": {
+                        "All Nodes": 40
+                    }
+                }
+                , {
+                    "state": "Q2FY15",
+                    "freq": {
+                        "All Nodes": 45
+                    }
+                }
+                , {
+                    "state": "Q3FY15",
+                    "freq": {
+                        "All Nodes": 23
+                    }
+                }
+                , {
+                    "state": "Q4FY15",
+                    "freq": {
+                        "All Nodes": 50
+                    }
+                },
+                {
+                    "state": "Q1FY16",
+                    "freq": {
+                        "All Nodes": 60
+                    }
+                }
+                , {
+                    "state": "Q2FY16",
+                    "freq": {
+                        "All Nodes": 30
+                    }
+                }
+            ],
+          
+          [
+                {
+                    "state": "Q1FY15",
+                    "freq": {
+                        "APJ": 20,
+                        "Americas": 40,
+						"EMEAR-REGION": 30
+                    }
+                }
+                , {
+                    "state": "Q2FY15",
+                    "freq": {
+                        "APJ": 30,
+                        "Americas": 40,
+						"EMEAR-REGION": 20
+                    }
+                }
+                , {
+                    "state": "Q3FY15",
+                    "freq": {
+                        "APJ": 50,
+                        "Americas": 30,
+						"EMEAR-REGION": 15
+                    }
+                }
+                , {
+                    "state": "Q4FY15",
+                    "freq": {
+                        "APJ": 10,
+                        "Americas": 40,
+						"EMEAR-REGION": 50
+                    }
+                },
+                {
+                    "state": "Q1FY16",
+                    "freq": {
+                        "APJ": 30,
+                        "Americas": 60,
+						"EMEAR-REGION": 5
+                    }
+                }
+                , {
+                    "state": "Q2FY16",
+                    "freq": {
+                        "APJ": 30,
+                        "Americas": 50,
+						"EMEAR-REGION": 15
+                    }
+                }
+                , {
+                    "state": "Q3FY16",
+                    "freq": {
+                        "APJ": 20,
+                        "Americas": 70,
+						"EMEAR-REGION": 5
+                    }
+                }
+                , {
+                    "state": "Q4FY16",
+                    "freq": {
+                        "APJ": 30,
+                        "Americas": 20,
+						"EMEAR-REGION": 30
+                    }
+                }
+            ]
+			]
+    }
+]

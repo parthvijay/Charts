@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Customers",
+    "list_price": "List Price",
+    "ts_list_price": "",
+    "swss_list_price": "",
+    "net_price": "Total Renew NET Price",
+    "net_annual": "",
+    "multiyear": "",
+    "swssNetPrice": "SWSS Renew NET Price",
+    "swssAnnualNetPrice": "",
+    "swssMultiYearNetPrice": "",
+    "tsNetPrice": "TS Renew NET Price",
+    "tsAnnualNetPrice": "",
+    "tsMultiYearNetPrice": "",
+    "total_contracts": "Total Renew",
+    "total_line_items": "",
+    "converted_to_pipeline": ""
+  },
+  {
+    "name": "",
+    "list_price": "Total Renew",
+    "ts_list_price": "TS Renew",
+    "swss_list_price": "SWSS Renew",
+    "net_price": "Total",
+    "net_annual": "Annual",
+    "multiyear": "Multi Year",
+    "swssNetPrice": "Total",
+    "swssAnnualNetPrice": "Annual",
+    "swssMultiYearNetPrice": "Multi Year",
+    "tsNetPrice": "Total",
+    "tsAnnualNetPrice": "Annual",
+    "tsMultiYearNetPrice": "Multi Year",
+    "total_contracts": "Total Contracts",
+    "total_line_items": "Total Line Items",
+    "converted_to_pipeline": "Converted To Pipeline"
+  }
+]

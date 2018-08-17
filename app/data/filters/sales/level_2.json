@@ -1,0 +1,34 @@
+{
+    "selected": "",
+    "values": [
+        {
+            "id": -1,
+            "title": "All",
+            "value": "*"
+        }, {
+            "id": 0,
+            "title": "CANADA",
+            "value": "CANADA"
+        }, {
+            "id": 1,
+            "title": "GLOBAL ENTERPRISE SEGMENT",
+            "value": "GLOBAL ENTERPRISE SEGMENT"
+        }, {
+            "id": 2,
+            "title": "LATIN AMERICA",
+            "value": "LATIN AMERICA"
+        }, {
+            "id": 3,
+            "title": "US COMMERCIAL",
+            "value": "US COMMERCIAL"
+        }, {
+            "id": 4,
+            "title": "US OTHER",
+            "value": "US OTHER"
+        }, {
+            "id": 5,
+            "title": "US PS Market Segment",
+            "value": "US PS Market Segment"
+        }
+    ]
+}

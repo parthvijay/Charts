@@ -1,0 +1,185 @@
+[
+    {
+        "title": "Actionable Opportunity vs. SFDC Pipeline ",
+        "description": "Comparison of the Total Actionable Refresh Opportunity with the opportunity entered into the SFDC pipeline. The SFDC pipeline shows only the deals that are tagged with ' Cisco Refresh' flag and has commit and upside status.",
+        "type": "bar_double",
+        "colors": {
+            "Actionable Opportunity": "#CA181D",
+            "SFDC": "#0570AF"
+        },
+        "data": [
+            {
+                "state": "Q1FY15",
+                "freq": {
+                    "Actionable Opportunity": 3000000000,
+                    "SFDC": 1000000000
+                }
+            }
+            , {
+                "state": "Q2FY15",
+                "freq": {
+                    "Actionable Opportunity": 4000000000,
+                    "SFDC": 2000000000
+                }
+            }
+            , {
+                "state": "Q3FY15",
+                "freq": {
+                    "Actionable Opportunity": 6000000000,
+                    "SFDC": 3000000000
+                }
+            }
+            , {
+                "state": "Q4FY15",
+                "freq": {
+                    "Actionable Opportunity": 9000000000,
+                    "SFDC": 4000000000
+                }
+            },
+            {
+                "state": "Q1FY16",
+                "freq": {
+                    "Actionable Opportunity": 3000000000,
+                    "SFDC": 1000000000
+                }
+            }
+            , {
+                "state": "Q2FY16",
+                "freq": {
+                    "Actionable Opportunity": 4000000000,
+                    "SFDC": 2000000000
+                }
+            }
+            , {
+                "state": "Q3FY16",
+                "freq": {
+                    "Actionable Opportunity": 6000000000,
+                    "SFDC": 3000000000
+                }
+            }
+            , {
+                "state": "Q4FY16",
+                "freq": {
+                    "Actionable Opportunity": 9000000000,
+                    "SFDC": 4000000000
+                }
+            }
+        ]
+    },
+    {
+        "title": "Refresh SFDC Bookings",
+        "description": "Total SFDC 'product' booking dollars. It represents the 'converted net expected value' Timeline- Current - 7 Fiscal Quarters.",
+        "type": "line",
+        "colors": {
+            "Total Bookings": "#AD017E"
+        },
+        "data": [
+            {
+                "state": "Q1FY15",
+                "freq": {
+                    "Total Bookings": 2500000000
+                }
+            }
+            , {
+                "state": "Q2FY15",
+                "freq": {
+                    "Total Bookings": 1000000000
+                }
+            }
+            , {
+                "state": "Q3FY15",
+                "freq": {
+                    "Total Bookings": 4500000000
+                }
+            }
+            , {
+                "state": "Q4FY15",
+                "freq": {
+                    "Total Bookings": 2000000000
+                }
+            },
+            {
+                "state": "Q1FY16",
+                "freq": {
+                    "Total Bookings": 2500000000
+                }
+            }
+            , {
+                "state": "Q2FY16",
+                "freq": {
+                    "Total Bookings": 1000000000
+                }
+            }
+            , {
+                "state": "Q3FY16",
+                "freq": {
+                    "Total Bookings": 4500000000
+                }
+            }
+            , {
+                "state": "Q4FY16",
+                "freq": {
+                    "Total Bookings": 2000000000
+                }
+            }
+        ]
+    },
+    {
+        "title": "Age of Install Summary",
+        "description": "Total value in list dollars of equipment by age.",
+        "type": "bar",
+        "colors": {
+            "Value": "#CB4C02"
+        },
+        "data": [
+            {
+                "state": "Current",
+                "freq": {
+                    "Value": 10000
+                }
+            }
+            , {
+                "state": "1-4 yrs",
+                "freq": {
+                    "Value": 8000
+                }
+            }
+            , {
+                "state": "5-7 yrs",
+                "freq": {
+                    "Value": 2000
+                }
+            }
+            , {
+                "state": "8+ yrs",
+                "freq": {
+                    "Value": 1000
+                }
+            },
+            {
+                "state": "Current",
+                "freq": {
+                    "Value": 10000
+                }
+            }
+            , {
+                "state": "1-4 yrs",
+                "freq": {
+                    "Value": 8000
+                }
+            }
+            , {
+                "state": "5-7 yrs",
+                "freq": {
+                    "Value": 2000
+                }
+            }
+            , {
+                "state": "8+ yrs",
+                "freq": {
+                    "Value": 1000
+                }
+            }
+        ]
+    }
+]

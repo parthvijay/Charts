@@ -1,0 +1,1388 @@
+<div id="wrapper" ng-class="{
+    'sidebar-active'
+            : sidebarActive, 'mobileAppliedFiltersActive' : mobileAppliedFiltersActive}" onclick="void(0);">
+
+    <div id="sidebar-wrapper" class="filter-tab">
+        <servicefilter-detail></servicefilter-detail>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper" class="global-bookmark">
+        <div class="freezed-container">
+            <!-- heading -->
+            <div class="grey-background">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!--<div class="col-lg-12">
+                                <span class="line-level-message error"><span class="ico-error"><span class="path1"></span><span class="path2"></span></span>This view is not valid.</span>
+                        </div>
+                        <div class="col-lg-12">
+                            <span class="line-level-message success"><span class="ico-success"><span class="path1"></span><span class="path2"></span></span>This is successfull message.</span>
+                        </div>
+                        <div class="col-lg-12">
+                            <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)" template-url="templates/alert.html">{{alert.msg}}</uib-alert>
+                        </div>
+                        <div class="col-lg-12">
+                            <span class="form-level-message success marginT10"><span class="ico-success"><span class="path1"></span><span class="path2"></span></span>This is a success message.</span>
+                        </div>
+                        <div class="col-lg-12">
+                            <span class="form-level-message error marginT10"><span class="ico-danger"><span class="path1"></span><span class="path2"></span></span>This is an error message.</span>
+                        </div>
+                        <div class="col-lg-12">
+                            <h1 class="marginT17 marginB15 page-heading">Total Actionable Opportunities</h1>
+                        </div> -->
+                        <div class="col-sm-12" ng-class="{'tabs-active' : tabsActive}" id="mainMenu" click-outside="closeMenu()" ng-if="analysis == 'analysis'">
+                            <!-- tabs -->
+                            <div class="current-opportunity" ng-click="toggleTabs()">
+                                <a href="">
+                                    <!--<span class="dollar">${{opportunities[activeTab].value|formatValue:false:false:true}}<span class="unit"></span></span>-->
+                                    <span class="service">{{opportunities[activeTab].title}}</span>
+                                    <span class="caret" ng-class="{'caret-reversed' : tabsActive}"></span>
+                                </a>
+                            </div>
+                            <ul class="opportunity-tab clearfix slick-carousel">
+                                <li ng-repeat="c in opportunities" ng-class="{
+                                    'active'
+                                            : opportunitiesActive == c.slug, 'disabled':c.disabled}" on-finish-render="ngRepeatOpp"><a ng-click="opportunitiesActiveToggle(c, $index);" ng-class="{'disabled' : c.disabled}"><!--<span class="dollar">${{c.value| formatValue:false:false:true}}<span class="unit"></span></span>--> <span class="service">{{c.title}}</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--
+                        <div class="col-xs-12" ng-if="analysis == 'campaign'">
+                            <h3 class="heading"><a href="#"><span class="ico-back-round hvr-icon-pop"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></a>
+                                <span class="text" ng-show="opportunitiesActive == 'drs'">Digital Ready Scorecard</span>
+                                <span class="text" ng-show="opportunitiesActive == 'co'">Cisco ONE</span>
+                            </h3>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+            <!-- Tabs main container -->
+            <div class="filter-strip sky-blue clearfix">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 clearfix">
+                            <ul class="filter-opt sub-opt" ng-show="opportunities[activeTab].subtabs">
+                                <li ng-class="{active : subopportunity == c.slug, 'disabled':c.disabled}" ng-repeat="c in opportunities[activeTab].subtabs">
+                                    <a ng-click="opportunitiesSubtabToggle(c.slug);" class="realization" ng-class="{'disabled' : c.disabled}">{{c.title}}
+                                        <span class="glyphicon glyphicon-triangle-top"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!--
+                            <a ng-click="openDefinition();" class="button stroke-btn pull-right marginL10" ng-if="analysis == 'campaign' && opportunitiesActive == 'drs'"><span>Definition</span></a>
+                            <a ng-click="openSalesKit();" class="button stroke-btn pull-right" ng-if="analysis == 'campaign' && opportunitiesActive == 'drs'"><span>Sales Kit</span></a>
+                            <a ng-click="openCiscoOneDefinition();" class="button stroke-btn pull-right marginL10" ng-if="analysis == 'campaign' && opportunitiesActive == 'co'"><span>Definition</span></a>
+                            <a class="button stroke-btn pull-right" ng-if="analysis == 'campaign' && opportunitiesActive == 'co'" href="https://salesconnect.cisco.com/#/search/Cisco%2520ONE/undefined" target="_blank"><span>Sales Kit</span></a>
+                            -->
+                            <img src="images/side-shadow.png" class="side-shadow right-shad" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- filter-strip -->
+            <div class="clearfix" style="position:relative;" ng-show="!$root.accessIssue || $root.accessIssue == 'nodata'">
+                <div class="fade-background"></div>
+                <div class="container-fluid filter-switch">
+                    <!-- Opportunities/Performance switch -->
+                    <div class="row">
+                        <div class="flexible-div">
+                            <div class="col-xs-12 col-sm-12 col-md-12 paddingR0">
+                                <ul class="filter-opt pull-left" ng-show="(opportunitiesActive == 'tsRenew' || opportunitiesActive == 'tsAttach') && subopportunity == 'overview'||subopportunity=='bookings'||subopportunity=='opportunities'||subopportunity=='realization'">
+
+                                    <li>
+                                        <a href="" id="menu-toggle" class="show-filter" ng-click="sidebarActiveToggle(true); mobileAppliedFiltersActive = false;" ng-show="!sidebarActive">
+                                            <span class="ico-filter_bg count" count="{{appliedFilters.length}}"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="opt-head"><span>Show</span> Filters</span>
+                                        </a>
+                                        <a href="" id="menu-toggle" class="show-filter" ng-click="sidebarActiveToggle(false);" ng-show="sidebarActive">
+                                            <span class="ico-filter_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="opt-head"><span>Hide</span> Filters</span>
+                                        </a>
+                                    </li>
+                                    <li ng-show="!isBookmarkActive()"><span class="separator"></span></li>
+                                    <li class="dropdown">
+                                        <a href="" class="hidden-lg opt-head view-applied" ng-click="openViewApplied();sidebarActiveToggle(true); mobileAppliedFiltersActive = true;">View Applied</a>
+                                        <a href="" ng-click="openViewApplied(appliedFilters)" class="visible-lg opt-head view-applied">View Applied ({{sldAppliedFiltersCount}})</a>
+
+                                    </li>
+                                    <li ng-show="!isBookmarkActive()"><span class="separator"></span></li>
+                                    <li ng-show="(opportunitiesActive == 'tsRenew' || opportunitiesActive == 'tsAttach') && subopportunity == 'overview'">
+                                        <span class="tile-heading"><a class="opt-head last-filter" id="dropdown-menu" ng-click="quarterYearOpen = !quarterYearOpen" click-outside="closeDropdown()">{{quarterYearSelected}} <span class="caret"></span></a>
+
+                                        <ul class="dropdown-menu categories filter-drop" ng-show="quarterYearOpen" style="display:block;">
+                                            <i class="tipsy"></i>
+                                            <li ng-repeat="(key,quarter) in quarterYear">
+                                                <a ng-class="{'active' : key == quarterYearSelected}" ng-click="getSelectedQuarter(quarter); $parent.quarterYearSelected = key; $parent.quarterYearOpen = false;">{{key}}</a>
+
+                                            </li>
+                                        </ul>
+
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-12 padding0" ng-if="analysis == 'analysis' && false">
+                                <ul class="opp-per-list">
+                                    <li class="left-tab" ng-class="{
+                                        'active'
+                                                : opportunitiesView == 'opportunities'}"><a ng-click="opportunitiesViewToggle('opportunities');">Opportunities</a>
+                                    </li>
+                                    <li class="right-tab" ng-class="{
+                                        'active'
+                                                : opportunitiesView == 'performance', 'disabled' : performanceDisabled()}"><a ng-click="opportunitiesViewToggle('performance');" ng-class="{'disabled' : performanceDisabled()}" ng-if="canAccessTab(dashboard, analysis, opportunitiesActive, subopportunity, 'performance')">Performance</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-12 paddingL0" ng-class="{'col-xs-offset-5': analysis != 'analysis'}" ng-if="false">
+                                <ul class="filter-opt pull-right">
+                                    <li ng-show="newBookmarkSaved" class=" success save-bookmark"><a href="" class="bookmark-hvr"><span class="ico-confirmation"></span>{{currentBookmark !=null?'Updated':'Saved'}}</a></li>
+                                    <li ng-show="!newBookmarkSaved" class="save-bookmark"><a href="" ng-class="{'disable': isCampaigns || (currentBookmark != null && !filtersServ.isFiltersChanged)}" class="bookmark-hvr active" ng-click="(currentBookmark != null)?openSaveBookmarkModal(currentBookmark):openSaveBookmarkModal()"><span class="ico-bookmark_pressed"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>{{currentBookmark == null|| currentBookmark.by != userData.user.fullName?'Save':'Update'}}<br> Bookmark</a></li>
+                                </ul>
+                                <!--<a href="" class="save-book pull-right"><span class="ico-bookmark"></span><span class="bookmark-txt">Save <br>Bookmark</span></a>-->
+                                <div class="list-filter filter-list pull-right" ng-hide="opportunitiesActive == 'all' || opportunitiesView == 'performance'">
+                                    <ul class="opp-per-list">
+                                        <li class="left-tab" ng-click="listDisabled ? angular.noop():$parent.isListOrNet = 'list'" ng-class="{active: isListOrNet == 'list', disabled: listDisabled}"><a href="">$List</a></li>
+                                        <li class="right-tab" ng-click="netDisabled ? angular.noop():$parent.isListOrNet = 'net'" ng-class="{active: isListOrNet == 'net', disabled: netDisabled}"><a href="">$Net</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Global-bookmarks-Strip -->
+        <div class="global-bookmarks-strip clearfix" ng-show="currentBookmark != null">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 clearfix">
+                        <div class="col-sm-5 paddingL0 paddingR0">
+                            <h3 class="heading">
+                                <span class="text"> {{currentBookmark.name}}</span>
+                                <a href="" ng-click="clearBookmark()">Clear Bookmark </a>
+                                <span class="dropdown more-bookmark-info visible-xs"><span class="ico-more_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+                                    <ul class="dropdown-menu">
+                                        <i class="tipsy"></i>
+                                        <li ng-show="currentBookmark.moreInfo">
+                                            <a href=""><span>More Info</span></a>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>View in Sales Hub</span></a>
+                                        </li>
+                                        <li>
+                                            <a ng-click="openBookmarksDefinition(currentBookmark);"><span>View Definition</span></a>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="col-sm-7 view-link paddingL0 paddingR0 hidden-xs" ng-show="currentBookmark.isGlobal" ng-class="{'view-bookmark-changed':filtersServ.isFiltersChanged}">
+                            <ul class="globalBookmark-view-link">
+                                <li ng-show="currentBookmark.moreInfo">
+                                    <a href=""><span>More Info</span></a>
+                                </li>
+                                <li ng-show="currentBookmark.moreInfo"><span class="separator"></span></li>
+                                <li>
+                                    <a ng-click="openBookmarksDefinition(currentBookmark);"><span>View Definition</span></a>
+                                </li>
+                                <li><span class="separator"></span></li>
+                                <li>
+                                    <a href=""><img src="images/SalesConnect.svg"><span>View in Sales Hub</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bookmark-criteria slideInRight animated" ng-show="filtersServ.isFiltersChanged">
+                <span class="ico-confirmation"></span> Bookmark criteria
+                <br> has been changed.
+            </div>
+        </div>
+        <!-- Global-bookmarks-Strip -->
+        <!-- freezed-container -->
+        <div class="opptabs overlay"></div>
+        <!-- <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-level-msg error">
+                        <div class="error-ico"><span class="ico-error"><span class="path1"></span><span class="path2"></span></span>
+                            <img class="shadow-img" src="images/shadow.svg" alt=""/></div>
+                        <span class="eror-msg"><span class="red"> Error!</span> Page you are looking for is not available</span>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="container-fluid" ng-show="subopportunity == 'as'">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="disclaimer-msg">
+                        <span class="ico-danger"><span class="path1"></span><span class="path2"></span></span>
+                        <span><strong>Disclaimer:</strong> Data is preliminary and not validated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid tabContent">
+            <!-- Tab content -->
+            <div class="opportunities-col {{opportunitiesActive}}">
+                <div class="row" ng-show="!$root.accessIssue">
+                    <!-- opportunity-tile -->
+
+                    <div class="col-xs-12 col-sm-6 kpi kpi_{{$index}} chart_{{c.type}}" ng-repeat="c in tiles| orderBy:'-expanded'" ng-class="{'col-lg-4' : !sidebarActive, 'col-lg-6' : sidebarActive, 'expanded' : c.expanded, 'accountManagerList' : c.isAccountManagerList}" ng-init="collapse(c); c.viewType = (c.viewtype)? c.viewtype : 'chart'; c.activeCategory = c.activeCategory?c.activeCategory:0; c.isPercent = CiscoUtilities.isPercent(c); isAccountManagerList(c); c.isPipeline = CiscoUtilities.isPipeline(c);" style="visibility: hidden;" on-finish-render="ngRepeatFinished">
+
+                        <div class="opportunity-tile" ng-if="c.info">
+                            <div class="tile-head-area">
+                                <h5>
+                                    <span class="tile-heading" uib-dropdown>
+                                        <a href uib-dropdown-toggle class="single-category" ng-if="c.type == 'line_chart_rr'">
+                                            {{c.title}}
+                                        </a>
+                                        <a href uib-dropdown-toggle ng-if="c.categories.length > 1" ng-class="{'single-category': false}">
+                                            {{c.categories[c.activeCategory]}} <span class="caret" ng-if="c.categories.length > 1"></span>
+                                        </a>
+                                        <a href uib-dropdown-toggle class="single-category" ng-if="!c.categories || c.categories.length == 1">
+                                            {{c.title}}
+                                        </a>
+
+                                        <!--<ul class="dropdown-menu categories" uib-dropdown-menu ng-if="c.categories.length > 1">
+                                            <i class="tipsy"></i>
+                                            <li ng-repeat="h in c.categories">
+                                                <a href ng-click="selectCategory(c, $index);" ng-class="{'active' : c.activeCategory == $index}">{{h}}</a>
+                                            </li>
+                                        </ul>-->
+                                    </span>
+                                    <span class="info-icon" popover-title="{{c.title}}" uib-popover-html="c.description" ng-if="c.description"></span>
+
+                                </h5>
+                                <div class="tile-size-icon" ng-show="c.info == 'nodata'">
+                                    <div class="inline">
+                                        <span uib-tooltip="Expand" tooltip-trigger="{{tooltipTrigger}}" class="ico-expand_tile_bg" ng-click="expand(c, $index, opportunitiesActive);" ng-if="!c.expanded && showExpandCollapse(c);"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+                                        <span uib-tooltip="Collapse" tooltip-trigger="{{tooltipTrigger}}" class="ico-collapse_tile_bg" ng-click="collapse(c);" ng-if="c.expanded && showExpandCollapse(c);">
+                                            <span class="path1"></span><span class="path2"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="page-level-msg error" ng-show="c.info == 'nodata' && c.categories[c.activeCategory] !== 'SFDC Booked Deals'">
+                                <div class="error-ico">
+                                    <img class="nodata" src="images/nodata.svg" alt="" />
+                                </div>
+                                <span class="error-msg">No Data Available!</span>
+                                <span class="grey-text">Currently, there is no data available for your selection.</span>
+                            </div>
+                            <div class="page-level-msg error" ng-show="c.info == 'nodata' && c.categories[c.activeCategory] === 'SFDC Booked Deals'">
+                                <div class="error-ico">
+                                    <img class="no-data-tile" src="images/nodata.svg" alt="" />
+                                </div>
+                                <span class="error-msg">No Booked Deals!</span>
+                                <span class="grey-text">Currently, there is no booked deal in SFDC.</span>
+                            </div>
+                            <div class="page-level-msg error" ng-show="c.info == 'future'">
+                                <div class="error-ico">
+                                    <img class="error-icon" src="images/error-icon.svg" alt="" />
+                                </div>
+                                <span class="error-msg">Content not available!</span>
+                                <span class="grey-text">This feature will be available in an upcoming release.</span>
+                            </div>
+                        </div>
+                        <!-- SunitaYadav  added class quarters_refresh  for table alignment -->
+                        <div class="opportunity-tile quarters_refresh" ng-show="!c.info">
+                            <div class="tile-head-area sm-tile-head">
+                                <h5>
+                                    <span class="tile-heading" uib-dropdown>
+
+                                        <a href uib-dropdown-toggle ng-if="c.categories.length > 1 && !(c.type == 'line_chart_rr')" ng-class="{'single-category': false}">
+                                            {{c.categories[c.activeCategory]}} <span class="caret" ng-if="c.categories.length > 1 && !(c.type == 'line_chart_rr')"></span>
+                                        </a>
+                                        <a href uib-dropdown-toggle class="single-category" ng-if="(!c.categories || c.categories.length == 1) || (c.type == 'line_chart_rr')">
+                                            {{c.title}}
+                                        </a>
+
+                                        <ul class="dropdown-menu animated fadeIn categories" uib-dropdown-menu ng-if="c.categories.length > 1 && !(c.type == 'line_chart_rr')">
+                                            <i class="tipsy"></i>
+                                            <li ng-repeat="h in c.categories">
+
+                                                <a href ng-click="selectCategory(c, $index, $parent.$index);" ng-class="{'active' : c.activeCategory == $index}">{{h}}</a>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                    <span class="info-icon" popover-title="{{c.title}}" uib-popover-html="c.description" ng-if="c.description"></span>
+                                    <span class="info-icon" popover-title="{{c.categories?c.tooltip_titles[c.activeCategory]:c.title}}" uib-popover-html="c.descriptions[c.activeCategory]" ng-if="c.descriptions"></span>
+                                </h5>
+                                <div class="tile-size-icon">
+                                    <div class="inline">
+                                        <span class="dropdown more-options" ng-if="(c.viewType == 'list' || c.type == 'line_chart_rr') && c.expanded"><span class="ico-download_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+                                            <!-- SunitaYadav  added class of animated fadeIn -->
+                                            <ul class="dropdown-menu">
+                                                <i class="tipsy"></i>
+                                                <li><a href="" ng-click="csvDownload($event,c);">Download CSV File</a></li>
+                                            </ul>
+                                        </span>
+                                        <!-- condition added to remove exapnd and collapse icons -G -->
+                                        <span uib-tooltip="Expand" tooltip-trigger="{{tooltipTrigger}}" class="ico-expand_tile_bg" ng-click="expand(c, $index, opportunitiesActive);" ng-if="!c.expanded && showExpandCollapse(c);"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+                                        <span uib-tooltip="Collapse" tooltip-trigger="{{tooltipTrigger}}" class="ico-collapse_tile_bg" ng-click="collapse(c);" ng-if="c.expanded && showExpandCollapse(c);">
+                                            <span class="path1 hvr-icon-pop"></span><span class="path2"></span>
+                                        </span>
+
+
+                                        <span uib-tooltip="List View" tooltip-trigger="{{tooltipTrigger}}" class="ico-list_bg" ng-click="toggleViewType(c, 'list');" ng-init="moveScrollToBottom()" ng-class="{'active' : c.viewType == 'list'}"><span class="path1 hvr-icon-pop"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <!-- Added new icon for realization view line-chart-r-r -->
+                                        <span uib-tooltip="Graph View" tooltip-trigger="{{tooltipTrigger}}" ng-click="toggleViewType(c, 'chart');" ng-class="{'ico-bar_graph_bg': c.type == 'bar' || c.type == 'bar_double' || c.type == 'bar_stacked', 'ico-hor-chart_bg': c.type == 'bar_stacked_horizontal' || c.type == 'bar_double_horizontal' || c.type == 'bar_double_horizontal_drs' || c.type == 'bar_stacked_double_horizontal' || c.type == 'bar_double_horizontal_stacked', 'ico-line-chart_bg' : c.type == 'line', 'ico-waterfall_bg' : c.type == 'line_chart_rr', 'ico-donut_graph_bg' : c.type == 'pie', 'active' : c.viewType == 'chart'}"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+                                        <!--<span uib-tooltip="Request Report" tooltip-trigger="{{tooltipTrigger}}" class="ico-report" ng-if="allowReportRequest(c);">
+                                            <span class="path1 hvr-icon-pop"></span><span class="path2"></span>
+                                        </span>-->
+                                    </div>
+                                </div>
+
+                                <!--Added dropdowns for realzation Add Quarters-->
+                                <div class="clearfix" ng-if="c.categories && c.type == 'line_chart_rr' && c.viewType == 'chart'">
+                                    <span uib-dropdown class="add-quarters">
+                                        <a href uib-dropdown-toggle>
+                                            Add Quarters <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu categories" uib-dropdown-menu>
+                                        <i class="tipsy"></i>
+                                        <li ng-repeat="d in c.sldData">
+                                            <div class="form-group dropdown-with-checkbox">
+                                                <input ng-init="c.checked[d.state] = (d.state == c.currentQuarter)? true : false; checkQuarters(c);" ng-model="c.checked[d.state]" type="checkbox" id="quartersCheckbox_{{d.state}}" ng-click="checkQuarters(c, true)">
+                                                <label for="quartersCheckbox_{{d.state}}" class="control-label"><span></span>{{d.state}} RR</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    </span>
+                                </div>
+
+                                <div class="form-group text-right tile-checkbox" ng-if="opportunitiesActive == 'tsRenew' && subopportunity == 'overview' && c.id == 1">
+                                    <input type="checkbox" id="globalCheckbox" ng-model="globalCheckbox" ng-click="isDistributor(globalCheckbox, $index)">
+                                    <label for="globalCheckbox" class="control-label"><span></span>Include Distributors</label>
+                                </div>
+                            </div>
+
+                            <!-- Changed the label text in TS renew Overview chart and added ng-hide in the absence of data -->
+                            <div class="rotated-text" ng-class="{'ng-hide': !(c.categories.length || c.sldData.length || c.data.length)}" ng-hide="c.viewType === 'list' || (c.viewType === 'chart' && subopportunity === 'realization')">Value shown in USD</div>
+                            <!-- <ul class="opp-filter clearfix">
+                                <li ng-repeat="(key, t) in c.tabs" ng-init="c.data = c.tabs[getFirstKey(c.tabs)]; c.activeTab = getFirstKey(c.tabs);" ng-class="{'active' : c.activeTab == key}"><a href="" ng-click="c.data = t; c.activeTab = key;">{{key}}</a></li>
+                            </ul> -->
+
+                            <span class="activeDrill" ng-if="(c.type == 'pie' || c.type == 'bar_double_horizontal_drs' || c.type == 'line') && pieActiveDrill" ng-click="$parent.$parent.pieActiveDrill = false; resetChartFilters(); getData();"><span class="ico-left-arrow-sm hvr-icon-pop"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span><span>{{pieActiveDrill}}</span></span>
+                            <span class="activeDrill" ng-if="c.type == 'bar_double' && campActiveDrill" ng-click="campActiveUndrill(c);"><span class="ico-left-arrow-sm hvr-icon-pop"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span><span>{{campActiveDrill}}</span></span>
+                            <!-- yopgupta - Added function call on click instead of inline -->
+                            <span class="activeDrill" ng-if="isAccountSelected() && (c.type == 'bar_double_horizontal' || (c.type == 'bar_stacked_horizontal' && opportunitiesActive == 'all') || (c.type == 'bar_stacked_horizontal' && opportunitiesActive == 'attach') || c.type == 'bar_stacked_double_horizontal' || (c.type == 'bar_stacked_horizontal' && opportunitiesActive == 'ciscoOne'));" ng-click="undrillAccountManager(c);"><span class="ico-left-arrow-sm hvr-icon-pop"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span><span>Opportunities by Account Managers</span></span>
+                            <div ng-show="c.type !== 'table'">
+                                <div class="tile" ng-show="c.viewType == 'chart'">
+                                    <bar-chart slug="opportunitiesActive"  view="opportunitiesView"  pieactivedrill=" $parent.$parent.pieActiveDrill" subslug="subopportunity" data="(c.categories?c.data[c.activeCategory]:c.data)" colors="colorsList" uniquekey="c.unique_key" columns="c.columns" expanded="c.expanded" sidebar="sidebarAnimated" percent="c.isPercent" viewtype="c.viewType" filtered="c.filtered" keys="c.keys" currentmonth="currentMonth" currentquarter="currentQuarter" currentyear="currentYear" selection-title="c.categories[c.activeCategory]" activecategory="c.activeCategory" ng-if="c.type == 'bar'"/>
+                                    <bar-double-chart data="(dashboard === 'services')?c.sldData:(isListOrNet === 'list')?(c.categories?c.data[c.activeCategory]:c.data):c.categories?c.data_net[c.activeCategory]:c.data_net" colors="colorsList" columns="c.columns" expanded="c.expanded" viewtype="c.viewType" filtered="c.filtered" sidebar="sidebarAnimated" viewtype="c.viewType" filtered="c.filtered" percent="c.isPercent" campactivedrill="$parent.$parent.campActiveDrill" updated="c.updated" area="$parent.$parent.areaActive" ng-if="c.type == 'bar_double'" ng-init="normalizeDC(c);" />
+                                    <bar-double-horizontal-chart selection-title="c.categories[c.activeCategory]" data="(dashboard === 'services')?c.sldData:(isListOrNet === 'list')?(c.categories?c.data[c.activeCategory]:c.data):(c.categories?c.data_net[c.activeCategory]:c.data_net)" colors="colorsList" columns="c.columns" sidebar="sidebarAnimated" expanded="c.expanded" viewtype="c.viewType" filtered="c.filtered" keys="c.keys" active="$parent.$parent.active" quarter="$parent.$parent.quarterActive" area="$parent.$parent.areaActive" percent="c.isPercent" activecategory="c.activeCategory" isaccountmanagerlist="c.isAccountManagerList" drillaccountmanager="drillAccountManager(arg1, arg2, c)" active-opp="CiscoUtilities.getTileActiveOpp(c.categories[c.activeCategory])" ng-if="c.type == 'bar_double_horizontal'" ng-init="normalizeDHC(c);" selectionenabled="isChartClickable()" selectionenabledarea="isAreaClickable(c, $index)" action="allowReportRequest(c)" />
+                                    <bar-double-horizontal-drs-chart has-sub="c.hasSub" pieactivedrill="$parent.$parent.pieActiveDrill" selection-title="c.categories[c.activeCategory]" data="(isListOrNet === 'list')?(c.categories?c.data[c.activeCategory]:c.data):(c.categories?c.data_net[c.activeCategory]:c.data_net)" productfamily="(isListOrNet === 'list')?c.productfamilylist:c.productfamilynet" filteredproductfamily="c.filteredproductfamily" colors="colorsList" columns="c.columns" sidebar="sidebarAnimated" expanded="c.expanded" viewtype="c.viewType" filtered="c.filtered" keys="c.keys" active="$parent.$parent.active" quarter="$parent.$parent.quarterActive" area="$parent.$parent.areaActive" percent="c.isPercent" activecategory="c.activeCategory" isaccountmanagerlist="c.isAccountManagerList" drillaccountmanager="drillAccountManager(arg1, arg2, c)" active-opp="CiscoUtilities.getTileActiveOpp(c.categories[c.activeCategory])" ng-if="c.type == 'bar_double_horizontal_drs'" selectionenabled="isChartClickable()" selectionenabledarea="isAreaClickable()" action="allowReportRequest(c)" />
+
+                                    <bar-stacked-chart selection-title="c.title" pieactivedrill="$parent.$parent.pieActiveDrill" selection="c.categories[c.activeCategory]" slug="opportunitiesActive" targetdata="c.target" view="opportunitiesView" subslug="subopportunity" previousdata="c.previous_data" selectionenabled="isChartClickable(c, $index)" data="(dashboard === 'services')?c.sldData : (isDrs ?((c.activeCategory === 0) ?((isListOrNet === 'list') ? c.shipment_data.data : c.shipment_data.data_net) : c.sfdc_data):(isListOrNet === 'list')?(c.categories?c.data[c.activeCategory]:c.data):(c.categories?c.data_net[c.activeCategory]:c.data_net))" title="" productfamily="(isListOrNet === 'list')?c.productfamilylist:c.productfamilynet" filteredproductfamily="c.filteredproductfamily" quarterheadership="c.quarterheadership" sfdcbookingsdata="c.sfdcbookingsdata" sfdcbookingsquarterdata="c.sfdcbookingsquarterdata" colors="colorsOpp" columns="c.columns" expanded="c.expanded" viewtype="c.viewType" filtered="c.filtered" sidebar="sidebarAnimated" keys="c.keys" active="$parent.$parent.active" quarter="$parent.$parent.quarterActive" area="$parent.$parent.areaActive" currentMonth="currentMonth" currentquarter="currentQuarter" currentyear="currentYear" percent="c.isPercent" campactivedrill="$parent.$parent.campActiveDrill" selectionenabledarea="isQuarterClickable()" expandeddata="(isListOrNet === 'list')?c.savAccountsList:c.savAccountsNet" filteredexpandeddata="c.filteredexpandeddata" customorder="c.customorder" ng-if="c.type == 'bar_stacked'" id="c.id" />
+                                   <bar-double-horizontal-stacked-chart data="(dashboard === 'services')?c.sldData :(isListOrNet === 'list')?(c.categories?c.data[c.activeCategory]:c.data):(c.categories?c.data_net[c.activeCategory]:c.data_net)" colors="colorsOpp" columns="c.columns" sidebar="sidebarAnimated" expanded="c.expanded" viewtype="c.viewType" filtered="c.filtered" keys="c.keys" active="$parent.$parent.active" quarter="$parent.$parent.quarterActive" area="$parent.$parent.areaActive" percent="c.isPercent" categories="c.categories" activecategory="c.activeCategory" isaccountmanagerlist="c.isAccountManagerList" drillaccountmanager="drillAccountManager(arg1, arg2, c)" ng-if="c.type == 'bar_double_horizontal_stacked'" action="allowReportRequest(c)" years="c.years" />
+                                    <bar-stacked-double-horizontal-chart data="(isListOrNet === 'list')?(c.categories?c.data[c.activeCategory]:c.data):(c.categories?c.data_net[c.activeCategory]:c.data_net)" colors="colorsOpp" columns="c.columns" sidebar="sidebarAnimated" expanded="c.expanded" expandeddata="(isListOrNet === 'list')?c.savAccountsList:c.savAccountsNet" filteredexpandeddata="c.filteredexpandeddata" viewtype="c.viewType" filtered="c.filtered" keys="c.keys" active="$parent.$parent.active" quarter="$parent.$parent.quarterActive" area="$parent.$parent.areaActive" percent="c.isPercent" categories="c.categories" activecategory="c.activeCategory" isaccountmanagerlist="c.isAccountManagerList" drillaccountmanager="drillAccountManager(arg1, arg2, c)" ng-if="c.type == 'bar_stacked_double_horizontal'" action="allowReportRequest(c)" />
+
+                                    <bar-stacked-horizontal-chart slug="opportunitiesActive" subslug="subopportunity" selectionenabled="isChartClickable(c, $index)" selectionenabledarea="isAreaClickable(c, $index)" multipleselectionenabled="hasMultipleSelection(c, $index)" data="(dashboard === 'services')?c.sldData : ((isListOrNet === 'list')?(c.categories?c.data[c.activeCategory]:c.data):(c.categories?c.data_net[c.activeCategory]:c.data_net))" colors="colorsOpp" columns="c.columns" sidebar="sidebarAnimated" active="$parent.$parent.active" expanded="c.expanded"  expandeddata="(isListOrNet === 'list')?c.savAccountsList:c.savAccountsNet" filteredexpandeddata="c.filteredexpandeddata" viewtype="c.viewType" filtered="c.filtered" filteredquarter="c.filteredquarter" keys="c.keys" id="c.id" quarter="$parent.$parent.quarterActive"  area="$parent.$parent.areaActive" percent="c.isPercent" activecategory="c.activeCategory" isaccountmanagerlist="c.isAccountManagerList" drillaccountmanager="drillAccountManager(arg1, arg2, c)" ng-if="c.type == 'bar_stacked_horizontal' && !(subopportunity === 'overview' && c.id ===2)" customorder="c.customorder" action="allowReportRequest(c)" quarterfilterenabled="isQuarterFilterEnabled(c, $index)" callparam="legendOrNodenameParam"/>
+
+                                    <bar-stacked-horizontal-chart slug="opportunitiesActive" subslug="subopportunity" selectionenabled="isChartClickable(c, $index)" selectionenabledarea="isAreaClickable(c, $index)" multipleselectionenabled="hasMultipleSelection(c, $index)" data="(dashboard === 'services')?c.sldData : ((isListOrNet === 'list')?(c.categories?c.data[c.activeCategory]:c.data):(c.categories?c.data_net[c.activeCategory]:c.data_net))" colors="colorsOpp" columns="c.columns" sidebar="sidebarAnimated" expanded="c.expanded" area="[]" expandeddata="(isListOrNet === 'list')?c.savAccountsList:c.savAccountsNet" filteredexpandeddata="c.filteredexpandeddata" viewtype="c.viewType" filtered="c.filtered" filteredquarter="c.filteredquarter" keys="c.keys" id="c.id" quarter="$parent.$parent.quarterActive"   percent="c.isPercent" activecategory="c.activeCategory" isaccountmanagerlist="c.isAccountManagerList" drillaccountmanager="drillAccountManager(arg1, arg2, c)" ng-if="c.type == 'bar_stacked_horizontal' && (subopportunity === 'overview' && c.id ===2)" customorder="c.customorder" action="allowReportRequest(c)" quarterfilterenabled="isQuarterFilterEnabled(c, $index)" callparam="legendOrNodenameParam" />
+
+                                    <bar-stacked-horizontal-vertical-chart selection-title="c.title" selection="c.categories[c.activeCategory]" slug="opportunitiesActive" view="opportunitiesView" data="(isListOrNet === 'list')?(c.categories?c.data[c.activeCategory]:c.data):(c.categories?c.data_net[c.activeCategory]:c.data_net)" title="" colors="colorsOpp" columns="c.columns" expanded="c.expanded" viewtype="c.viewType" filtered="c.filtered" sidebar="sidebarAnimated" keys="c.keys" active="$parent.$parent.active" quarter="$parent.$parent.quarterActive" area="$parent.$parent.areaActive" currentMonth="currentMonth" currentquarter="currentQuarter" currentyear="currentYear" percent="c.isPercent" campactivedrill="$parent.$parent.campActiveDrill" selectionenabled="isChartClickable(c, $index)" ng-if="c.type == 'bar_stacked_horizontal_vertical'" />
+                                    <line-chart selection-title="c.title" selection="c.categories[c.activeCategory]" slug="opportunitiesActive" view="opportunitiesView" data="(c.categories?c.data[c.activeCategory]:c.data)" colors="colorsList" columns="c.columns" expanded="c.expanded" sidebar="sidebarAnimated" percent="c.isPercent" currentmonth="currentMonth" currentquarter="currentQuarter" currentyear="currentYear" viewtype="c.viewType" filtered="c.filtered" keys="c.keys" ng-if="c.type == 'line'" subslug="subopportunity"/>
+                                    <line-chart-r-r selection-title="c.title" selection="c.categories[c.activeCategory]" slug="opportunitiesActive" view="opportunitiesView" data="c.data" colors="colorsList" columns="c.columns" expanded="c.expanded" sidebar="sidebarAnimated" color-config="colorConfig" percent="c.isPercent" currentmonth="currentMonth" currentquarter="currentQuarter" currentyear="currentYear" viewtype="c.viewType" filtered="c.filtered" keys="c.keys" ng-if="c.type == 'line_chart_rr'" />
+                                    <pie-chart has-sub="hasSub" pieactivedrill="$parent.$parent.pieActiveDrill" selection-title="c.title" selection="c.categories[c.activeCategory]" slug="opportunitiesActive" view="opportunitiesView" data="(dashboard === 'services')?c.sldData : ((isListOrNet === 'list')?(c.categories?c.data[c.activeCategory]:c.data):(c.categories?c.data_net[c.activeCategory]:c.data_net))" productfamily="(isListOrNet === 'list')?c.productfamilylist:c.productfamilynet" filteredproductfamily="c.filteredproductfamily" colors="colorsList" columns="c.columns" expanded="c.expanded" sidebar="sidebarAnimated" keys="c.keys" active="$parent.$parent.active" quarter="$parent.$parent.quarterActive" area="$parent.$parent.areaActive" percent="c.isPercent" colors-opp="colorsOpp" subarchlabel="$parent.$parent.subArchLabel" selectionenabled="isChartClickable(c, $index)" keyinfo="c.key_info" viewtype="c.viewType" filtered="c.filtered" customorder="c.customorder" ng-if="c.type == 'pie'" id="c.id" />
+                                </div>
+
+                                <div class="table-responsive" ng-if="c.viewType == 'list' && (c.type == 'pie' && opportunitiesActive !== 'refresh')">
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{c.isPercent?'Value shown in Percentage':getValueLabel(c)}}</span>
+                                    </div>
+                                    <table class="table-scroll">
+                                        <thead>
+                                            <tr>
+                                                <!-- US116377 --><!-- DE130360 -->
+                                                <th class="fix-long-word"><span>{{opportunitiesActive === "ts_renew"? "Opportunity Types" : "Architectures"}}</span></th>
+                                                <th class="text-right ">{{CiscoUtilities.getTotalLabel(c.categories?c.categories[c.activeCategory]:c.title)}}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="d in c.filtered">
+                                                <td class="top-area1 fix-long-word"><span uib-tooltip="{{d.state}}" tooltip-trigger="{{tooltiptrigger}}">{{d.state}}</span></td>
+                                                <td class="text-right net-val selected-row-data">
+                                                    <div class="table-totalVal"><span>{{d.total|formatGridValue}}</span></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!--Added for realizationlist view -G -->
+                                <div ng-show="c.expanded" ng-if="c.viewType == 'list' && c.type == 'line_chart_rr'" class="marginT10 marginB10" ng-init="freezeHeader()">
+                                    <table class="table-scroll" ng-class="{'waterfall-chart-table':c.viewType == 'list' && c.type == 'line_chart_rr' && c.expanded}" ng-init="setExcelData(c)">
+                                        <thead>
+                                            <tr>
+                                                <th><span>Fiscal Qtr ID</span></th>
+                                                <th ng-repeat="d in c.categories" class="text-center">{{d}}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="bottom-scroll">
+                                            <tr ng-repeat="d in c.sldData">
+                                                <td><span uib-tooltip="{{d.state}}" tooltip-trigger="{{tooltiptrigger}}">{{d.state}}</span></td>
+                                                <td ng-repeat="e in c.categories" ng-class="{'selected-data': ((d.state === e) && (d.state !== c.currentQuarter)), 'text-center': true, 'current-quarter': ((d.state === e) && (d.state === c.currentQuarter))}"><span ng-if="d.freq[e]" tooltip-class="realization-table-tooltip" uib-tooltip-html="'<h3 class=tooltip-title>{{d.state}} at {{e}} <span>RR: {{d.freq[e].rr}}%</span></h3><span> {{c.keys[0]}}: {{d.freq[e].values[0]| currency:'$':0}}</span><span> {{c.keys[1]}}: {{d.freq[e].values[1]| currency:'$':0}}</span>'" tooltip-trigger="{{tooltipTrigger}}"><span class="numerator-fraction"><strong>{{d.freq[e].rr}}%</strong></span><span class="denominator-fraction"> (${{d.freq[e]['values'][0] | formatValue:false:false:true}} / ${{d.freq[e]['values'][1] | formatValue:false:false:true }})</span></span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!--Added for Architectures List View-->
+                                <div class="table-responsive product-table" ng-if="c.viewType == 'list' && (c.type == 'pie' || c.type == 'bar_stacked') && opportunitiesActive == 'refresh'" ng-init="c.quarters = getQuarters(c.filteredproductfamily);">
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{getValueLabel(c)}}</span>
+                                    </div>
+
+                                    <div class="tbl-head clearfix">
+                                        <div class="col-head product-family">
+                                            <span ng-click="expandAllArchitecture(c)" ng-class='{"ico-collapse":c.expandAllArch, "ico-expand":!c.expandAllArch}'></span> {{pieActiveDrill?'Sub-Architectures':'Architectures'}}
+                                        </div>
+                                        <div class="col-head text-right">
+                                            {{CiscoUtilities.getTotalLabel(c.categories?c.categories[c.activeCategory]:c.title)}}
+                                        </div>
+                                        <div class="col-head text-right" ng-repeat="(key, t) in c.quarters" ng-if="c.expanded && c.type == 'bar_stacked'">
+                                            {{key}}
+                                        </div>
+                                    </div>
+
+                                    <ul class="product-family" ng-class="{'sub-arch-list':pieActiveDrill}">
+                                        <li ng-repeat="archList in c.filteredproductfamily">
+                                            <div class="tbl-row clearfix">
+                                                <div class="tbl-col blue-title" ng-click="showAllArchs(archList, c)">
+                                                    <span ng-class='{"ico-collapse":archList.show, "ico-expand":!archList.show}'></span> {{archList.name}}
+                                                </div>
+                                                <div class="tbl-col text-right" ng-if="!pieActiveDrill">{{archList.routing| sumArchRouting : 'opportunity' | formatGridValue}}</div>
+                                                <div class="tbl-col text-right" ng-if="pieActiveDrill">{{archList.routing[0].family| sumByKey : 'opportunity' | formatGridValue}}</div>
+                                                <div class="tbl-col text-right" ng-repeat="(key, t) in c.quarters" ng-if="c.expanded && c.type == 'bar_stacked'">{{archList.quarters[key] | formatGridValue}}</div>
+                                            </div>
+
+                                            <ul class="inner-product-family inner-product-arch-list" ng-show="archList.show">
+                                                <li ng-repeat="routing in archList.routing">
+                                                    <div class="tbl-row clearfix">
+                                                        <div class="tbl-col" ng-click="routing.show = !routing.show" ng-if="!pieActiveDrill" ng-class="{'blue-title':!pieActiveDrill}">
+                                                            <span ng-class='{"ico-collapse":routing.show, "ico-expand":!routing.show}' ng-if="!pieActiveDrill"></span> {{routing.name}}
+                                                        </div>
+                                                        <ul ng-if="pieActiveDrill">
+                                                            <li ng-repeat="subRouting in routing.family">
+                                                                <div class="tbl-row clearfix">
+                                                                    <div class="tbl-col" ng-if="pieActiveDrill" ng-class="{'blue-title':!pieActiveDrill}">
+                                                                        <span ng-class='{"ico-collapse":routing.show, "ico-expand":!routing.show}' ng-if="!pieActiveDrill"></span> {{subRouting.name}}
+                                                                    </div>
+                                                                    <div class="tbl-col text-right" ng-if="pieActiveDrill">
+                                                                        {{subRouting.opportunity| formatGridValue}}
+                                                                    </div>
+                                                                    <div class="tbl-col text-right" ng-repeat="(key, t) in c.quarters" ng-if="c.expanded && c.type == 'bar_stacked'">
+                                                                        {{subRouting.quarters[key] | formatGridValue}}
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="tbl-col text-right" ng-if="!pieActiveDrill">
+                                                            {{routing.family| sumByKey : 'opportunity' | formatGridValue}}
+                                                        </div>
+                                                        <div class="tbl-col text-right" ng-if="!pieActiveDrill && c.expanded && c.type == 'bar_stacked'" ng-repeat="(key, t) in c.quarters">
+                                                            {{routing.quarters[key] | formatGridValue}}
+                                                        </div>
+                                                    </div>
+
+                                                    <ul class="inner-product-family" ng-show="routing.show">
+                                                        <li ng-repeat="family in routing.family">
+                                                            <div class="tbl-row clearfix">
+                                                                <div class="tbl-col">
+                                                                    {{family.name}}
+                                                                </div>
+                                                                <div class="tbl-col text-right">
+                                                                    {{family.opportunity| formatGridValue}}
+                                                                </div>
+                                                                <div class="tbl-col text-right" ng-repeat="(key, t) in c.quarters" ng-if="c.expanded && c.type == 'bar_stacked'">
+                                                                    {{family.quarters[key]| formatGridValue}}
+                                                                </div>
+                                                            </div>
+                                                        </li>
+
+                                                    </ul>
+                                                    <hr class="hor-line">
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Architecture view for DRS  -->
+                                <!--Added for Architectures List View-->
+                                <div class="table-responsive product-table" ng-if="c.viewType == 'list' && c.type === 'bar_double_horizontal_drs' && opportunitiesActive === 'drs'">
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{getValueLabel(c)}}</span>
+                                    </div>
+                                    <div class="product-family-table">
+                                        <div class="tbl-head clearfix">
+                                            <div class="col-head product-family">
+                                                <span ng-click="expandAllArchitecture(c)" ng-class='{"ico-collapse":c.expandAllArch, "ico-expand":!c.expandAllArch}'></span> {{pieActiveDrill?'Sub-Architectures':'Architectures'}}
+                                            </div>
+                                            <div class="col-head text-right" ng-if="c.type == 'bar_double_horizontal_drs'">
+                                                Opportunity
+                                            </div>
+                                            <div class="col-head text-right" ng-if="c.type == 'bar_double_horizontal_drs'">
+                                                Pipeline
+                                            </div>
+                                            <div class="col-head text-right" ng-if="c.type == 'bar_double_horizontal_drs' && c.expanded">
+                                                Gap in Pipeline
+                                            </div>
+                                            <div class="col-head text-right" ng-repeat="(key, t) in c.quarterheadership" ng-if="c.expanded && c.type === 'bar_stacked'">
+                                                {{key}}
+                                            </div>
+                                        </div>
+
+                                        <ul class="product-family" ng-class="{'sub-arch-list':pieActiveDrill}">
+                                            <li ng-repeat="archList in c.filteredproductfamily">
+                                                <div class="tbl-row clearfix">
+                                                    <div class="tbl-col blue-title" ng-click="showAllArchs(archList, c)">
+                                                        <span ng-class='{"ico-collapse":archList.show, "ico-expand":!archList.show}'></span> {{archList.name}}
+                                                    </div>
+                                                    <div class="tbl-col text-right">
+                                                        {{archList.quarters.opportunity| formatGridValue}}
+                                                    </div>
+                                                    <div class="tbl-col text-right">
+                                                        {{archList.quarters.pipeline| formatGridValue}}
+                                                    </div>
+                                                    <div class="tbl-col text-right" ng-if="c.expanded">
+                                                        {{archList.quarters.opportunity - archList.quarters.pipeline| formatGridValue}}
+                                                    </div>
+                                                </div>
+
+                                                <ul class="inner-product-family inner-product-arch-list" ng-show="archList.show">
+                                                    <li ng-repeat="routing in archList.routing">
+                                                        <div class="tbl-row clearfix">
+                                                            <div class="tbl-col" ng-click="routing.show = !routing.show" ng-if="!pieActiveDrill" ng-class="{'blue-title':!pieActiveDrill}">
+                                                                <span ng-class='{"ico-collapse":routing.show, "ico-expand":!routing.show}' ng-if="!pieActiveDrill"></span> {{routing.name}}
+                                                            </div>
+                                                            <ul ng-if="pieActiveDrill">
+                                                                <li ng-repeat="subRouting in routing.family">
+                                                                    <div class="tbl-row clearfix">
+                                                                        <div class="tbl-col" ng-if="pieActiveDrill" ng-class="{'blue-title':!pieActiveDrill}">
+                                                                            <span ng-class='{"ico-collapse":routing.show, "ico-expand":!routing.show}' ng-if="!pieActiveDrill"></span> {{subRouting.name}}
+                                                                        </div>
+                                                                        <div class="tbl-col text-right" ng-if="pieActiveDrill">
+                                                                            {{subRouting.quarters.opportunity| formatGridValue}}
+                                                                        </div>
+                                                                        <div class="tbl-col text-right" ng-if="pieActiveDrill">
+                                                                            -
+                                                                        </div>
+                                                                        <div class="tbl-col text-right" ng-if="pieActiveDrill && c.expanded">
+                                                                            -
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tbl-col text-right" ng-if="!pieActiveDrill">
+                                                                {{routing.quarters.opportunity| formatGridValue}}
+                                                            </div>
+                                                            <div class="tbl-col text-right" ng-if="!pieActiveDrill">
+                                                                {{routing.quarters.pipeline| formatGridValue}}
+                                                            </div>
+                                                            <div class="tbl-col text-right" ng-if="!pieActiveDrill && c.expanded">
+                                                                {{routing.quarters.opportunity - routing.quarters.pipeline | formatGridValue}}
+                                                            </div>
+                                                        </div>
+
+                                                        <ul class="inner-product-family" ng-show="routing.show">
+                                                            <li ng-repeat="family in routing.family">
+                                                                <div class="tbl-row clearfix">
+                                                                    <div class="tbl-col">
+                                                                        {{family.name}}
+                                                                    </div>
+                                                                    <div class="tbl-col text-right">
+                                                                        {{family.quarters.opportunity| formatGridValue}}
+                                                                    </div>
+                                                                    <div class="tbl-col text-right">
+                                                                        -
+                                                                    </div>
+                                                                    <div class="tbl-col text-right" ng-if="c.expanded">
+                                                                        -
+                                                                    </div>
+                                                                    <div class="tbl-col text-right" ng-repeat="(key, t) in c.quarters" ng-if="c.expanded && c.type == 'bar_stacked'">
+                                                                        {{family.quarters[key]| formatGridValue}}
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+                                                        </ul>
+                                                        <hr class="hor-line">
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- ship timeline-->
+                                <div class="table-responsive product-table" ng-if="c.viewType == 'list' && c.type === 'bar_stacked' && opportunitiesActive === 'drs' && c.activeCategory === 0">
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{getValueLabel(c)}}</span>
+                                    </div>
+                                    <div class="product-family-table">
+                                        <div class="tbl-head clearfix">
+                                            <div class="col-head product-family">
+                                                <span ng-click="expandAllArchitecture(c)" ng-class='{"ico-collapse":c.expandAllArch, "ico-expand":!c.expandAllArch}'></span> {{pieActiveDrill?'Sub-Architectures':'Architectures'}}
+                                            </div>
+                                            <div class="col-head text-right">
+                                                {{CiscoUtilities.getTotalLabel(c.categories?c.categories[c.activeCategory]:c.title)}}
+                                            </div>
+                                            <div class="col-head text-right" ng-repeat="(key, t) in c.quarterheadership" ng-if="c.expanded && c.type === 'bar_stacked'">
+                                                {{key}}
+                                            </div>
+
+                                        </div>
+
+                                        <ul class="product-family" ng-class="{'sub-arch-list':pieActiveDrill}">
+                                            <li ng-repeat="archList in c.filteredproductfamily.shipTimelinePf">
+                                                <div class="tbl-row clearfix">
+                                                    <div class="tbl-col blue-title" ng-click="showAllArchs(archList, c)">
+                                                        <span ng-class='{"ico-collapse":archList.show, "ico-expand":!archList.show}'></span> {{archList.name}}
+                                                    </div>
+                                                    <div class="tbl-col text-right" ng-if="!pieActiveDrill">{{archList.routing| sumArchRouting : 'opportunity' | formatGridValue}}</div>
+                                                    <div class="tbl-col text-right" ng-if="pieActiveDrill">{{archList.routing[0].family| sumByKey : 'opportunity' | formatGridValue}}</div>
+                                                    <div class="tbl-col text-right" ng-repeat="(key, t) in c.quarterheadership" ng-if="c.expanded && c.type == 'bar_stacked'">{{archList.quarters[key] | formatGridValue}}</div>
+                                                </div>
+
+                                                <ul class="inner-product-family inner-product-arch-list" ng-show="archList.show">
+                                                    <li ng-repeat="routing in archList.routing">
+                                                        <div class="tbl-row clearfix">
+                                                            <div class="tbl-col" ng-click="routing.show = !routing.show" ng-if="!pieActiveDrill" ng-class="{'blue-title':!pieActiveDrill}">
+                                                                <span ng-class='{"ico-collapse":routing.show, "ico-expand":!routing.show}' ng-if="!pieActiveDrill"></span> {{routing.name}}
+                                                            </div>
+                                                            <ul ng-if="pieActiveDrill">
+                                                                <li ng-repeat="subRouting in routing.family">
+                                                                    <div class="tbl-row clearfix">
+                                                                        <div class="tbl-col" ng-if="pieActiveDrill" ng-class="{'blue-title':!pieActiveDrill}">
+                                                                            <span ng-class='{"ico-collapse":routing.show, "ico-expand":!routing.show}' ng-if="!pieActiveDrill"></span> {{subRouting.name}}
+                                                                        </div>
+                                                                        <div class="tbl-col text-right" ng-if="pieActiveDrill">
+                                                                            {{subRouting.opportunity| formatGridValue}}
+                                                                        </div>
+                                                                        <div class="tbl-col text-right" ng-repeat="(key, t) in c.quarterheadership" ng-if="c.expanded && c.type == 'bar_stacked'">
+                                                                            {{subRouting.quarters[key] | formatGridValue}}
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tbl-col text-right" ng-if="!pieActiveDrill">
+                                                                {{routing.family| sumByKey : 'opportunity' | formatGridValue}}
+                                                            </div>
+                                                            <div class="tbl-col text-right" ng-if="!pieActiveDrill && c.expanded && c.type == 'bar_stacked'" ng-repeat="(key, t) in c.quarterheadership">
+                                                                {{routing.quarters[key] | formatGridValue}}
+                                                            </div>
+                                                        </div>
+
+                                                        <ul class="inner-product-family" ng-show="routing.show">
+                                                            <li ng-repeat="family in routing.family">
+                                                                <div class="tbl-row clearfix">
+                                                                    <div class="tbl-col">
+                                                                        {{family.name}}
+                                                                    </div>
+                                                                    <div class="tbl-col text-right">
+                                                                        {{family.opportunity| formatGridValue}}
+                                                                    </div>
+                                                                    <div class="tbl-col text-right" ng-repeat="(key, t) in c.quarterheadership" ng-if="c.expanded && c.type == 'bar_stacked'">
+                                                                        {{family.quarters[key]| formatGridValue}}
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+                                                        </ul>
+                                                        <hr class="hor-line">
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- SFDC booked deals list view -->
+                                <div class="table-responsive product-table" ng-if="c.viewType == 'list' && c.type === 'bar_stacked' && opportunitiesActive === 'drs' && c.activeCategory === 1 && !c.expanded">
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{getValueLabel(c)}}</span>
+                                    </div>
+                                    <div class="product-family-table">
+                                        <div class="tbl-head clearfix">
+                                            <div class="col-head product-family">
+                                                <span ng-click="expandAllArchitecture(c)" ng-class='{"ico-collapse":c.expandAllArchSFDC, "ico-expand":!c.expandAllArchSFDC}' ng-if="!pieActiveDrill"></span> {{pieActiveDrill?'Sub-Architectures':'Architectures'}}
+                                            </div>
+                                            <div class="col-head text-right">
+                                                {{CiscoUtilities.getTotalLabel(c.categories?c.categories[c.activeCategory]:c.title)}}
+                                            </div>
+                                            <div class="col-head text-right" ng-repeat="(key, t) in c.quarterheadership" ng-if="c.expanded && c.type === 'bar_stacked'">
+                                                {{key}}
+                                            </div>
+
+                                        </div>
+
+                                        <ul class="product-family" ng-class="{'sub-arch-list':pieActiveDrill}">
+                                            <li ng-repeat="(key, archList) in c.sfdcbookingsdata">
+                                                <div class="tbl-row clearfix">
+                                                    <div ng-class='{"tbl-col blue-title":!pieActiveDrill, "tbl-col":pieActiveDrill}' ng-click="showAllArchs(archList, c)">
+                                                        <span ng-class='{"ico-collapse":archList.show, "ico-expand":!archList.show}' ng-if="!pieActiveDrill"></span> {{key}}
+                                                    </div>
+                                                    <div class="tbl-col text-right">{{archList['SFDC Pipeline'] | formatGridValue}}</div>
+                                                    <div class="tbl-col text-right" ng-repeat="(key, t) in c.quarterheadership" ng-if="c.expanded && c.type == 'bar_stacked'">{{archList.quarters[key] | formatGridValue}}</div>
+                                                </div>
+
+                                                <ul class="inner-product-family inner-product-arch-list" ng-show="archList.show && !pieActiveDrill">
+                                                    <li ng-repeat="(key, x) in archList['areas_drill']">
+                                                        <div class="tbl-row clearfix">
+                                                            <div class="tbl-col" ng-click="routing.show = !routing.show" ng-if="!pieActiveDrill">
+                                                                {{key}}
+                                                            </div>
+                                                            <div class="tbl-col text-right" ng-if="!pieActiveDrill">
+                                                                {{x['SFDC Pipeline'] | formatGridValue}}
+                                                            </div>
+                                                            <div class="tbl-col text-right" ng-if="!pieActiveDrill && c.expanded && c.type == 'bar_stacked'" ng-repeat="(key, t) in c.quarterheadership">
+                                                                {{routing.quarters[key] | formatGridValue}}
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="hor-line">
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- SFDC booked deals expanded view -->
+                                <div class="table-responsive product-table" ng-if="c.viewType == 'list' && c.type === 'bar_stacked' && opportunitiesActive === 'drs' && c.activeCategory === 1 && c.expanded">
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{getValueLabel(c)}}</span>
+                                    </div>
+                                    <div class="product-family-table">
+                                        <div class="tbl-head clearfix">
+                                            <div class="col-head product-family">
+                                                <span ng-click="expandAllArchitecture(c)" ng-class='{"ico-collapse":c.expandAllArch, "ico-expand":!c.expandAllArch}' ng-if="!pieActiveDrill"></span> {{pieActiveDrill?'Sub-Architectures':'Architectures'}}
+                                            </div>
+                                            <div class="col-head text-right">
+                                                {{CiscoUtilities.getTotalLabel(c.categories?c.categories[c.activeCategory]:c.title)}}
+                                            </div>
+                                            <div class="col-head text-right" ng-repeat="quarters in c.filteredproductfamily.sfdcBookings">
+                                                {{quarters.quarter}}
+                                            </div>
+                                        </div>
+
+
+                                        <ul class="product-family" ng-class="{'sub-arch-list':pieActiveDrill}">
+                                            <li ng-repeat="(key, archList) in c.sfdcbookingsquarterdata">
+                                                <div class="tbl-row clearfix">
+                                                    <div ng-class='{"tbl-col blue-title":!pieActiveDrill, "tbl-col":pieActiveDrill}' ng-click="showAllArchs(archList, c)">
+                                                        <span ng-class='{"ico-collapse":archList.show, "ico-expand":!archList.show}' ng-if="!pieActiveDrill"></span> {{key}}
+                                                    </div>
+                                                    <div class="tbl-col text-right">{{c.sfdcbookingsdata[key]['SFDC Pipeline'] | formatGridValue}}</div>
+                                                    <div class="tbl-col text-right" ng-repeat="quarters in c.filteredproductfamily.sfdcBookings">{{archList[quarters.quarter] | formatGridValue}}</div>
+                                                </div>
+
+                                                <ul class="inner-product-family inner-product-arch-list" ng-show="archList.show && !pieActiveDrill">
+                                                    <li ng-repeat="(subkey, x) in archList['areas_drill']">
+                                                        <div class="tbl-row clearfix">
+                                                            <div class="tbl-col" ng-click="routing.show = !routing.show" ng-if="!pieActiveDrill">
+                                                                {{subkey}}
+                                                            </div>
+
+                                                            <div class="tbl-col text-right">
+                                                                {{c.sfdcbookingsdata[key]['areas_drill'][subkey]['SFDC Pipeline']}}
+                                                            </div>
+                                                            <div class="tbl-col text-right" ng-if="!pieActiveDrill && c.expanded && c.type == 'bar_stacked'" ng-repeat="quarters in c.filteredproductfamily.sfdcBookings">
+                                                                {{x[quarters.quarter] | formatGridValue}}
+                                                            </div>
+                                                        </div>
+
+                                                        <hr class="hor-line">
+                                                    </li>
+                                                </ul>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!--End Architecture view for DRS-->
+                                <div class="table-responsive" ng-if="c.viewType == 'list' && c.type == 'bar_stacked' && analysis == 'analysis' && false">
+                                    <table class="table border-table  opp-by simple-table sav-table" ng-class="{'actions' : allowReportRequest(c)}">
+                                        <thead>
+                                            <tr>
+                                                <th ng-if="allowReportRequest(c);">Actions</th>
+                                                <th class="tile-table" style="width:33.3%;">Period</th>
+                                                <th class="text-right" style="width:33.3%;">Expired</th>
+                                                <th class="text-right" style="width:33.3%;">Upcoming</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Q2FY16</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?2.10:1.10}}</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?50.60:51.60}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Q3FY16</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?2.10:0.10}}</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?52.10:51.10}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Q4FY16</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?3.60:1.60}}</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?55.60:51.60}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Q1FY17</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?3.60:3.10}}</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?49.60:41.90}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Q2FY17</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?53.6:44.7}}</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?49.60:41.60}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Q3FY17</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?4.60:4.10}}</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?36.70:32.70}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Q4FY17</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?2.10:1.10}}5.60</td>
+                                                <td class="text-right">{{isListOrNet === 'list'?8.40:6.10}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div ng-if="c.viewType == 'list' && (c.type == 'bar_stacked_horizontal' || c.type == 'bar_double_horizontal_stacked') && !showCustomerExpand(c) && expanded_renewal_view(c)" ng-init="dataFormatting(c);freezeHeader()">
+                                <div class="clearfix right-fix">
+                                    <span class="pull-right table-unit">{{c.isPercent?'Value shown in Percentage':getValueLabel(c)}}</span>
+                                </div>
+                                <div class="clearfix cisco-one-tbl">
+                                    <table class="table-scroll route-to-market">
+                                        <thead>
+                                            <tr>
+                                                <th class="fix-long-word"></th>
+                                                <th ng-repeat="f in c.years" colspan="3" class="text-center">{{f}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="fix-long-word"><span>State</span></th>
+                                                <th class="text-right">Direct</th>
+                                                <th class="text-right">Partner</th>
+                                                <th class="text-right">Total Bookings</th>
+                                                <th class="text-right">Direct</th>
+                                                <th class="text-right">Partner</th>
+                                                <th class="text-right">Total Bookings</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="(key,value) in c.tdata">
+												<td class="top-area1 fix-long-word"><span uib-tooltip="{{key}}" tooltip-trigger="{{tooltiptrigger}}">{{key}}</span></td>
+                                                <td class="text-right net-val">{{value["currentyear"]['direct']|objectTotal:active|formatGridValue}}</td>
+                                                <td class="text-right net-val">{{value["currentyear"]['partner']|objectTotal:active|formatGridValue}}</td>
+                                                <td class="text-right net-val selected-row-data"><div class="table-totalVal"><span>{{value["currentyear"]['total']|objectTotal:active|formatGridValue}}</span></div></td>
+                                                <td class="text-right net-val">{{value["previousyear"]['direct']|objectTotal:active|formatGridValue}}</td>
+                                                <td class="text-right net-val">{{value["previousyear"]['partner']|objectTotal:active|formatGridValue}}</td>
+                                                <td class="text-right net-val selected-row-data"><div class="table-totalVal"><span>{{value["previousyear"]['total']|objectTotal:active|formatGridValue}}</span></div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div ng-if="c.viewType == 'list' && (c.type == 'bar_stacked_horizontal' || c.type == 'bar_double_horizontal_stacked') && !showCustomerExpand(c) && !expanded_renewal_view(c)" ng-init="freezeHeader()">
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{c.isPercent?'Value shown in Percentage':getValueLabel(c)}}</span>
+                                    </div>
+                                    <div class="clearfix cisco-one-tbl">
+                                        <table class="table-scroll">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center action-col" ng-if="allowReportRequest(c);"><span>Actions</span></th>
+                                                    <th class="fix-long-word"><span>{{CiscoUtilities.getOppHeading(c.categories?c.categories[c.activeCategory]:c.title)}}</span></th>
+                                                    <th class="text-right" ng-if="c.expanded && c.keys.length > 1" ng-repeat="f in c.keys">{{f}}</th>
+                                                    <th class="text-right" ng-if="opportunitiesActive != 'tsAttach' || subopportunity != 'overview' ||  c.id != 1">{{CiscoUtilities.getTotalLabel(c.categories?c.categories[c.activeCategory]:c.title)}}</th>
+                                                    <th class="text-right" ng-if="opportunitiesActive == 'tsAttach' && subopportunity == 'overview' && c.id == 1">Bookings</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="d in c.filtered">
+
+                                                    <td class="text-center action-col" ng-if="allowReportRequest(c);">
+                                                        <span class="dropdown export"><span class="ico-more_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+                                                        <!-- SunitaYadav  added class of animated fadeIn -->
+                                                        <ul class="dropdown-menu">
+                                                            <i class="tipsy"></i>
+                                                            <li ng-if='canViewDetails()'><a ng-click="viewDetails(d)" href="">Pipeline Details</a></li>
+                                                            <li><a href="javascript:void(0);" ng-click="openRequestReport(d.state)">Request Smart IB Report</a></li>
+                                                            <li><a href="javascript:void(0);" ng-if="allowCustomerReport(c);" ng-click="openRequestReport(d.state, 'Request Customer Detail Report')">{{requestText}}</a></li>
+
+                                                            <!--                                                                <li><a href="javascript:void(0);">Line Items Export</a></li>-->
+                                                            <li><a href="javascript:void(0);" ng-if="allowActionMetrics(c);" ng-click="openActionMetrics(d.state)">Action Metrics</a></li>
+                                                        </ul>
+                                                        </span>
+                                                    </td>
+                                                <td class="top-area1 fix-long-word"><span uib-tooltip="{{d.state}}" tooltip-trigger="{{tooltiptrigger}}">{{d.state}}</span></td>
+                                                <td class="text-right net-val selected-row-data" ng-if="!c.expanded && ((c.categories[c.activeCategory]).indexOf('Route to Market') > -1)"><div class="table-totalVal"><span>{{d.freq|objectTotal:active|formatGridValue}}</span></div></td>
+                                                <td class="text-right net-val selected-row-data" ng-if="!c.expanded && !((c.categories[c.activeCategory]).indexOf('Route to Market') > -1)"><div class="table-totalVal"><span>{{d.freq|objectTotal|formatGridValue}}</span></div></td>
+                                                <td class="text-right" ng-if="c.expanded && c.keys.length > 1" ng-repeat="f in c.keys">{{d.freq[f]|formatGridValue}}</td>
+                                                <td class="text-right net-val selected-row-data" ng-if="c.expanded"><div class="table-totalVal"><span>{{d.freq|objectTotal|formatGridValue}}</span></div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="table-responsive listViewAccount" ng-if="c.viewType == 'list' && (c.type == 'bar_stacked_horizontal' || c.type == 'bar_stacked_double_horizontal') && showCustomerExpand(c)">
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{getValueLabel(c)}}</span>
+                                    </div>
+                                    <div class="clearfix cisco-one-tbl">
+
+                                        <table class="table expanded opp-by simple-table sav-table" ng-class="{'actions' : allowReportRequest(c)}">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:2%; padding-left:10px;" ng-if="allowReportRequest(c);">Actions</th>
+                                                    <th style="width:20%;" class="second-col">{{CiscoUtilities.getOppHeading(c.categories?c.categories[c.activeCategory]:c.title)}}</th>
+                                                    <th ng-if="opportunitiesActive == 'refresh' || opportunitiesActive == 'attach'" style="width:5%;" class="text-right"># of Chassis</th>
+                                                    <th ng-if="opportunitiesActive == 'refresh' || opportunitiesActive == 'attach'" style="width:5%;" class="text-right"># of Components</th>
+                                                    <th ng-if="opportunitiesActive == 'renew'" style="width:10%;" class="text-right">Total Contracts</th>
+                                                    <th ng-if="opportunitiesActive == 'renew'" style="width:10%;" class="text-right">Total Line Items</th>
+                                                    <th ng-if="opportunitiesActive == 'refresh' || opportunitiesActive == 'attach'" style="width:10%;" class="text-right"># of Install Site</th>
+                                                    <th style="width:15%;" class="text-right">List Price</th>
+                                                    <th ng-if="opportunitiesActive == 'refresh' || opportunitiesActive == 'renew'" style="width:10%;" class="text-right">Net Price</th>
+                                                    <th style="width:13%;" class="text-right">Converted to Pipeline</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="e in c.filteredexpandeddata">
+                                                    <td ng-if="allowReportRequest(c);" class="action-btn"><span class="dropdown export"><span class="ico-more_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+                                                        <ul class="dropdown-menu">
+                                                            <i class="tipsy"></i>
+                                                            <li ng-if='canViewDetails()'><a ng-click="viewDetails(e)" href="">Pipeline Details</a></li>
+                                                            <li><a href="javascript:void(0);" ng-click="openRequestReport(e.name)">Request Smart IB Report</a></li>
+                                                            <li><a href="javascript:void(0);" ng-click="openRequestReport(e.name, 'Request Customer Detail Report')">Request Customer Detail Report</a></li>
+                                                        </ul>
+                                                        </span>
+                                                    </td>
+                                                    <td class="sav-td second-col"><span uib-tooltip="{{e.name}}" tooltip-trigger="{{tooltiptrigger}}">{{e.name}}</span></td>
+                                                    <td ng-if="opportunitiesActive == 'refresh' || opportunitiesActive == 'attach'" class="text-right">{{e.chassis}}</td>
+                                                    <td ng-if="opportunitiesActive == 'refresh' || opportunitiesActive == 'attach'" class="text-right">{{e.components}}</td>
+                                                    <td ng-if="opportunitiesActive == 'renew'" class="text-right">{{e.total_contracts}}</td>
+                                                    <td ng-if="opportunitiesActive == 'renew'" class="text-right">{{e.total_line_items}}</td>
+                                                    <td ng-if="opportunitiesActive == 'refresh' || opportunitiesActive == 'attach'" class="text-right">{{e.install_site}}</td>
+                                                    <td class="text-right">{{e.list_price| formatGridValue}}</td>
+                                                    <td ng-if="opportunitiesActive == 'refresh' || opportunitiesActive == 'renew'" class="text-right">{{e.net_price| formatGridValue}}</td>
+                                                    <td class="text-right">{{e.pipeline| formatGridValue}}</td>
+                                                </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            <div ng-if="c.viewType == 'list' && ((c.type == 'bar_stacked' && opportunitiesActive != 'refresh' && (opportunitiesActive !== 'drs')) || c.type == 'line' || (c.type == 'bar' && (c.unique_key == null || c.unique_key != 'corporate_attach_rate')))" ng-init="freezeHeader()">
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{c.isPercent?'Value shown in Percentage':getValueLabel(c)}}</span>
+                                    </div>
+                                    <table class="table-scroll">
+                                        <thead>
+                                            <tr>
+                                                <th class="fix-long-word"><span>Period</span></th>
+                                                <!-- yopgupta - Added conditions to show different table headings -->
+                                                <th class="text-right " ng-if="!c.expanded">{{CiscoUtilities.getTotalLabel(c.categories?c.categories[c.activeCategory]:c.title)}}</th>
+                                                <th class="text-right" ng-if="c.expanded && c.keys.length > 1" ng-repeat="f in c.keys">{{f}}</th>
+                                                <th class="text-right" ng-if="c.expanded && !((c.categories[c.activeCategory]).indexOf('Rate by Sales') > -1)">{{CiscoUtilities.getTotalLabel(c.categories?c.categories[c.activeCategory]:c.title)}}</th>
+                                                <th class="text-right" ng-if="(opportunitiesActive == 'tsRenew' && subopportunity == 'overview') || (opportunitiesActive == 'tsAttach' && subopportunity == 'overview')">Previous Year</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                           <tr ng-repeat="d in c.filtered">
+                                                <td class="top-area1 fix-long-word"><span>{{d.state}}</span></td>
+                                                <td class="text-right net-val selected-row-data" ng-if="!c.expanded"><div class="table-totalVal"><span>{{d.freq|objectTotal|formatGridValue:true: (c.isPercent? true: false)}}</span></div></td>
+                                                <td class="text-right" ng-if="c.expanded && c.keys.length > 1" ng-repeat="f in c.keys">{{d.freq[f]|formatGridValue:true: (c.isPercent? true: false)}}</td>
+                                                <td class="text-right net-val selected-row-data" ng-if="c.expanded && !((c.categories[c.activeCategory]).indexOf('Rate by Sales') > -1)"><div class="table-totalVal"><span>{{d.total|formatGridValue:true: (c.isPercent? true: false)}}</span></div></td>
+                                                <td class="text-right net-val" ng-if="(opportunitiesActive == 'tsRenew' && subopportunity == 'overview') || (opportunitiesActive == 'tsAttach' && subopportunity == 'overview')">{{d.previoustotal|formatGridValue:true: (c.isPercent? true: false)}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-responsive" ng-if="c.viewType == 'list' && c.type == 'bar_stacked_horizontal' && false">
+                                    <!-- yopgupta - removed campaign check condition so that this table doesn't load in analysis -->
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{c.isPercent?'Value shown in Percentage':getValueLabel(c)}}</span>
+                                    </div>
+                                    <table class="table opp-by name-value-tbl" ng-class="{'actions' : allowReportRequest(c)}">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center action-col" ng-if="allowReportRequest(c);">Actions</th>
+                                                <th class="">{{CiscoUtilities.getOppHeading(c.categories?c.categories[c.activeCategory]:c.title)}}</th>
+                                                <th class="text-right">Value ($)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="d in c.filtered">
+                                                <td class="text-center action-col" ng-if="allowReportRequest(c);">
+                                                    <span class="dropdown export"><span class="ico-more_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+                                                    <!-- SunitaYadav  added class of animated fadeIn -->
+                                                    <ul class="dropdown-menu">
+                                                        <i class="tipsy"></i>
+                                                        <li><a href="javascript:void(0);" ng-click="openRequestReport(d.state)" ng-if="allowSmartReport(c);">Request Smart IB Report</a></li>
+                                                        <li><a href="javascript:void(0);" ng-if="allowCustomerReport(c);" ng-click="openRequestReport(d.state, 'Request Customer Detail Report')">Request Customer Detail Report</a></li>
+                                                        <li><a href="javascript:void(0);" ng-if="allowActionMetrics(c);" ng-click="openActionMetrics(d.state)">Action Metrics</a></li>
+                                                    </ul>
+                                                    </span>
+                                                </td>
+                                                <td class="top-area1"><span ng-click="drillAccountManager(c.isAccountManagerList, d.state, c);">{{d.state}}</span></td>
+                                                <td class="text-right net-val">{{d.freq|objectTotal:active| formatGridValue}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+
+                                <div class="table-responsive" ng-if="c.viewType == 'list' && (c.type == 'bar_stacked_double_horizontal') && !showCustomerExpand(c)">
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{getValueLabel(c)}}</span>
+                                    </div>
+                                    <table class="table opp-by simple-table" ng-class="{'actions' : allowReportRequest(c)}">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center action-col" ng-if="allowReportRequest(c);">Actions</th>
+                                                <th>{{CiscoUtilities.getOppHeading(c.categories?c.categories[c.activeCategory]:c.title)}}</th>
+                                                <th class="text-right">{{isListOrNet === 'list' ? 'List':'Net'}} Price</th>
+                                                <th class="text-right" ng-if="c.filtered[0].freq_2">SFDC Pipeline</th>
+                                                <th class="text-right" ng-if="c.filtered[0].freq_2 && c.expanded">Gap in Pipeline</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="d in c.filtered">
+                                                <td class="text-center action-col" ng-if="allowReportRequest(c);"><span class="dropdown export"><span class="ico-more_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+                                                    <ul class="dropdown-menu">
+                                                        <i class="tipsy"></i>
+                                                        <!--                                                            <li><a href="javascript:void(0);" ng-click="openRequestReport(d.state)" ng-if="allowSmartReport(c);">Request Smart IB Report</a></li>
+                                                                                                                        <li><a href="javascript:void(0);" ng-if="allowCustomerReport(c);" ng-click="openRequestReport(d.state, 'Request Customer Detail Report')">Request Customer Detail Report</a></li>
+                                                                                                                        <li><a href="javascript:void(0);" ng-if="allowActionMetrics(c);" ng-click="openActionMetrics(d.state)">Action Metrics</a></li>-->
+
+                                                        <li ng-if='canViewDetails()'><a href="" ng-click="viewDetails(d)">Pipeline Details</a></li>
+                                                        <li><a href="javascript:void(0);" ng-click="openRequestReport(d.state)">Request Smart IB Report</a></li>
+                                                        <li><a href="javascript:void(0);" ng-click="openRequestReport(d.state, 'Request Customer Detail Report')">Request Customer Detail Report</a></li>
+                                                        <!--                                                            <li><a href="javascript:void(0);">Line Items Export</a></li>-->
+                                                        <li><a href="javascript:void(0);" ng-if="allowActionMetrics(c);" ng-click="openActionMetrics(d.state)">Action Metrics</a></li>
+
+                                                    </ul>
+                                                    </span>
+                                                </td>
+                                                <td class="top-area1"><span uib-tooltip="{{d.state}}" tooltip-trigger="{{tooltiptrigger}}">{{d.state}}</span></td>
+                                                <td class="text-right net-val">{{d.freq|objectTotal:active| formatGridValue}}</td>
+                                                <td class="text-right net-val" ng-if="d.freq_2">{{d.freq_2|objectTotal:active| formatGridValue}}</td>
+                                                <td class="text-right" ng-if="d.freq_2 && c.expanded">{{((d.freq|objectTotal)-(d.freq_2|objectTotal)) | formatGridValue}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div ng-if="c.viewType == 'list' && c.type == 'bar_double'" ng-init="freezeHeader()">
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{c.isPercent?'Value shown in Percentage':getValueLabel(c)}}</span>
+                                    </div>
+                                    <table class="table-scroll">
+                                        <thead>
+                                            <!--<tr class="clearfix" ng-if="c.expanded">
+                                            <th></th>
+                                            <th class="text-center" colspan="3">Overall</th>
+                                        </tr> -->
+                                            <tr>
+                                            <th class="fix-long-word"><span>{{opportunitiesActive === 'drs' ? 'Architectures' : 'Period'}}</span></th>
+                                                <!--<th class="text-right">
+                                    <table>
+                                        <tr>
+
+                                        </tr>
+                                    </table>
+                                    </th>-->
+                                            <th class="text-right" ng-repeat="(k, v) in c.filtered[0].areas[0].freq">{{c.isPipeline?(k == constants.opportunity?'Opportunity':'Pipeline'):k}}</th>
+                                            <th class="text-right" ng-if="c.expanded && c.isPipeline">Gap in Pipeline</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="d in c.filtered">
+                                                <td class="top-area1 fix-long-word"><span uib-tooltip="{{d.quarter}}" tooltip-trigger="{{tooltiptrigger}}">{{d.quarter}}</span></td>
+                                                <td class="text-right" ng-repeat="(k, v) in d.freq">{{v|formatGridValue}}</td>
+                                                <td class="text-right" ng-if="c.expanded && c.isPipeline">{{d.freq[constants.opportunity] - d.freq[constants.pipeline]|formatGridValue}}</td>
+                                                <!--<td>
+                                                <table>
+                                                    <tr>
+
+                                                    </tr>
+                                                </table>
+                                            </td>-->
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-responsive" ng-if="c.viewType == 'list' && c.type == 'bar_double_horizontal'">
+                                    <div class="clearfix right-fix">
+                                        <span class="pull-right table-unit">{{c.isPercent?'Value shown in Percentage':getValueLabel(c)}}</span>
+                                    </div>
+                                    <table class="table opp-by table-fixed1 double-head full-width" ng-class="{'actions' : allowReportRequest(c)}">
+                                        <thead>
+                                            <tr ng-show="c.expanded" class="level-0">
+                                                <th ng-show="allowReportRequest(c)"></th>
+                                                <th><span class="visibleHidden">{{CiscoUtilities.getOppHeading(c.categories?c.categories[c.activeCategory]:c.title)}}</span></th>
+                                                <th class="text-center">Overall</th>
+                                                <th class="text-center" ng-repeat="f in c.filtered[0].areas">{{f.state}}
+                                                    <a class="expandable_button" ng-click="drillUndrillColumn(f);" ng-show="f.areas_drill">
+                                                        <span class="ico-expand" ng-show="!isDrilled(f)"></span>
+                                                        <span class="ico-collapse" ng-show="isDrilled(f)"></span>
+                                                    </a>
+                                                </th>
+                                            </tr>
+                                            <tr ng-show="c.expanded && drilledCols.length" class="level-1">
+                                                <th ng-show="allowReportRequest(c)"></th>
+                                                <th>
+                                                    <table class="visibleHidden">
+                                                        <tr>
+                                                            <td>{{CiscoUtilities.getOppHeading(c.categories?c.categories[c.activeCategory]:c.title)}}</td>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                                <th class="text-center">
+                                                    <table class="visibleHidden">
+                                                        <tr>
+                                                            <td class="text-center">Overall</td>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                                <th class="text-center" ng-repeat="f in c.filtered[0].areas">
+                                                    <table ng-show="isDrilled(f)">
+                                                        <tr>
+                                                            <td class="text-center" ng-repeat="g in f.areas_drill">{{g.state}}</td>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                            <tr class="level-2">
+                                                <th class="text-center action-col" ng-show="allowReportRequest(c)">Actions</th>
+                                                <th class="fix-long-word">{{CiscoUtilities.getOppHeading(c.categories?c.categories[c.activeCategory]:c.title)}}</th>
+                                                <th class="text-right padding0">
+                                                    <table>
+                                                        <tr>
+                                                            <td class="text-right" ng-repeat="(k, v) in c.filtered[0].areas[0].freq">{{k==constants.opportunity?'Opportunity':'Pipeline'}}</td>
+                                                            <td ng-if="c.activeCategory !== 1" ng-show="c.filtered[0].areas[0].freq[constants.pipeline] !== null && c.expanded">Gap in Pipeline</td>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                                <th class="text-right1" ng-show="c.expanded" ng-repeat="f in c.filtered[0].areas">
+                                                    <table ng-show="isDrilled(f)" ng-init="f.drillTemp = getDrilledHead(f.areas_drill);">
+                                                        <tr>
+                                                            <td class="text-right" ng-repeat="v in f.drillTemp track by $index">{{v==constants.opportunity?'Opportunity':'Pipeline'}}</td>
+                                                        </tr>
+                                                    </table>
+                                                    <table ng-show="!isDrilled(f)">
+                                                        <tr>
+                                                            <td class="text-right" ng-repeat="(k, v) in f.freq">{{k==constants.opportunity?'Opportunity':'Pipeline'}}</td>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="d in c.filtered">
+                                                <td class="text-center action-col" ng-show="allowReportRequest(c);">
+                                                    <span class="dropdown export"><span class="ico-more_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+                                                    <!-- SunitaYadav  added class of animated fadeIn -->
+                                                    <ul class="dropdown-menu">
+                                                        <i class="tipsy"></i>
+                                                        <li ng-if="canViewDetails()"><a href="" ng-click="viewDetails(d)">Pipeline Details</a></li>
+                                                        <li><a href="javascript:void(0);" ng-click="openRequestReport(d.quarter)" ng-show="allowSmartReport(c);">Request Smart IB Report</a></li>
+                                                        <li><a href="javascript:void(0);" ng-show="allowCustomerReport(c);" ng-click="openRequestReport(d.quarter, 'Request Customer Detail Report')">Request Customer Detail Report</a></li>
+                                                        <li><a href="javascript:void(0);" ng-show="allowActionMetrics(c);" ng-click="openActionMetrics(d.quarter)">Action Metrics</a></li>
+                                                    </ul>
+                                                    </span>
+                                                </td>
+                                                <td class="top-area1 fix-long-word"><span>{{d.quarter}}</span></td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td class="text-right" ng-repeat="(k, v) in d.freq">{{v|formatGridValue}}</td>
+                                                            <td class="text-right" ng-if="c.activeCategory !== 1" ng-show="d.freq[constants.pipeline] !== null && c.expanded">{{d.freq[constants.opportunity] - d.freq[constants.pipeline]|formatGridValue}}</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td ng-show="c.expanded" ng-repeat="f in d.areas">
+                                                    <table ng-show="isDrilled(f)" ng-init="f.drillTempB = getDrilledBody(f.areas_drill);">
+                                                        <tr>
+                                                            <td class="text-right" ng-repeat="v in f.drillTempB track by $index">{{v|formatGridValue}}</td>
+                                                        </tr>
+                                                    </table>
+                                                    <table ng-show="!isDrilled(f)">
+                                                        <tr>
+                                                            <td class="text-right" ng-repeat="(k, v) in f.freq">{{v| formatGridValue}}</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            <!-- List view for TS Attach Realization : Corporate Attach Rate-->
+                            <div ng-if="c.viewType == 'list' && c.type == 'bar'  && c.unique_key == 'corporate_attach_rate'" ng-init="freezeHeader()">
+                                <div class="clearfix right-fix">
+                                    <span class="pull-right table-unit">{{c.isPercent?'Value shown in Percentage':getValueLabel(c)}}</span>
+                                </div>
+                                <table class="table-scroll" ng-init="setListKeys(c)">
+                                    <thead>
+                                    <tr>
+                                        <th class="fix-long-word" ng-if="c.activeCategory == 0"><span>AR Month</span></th>
+                                        <th class="fix-long-word" ng-if="c.activeCategory == 1"><span>AR Quarter</span></th>
+                                        <th class="text-right" ng-repeat="f in (c.expanded ? c.listKeys : c.listKeys.slice(0,2))">{{f}}</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="d in c.data_net[c.activeCategory]" ng-class="{'highlighted-tr': highlightRow(d.state)}">
+                                        <td class="top-area1 fix-long-word"><span>{{d.state}}</span></td>
+                                        <td class="text-right" ng-repeat="f in (c.expanded ? c.listKeys : c.listKeys.slice(0,2))"
+                                            ng-class="{'red': d.freq[f] != null && d.freq[f] != '' && d.freq[f] != 0 && ((f == 'YOY' && d.freq[f] < 0) || (f == '% of Target' && d.freq[f] < 95)),
+                                                        'green' : d.freq[f] != null && d.freq[f] != '' && d.freq[f] != 0 && ((f == 'YOY' && d.freq[f] > 0)|| (f == '% of Target' && d.freq[f] > 100))}">
+                                            <span ng-if="d.freq[f] != null && d.freq[f] != '' && d.freq[f] != 0 && (f == '% of Target' || f == 'YOY')" ng-class="{'glyphicon glyphicon-triangle-bottom' : ((f == 'YOY' && d.freq[f] < 0) || (f == '% of Target' && d.freq[f] < 95)), 'glyphicon glyphicon-triangle-top' : ((f == 'YOY' && d.freq[f] > 0)|| (f == '% of Target' && d.freq[f] > 100))}">&nbsp;</span>{{ d.freq[f]|formatGridValue:true:((f == "% of Target" || f == "YOY" || f == "AR" || f == "Target") ? true : false) }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="rotated-text" ng-show="((isListOrNet === 'list')?(c.categories?c.data[c.activeCategory].length:c.data.length):(c.categories?c.data_net[c.activeCategory].length:c.data_net.length)) && c.viewType == 'chart' && !c.isPercent">{{getValueLabel(c)}}</div>
+                            <div class="rotated-text percentage" ng-show="c.viewType == 'chart' && c.isPercent">Value shown in Percentage</div>
+                            <div class="rotated-text renewalRate" ng-show="c.viewType == 'chart' && c.type == 'line_chart_rr'">Renewal Rate</div>
+
+
+                            <!--baljinderKaur - Added table for Realization Graph Description-->
+                            <div class="graph-desc-tbl marginT10 marginB10" ng-if="c.viewType == 'chart' && c.type == 'line_chart_rr'">
+                                <table class="graph-desc">
+                                    <thead>
+                                        <tr>
+                                            <td style="width:6%;" class="bold-header">Fiscal Qtr ID</td>
+                                            <td style="width:8%;" class="bold-header">Details</td>
+                                            <td style="width:10.5%;" class="bold-header text-right" ng-repeat="q in realizationXList">{{q}}</td>
+                                            <td style="width:12.5%;"></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody ng-init = "getCheckedKeys(c); getQuarterFreqData(c)"  ng-repeat="d in checkedKeys">
+                                        <tr style="background: {{(quartersDescColors[colorConfig[d]] == null) ? 'rgba(107,47,131,0.2)': quartersDescColors[colorConfig[d]]}}">
+                                            <td style="width:6%;" class="bold-header">{{d}}</td>
+                                            <td style="width:8%;" class="bold-header">RR</td>
+                                            <td style="width:10.5%;" class="text-right" ng-repeat="e in quarterFreqData[d]">{{e.rr != "" ? e.rr + '%':''}}</td>
+                                            <td style="width:12.5%;"></td>
+                                        </tr>
+                                        <tr style="background: {{(quartersDescColors[colorConfig[d]] == null) ? 'rgba(107,47,131,0.2)': quartersDescColors[colorConfig[d]]}}">
+                                            <td style="width:6%;" class="bold-header">&nbsp;</td>
+                                            <td style="width:8%;" class="bold-header">Svc Renewed</td>
+                                            <td style="width:10.5%;" class="text-right" ng-repeat="e in quarterFreqData[d]">{{e.values[0] != "" ? (e.values[0] | currency:'$':0) : ''}}</td><td style="width:12.5%;"></td>
+                                        </tr>
+                                        <tr style="background: {{(quartersDescColors[colorConfig[d]] == null) ? 'rgba(107,47,131,0.2)': quartersDescColors[colorConfig[d]]}}">
+                                            <td style="width:6%;" class="bold-header">&nbsp;</td>
+                                            <td style="width:8%;" class="bold-header">Renewal Oppty</td>
+                                            <td style="width:10.5%;" class="text-right" ng-repeat="e in quarterFreqData[d]">{{e.values[1] != "" ? (e.values[1] | currency:'$':0) : ''}}</td><td style="width:12.5%;"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- opportunity-tile -->
+                    </div>
+                    <!-- <div class="col-xs-12 col-sm-6 kpi kpi_999" ng-class="{'col-lg-4' : !sidebarActive && sidebarAnimated, 'col-lg-6' : sidebarActive}" style="visibility: hidden;">
+                         <div class="opportunity-tile error-tile">
+                             <div class="page-level-msg error">
+                                 <div class="error-ico"><span class="ico-danger"><span class="path1"></span><span class="path2"></span></span>
+                                     <img class="shadow-img" src="images/shadow.svg" alt=""/></div>
+                                 <span class="eror-msg"><span class="red"> Error!</span> Content not available</span>
+                             </div>
+                         </div>
+                     </div>-->
+                </div>
+                <!-- row -->
+                <div class="row" ng-show="$root.accessIssue == 'timeout'">
+                    <div class="col-sm-12">
+                        <div class="page-level-msg error">
+                            <div class="error-ico">
+                                <img class="timeout" src="images/timeout.svg" alt="" /></div>
+                            <span class="error-msg">Time Out!</span>
+                            <span class="grey-text">Your session has timed out due to inactivity.<br>Please click to Sign In again.</span>
+                            <a href="" ng-click="logout()" class="button filled-btn blue"><span>Sign In</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!--System down message starts here-->
+                <div class="row" ng-show="$root.accessIssue == 'systemdown'">
+                    <div class="col-sm-12">
+                        <div class="page-level-msg error">
+                            <div class="error-ico">
+                                <img class="systemdown" src="images/systemdown.svg" alt="" /></div>
+                            <span class="error-msg">System is down for data updates!</span>
+                            <span class="grey-text">Please check back after some time.</span>
+                        </div>
+                    </div>
+                </div>
+                <!--System down message ends here-->
+                <!--No Data available message starts here-->
+                <div class="row" ng-show="$root.accessIssue == 'nodata'">
+                    <div class="col-sm-12">
+                        <div class="page-level-msg error">
+                            <div class="error-ico">
+                                <img class="nodata" src="images/nodata.svg" alt="" /></div>
+                            <span class="error-msg">No Data Available!</span>
+                            <span class="grey-text">Currently, there is no data available for your selection.</span>
+                            <span>You may want to review your filters.</span>
+                            <a href="" class="button filled-btn blue" ng-click="sidebarActiveToggle(true);"><span>Review Filters</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!--No Data available message ends here-->
+                <!--No access error starts here-->
+                <div class="row">
+                <div class="col-sm-12"  ng-show="$root.accessIssue == 'noaccess'">
+                    <div class="page-level-msg error no-access">
+                        <div class="error-ico">
+                            <img class="noaccess" src="images/noaccess.svg" alt="" /></div>
+                        <span class="error-msg">No Access</span>
+                        <span class="grey-text">You are not authorized to view this page. </span>
+                        <span class="grey-text">For instructions on how to request access, </br>please visit the Cisco SalesConnect Access Guide webpage. </span>
+                        <a class="link-text" target="_blank" href="https://www.cisco.com/c/dam/en/us/products/se/2017/4/Collateral/Cisco_Ready_Access_Guide.pdf">Enrollment Guide</a>
+                        <a target="_blank" href="https://salesconnect.cisco.com/c/r/salesconnect/index.html#/content-detail/b5e2cb9a-25f3-4f59-9ae2-8ba3fe1326f5" class="button filled-btn blue"><span>For additional information - go to SalesConnect</span></a>
+                    </div>
+                </div>
+            </div>
+                <!--No access error ends here-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="entire-network" ng-repeat="c in networkData" data-cat="{{c.title|lowercase}}">
+                            <!-- yopgupta - Added lowercase filter for correct html selector -->
+                            <h1>{{c.title}}</h1>
+                            <div class="network-detail" ng-bind-html="c.content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- tab-content -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- tabs main wrapper -->
+    <div class="action_offset export">
+        <ul class="dropdown-menu animated fadeIn"><i class="tipsy" style=""></i>
+            <li ng-if="canViewDetails()"><a href="" ng-click="viewDetails($event)">Pipeline Details</a></li>
+            <li ng-if="allowSmartReport() || canViewDetails()"><a href="javascript:void(0);" ng-click="openRequestReport($event)">Request Smart IB Report</a></li>
+            <li ng-if="allowCustomerReport();"><a href="javascript:void(0);" ng-click="openRequestReport($event, 'Request Customer Detail Report')">{{requestText}}</a></li>
+            <li ng-if="allowActionMetrics();"><a href="javascript:void(0);" ng-click="openActionMetrics($event)">Action Metrics</a></li>
+            <li ng-if="allowDrillOption()"><a id="click_area_text" href="javascript:void(0);" ng-click="CheckedArea($event)">Filter to this Customer</a></li>
+        </ul>
+    </div>
+
+
+</div>
+<!-- page-content-wrapper -->
+</div>
+<!-- wrapper -->

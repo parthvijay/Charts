@@ -1,0 +1,58 @@
+<div class="modal-header">
+    <h1>Total Asset View Definition
+        <a href="javascript:void(0)" class="modal-close" ng-click="cancel()">
+            <span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+        </a>
+    </h1>
+</div>
+<div class="modal-body definition-popup total-asset-view-popup">
+    <!-- sunitayadav - added and changed content of this table according to new pdf file -->
+    <div class="tab-content expanded">
+        <span class="marginB15">Total Asset View is to provide a holistic picture of the Cisco products that our Customers purchased for their networks,
+            which is categorized as Hardware and Software (perpetual & subscription). This is a representation of LAND stage
+            of the overarching Lifecycle Management Strategy (Land, Adopt, Expand, and Renew).</span>
+        <div class="clearfix">
+            <span class="pull-right">
+                <img src="images/total-asset-img.png">
+            </span>
+            <div class="total-asset-view-info">
+                <span class="marginB15">The default view is set to All Covered products that are shipped from 1997 till today and Uncovered products
+                    that are shipped within the last 7 years. User has the flexibility to change the shipment fiscal year
+                    range for both covered and uncovered products, using Dataset Filter located under the Global Navigation.</span>
+                <span class="marginB20">The dataset filter is only applicable to Total Asset View tab. This is NOT and opportunity view, therefore
+                    TAO rules does not apply. Product Refresh, Renew and Attach tabs are still on TAO (Total Actionable Opportunity)
+                    business rules. Please
+                    <a href="https://cisco.jiveon.com/docs/DOC-1504043" target="_blank">click here</a> for more detail on TAO business rules.</span>
+                <span class="marginB5">Today, under Total Asset View, we have:</span>
+                <span class="marginB15">
+                    <b>Hardware</b>
+                    <br>All Architecture products, except Meraki (Meraki data integration is planned to be completed in the second half of FY"19).</span>
+                <span class="marginB5">
+                    <b>Software</b>
+                    <br> All Perpetual Licenses, Collaboration and Security portfolio except listed below.</span>
+            </div>
+        </div>
+        <span class="marginT15 marginB5">The following Software product will be available in CE at the beginning of FY'19:</span>
+        <div class="table-responsive">
+            <table class="table opp-by table-fixed1 striped-table">
+                <thead>
+                    <tr>
+                        <th class="alignCenter" colspan="3">August FY19</th>
+                        <th class="alignCenter">Q2-Q4' FY19</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in assetDefinitionData">
+                        <td>{{x.software_product1}}</td>
+                        <td>{{x.software_product2}}</td>
+                        <td>{{x.software_product3}}</td>
+                        <td>{{x.software_product4}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <!-- sunitayadav - added and changed content of this table according to new pdf file -->
+    </div>
+</div>
+<div class="modal-body"></div>

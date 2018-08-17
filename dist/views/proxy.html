@@ -1,0 +1,26 @@
+<div id="wrapper">
+    <div id="page-content-wrapper">
+	<div class="proxy-wrapper">
+        <div class="proxyWidget">
+            <h3>Login As:</h3>
+            <div class="spacer20"></div>
+            <div class="first selectProxy">
+               <input type="radio"  name="rdProxy" value="selfUser" id="idRdSelfProxy" onclick="fnCheck()" kdfapp="Quoting" kdfpage="proxyhome" kdfid="idRdSelfProxy" autocomplete="off"><label for="idRdSelfProxy">Me</label>
+            </div>
+            <div class="selectProxy">
+                <input type="radio" name="rdProxy" value="otherUser" id="idRdOtherProxy" onclick="fnUserCheck()" kdfapp="Quoting" kdfpage="proxyhome" kdfid="idRdOtherProxy" autocomplete="off" checked="checked" type="radio"><label for="idRdOtherProxy"> Proxy As User ID</label>
+               
+            </div>
+            <div class="spacer20"></div>
+            <div>
+                <input name="proxyAsUserId" placeholder="Enter ID" id="idproxyUserId" style="width:100%;" kdfapp="Quoting" kdfpage="proxyhome" kdfid="idproxyUserId" type="text">
+            </div>
+            <div class="spacer20"></div>
+            <div class="bottomButton">
+                <input class="pdrButton button" name="B1" value="Login to Cisco Ready" id="loginToCCW" kdfapp="Quoting" kdfpage="proxyhome" kdfid="loginToCCW" type="button">
+                <!--<input class="pdrButton" name="B2" value="Login to SFDC - Quoting" id="loginToSFDC" kdfapp="Quoting" kdfpage="proxyhome" kdfid="loginToSFDC" type="button">-->
+            </div>
+        </div>
+		</div>
+    </div>
+</div>

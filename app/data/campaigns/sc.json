@@ -1,0 +1,150 @@
+{
+  "header": {
+    "no_of_customers": 1160,
+    "no_of_partners": 1670,
+    "opportunity_total": 173130141
+  },
+  "slides": [
+    {
+      "title": "TS Renew",
+      "dataset": 45200000
+    },
+    {
+      "title": "TS Attach",
+      "dataset": 45260000
+    },
+    {
+      "title": "SWSS Attach",
+      "dataset": 58360000
+    },
+    {
+      "title": "SWSS Renew",
+      "dataset": 13661000
+    }
+  ],
+  "columnsData": [
+    {
+      "headerName": "Opportunity View",
+      "headerClass": "alignCenterSalesLevel",
+      "width": 275,
+      "height": 100,
+      "minWidth": 100,
+      "pinned": "left",
+      "cellRenderer": "agGroupCellRenderer",
+      "field": "group",
+      "cellRendererParams": {
+        "suppressCount": true,
+        "checkbox": true
+      }
+    },
+    {
+      "headerName": "Total Opportunity",
+      "headerClass": "alignCenter alignCenterTotalNetBook",
+      "width": 150,
+      "pinned": "left",
+      "field": "totalOpportunity",
+      "type": "numericColumn",
+      "minWidth": 100,
+      "maxWidth": 300,
+      "sort": "desc"
+    },
+    {
+      "headerName": "TS Renew",
+      "headerClass": "alignCenter alignCenterTotalNetBook",
+      "width": 150,
+      "field": "tsRenew",
+      "type": "numericColumn",
+      "minWidth": 100,
+      "maxWidth": 300
+    },
+    {
+      "headerName": "TS Attach",
+      "headerClass": "alignCenter alignCenterTotalNetBook",
+      "width": 150,
+      "field": "tsAttach",
+      "type": "numericColumn",
+      "minWidth": 100,
+      "maxWidth": 300
+    },
+    {
+      "headerName": "SWSS Attach",
+      "headerClass": "alignCenter alignCenterTotalNetBook",
+      "width": 150,
+      "field": "swssAttach",
+      "type": "numericColumn",
+      "minWidth": 100,
+      "maxWidth": 300
+    },
+    {
+      "headerName": "SWSS Renew",
+      "headerClass": "alignCenter alignCenterTotalNetBook",
+      "width": 150,
+      "field": "swssRenew",
+      "type": "numericColumn",
+      "minWidth": 100,
+      "maxWidth": 300
+    }
+  ],
+  "rowsData": [
+    {
+      "group": "Americas",
+      "totalOpportunity": 23456789,
+      "tsRenew": 12234543,
+      "tsAttach": 45980987.12,
+      "swssAttach": 67345654.23,
+      "swssRenew": 78121212,
+      "line_count": 80000,
+      "participants": [
+        {}
+      ]
+    },
+    {
+      "group": "GSP - Americas",
+      "totalOpportunity": 23236789,
+      "tsRenew": 56765690.89,
+      "tsAttach": 67678787,
+      "swssAttach": 23454312,
+      "swssRenew": 34543423,
+      "line_count": 70000,
+      "participants": [
+        {}
+      ]
+    },
+    {
+      "group": "GLOBAL SERVICE PROVIDER",
+      "totalOpportunity": 34565432,
+      "tsRenew": 45643234,
+      "tsAttach": 22121452,
+      "swssAttach": 65443345,
+      "swssRenew": 78987236,
+      "line_count": 300000,
+      "participants": [
+        {}
+      ]
+    },
+    {
+      "group": "GREATER_CHINA",
+      "totalOpportunity": 23454320,
+      "tsRenew": 45676523,
+      "tsAttach": 2222542,
+      "swssAttach": 45367234,
+      "swssRenew": 67876675,
+      "line_count": 50000,
+      "participants": [
+        {}
+      ]
+    },
+    {
+      "group": "EMEAR-REGION",
+      "totalOpportunity": 12345607,
+      "tsRenew": 12342354,
+      "tsAttach": 45451245,
+      "swssAttach": 45234312,
+      "swssRenew": 34233356,
+      "line_count": 50000,
+      "participants": [
+        {}
+      ]
+    }
+  ]
+}

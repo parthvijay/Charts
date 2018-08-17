@@ -1,0 +1,104 @@
+<div class="Modal" ng-show="show"><div class="Modal-overlay" ng-click="hide()"></div><div class="Modal-content">
+    <div style="position: fixed;  top: 0; right: 0; bottom: 0; left: 0; z-index:1000;" ng-click="bookmark.sharePopup =!bookmark.sharePopup"></div>
+<span  class="share-col">
+    <div ng-show="!addUser" class="dropdown-menu share-flyout" style="display: block;" ><span class="ico-close_bg" ng-click="hide()" ><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+    <i class="tipsy"></i>
+    <div class="header"><h1>Share with</h1><div class="clearfix"></div></div>
+    <hr>
+
+    <div class="share-body" ng-class="{'nopadding':(bookmark.shareFriendsData.length>0)}">
+        <div class="add-people" ng-show="bookmark.shareFriendsData.length>=1">
+            <div class="media" ng-repeat="user in bookmark.shareFriendsData">
+                <div class="media-left">
+                    <img src={{user.avatar}} class="media-object img-circle">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{user.fullname}}</h4>
+                    <p>{{user.email}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="share-content" ng-show="bookmark.shareFriendsData.length==0">
+            <div class="share-profile-pic"><img src="images/share-user-pro.svg"></div>
+            <h2>Not shared with anyone</h2>
+            <p>You can share by search or Click here to add.</p>
+            <div class="arrow-down">
+                <img src="images/faded-arrow.svg" width="19" height="90">
+            </div>
+        </div>
+    </div>
+    <div class="share-footer">
+        <div class="add-people">
+            <a ng-click="showAddFriends()">Add People</a>
+            <div class="pull-right">
+                <a ng-click="showAddFriends()" class="arrow-up">
+                    <span class="ico-up_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+                </a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <div ng-show="addUser" class="dropdown-menu share-flyout" style="display: block;">
+        <span class="ico-down_bg" ng-click="showAddFriends()"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+    <i class="tipsy"></i>
+    <div class="header">
+        <h1>Add People</h1>
+        <div class="clearfix"></div>
+        <div class="people-search">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="people-search-input">
+                        <label ng-repeat="user in addShareUsers" ng-click="removeUsersFromList(user)">
+                {{user.fullname}}
+                <i class="ico-close"></i>
+            </label>
+                    <input class="form-control" border="0" style="border:0px" type="text" ng-model="searchname">
+                    <a href="javascript:void(0);" class="ico-search form-control-search" ng-show="addShareUsers.length<=0"></a>
+                    <a href="javascript:void(0);" ng-click="deleteAllUserList()" class="ico-close" ng-show="addShareUsers.length>=1"></a>
+                    </div>
+                    <div class="send-icon" ng-click="addShareUsersToBookmark()"><span class="input-group-addon"><span class="glyphicon ico-go"></span></span></div>
+                </div>
+
+            </div>
+            <div ng-if="searchname" class="search-list">
+                <div class="search-list-item" ng-click="addUsersToList(user)"  ng-repeat="user in newUsers| ShareUserForSearch:bookmark.shareFriendsData| bookmarkFilterForSearch : searchname : 'fullname'">
+                      {{user.fullname}}
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control message" ng-show="addShareUsers.length>=1"  placeholder="Enter your message...." rows="5" id="comment"></textarea>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+
+    <div class="share-body nopadding">
+        <div class="add-people">
+            <div class="media" ng-repeat="user in newUsers | ShareUserForSearch:bookmark.shareFriendsData">
+                <div class="media-left">
+                    <img src="{{user.avatar}}" class="media-object img-circle">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{user.fullname}}</h4>
+                    <p>{{user.email}}</p>
+                </div>
+<span class="ico-add" ng-click="addUsersToList(user)">
+    <span class="path1"></span><span class="path2"></span>
+    </span>
+            </div>
+        </div>
+    </div>
+</div>
+</span>
+
+</div></div>

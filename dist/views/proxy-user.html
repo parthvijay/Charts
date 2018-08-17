@@ -1,0 +1,93 @@
+<div id="wrapper" ng-class="{
+    'sidebar-active'
+            : filtersServ.sidebarActive, 'mobileAppliedFiltersActive' : filtersServ.mobileAppliedFiltersActive}" onclick="void(0);"
+    class="{{opportunitiesActive+ ' ' + subopportunity + ' ' + opportunitiesView}}">
+    <!--    <div ng-include="'views/filters.html'"></div>-->
+    <!-- Page Content -->
+    <div id="page-content-wrapper" class="global-bookmark">
+        <div class="freezed-container">
+            <!-- heading -->
+            <div class="grey-background">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="heading">
+                                <span class="text">Proxy User Login</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tabs main container -->
+            <div class="filter-strip sky-blue clearfix">
+                <div class="container-fluid">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <!-- filter-strip -->
+        </div>
+        <!-- SunitaYadav  added html for Proxy Admin user -->
+        <div class="proxy-user clearfix">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="proxy-user-form">
+                            <form>
+                                <div class="form-group">
+                                    <label for="userId">Enter User ID you want to login as</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control" id="userId" placeholder="User ID" ng-model="userId" />
+                                        <div class="input-group-btn">
+                                            <button class="button btn btn-default" ng-click="useProxy()">Go</button>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="proxy-table" ng-show="proxyUser">
+                            <div class="proxy-user-table tab-content expanded">
+                                <div class="table-responsive cisco-one-tbl">
+                                    <table class="table opp-by striped-table">
+                                        <thead>
+                                            <tr>
+                                                <th>User ID</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="sav-td second-col">{{proxyUser.userid}}</td>
+                                                <td>{{proxyUser.name}}</td>
+                                                <td>{{proxyUser.email}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="clearfix login-btn">
+                                    <a href="#/sales/analysis/asset" class="button filled-btn blue" ng-click="proxyLogin()" ng-disabled="!proxyUser.email">Login</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- freezed-container -->
+            <div class="opptabs overlay"></div>
+
+
+
+        </div>
+        <!-- tab-content -->
+    </div>
+    <!-- container -->
+</div>
+<!-- tabs main wrapper -->
+</div>
+<!-- page-content-wrapper -->
+</div>
+<!-- wrapper -->

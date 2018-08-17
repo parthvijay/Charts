@@ -1,0 +1,94 @@
+<div class="share-bookmark-popup">
+    <div class="modal-header">        
+        <h1>Share with others<a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a></h1>
+    </div>
+    <div class="modal-body">
+        <label class="label-search">Search</label>
+        <div class="search-form form-group search-box">
+            <a href="javascript:void(0);" class="ico-search form-control-search" ng-hide="searchText"></a>
+            <a href="javascript:void(0);" class="ico-close form-control-search" ng-show="searchText" ng-click="clearSearchResults()"></a>
+            <input type="text" class="form-control search" name="search" id="search" placeholder="Enter Name, Email ID, Internal Mailer" ng-model="searchText" ng-model-options="{ debounce: 1500 }" autocomplete="off" ng-change="searhTextUpdated(searchText)">
+        </div>
+        <div class="search-results">Search Results: <span ng-show="searchText">{{startIndex + 1}}-{{endIndex}} of {{searchUsers.length}}</span>
+            <span class="pull-right" ng-show="selectedSharedUsers.length >=2" ng-click="clearAllSelectedSharedUsers()"><a>Clear All</a></span>
+        </div>
+        <div class="searched-list" ng-show="selectedSharedUsers != ''">
+            <span class="name-tag" ng-repeat="user in selectedSharedUsers">{{user.userName}}<span class="ico-close" ng-click="user.list ? deleteAllDescendants(user) : deleteSelectedSharedUser(user)"></span></span>
+        </div>
+        <div class="popup-table-wrap">
+            <div class="table-responsive absolute">
+                <table class="grey-headed-tbl multi-step-tbl">
+                    <thead>
+                        <th><span class="share-name">Name</span></th>
+                        <th>Email</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-show="user.show" ng-repeat="user in displaySearchUsers" ng-class="{'innerRow': user.level == 2, 'innerSubRow': user.level == 3}">
+                            <td><span ng-model="user.expanded" class="ico-dropdown" ng-class="{'open':user.expanded}" ng-if="user.isMailer == true" ng-click="toggle(user)"></span><input type="checkbox" id="checkbox{{user.id}}" ng-model="user.isCheck"  ng-click="updateSharedUser(user)"  /><label for="checkbox{{user.id}}"><span class="check"></span></label><span class="share-name">{{user.userName}}</span></td>
+                            <td>{{user.emailId}}</td>
+                        </tr>
+                    </tbody>
+                    <tbody class="zerostate-tbody" ng-hide="selectedSharedUsers != '' || searchText">
+                        <tr>
+                            <td colspan="2">No contacts added</td>
+                        </tr>                        
+                    </tbody>
+                    <tbody class="zerostate-tbody" ng-show="displaySearchUsers == '' && searchText">
+                    <tr>
+                        <td colspan="2">No matches found</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="clearfix pagination paddingT5">
+            <div class="form-group view-dropdown pull-left">
+                <label for="OpportunityStage">View</label>
+                <div class="input-drop select-input input-dropdown">
+                    <ol class="nya-bs-select" ng-model="selectedViewBy" title="{{pageSize}}">
+                        <li class="nya-bs-option" ng-repeat="option in viewOptions" ng-click="setPageSize(option)">
+                            <a>{{option}}</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="pull-right pagination-right">
+                <span class="ico-next-double" ng-class="pageNo == totalPages ? 'disabled' : ''" ng-click="setPageNo(totalPages)"></span>
+                <span class="ico-next-single" ng-class="pageNo == totalPages ? 'disabled' : ''" ng-click="setPageNo(pageNo + 1)"></span>
+                <span class="previous-next" ng-class="pageNo == totalPages ? 'disabled' : ''" ng-click="setPageNo(pageNo + 1)">Next</span>
+                <div class="form-group page-number view-dropdown">
+                    <div class="input-drop select-input input-dropdown">
+                        <ol class="nya-bs-select" ng-model="selectedViewBy2" title="{{pageNo}}">
+                            <li class="nya-bs-option" ng-repeat="i in range(totalPages)" ng-click="setPageNo(i)">
+                                <a>{{i}}</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <span class="previous-next" ng-class="pageNo == 1 ? 'disabled' : ''" ng-click="setPageNo(pageNo - 1)">Previous</span>
+                <span class="ico-previous-single" ng-class="pageNo == 1 ? 'disabled' : ''" ng-click="setPageNo(pageNo - 1)"></span>
+                <span class="ico-previous-double" ng-class="pageNo == 1 ? 'disabled' : ''" ng-click="setPageNo(1)"></span>
+            </div>
+        </div>
+        <!-- Changes for DE134116 -->
+        <form name="form.sharebookmark">
+            <div class="form-group"  ng-class="{'has-error': form.sharebookmark.shareMessage.$error.maxlength}">
+
+                <label class="control-label">Add Message</label>
+                    <textarea id="bookmarkDescription" name="shareMessage" placeholder="Enter Your Message" class="form-control" ng-model="message" maxlength="200" required></textarea>
+                    <!--<div ng-messages="userForm.bio.$error" ng-show="userForm.bio.$dirty">-->
+                      <div class="help-block-container">
+                            <p class="help-block" ng-show="form.sharebookmark.shareMessage.$error.maxlength">Max 200 characters allowed</p>
+                            {{form.sharebookmark.shareMessage.maxlength}}
+                            <!--<p class="help-block" ng-show="form.saveBookmark.definition.$error.maxlength">Max 1024 characters allowed.</p>-->
+                        </div>
+                    <!--</div>-->                
+            </div>
+        </form>
+    </div>
+    <div class="clearfix text-right modal-footer">
+        
+        <a href="javascript:void(0)" class="button stroke-btn blue marginR10" ng-click="cancel()">Cancel</a>
+        <a href="javascript:void(0)" class="button filled-btn blue" ng-disabled="selectedSharedUsers == ''" ng-click="shareBookmark()">Share</a>
+    </div>
+</div>

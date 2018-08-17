@@ -1,0 +1,36 @@
+<!--<div class="modal-body text-center">
+    <a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    <p class="success-text marginT30">Cisco Ready Integration Coming Soon!</p>
+    <p>The "Competitive Dashboard" is currently located in a different url. Full integration with the Cisco Ready dashboard is coming soon.</p>
+    <p class="grey-text marginT15"></p>
+    <div class="clearfix marginT30">
+        <a href="" class="button stroke-btn blue marginR10 marginB10" ng-click="cancel()">Cancel</a>
+        <a href="http://qli-web-003-p/QvAJAXZfc/opendoc.htm?document=SFDC_Competitive_Dashboard_V1.qvw&host=QVS%40qli-app-006-P" target="_blank" class="button filled-btn blue marginB10">Go There!</a>
+    </div>
+</div>-->
+
+
+<div class="modal-body all-tech text-center">
+    <a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    <p class="model-head">All Technologies and Product Family List</p>
+	<ul class="select-option">
+		<li><a href="javascript:void(0)" ng-click="selectAll()">{{select?'Deselect All':'Select All'}}</a></li>
+		<li><a href="javascript:void(0)" ng-click="expandAll()">{{expand?'Collapse All':'Expand All'}}</a></li>
+	</ul>
+	<ul class="product-list">
+		<li ng-repeat="(key, val) in technologies" ng-class="{'inner-list': val.options.length >=1 && val.showTechnologyOptions===true}">
+		<input type="checkbox" id="13{{key+''+$index}}" name="product-check" ng-model="val.selected" ng-change="pushOrPopElement(val,key,true)">
+			<label for="13{{key+''+$index}}"><span></span></label><span  ng-class='{"ico-collapse":val.showTechnologyOptions,"ico-expand":!val.showTechnologyOptions}' ng-click="setExpandBool(val)"></span><span class="product-list-txt">{{key}}</span>
+			<ul class="inner-product-list" >
+				<li ng-repeat="option in val.options"><input type="checkbox" id="14{{key+''+$index}}" ng-change="pushOrPopElement(option,key,false)"  name="product-check" ng-model="option.selected">
+					<label for="14{{key+''+$index}}"><span></span></label><span class="product-list-txt">{{option.key}}</span>
+				</li>
+			</ul>
+		</li>
+	</ul>
+    
+    <div class="clearfix marginT30 text-right">
+        <a href="javascript:void(0);" class="button stroke-btn blue marginR10 marginB10" ng-click="cancel()">Cancel</a>
+        <a href="javascript:void(0);" class="button filled-btn blue marginB10" ng-click="close()">Save</a>
+    </div>
+</div>

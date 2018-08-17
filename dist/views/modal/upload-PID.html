@@ -1,0 +1,90 @@
+<div class="modal-header">
+    <h1>Upload PID File<a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span
+            class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a></h1>
+</div>
+<div class="modal-body global-bookmark-popup save-update-popup pid-upload">
+    <div class="uploadSection" ngf-drop ng-model="files" ngf-drag-over-class="'dragover'"
+         ngf-multiple="false"
+         ngf-pattern="'.csv,.xlsx,.xls'"
+         ngf-accept="'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel, .csv'">
+        <div class="upload-inner">
+            <h1>Drag & drop </h1>
+            <h3>your files here, or
+                <a href="javascript:void(0)" ngf-select ng-model="files" ngf-multiple="false"
+                   ngf-pattern="'.csv,.xlsx,.xls'"
+                   ngf-accept="'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel, .csv'">browse.
+                </a>
+            </h3>
+            <div class="progressbarArea" ng-if="isLoading || readUploadedPIDDataFlag">
+                <span class="file-icon"></span>
+                <div class="progessBar">
+                    <p class="progreeFile pull-left">{{filename}}</p>
+                    <p class="progressValue pull-right">{{progress}}%</p>
+                    <!--
+                    <div class="help-block paddingT10"><p>Please select column below which you want to map.</p>
+                    </div>
+                    -->
+                    <div class="progress active" style="width:100%; margin: 0px auto; height: 3px;">
+                        <div id="progressbar" class="progress-bar" ng-class="{'progress-bar-danger': errorUploading}"
+                             role="progressbar"
+                             style="width:{{progress}}%;"></div>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" ng-click="clearFile()"><span class="cross-icon"></span></a>
+                <ul class="progressNumericValue" ng-if="readUploadedPIDDataFlag && uploadFlag && !errorUploading">
+                    <li>
+                        <h6>{{uploadedPIDData.length}}</h6>
+                        <span>Uploaded</span>
+                    </li>
+                    <li>
+                        <h6>{{matchedData.length}}</h6>
+                        <span>Matched</span>
+                    </li>
+                    <li>
+                        <h6>{{unMatchedData.length}}</h6>
+                        <span>Unmatched</span>
+                    </li>
+                    <li>
+                        <h6>{{duplicateCount}}</h6>
+                        <span>Duplicate</span>
+                    </li>
+                </ul>
+            </div>
+            <p class="error-msg marginT5" ng-if="errorUploading">Uploaded file has more than 2K PIDs</p>
+            <p class="error-msg marginT5" ng-if="errorUploadingEmpty">Uploaded file has no PIDs</p> <!-- Changes for DE149509 - Sindhu -->
+            <!--<p class="marginT20 marginB20" ng-if="errorUploading" ng-click=""><a href="javascript:void(0)">Click here</a> to upload again</p> -->
+        </div>
+    </div>
+    <p class="help-block paddingT10">Note: Only CSV/Excel files can be uploaded with 2K Product IDs maximum.</p>
+    <div class="pid-status-table" ng-if="readUploadedPIDDataFlag && uploadFlag && !errorUploading">
+        <table class="table-scroll" id="pid-table">
+            <thead>
+            <tr>
+                <th class="fix-long-word"><span>PID</span></th>
+                <th class="text-right">Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="m in matchedData track by $index">
+                <td class="top-area1 fix-long-word">{{m}}</td>
+                <td class="text-right text-green">Matched</td>
+            </tr>
+            <tr ng-repeat="u in unMatchedData track by $index">
+                <td class="top-area1 fix-long-word">{{u}}</td>
+                <td class="text-right text-orange">Unmatched</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+<div class="clearfix text-right modal-footer">
+    <a class="pull-left downloadTemp" href="config/PID_upload_format.xlsx" download>Download Template</a>
+    <a href="javascript:void(0)" class="button stroke-btn blue marginR10 marginB10" ng-click="cancel()">Cancel</a>
+    <a href="javascript:void(0)" class="button filled-btn blue marginB10" ng-if="!errorUploading && !uploadFlag"
+       ng-class="{'disabled':!readUploadedPIDDataFlag || errorUploading || errorUploadingEmpty}" ng-click="uploadPID()">Upload</a> <!-- Changes for DE149509 - Sindhu -->
+    <a href="javascript:void(0)" class="button filled-btn blue marginB10" ng-if="errorUploading || uploadFlag"
+       ng-class="{'disabled':!readUploadedPIDDataFlag || errorUploading}" ng-click="download()">Download</a>
+    <a href="javascript:void(0)" class="button filled-btn blue marginB10" ng-if="!errorUploading && uploadFlag"
+       ng-class="{'disabled':!readUploadedPIDDataFlag || errorUploading || matchedData.length <= 0}" ng-click="ok()">Done</a>
+</div>

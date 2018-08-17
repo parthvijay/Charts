@@ -1,0 +1,272 @@
+<div id="sidebar-wrapper" class="filter-tab global-filter">
+<div class="sidebar-brand clearfix">
+            <ul class="filter-tabs">
+                <li ng-class="{'active' : filterTabActive == 'filters'}"><a href="" ng-click="filterTabActive = 'filters'">Filters</a></li>
+                <li ng-class="{'active' : filterTabActive == 'insights'}"><a href="" ng-click="filterTabActive = 'insights'">Insights</a></li>
+            </ul>
+            <a href="">
+                <span ng-click="vm.sidebarActive = false;vm.sidebarActiveToggle(false);" class="ico-close_bg">
+                    <span class="path1 hvr-icon-pop"></span><span class="path2"></span>
+                </span>
+            </a>
+        </div>
+        <!-- <div class="shadow-downward"></div> -->
+        <ul class="sidebar-nav" ng-nicescroll nice-option="niceScrollOptions" ng-if="filterTabActive == 'filters'">
+        <li id="filters" class="form-group" ng-class="{
+                'active': c.active, 'collapsed' : !c.active}" ng-repeat="c in filtersServ.newFilters">
+            <a href="" ng-click="vm.toggleVar($event, c);">{{c.title}}
+                <span ng-if="!c.active" class="ico-arrow_collapse"></span>
+                <span ng-if="c.active" class="ico-arrow_expand"></span>
+            </a>
+
+            <div class="selectbox-container dropdown-collapse" ng-init="vm.getFiltersDropdown(c, 0)" ng-if="c.type === 'dropdown'">
+                <div ng-repeat="f in c.levels" ng-if="f.length">
+                    <hr ng-if="vm.showBorder(c, $index)"/>
+                    <div>{{c.levels_name[$index]}}</div>
+                    <ol class="nya-bs-select check-in " multiple live-search="true" no-search-title="No Search Results" actions-box="true" ng-model="c.selected[$index]" ng-change="vm.getFiltersDropdown(c, $index + 1)" data-size="5" data-title="Select {{c.levels_name[$index]}}" ng-init="c.selected[$index] = []">
+                        <!-- <li class="search-bar form-group">
+                            <a class="ico-search form-control-search"></a>
+                            <input id="search" class="search-text" value="" placeholder="Search" type="text" ng-model="f.search"/>
+                        </li>
+                        <li class="nya-bs-option select-all form-group">
+                            <a ng-click="selectAllCheckboxes(c, f, $index)">Select All</a>
+                        </li> -->
+                        <li class="nya-bs-option form-group sub-filter select-checkbox " data-nya-bs-option="o in f group by o.parent" data-value="o.key">
+                            <span ng-if="o.parent" class="dropdown-header select-sub-heading">{{$group}}</span>
+                            <input type="checkbox"><label><span></span><a>{{o.key}}</a><b ng-if="o.name">{{o.name}}</b><i ng-if="o.location">{{o.location}}</i></label>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="date-filter dropdown-collapse" ng-if="c.type === 'date'">
+                <ul>
+				
+            <li class="form-group" ng-class="{
+           'active': d.active, 'collapsed' : !d.active}" ng-repeat="d in c.categories">  
+                        <a href="" ng-click="toggleVar($event, d);">{{d.title}}
+                            <span ng-if="!d.active" class="ico-arrow_collapse"></span>
+                            <span ng-if="d.active" class="ico-arrow_expand"></span>
+                        </a>
+                        <div class="ldos-date">
+                            <ul class="opp-per-list">
+                                <li class="left-tab disabled"><a>Fixed Date within</a></li>
+                                <li class="right-tab active"><a>Relative Date within</a></li>
+                            </ul>
+                            <div class="clearfix value-int">
+                                <form class="form-inline" id="myform">
+                                    <div class="form-group" style="position: relative;">
+                                        <label>Range</label>
+                                        <input type="text" placeholder="0" class="form-control">                                  
+                                        <div class="text">to</div>
+                                        <label class="sr-only"></label>
+                                        <input type="text" placeholder="2" class="form-control">
+                                        <div class="popover bottom">
+                                            <div class="arrow"></div>
+                                               <div class="popover-inner">
+                                                <p>Cannot be less than start by</p>
+                                               </div>
+                                        </div>
+                                    </div>                                
+                                    <div class="form-group marginLR selectbox-container">
+                                        <label>Period</label>
+                                        <ol class="nya-bs-select" ng-model="d.month" data-size="5" data-title="Select">
+                                            <li class="nya-bs-option" data-value="Days">
+                                                <a>Days</a>
+                                            </li>
+                                            <li class="nya-bs-option" data-value="Months">
+                                                <a>Months</a>
+                                            </li>
+                                            <li class="nya-bs-option" data-value="Years">
+                                                <a>Years</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <div class="form-group selectbox-container">
+                                        <label>Direction</label>
+                                        <ol class="nya-bs-select" ng-model="d.direction" data-size="5" data-title="Select">
+                                            <li class="nya-bs-option" data-value="From now">
+                                                <a>From now</a>
+                                            </li>
+                                            <li class="nya-bs-option" data-value="Ago">
+                                                <a>Ago</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+
+                                </form>  
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="coverage-status dropdown-collapse" ng-if="c.type === 'status'">
+                <ul class="sub-filter">
+                    <li class="form-group" ng-repeat="d in c.categories">
+                        <label class="radio marginL">{{d.title}}</label>
+                        <ul class="nav nav-pills">
+                            <li class="border-right" ng-class="{'active': d.selected == e}" ng-click="d.selected = e" ng-repeat="e in c.options">
+                                <a href="">{{e}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </li> 
+
+
+        <li id="filters" class="form-group allow-toggle collapsed" ng-class="{
+                        'active'
+                                : filtersServ.sales.active}" ng-click="vm.toggleVar($event, filtersServ.sales);" ng-init="filtersServ.sales.active = false" style="display:none;">
+                <input type="checkbox" id="filters_00" disabled />
+                <label for="filters_00" style="visibility:hidden;"><span></span></label>
+                <a href="" class="allow-toggle">Sales Level
+                    <span ng-if="!filtersServ.sales.active" class="ico-arrow_collapse"></span>
+                    <span ng-if="filtersServ.sales.active" class="ico-arrow_expand"></span>
+                </a>
+                <div class="selectbox-container">
+                    <ol class="nya-bs-select" ng-model="vm.salesLevel[1].selected" ng-change="vm.setNextSalesLevelSelection(2)" ng-click="vm.getSalesLevelFilterValues(1, $event)" disabled="vm.lockSalesFilter.level1" data-size="5" data-title="All">
+                        <li class="nya-bs-option" nya-bs-option="o in vm.salesLevel[1].values" data-value="o.value">
+                            <a>{{o.title}}</a>
+                        </li>
+                    </ol>
+                    <ol class="nya-bs-select" ng-if="vm.salesLeve\l[2]" ng-model="vm.salesLevel[2].selected" ng-change="vm.setNextSalesLevelSelection(3)" ng-click="vm.getSalesLevelFilterValues(2, $event)" disabled="vm.lockSalesFilter.level2" data-size="5" data-title="All">
+                        <li class="nya-bs-option" nya-bs-option="o in vm.salesLevel[2].values" data-value="o.value">
+                            <a>{{o.title}}</a>
+                        </li>
+                    </ol>
+                    <ol class="nya-bs-select" ng-if="vm.salesLevel[3]" ng-model="vm.salesLevel[3].selected" ng-change="vm.setNextSalesLevelSelection(4)" ng-click="vm.getSalesLevelFilterValues(3, $event)" disabled="vm.lockSalesFilter.level3" data-size="5" data-title="All">
+                        <li class="nya-bs-option" nya-bs-option="o in vm.salesLevel[3].values" data-value="o.value">
+                            <a>{{o.title}}</a>
+                        </li>
+                    </ol>
+                    <ol class="nya-bs-select" ng-if="vm.salesLevel[4]" ng-model="vm.salesLevel[4].selected" ng-change="vm.setNextSalesLevelSelection(5)" ng-click="vm.getSalesLevelFilterValues(4, $event)" disabled="vm.lockSalesFilter.level4" data-size="5" data-title="All">
+                        <li class="nya-bs-option" nya-bs-option="o in vm.salesLevel[4].values" data-value="o.value">
+                            <a>{{o.title}}</a>
+                        </li>
+                    </ol>
+                    <ol class="nya-bs-select" ng-if="vm.salesLevel[5]" ng-model="vm.salesLevel[5].selected" ng-change="vm.setNextSalesLevelSelection(6)" ng-click="vm.getSalesLevelFilterValues(5, $event)" disabled="vm.lockSalesFilter.level5" data-size="5" data-title="All">
+                        <li class="nya-bs-option" nya-bs-option="o in vm.salesLevel[5].values" data-value="o.value">
+                            <a>{{o.title}}</a>
+                        </li>
+                    </ol>
+                    <ol class="nya-bs-select" ng-if="vm.salesLevel[6]" ng-model="vm.salesLevel[6].selected" ng-click="vm.getSalesLevelFilterValues(6, $event)" disabled="vm.lockSalesFilter.level6" data-size="5" data-title="All">
+                        <li class="nya-bs-option" nya-bs-option="o in vm.salesLevel[6].values" data-value="o.value">
+                            <a>{{o.title}}</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="selectbox-container borderT">
+                    <ol class="nya-bs-select" ng-model="vm.accounts[1].selected" ng-click="vm.getAccountManagerFilterValues($event, 1)" ng-show="vm.salesLevel[5].selected" ng-change="vm.changeAccountManager = true" data-size="6" data-title="Account Manager">
+                        <li class="nya-bs-option" nya-bs-option="o in vm.accounts[1].values" data-value="o.value">
+                            <a>{{o.title}}</a>
+                        </li>
+                    </ol>
+                    <ol class="nya-bs-select" ng-model="vm.accounts[2].selected" ng-show="vm.accounts[1].selected" ng-click="vm.getAccountManagerFilterValues($event, 2)" data-size="6" data-title="SAV Account">
+                        <li class="nya-bs-option" nya-bs-option="o in vm.accounts[2].values" data-value="o.value">
+                            <a>{{o.title}}</a>
+                        </li>
+                    </ol>
+                </div>
+            </li>
+            <li class="form-group allow-toggle" ng-repeat="c in vm.filters" ng-class="{
+                        'active'
+                                : c.active}" ng-click="vm.toggleVar($event, c)" ng-init="vm.checkParent(c.filters, c)" style="display:none;">
+                <input type="checkbox" id="filters_{{$index}}" ng-model="c.checked" ng-change="vm.checkAll(c.filters, c.checked)">
+                <label for="filters_{{$index}}" ng-class="{'invisible' : c.type === 'radio'}"><span></span></label><a href="" class="allow-toggle">{{c.title}}
+                     <span ng-if="!c.active" class="ico-arrow_collapse"></span>
+                    <span ng-if="c.active" class="ico-arrow_expand"></span>
+                </a>
+                <div class="coverage-status">
+                    <ul class="sub-filter" ng-if="c.type !== 'radio'">
+                        <li class="form-group" ng-repeat="d in c.filters">
+                            <input type="checkbox" id="filters_{{$parent.$index + '_' + $index}}" name="{{c.title}}" ng-model="d.checked" ng-value="d.title" ng-change="vm.checkParent(c.filters, c)">
+                            <label for="filters_{{$parent.$index + '_' + $index}}"><span></span>{{d.title}}</label>
+                        </li>
+                    </ul>
+                    <ul class="sub-filter" ng-if="c.type === 'radio'" ng-class="{'sub-filter-disabled' : opportunitiesView==='performance'}">
+                        <li class="form-group" ng-repeat="d in c.filters">
+                            <input type="radio" id="filters_{{$parent.$index + '_' + $index}}" name="{{c.title}}" ng-model="c.selected" ng-value="d.value" ng-change="vm.checkParent(c.filters, c)" ng-disabled="opportunitiesView==='performance'">
+                            <label class="radio" for="filters_{{$parent.$index + '_' + $index}}"><span></span><span>{{d.title}}</span></label>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul class="sidebar-nav" ng-nicescroll nice-option="niceScrollOptions" ng-if="filterTabActive == 'insights'">
+             <li class="form-group allow-toggle" ng-class="{
+                'active'
+                        : prop_1.active}" ng-click="toggleVar($event, prop_1);" ng-init="prop_1.active = true">
+                <a href="" class="allow-toggle">Propensity to Refresh
+                    <span ng-if="!prop_1.active" class="ico-arrow_collapse"></span>
+                    <span ng-if="prop_1.active" class="ico-arrow_expand"></span>
+                </a>
+                <div class="insight-filter dropdown-collapse">
+
+                    <div class="insight-range-slider">
+                        <rzslider rz-slider-model="vm.propensityToRefresh.minValue"
+                                  rz-slider-high="vm.propensityToRefresh.maxValue"
+                                  rz-slider-options="vm.propensityToRefresh.options">                              
+                        </rzslider>
+                    </div>                     
+                    
+            </li> 
+
+            <!-- <li class="form-group allow-toggle" ng-class="{
+
+                'active'
+                        : prop_2.active}" ng-click="toggleVar($event, prop_2);" ng-init="prop_2.active = true">
+                <input type="checkbox" disabled />
+                <label style="visibility:hidden;"><span></span></label><a href="" class="allow-toggle"><span class="dbl-title">Propensity for TS Attach<br>(US Commercial Only)</span>
+                    <span ng-if="!prop_2.active" class="ico-arrow_collapse"></span>
+                    <span ng-if="prop_2.active" class="ico-arrow_expand"></span>
+                </a>
+                <div class="insight-filter">
+                    <div class="insight-range-slider">
+                        <rzslider rz-slider-model="vm.propensityToTSAttach.minValue" 
+                                  rz-slider-high="vm.propensityToTSAttach.maxValue" 
+                                  rz-slider-options="vm.propensityToTSAttach.options">                            
+                        </rzslider>
+                    </div>   
+                </div>
+
+            </li>   -->
+
+        </ul>
+        <ul class="sidebar-nav applied-filters" ng-nicescroll nice-option="niceScrollOptions">
+        <li class="applied-filters-head-ipad" ng-show="hasAppliedFilters(3);">Sales Level<span class="pull-right" ng-click="clearFilters(1)">Clear</span></li>
+        <li ng-repeat="c in appliedFilters" ng-if="c.categoryId === 1">
+            <a>{{c.title}}<span ng-if="c.level >= userInfo.salesLevel" class="ico-close" ng-click="removeFilter(c);">
+                    <span class="path1"></span><span class="path2"></span>
+                </span>
+            </a>                
+        </li>
+        <li ng-show="hasAppliedFilters(3);" class="applied-filters-head-ipad">Accounts<span class="pull-right" ng-click="clearFilters(3)">Clear</span></li>
+        <li ng-repeat="c in appliedFilters" ng-if="c.categoryId === 3">
+            <a>{{c.title}}<span class="ico-close" ng-click="removeFilter(c);">
+                    <span class="path1"></span><span class="path2"></span>
+                </span>
+            </a>
+        </li>
+        <li class="applied-filters-head-ipad" ng-show="hasAppliedFilters(2);">Architecture<span class="pull-right" ng-click="clearFilters(2)">Clear</span></li>
+        <li ng-repeat="c in appliedFilters" ng-if="c.categoryId === 2">
+            <a>{{c.title}}<span class="ico-close" ng-click="removeFilter(c);">
+                    <span class="path1"></span><span class="path2"></span>
+                </span>
+            </a>                
+        </li>
+        <li class="applied-filters-head-ipad" ng-show="hasAppliedFilters(4);">Coverage<span class="pull-right" ng-click="clearFilters(4)" ng-show="opportunitiesView !== 'performance'">Clear</span></li>
+        <li ng-repeat="c in appliedFilters" ng-if="c.categoryId === 4">
+            <a>{{c.title}}<span class="ico-close" ng-click="removeFilter(c);">
+                    <span class="path1"></span><span class="path2"></span>
+                </span>
+            </a>                
+        </li>
+        </ul>
+        <div class="fixed-bottom shadow">
+        <!-- <div class="shadow"></div> -->
+            <div class="apply"><a href="" class="button filled-btn blue" ng-click="!vm.isFiltersChecked || vm.applyFilters();" ng-disabled="!vm.isFiltersChecked"><span>Apply <span ng-show="vm.filtersChecked">({{vm.filtersChecked}})</span></span></a></div>
+            <div class="clear-filter"><a href="" ng-click="!vm.filtersChecked || vm.clearFilters(0, true);">Clear All</a></div>
+        </div>
+</div>

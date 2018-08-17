@@ -1,0 +1,57 @@
+[
+{   
+"title":"ASA LDOS/LEGACY",
+"yearRange":"2009-2016",
+"dataset":{
+            "opportunity":"871000000","sfdc pipeline":"112000000"}
+            
+},
+{    
+"title":"IPS LDOS",
+"dataset":{
+            "opportunity":"871000000","sfdc pipeline":"112000000"}
+},
+{
+"title":"ASA5585",
+"yearRange":"2011-2015",
+"dataset":{
+            "opportunity":"871000000","sfdc pipeline":"112000000"}
+},
+{
+"title":"ANY CONNECT",
+"dataset":{
+            "opportunity":"871000000","sfdc pipeline":"112000000"}
+},
+{
+"title":"EMAIL LDOS",
+"yearRange":"2009-2016",
+"dataset":{
+            "opportunity":"871000000","sfdc pipeline":"112000000"}
+},
+{
+"title":"ASA LDOS/LEGACY",
+"dataset":{
+            "opportunity":"871000000","sfdc pipeline":"112000000"}
+},
+{
+"title":"IPS LDOS",
+"dataset":{
+            "opportunity":"871000000","sfdc pipeline":"112000000"}
+},
+{
+"title":"ASA5585",
+"yearRange":"2009-2016",
+"dataset":{
+            "opportunity":"871000000","sfdc pipeline":"112000000"}
+},
+{
+"title":"ANY CONNECT",
+"dataset":{
+            "opportunity":"871000000","sfdc pipeline":"112000000"}
+},
+{
+"title":"EMAIL LDOS",
+"dataset":{
+            "opportunity":"871000000","sfdc pipeline":"112000000"}
+}
+]

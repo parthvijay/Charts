@@ -1,0 +1,143 @@
+<div id="wrapper" class="sidebar-active global-bookmarks" ng-controller="BookmarkController">
+    <div>
+        <div id="sidebar-wrapper" class="bookmark-outer filter-tab navigation-col">
+            <div class="expanded-sub-menu"  data-ng-class="{'expanded':isMenuShown}"> 		
+                <div ng-click="isMenuShown=!isMenuShown"> 	
+            <h1><span class="ico-dropdown visible-xs"></span>Bookmarks </h1>
+                </div>
+            <ul class="left-nav">
+                <li ng-if="showMenuForWeb || isMenuShown || activeBookamrkType == bookmarkTypes.MyBookmark" ng-class="{'active':!searchView && activeBookamrkType == bookmarkTypes.MyBookmark}" ng-click="setBookmarkType(bookmarkTypes.MyBookmark)"><a>My Bookmarks <span ng-bind="allTotalBookmarkTypeObj.myBookmarks"></span></a></li>
+                <li ng-if="showMenuForWeb || isMenuShown || activeBookamrkType == bookmarkTypes.FavouriteBookmark" ng-class="{'active':!searchView && activeBookamrkType == bookmarkTypes.FavouriteBookmark}" ng-click="setBookmarkType(bookmarkTypes.FavouriteBookmark)"><a>Favorite Bookmarks <span ng-bind="allTotalBookmarkTypeObj.favorite"></span></a></li>
+                <li ng-if="showMenuForWeb || isMenuShown || activeBookamrkType == bookmarkTypes.SharedBookmark" ng-class="{'active':!searchView && activeBookamrkType == bookmarkTypes.SharedBookmark}" ng-click="setBookmarkType(bookmarkTypes.SharedBookmark)"><a>Shared with Me <span ng-bind="allTotalBookmarkTypeObj.shared"></span></a></li>
+                <li ng-if="showMenuForWeb || isMenuShown || activeBookamrkType == bookmarkTypes.GlobalBookmark" ng-class="{'active':!searchView && activeBookamrkType == bookmarkTypes.GlobalBookmark}" ng-click="setBookmarkType(bookmarkTypes.GlobalBookmark)"><a>Global Bookmarks <span ng-bind="allTotalBookmarkTypeObj.global"></span></a></li>
+            </ul>
+            </div>
+            <div class="recent-bookmark expanded-sub-menu" ng-class="{'expanded': recentBookmark}">
+                <h1 ng-click="recentBookmark=!recentBookmark" ><span class="ico-dropdown visible-xs" ></span>Recent Bookmarks</h1>
+                <ul class="left-nav">
+                    <li ng-repeat="bookmark in recentBookmarks" ng-class="{'alert-update' : isValidByDate(bookmark)}">
+                        <a href="javascript:void(0)" ng-show="!isValidByDate(bookmark)" ng-click="setBookmarkAsCurrent(bookmark, 5)">{{bookmark.name}}</a>
+                        <a href="javascript:void(0)" ng-show="!isExpired(bookmark) && isValidByDate(bookmark)">{{bookmark.name}}<br><small>Will Start on {{convertDate(bookmark.startDate) | date : 'dd-MMM-yyyy'}}</small></a>
+                        <a href="javascript:void(0)" ng-show="isExpired(bookmark)">{{bookmark.name}}<br><small>Expired on {{convertDate(bookmark.endDate) | date : 'dd-MMM-yyyy'}}</small></a>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- sidebar-wrapper -->
+    </div><!-- side pannel -->
+    <div id="page-content-wrapper" class="global-bookmark">
+        <div class="container-fluid tabContent">
+            <div class="row bookmark-outer">
+
+                <div class="col-md-12 myBookmark-section search-col clearfix">
+                    <form action="" class="form-inline">
+                        <!--baljinderKaur - View by drop added-->
+                       <div class="form-group heading-dropdown marginR0 view-by">
+                            <label for="OpportunityStage">View by</label>
+                            <div class="input-drop select-input input-dropdown">
+                                <ol class="nya-bs-select" ng-model="selectedViewBy" title="{{activeViewByText}}">
+                                    <li class="nya-bs-option" ng-repeat="view in viewByOptions" ng-click="setActiveViewBy(view)">
+                                        <a>{{view}}</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="search-form pull-right">
+                            <div class="form-group search-bookmark" data-ng-class="{'showEffects':focused}">
+                                <div class="form-group small marginR0">
+                                    <div class="input-drop select-input input-dropdown">
+                                        <ol class="nya-bs-select" ng-model="searchTab" title="{{selectedBookmarkTab.name}}">
+                                            <li class="nya-bs-option" ng-repeat="bookmarkTab in bookmarkTabs" ng-click="setActiveTabBy(bookmarkTab)">
+                                                <a>{{bookmarkTab.name}}</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0);" class="ico-search form-control-search" ng-hide="searchText"></a>
+                                <a href="javascript:void(0);" class="ico-close form-control-search" ng-show="searchText" ng-click="searchText = null"></a>
+                                <input type="text" class="form-control search" name="search" id="search" placeholder="Search by name"
+                                       ng-model="searchText" autocomplete="off" ng-change="searhBookmark(searchText)" ng-focus="focused = true" ng-blur="focused = false">
+                                <div ng-show="searchText" class="search-list" click-outside="clearSearchText()">
+                                    <!--name-->
+                                    <div class="search-list-item" ng-repeat="bookmark in bookmarkSearchData | bookmarkFilterForSearch : searchText : 'name' : 'userId'" ng-click="addInSearchByName(bookmark)">
+                                        <p>{{bookmark.name}}</p>
+                                        <p class="bookmark-by">{{bookmark.userId}}</p>
+                                    </div>
+                                    <div class="search-list-item" ng-if="(bookmarkSearchData | bookmarkFilterForSearch : searchText : 'name' : 'userId').length == 0">
+                                        <p>No Matches found</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-12 myBookmark-section clearfix">
+                    <hr class="darkborder">
+                    <h1>{{!searchView?currentLabel:'Search Result(s)'}}</h1>
+					    <a href="" ng-show="isDeleted" data-ng-class="{'animated-long fadeOut':isDeleted}" class="bookmark-hvr pull-right success-msg"><span class="ico-confirmation"></span>Deleted</a>
+					    <a href="" ng-show="bookmarkUpdated" data-ng-class="{'animated-long fadeOut':bookmarkUpdated}" class="bookmark-hvr pull-right success-msg"><span class="ico-confirmation"></span>Updated</a>
+                        <a href="" ng-show="isRemoved" data-ng-class="{'animated-long fadeOut':isRemoved}" class="bookmark-hvr pull-right success-msg"><span class="ico-confirmation"></span>Removed</a>
+                        <a href="" ng-show="copyMessage" data-ng-class="{'animated-long fadeOut':copyMessage}" class="bookmark-hvr pull-right success-msg"><span class="ico-confirmation"></span>Copied to Clipboard</a>
+                </div>
+                <div class="col-md-12">
+                    <div class="bookmarks-list-view">
+                        <div class="row">
+                            <div class="col-lg-12" ng-repeat="bookmark in ((searchView)? searchByName : bookmarks.bookmarks)|customDate:showBookmarkGreatenThenDate|orderBy: sortDate : sortByNameOrDate track by $index">
+                                <div class="bookmark-tile" data-ng-class="{'animated fadeOut':bookmark.animated}">
+                                    <h1 ng-class="{'disabled' : isValidByDate(bookmark)}"><a href= "" ng-click="setBookmarkAsCurrent(bookmark, key)">{{bookmark.name}}</a><span>{{'by ' + bookmark.createdBy}}</span><span class="pull-right">{{bookmark.isPublic ? 'Searchable' : ''}}</span></h1>
+                                    <p class="bookmark-desc">{{bookmark.description}}</p>
+                                    <div class="clearfix bookmark-dates">
+                                        <span class="viewTxt">View: <b>{{bookmark.urlDetails.view}} </b></span>
+                                        <span class="createdTxt">Created: <b>{{ convertDate(bookmark.createDate) | date : 'dd-MMM-yyyy, hh:mm'}}</b></span>
+                                        <span class="modifieTxt">Modified: <b>{{convertDate(bookmark.modifiedDate) | date:'dd-MMM-yyyy, hh:mm'}}</b></span>
+                                        <span class="createdTxt">{{isStarted(bookmark.startDate) ? 'Started: ' : 'Start On: '}}<b>{{ convertStartDate(bookmark.startDate) | date : 'dd-MMM-yyyy'}}</b></span>
+                                        <span ng-show="!isExpired(bookmark)" class="modifieTxt">Expiration: <b>{{bookmark.endDate == '9999-12-31' ? 'none' : convertStartDate(bookmark.endDate) | date:'dd-MMM-yyyy'}}</b></span>
+                                        <span ng-show="isExpired(bookmark)" class="modifieTxt red">Expired: <b>{{bookmark.endDate == '9999-12-31' ? '' : convertStartDate(bookmark.endDate) | date:'dd-MMM-yyyy'}}</b></span>
+                                        <!--<span class="by-name">{{'By: '+ bookmark.by}} </span>-->
+                                    </div>
+                                    <div class="bookmark-All-icon filter-dropdown" >
+                                        <span class="bookmark-opt" ng-click="toggleFavirouteBookmark(bookmark)" uib-tooltip="Favorite" tooltip-trigger="{{tooltipTrigger}}">
+                                            <span class="ico-star active" ng-class="{'FavoriteToggle':bookmark.isFavourite}"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="opt-name icon-name">Favorite</span>
+                                        </span>
+
+                                        <span class="bookmark-opt" ng-click="openViewAppliedFromBookmark(bookmark)" uib-tooltip="Filter" tooltip-trigger="{{tooltipTrigger}}">
+                                            <span class="ico-filter_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="icon-name">Applied Filters</span>
+                                        </span>
+                                        <span class="bookmark-opt" ng-show="!isExpired(bookmark)" ng-click="copyBookmarkURLToClipboard(bookmark)" uib-tooltip="Copy URL" tooltip-trigger="{{tooltipTrigger}}"> 
+                                        <span class="ico-copy-link_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="opt-name icon-name">Copy URL</span> <!-- Change for DE134065 - Shankar -->
+                                        </span>
+                                        <span class="bookmark-opt" ng-show="userData.user.userId == bookmark.userId && (!isExpired(bookmark))" ng-click="editBookmark(bookmark, key)" uib-tooltip="Edit" tooltip-trigger="{{tooltipTrigger}}">
+                                            <span class="ico-edit"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="icon-name">Edit</span>
+                                        </span>
+
+                                        <span class="bookmark-opt" ng-show="!isExpired(bookmark) && activeBookamrkType != bookmarkTypes.SharedBookmark" uib-tooltip="Share" tooltip-trigger="{{tooltipTrigger}}" ng-click="shareBookmark(bookmark, key)">
+                                            <span class="ico-share"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="icon-name">Share with</span>
+                                        </span>
+
+                                        <!-- <span class="bookmark-opt" ng-show="userData.user.userId == bookmark.userId" ng-hide="activeBookamrkType == bookmarkTypes.FavouriteBookmark" ng-click="deleteBookmark(bookmark, key)" uib-tooltip="Delete" tooltip-trigger="{{tooltipTrigger}}"> -->
+                                        <span class="bookmark-opt" ng-show="userData.user.userId == bookmark.userId"  ng-click="deleteBookmark(bookmark, key)" uib-tooltip="Delete" tooltip-trigger="{{tooltipTrigger}}">
+                                            <span class="ico-delete"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="icon-name">Delete</span></span>
+
+                                        <span class="bookmark-opt" ng-show="activeBookamrkType == bookmarkTypes.FavouriteBookmark || activeBookamrkType == bookmarkTypes.SharedBookmark || searchView" ng-click="searchView ? deleteInSearchByName(bookmark) : removeBookmark(bookmark)" uib-tooltip="Remove" tooltip-trigger="{{tooltipTrigger}}">
+                                            <span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="icon-name">Remove</span></span>
+                                    </div>
+                                </div><!-- bookmark-tile -->
+                            </div><!-- col-md-12 -->
+                        </div><!-- row -->
+                    </div><!-- bookmark list and grid view container -->
+                </div><!-- col-md-12 -->
+
+				<div class="myBookmark-error" ng-show="">
+					<img src="images/error-in-loading.62c1e23b.svg">
+					<p class="black-text">An error occurred while loading <br>content in bookmark manager.</p>
+					<p class="grey-text">Please try again.</p>
+				</div><!-- my bookmark loading error -->
+
+				<div class="myBookmark-error" ng-show="isBookmarkEmpty && !searchView">
+					<img src="images/no-bookmark.2533e57e.svg">
+					<p class="black-text">Currently, there are no bookmarks to display.</p>
+				</div><!-- no bookmark error -->
+
+            </div><!-- bookmark-outer -->
+        </div><!-- tab-content -->
+    </div><!-- page-content-wrapper -->
+</div><!-- wrapper -->

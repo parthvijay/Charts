@@ -1,0 +1,22 @@
+{
+    "selected": "",
+    "values": [
+        {
+            "id": -1,
+            "title": "All",
+            "value": "*"
+        }, {
+            "id": 0,
+            "title": "CENTRAL CAN COMMERCIAL AREA",
+            "value": "CENTRAL CAN COMMERCIAL AREA"
+        }, {
+            "id": 1,
+            "title": "EAST CAN COMMERCIAL AREA",
+            "value": "EAST CAN COMMERCIAL AREA"
+        }, {
+            "id": 2,
+            "title": "WEST CAN COMMERCIAL AREA",
+            "value": "WEST CAN COMMERCIAL AREA"
+        }
+    ]
+}

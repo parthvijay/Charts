@@ -1,0 +1,49 @@
+<!--<div class="modal-body text-center">
+    <a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    <p class="success-text marginT30">Cisco Ready Integration Coming Soon!</p>
+    <p>The "Competitive Dashboard" is currently located in a different url. Full integration with the Cisco Ready dashboard is coming soon.</p>
+    <p class="grey-text marginT15"></p>
+    <div class="clearfix marginT30">
+        <a href="" class="button stroke-btn blue marginR10 marginB10" ng-click="cancel()">Cancel</a>
+        <a href="http://qli-web-003-p/QvAJAXZfc/opendoc.htm?document=SFDC_Competitive_Dashboard_V1.qvw&host=QVS%40qli-app-006-P" target="_blank" class="button filled-btn blue marginB10">Go There!</a>
+    </div>
+</div>-->
+
+<div class="modal-body text-center">
+    <a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    <p class="model-head">Technologies and Product list for your IB</p>
+	
+	<div class="table-responsive expanded popup-table">
+	<div class="usd-value marginR0 marginB15">Value shown in USD</div>
+		<table class="table border-table opp-by  sav-table table-fixed1 striped-table marginB0">
+			<thead> 
+				<tr>
+					<th style="width:47%;" class="fix-long-word"><span class="product-list-txt">Product Architecture</span></th>
+					<th style="width:20%;" class="text-right"><span class="product-list-txt">Total Line Items</span></th>
+					<th style="width:15%;" class="text-right"><span class="product-list-txt">{{productServicesList}}</span></th>
+					<th style="width:15%;" class="text-right"><span class="product-list-txt">{{productServicesNet}}</span></th>
+					<!--<th class="text-right"><span class="product-list-txt">Line Items</span></th>
+					<th class="text-right"><span class="product-list-txt">List($)</span></th>
+					<th class="text-right"><span class="product-list-txt">Net($)</span></th>-->
+				</tr>
+			</thead>
+			<tbody> 
+				<tr ng-repeat="val in selectedTechnologies">
+					<td class="text-left paddingT10"><span class="product-list-txt"><span class="ico-expand disable"></span>{{val.productArchitecture}} - {{val.productSubArchitecture}}</span></td>
+					<td class="text-right paddingT10"><span class="product-list-txt">{{val.totalLineItems | formatGridValue}}</span></td>
+					<td class="text-right paddingT10"><span class="product-list-txt">{{val.listPrice | formatGridValue}}</span></td>
+					<td class="text-right paddingT10"><span class="product-list-txt">{{val.netPrice | formatGridValue}}</span></td>
+					<!--<td class="text-right"><span class="product-list-txt">07</span></td>
+					<td class="text-right"><span class="product-list-txt">$200,000</span></td>
+					<td class="text-right"><span class="product-list-txt">$100,000</span></td>-->
+				</tr>
+			</tbody>
+		</table>
+	</div>
+    
+    <div class="clearfix marginT30 text-right">
+        <a href="javascript:void(0);" class="button stroke-btn blue marginR10 marginB10" ng-click="cancel()">Cancel</a>
+    </div>
+</div>
+
+

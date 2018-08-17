@@ -1,0 +1,520 @@
+[
+    {
+        "title": "Attach by Architecture",
+        "description": "For each Architecture: Attach's TS bookings in normalized dollars by fiscal month.",
+        "type": "line",
+        "colors": {
+            "Security": "#CA181D",
+            "Enterprise": "#0570AF",
+            "Mobility": "#AD017E",
+            "Computing": "#CB4C02",
+            "Collaboration": "#238A45"
+        },
+        "data": [
+            {
+                "state": "Q1FY15",
+                "freq": {
+                    "Security": 18000000000,
+                    "Enterprise": 12000000000,
+                    "Mobility": 8000000000,
+                    "Computing": 4000000000,
+                    "Collaboration": 28000000000
+                }
+            }
+            , {
+                "state": "Q2FY15",
+                "freq": {
+                    "Security": 1900000000,
+                    "Enterprise": 22000000000,
+                    "Mobility": 18000000000,
+                    "Computing": 8000000000,
+                    "Collaboration": 26000000000
+                }
+            }
+            , {
+                "state": "Q3FY15",
+                "freq": {
+                    "Security": 40000000000,
+                    "Enterprise": 30000000000,
+                    "Mobility": 5000000000,
+                    "Computing": 9000000000,
+                    "Collaboration": 35000000000
+                }
+            }
+            , {
+                "state": "Q4FY15",
+                "freq": {
+                    "Security": 22000000000,
+                    "Enterprise": 12000000000,
+                    "Mobility": 8000000000,
+                    "Computing": 5000000000,
+                    "Collaboration": 32000000000
+                }
+            },
+            {
+                "state": "Q1FY16",
+                "freq": {
+                    "Security": 18000000000,
+                    "Enterprise": 12000000000,
+                    "Mobility": 8000000000,
+                    "Computing": 4000000000,
+                    "Collaboration": 28000000000
+                }
+            }
+            , {
+                "state": "Q2FY16",
+                "freq": {
+                    "Security": 1900000000,
+                    "Enterprise": 22000000000,
+                    "Mobility": 18000000000,
+                    "Computing": 8000000000,
+                    "Collaboration": 26000000000
+                }
+            }
+            , {
+                "state": "Q3FY16",
+                "freq": {
+                    "Security": 40000000000,
+                    "Enterprise": 30000000000,
+                    "Mobility": 5000000000,
+                    "Computing": 9000000000,
+                    "Collaboration": 35000000000
+                }
+            }
+            , {
+                "state": "Q4FY16",
+                "freq": {
+                    "Security": 22000000000,
+                    "Enterprise": 12000000000,
+                    "Mobility": 8000000000,
+                    "Computing": 5000000000,
+                    "Collaboration": 32000000000
+                }
+            }
+        ]
+    },
+    {
+        "title": "Attach Performance",
+        "description": "<p><b>Covered</b> - The value of the normalized list price of services attached during the fiscal month.</p><p><b>Uncovered</b> - The value of the normalized list of service opportunities that remains uncovered for the fiscal month.</p><p><b>Timeline</b> - Current - 11 fiscal months.</p>",
+        "type": "bar_stacked",
+        "keys": ["Covered", "Uncovered"],
+        "colors": {
+            "Covered": "#0570AF",
+            "Uncovered": "#AD017E"
+        },
+        "data": [
+            {
+                "quarter": "Q1FY16",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q2FY16",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q3FY16",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q4FY16",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q1FY17",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    }
+                ]
+            },
+            {
+                "quarter": "Q2FY17",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Canada (AMER)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "India_Area (APJ)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_Central (EMEAR)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    },
+                    {
+                        "state": "Emear_North (EMEAR)",
+                        "freq": {
+                            "Covered": 85000000000,
+                            "Uncovered": 75000000000
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Attach Performance-Unattached $",
+        "description": "<p><b>Total</b> - The attach opportunity that was left unattached based on normalized list price for the Sales level currently being viewed.</p><p><b>Benchmark</b> - The attach opportunity that was left unattached based on normalized list price for all sales areas within the level currently being viewed.</p>",
+        "type": "line",
+        "colors": {
+            "Americas": "#CB4C02",
+            "Security": "#CA181D",
+            "Enterprise": "#0570AF"
+        },
+        "tabs": {
+            "Total": [
+                {
+                    "state": "AprFY15",
+                    "freq": {
+                        "Americas": 6500000000000
+                    }
+                }
+                , {
+                    "state": "MayFY15",
+                    "freq": {
+                        "Americas": 9000000000000
+                    }
+                }
+                , {
+                    "state": "JunFY15",
+                    "freq": {
+                        "Americas": 19000000000000
+                    }
+                }
+                , {
+                    "state": "JulFY15",
+                    "freq": {
+                        "Americas": 10000000000000
+                    }
+                },
+                {
+                    "state": "AugFY15",
+                    "freq": {
+                        "Americas": 6500000000000
+                    }
+                }
+                , {
+                    "state": "SepFY15",
+                    "freq": {
+                        "Americas": 9000000000000
+                    }
+                }
+                , {
+                    "state": "OctFY15",
+                    "freq": {
+                        "Americas": 19000000000000
+                    }
+                }
+                , {
+                    "state": "NovFY15",
+                    "freq": {
+                        "Americas": 10000000000000
+                    }
+                },
+                {
+                    "state": "DecFY15",
+                    "freq": {
+                        "Americas": 6500000000000
+                    }
+                }
+                , {
+                    "state": "JanFY15",
+                    "freq": {
+                        "Americas": 9000000000000
+                    }
+                }
+                , {
+                    "state": "FebFY15",
+                    "freq": {
+                        "Americas": 19000000000000
+                    }
+                }
+                , {
+                    "state": "MarFY15",
+                    "freq": {
+                        "Americas": 10000000000000
+                    }
+                }
+            ],
+            "Benchmark": [
+                {
+                    "state": "AprFY15",
+                    "freq": {
+                        "Security": 18000000000,
+                        "Enterprise": 12000000000
+                    }
+                }
+                , {
+                    "state": "MayFY15",
+                    "freq": {
+                        "Security": 1900000000,
+                        "Enterprise": 22000000000
+                    }
+                }
+                , {
+                    "state": "JunFY15",
+                    "freq": {
+                        "Security": 40000000000,
+                        "Enterprise": 30000000000
+                    }
+                }
+                , {
+                    "state": "JulFY15",
+                    "freq": {
+                        "Security": 22000000000,
+                        "Enterprise": 12000000000
+                    }
+                },
+                {
+                    "state": "AugFY15",
+                    "freq": {
+                        "Security": 18000000000,
+                        "Enterprise": 12000000000
+                    }
+                }
+                , {
+                    "state": "SepFY15",
+                    "freq": {
+                        "Security": 1900000000,
+                        "Enterprise": 22000000000
+                    }
+                }
+                , {
+                    "state": "OctFY15",
+                    "freq": {
+                        "Security": 40000000000,
+                        "Enterprise": 30000000000
+                    }
+                }
+                , {
+                    "state": "NovFY15",
+                    "freq": {
+                        "Security": 22000000000,
+                        "Enterprise": 12000000000
+                    }
+                },
+                {
+                    "state": "DecFY15",
+                    "freq": {
+                        "Security": 18000000000,
+                        "Enterprise": 12000000000
+                    }
+                }
+                , {
+                    "state": "JanFY15",
+                    "freq": {
+                        "Security": 1900000000,
+                        "Enterprise": 22000000000
+                    }
+                }
+                , {
+                    "state": "FebFY15",
+                    "freq": {
+                        "Security": 40000000000,
+                        "Enterprise": 30000000000
+                    }
+                }
+                , {
+                    "state": "MarFY15",
+                    "freq": {
+                        "Security": 22000000000,
+                        "Enterprise": 12000000000
+                    }
+                }
+            ]
+        }
+    }
+]

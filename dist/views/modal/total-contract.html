@@ -1,0 +1,68 @@
+<!--<div class="modal-body text-center">
+    <a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    <p class="success-text marginT30">Cisco Ready Integration Coming Soon!</p>
+    <p>The "Competitive Dashboard" is currently located in a different url. Full integration with the Cisco Ready dashboard is coming soon.</p>
+    <p class="grey-text marginT15"></p>
+    <div class="clearfix marginT30">
+        <a href="" class="button stroke-btn blue marginR10 marginB10" ng-click="cancel()">Cancel</a>
+        <a href="http://qli-web-003-p/QvAJAXZfc/opendoc.htm?document=SFDC_Competitive_Dashboard_V1.qvw&host=QVS%40qli-app-006-P" target="_blank" class="button filled-btn blue marginB10">Go There!</a>
+    </div>
+</div>-->
+    <div class="modal-header">
+            <h1>{{vm.contractName}}<a href="javascript:void(0)" class="modal-close" ng-click="vm.dismiss()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+                <div class="dropdown more-options">
+                <span class="ico-more_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span>
+                <ul class="dropdown-menu">
+                    <i class="tipsy"></i>
+                    <li class="head-li"><span><a href="" onclick="downloadCSV(this);">Export As CSV</a></span></li>
+                </ul>
+                </div>
+            </h1>
+    </div>
+    <div class="modal-body text-center health-popup">
+    <div class="usd-value marginR0">Price shown in USD</div>
+    <div class="table-responsive expanded marginT10 popup-table">
+        <table class="table opp-by table-fixed1 striped-table marginB0">
+            <thead>
+                <tr>
+                    <th style="width:23%;" class="fix-long-word">
+                    <span ng-hide = "vm.showApply">
+                        <input type="checkbox" ng-click="vm.toggleAll()" ng-model="vm.isAllSelected" id="14" name="product-check">
+                        <label for="14"><span></span></label>
+                    </span>
+                    <span class="product-list-txt paddingL10">Contract Number</span><span class="ico-dropdown"></span></th>
+                    <th style="width:14%;"><span class="product-list-txt">Start/End Date</span></th>
+                    
+                    <th style="width:20%;"><span class="product-list-txt">Earliest Line End Date</span></th>
+                    <th style="width:10%;"><span class="product-list-txt">Type</span></th>
+                    <th style="width:13%;" class="text-right"><span class="product-list-txt">Line Items</span></th>
+                    <th style="width:10%;" class="text-right"><span class="product-list-txt">List Price($)</span></th>
+                    <th style="width:10%;" class="text-right"><span class="product-list-txt">Net Price($)</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contract in vm.contracts">
+                    <td class="text-left">
+                    <span ng-hide = "vm.showApply">
+                    
+                    <input type="checkbox"  ng-model="contract.select"  ng-change="vm.optionToggled(contract.select)" id="16+{{$index}}" name="product-check">
+                    <label for="16+{{$index}}"><span></span></label>
+                    </span>
+                        <label for="16+{{$index}}"><span></span></label><span class="product-list-txt paddingL10">{{contract.contractNumber}}</span></td>
+                    <td class="text-left"><span class="product-list-txt">{{contract.date.from}}</span>&nbsp;<span class="product-list-txt">{{contract.date.to}}</span></td>
+                    <td class="text-left"><span class="product-list-txt">{{contract.earliestEndDate}}</span></td>
+                    <td class="text-left"><span class="product-list-txt">{{contract.type}}</span></td>
+                    <td class="text-right"><span class="product-list-txt">{{contract.lineItems}}</span></td>
+                    <td class="text-right"><span class="product-list-txt">{{contract.list|formatGridValue}}</span></td>
+                    <td class="text-right"><span class="product-list-txt">{{contract.net|formatGridValue}}</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="clearfix text-right marginT20" ng-hide= "vm.showApply">
+        <a href="javascript:void(0);" class="button stroke-btn blue marginR10 marginB10" ng-click="vm.dismiss()">Cancel</a>
+        <a href="javascript:void(0);" class="button filled-btn blue marginB10" ng-click="vm.close()" ng-show="applyValid()">Apply</a>
+        <a href="javascript:void(0);" class="button filled-btn blue marginB10" ng-show="!applyValid()" ng-disabled="!applyValid()">Apply</a>
+    </div>
+</div>

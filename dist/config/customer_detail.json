@@ -1,0 +1,35 @@
+[            
+    {
+        "name": "Health Quest",
+        "hasGU": [
+            {
+                "name": "GU Site 1",
+                "value": "GU Site 1"
+            },
+            {
+                "name": "GU Site 2",
+                "value": "GU Site 2"
+            }
+        ],
+        "lineItems": 14,
+        "totalOpportunity": 36723,
+        "inPipeline": 14243,
+        "availableForPipeline": 22589,
+        "totalContracts": 7,
+        "contractsSelected": 0,
+        "data": [
+            {
+                "quarter": "Q1FY14",
+                "areas": [
+                    {
+                        "state": "US_Enterprise (AMER)",
+                        "freq": {
+                            "Available for Pipeline": 380000000,
+                            "In Pipeline": 360000000
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

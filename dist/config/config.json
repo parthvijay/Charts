@@ -1,0 +1,1552 @@
+{
+    "env": 4,
+    "apiDomain": {
+        "1": "http://private-2469c-ce21.apiary-mock.com",
+        "2": "http://localhost:8080",
+        "3": "https://crleadership-dev.cloudapps.cisco.com/CEREWARD_API",
+        "4": "https://crleadership-stg.cloudapps.cisco.com/CEREWARD_API",
+        "5": "https://crleadership.cloudapps.cisco.com/CEREWARD_API",
+        "6": "https://crleadership-lt.cloudapps.cisco.com/CEREWARD_API",
+        "7": "http://celeadership.cloudapps.cisco.com/CEREWARD_API",
+        "8": "https://crsfdc-stg.cloudapps.cisco.com/CEREWARD_API"
+    },
+    "sfdcEnvKey": 3,
+    "sdfc_env_details":{
+       "1" : {
+            "url": "https://apmi-dev.cisco.com/it/sales/cr/v2.0",
+            "client_id": "249755e8209245dfbd1a164e18e119ff",
+            "client_secret": "Ecd80cBE395d4E8B90146D2B33DBA37d",
+            "grant_type": "client_credentials",
+            "scope" : "Read Write",
+            "token_url":"https://cloudsso-test.cisco.com/as/token.oauth2",
+            "edit_link":"https://ciscosales--qtr.cs71.my.salesforce.com/"
+            },
+        "2": {
+               "url": "https://apmi-stage.cisco.com/it/sales/xrm/cr/v3.0",
+               "client_id": "249755e8209245dfbd1a164e18e119ff",
+               "client_secret": "Ecd80cBE395d4E8B90146D2B33DBA37d",
+               "grant_type": "client_credentials",
+               "scope" : "Read Write",
+               "token_url":"https://cloudsso-test.cisco.com/as/token.oauth2",
+               "edit_link":"https://ciscosales--qtr.cs71.my.salesforce.com/"
+            },
+         "3": {
+               "url": "https://apmi.cisco.com/it/sales/xrm/cr/v3.0",
+               "client_id": "b435885c685c4bba81d2ddd40a4385fa",
+               "client_secret": "90e4a75f31A04337B6446EA3bdB26729",
+                "grant_type": "client_credentials",
+               "scope" : "Read Write",
+               "token_url": "https://cloudsso.cisco.com/as/token.oauth2",
+               "edit_link":"https://ciscosales.my.salesforce.com/"
+         }
+    },
+    "local": false,
+    "overview-tabs-order": {
+        "asset": 1,
+        "refresh": 2,
+        "subscription": 3,
+        "renew": 4,
+        "attach": 5,
+        "eos": 6
+    },
+    "overview-tabs": [{
+        "title": "Total Asset View",
+        "slug": "asset",
+        "postfix": null,
+        "dashboard": "sales"
+    }, {
+        "title": "Product Refresh",
+        "slug": "refresh",
+        "postfix": null,
+        "active": "ship",
+        "dashboard": "sales",
+        "subtabs": [{
+            "title": "Ship Timeline",
+            "slug": "ship"
+        }, {
+            "title": "EOS Timeline",
+            "slug": "eos"
+        }, {
+            "title": "LDOS Timeline",
+            "slug": "ldos"
+        }]
+    }, {
+        "title": "Subscription",
+        "slug": "subscription",
+        "postfix": null,
+        "active": "security",
+        "dashboard": "sales",
+        "subtabs": [{
+                "title": "Security",
+                "slug": "security"
+            }, {
+                "title": "Collaboration",
+                "slug": "collaboration"
+            }, {
+                "title": "Other",
+                "slug": "other"
+            }]
+    }, {
+        "title": "Renew",
+        "slug": "renew",
+        "postfix": null,
+        "active": "total",
+        "dashboard": "sales",
+        "subtabs": [{
+            "title": "Total Renew",
+            "slug": "total"
+        }, {
+            "title": "TS Renew",
+            "slug": "ts"
+        }, {
+            "title": "SWSS Renew",
+            "slug": "swss"
+        },
+         {
+            "title":"AS Renew (Pilot)",
+            "slug":"as"
+         }]
+    }, {
+        "title": "Attach",
+        "slug": "attach",
+        "postfix": null,
+        "active": "total",
+        "dashboard": "sales",
+        "subtabs": [{
+            "title": "Total Attach",
+            "slug": "total"
+        }, {
+            "title": "TS Attach",
+            "slug": "ts"
+        }, {
+            "title": "SWSS Attach",
+            "slug": "swss"
+        }]
+    },{
+        "title": "TS Renew",
+        "slug": "tsRenew",
+        "postfix": null,
+        "active": "opportunities",
+        "dashboard": "services",
+        "subtabs": [{
+            "title": "Overview",
+            "slug": "overview"
+        }, {
+            "title": "Bookings",
+            "slug": "bookings"
+        }, {
+            "title": "Opportunities",
+            "slug": "opportunities"
+        }, {
+            "title": "Renewal Rate",
+            "slug": "realization"
+        }]
+    },{
+        "title": "TS Attach",
+        "slug": "tsAttach",
+        "postfix": null,
+        "active": "opportunities",
+        "dashboard": "services",
+        "subtabs": [{
+            "title": "Overview",
+            "slug": "overview"
+        }, {
+            "title": "Service Sold",
+            "slug": "bookings"
+        }, {
+            "title": "Opportunities",
+            "slug": "opportunities"
+        }, {
+            "title": "Attach Rate",
+            "slug": "realization"
+        }]
+    }
+],
+    "opportunitiesKeyNameMap": {
+        "sales": 0,
+        "partner": 1,
+        "customer": 2,
+        "manager": 3,
+        "sav": 4
+    },
+    "opportunitiesKeyIndexMap": {
+        "0": "sales",
+        "1": "partner",
+        "2": "customer",
+        "3": "manager",
+        "4": "sav"
+    },
+    "sldKeyIndexMap":{
+        "0": "sales",
+        "1": "customer"
+    },
+    "opportunitiesNameIndexMap": {
+        "0": "Sales Levels",
+        "1": "Partners",
+        "2": "Customers",
+        "3": "Account Managers",
+        "4": "SAV Accounts"
+    },
+    "colors": {
+        "Security": "#31A254",
+        "Enterprise": "#0570AF",
+        "Mobility": "#D85F0E",
+        "Computing": "#CB4C02",
+        "Collaboration": "#2C7FB7",
+        "LLW": "#AD017E",
+        "Non-LLW": "#CA181D",
+        "Covered": "#0570AF",
+        "Uncovered": "#AD017E",
+        "1st Month": "#238A45",
+        "2nd Month": "#AD017E",
+        "3rd Month": "#0570AF",
+        "All Nodes": "#7EB963",
+        "Actionable Opportunity": "#83B758",
+        "SFDC Pipeline": "#0570AF",
+        "On Time": "#0570AF",
+        "Late": "#AD017E",
+        "Missed": "#CB4C02",
+        "Remaining": "#238A45",
+        "Early": "#BCBD22",
+        "Ontime": "#17BECF",
+        "Late1 Month": "#1F77B4",
+        "Late2 Months": "#9EDAE5",
+        "Late3 Months": "#1F5188",
+        "Americas": "#CA181D",
+        "Total Bookings": "#AD017E",
+        "Value": "#CB4C02",
+        "Attach": "#0570AF",
+        "Renew": "#CA181D",
+        "Refresh": "#238A45",
+        "Enterprise Routing": "#EF3B20",
+        "Computing Systems": "#C41B89",
+        "Service Provider Routing": "#FBAD90",
+        "SP Video Infrastructure": "#BCC8E0",
+        "SP Video Software and Solutions": "#B1E1E1",
+        "Switching": "#D6B4D7",
+        "Wireless": "#FD9829",
+        "IOT Software": "#FDD88D",
+        "Other": "#8CDDA5",
+        "IOT": "#641E16",
+        "Routing": "#9A7D0A",
+        "Switching & Wireless": "#DAF7A6",
+        "Emerging/home Networking": "#2E4053",
+        "Data Center Switching": "#1F5188",
+        "Enterprise Switching": "#17BECF",
+        "Expired": "#0570AF",
+        "Upcoming Renewal": "#AD017E",
+        "SWSS Attach": "#AD017E",
+        "TS Attach": "#0570AF",
+        "<1 Month": "#238A45",
+        "1-3 Months": "#CB181B",
+        ">3 Months": "#0570B0",
+        "COLLABORATION": "#FD9829",
+        "DCV": "#17BECF",
+        "ENTERPISE NETWORKING": "#0570AF",
+        "SERVICE PROVIDER": "#9A7D0A",
+        "UNKNOWN": "#8CDDA5"
+    },
+    "colorsPalette": {
+        "sales": {
+            "colors": ["#267278", "#65338d", "#4770b3", "#d21f75", "#3b3689", "#50aed3", "#48b24f", "#e57438", "#569dd2", "#569d79", "#58595b", "#e4b031", "#84d2f4"],
+            "colors_6": ["#4770b3", "#267278", "#e4b031", "#50aed3", "#cad93f", "#9e9ea2"],
+            "colors_3": ["#4770b3", "#cad93f", "#65338d"],
+            "colors_2": ["#95add5", "#ffd15c"],
+            "colors_3_co": ["#ff8a65", "#80cbc4", "#78909c","#ba8268"],
+            "colors_more": ["#267278", "#65338d", "#4770b3", "#d21f75", "#3b3689", "#50aed3", "#48b24f", "#e57438", "#569dd2", "#569d79", "#58595b", "#e4b031", "#84d2f4", "#cad93f", "#f5c8af", "#9ac483", "#9e9ea2", "#f4dfad", "#eaf0b2", "#ba8268", "#a8c7c9", "#a385bb", "#91a9d1", "#eda5c8", "#b9dfed", "#b6e0b9", "#efac88", "#dedede"],
+            "colors_corporate_target": ["#4770b3", "#000000"],
+            "square_block": ["#2a9e8b","#51add3","#ec7234"],
+            "constant": {
+                "Actionable Opportunity": "#4770b3",
+                "opportunity": "#4770b3",
+                "SFDC Pipeline": "#0bbcd3",
+                "sfdc": "#0bbcd3",
+                "Upcoming Renewal": "#4770b3",
+                "Expired": "#EC7234",
+                "Expired then Covered": "#EC7234",
+                "Expired to Cover": "#EC7234",
+                "Covered": "#4770b3",
+                "Uncovered": "#cad93f",
+                "Overdue": "#CAD940",
+                "Over-Due": "#CAD940",
+                "Access-Switching": "#4770b3",
+                "Access-Wireless": "#84d2f4",
+                "DataCenter-Compute": "#48b24f",
+                "DataCenter-Networking": "#267278",
+                "WAN": "#e4b031",
+                "Service Not Sold": "#65338d",
+                "Service Sold": "#cad93f",
+                "Active": "#2a9e8b",
+                "Signed": "#51add3",
+                "Early": "#4870B2",
+                "Late": "#50ACD2",
+                "Late In Quarter": "#E3AF31",
+                "Late In Quarters": "#E3AF31",
+                "Ontime": "#267278",
+                "On Time": "#267278",
+                "On-Time": "#267278",
+                "Uncategorized": "#ec7234"
+            },
+            "quartersColors": ["#4770b3","#b9d11f", "#569dd2", "#2d7135", "#7a1ca6", "#40b5e2", "#d6007d", "#d15d1f", "#8e1f1f", "#58595b","#6b2f83"],
+             "quartersDescColors": {
+                 "#4770b3": "rgba(71,112,179,0.2)",
+                 "#b9d11f": "rgba(185,209,31,0.2)",
+                 "#569dd2": "rgba(86,157,210,0.2)",
+                 "#2d7135": "rgba(45,113,53,0.2)",
+                 "#7a1ca6": "rgba(122,228,166,0.2)",
+                 "#40b5e2": "rgba(64,181,226,0.2)",
+                 "#d6007d": "rgba(214,0,125,0.2)",
+                 "#d15d1f": "rgba(209,93,31,0.2)",
+                 "#8e1f1f": "rgba(142,31,31,0.2)",
+                 "#58595b": "rgba(88,89,91,0.2)",
+                 "#6b2f83": "rgba(107,47,131,0.2)"
+             }
+        },
+         "services": {
+            "colors": ["#267278", "#65338d", "#4770b3", "#d21f75", "#3b3689", "#50aed3", "#48b24f", "#e57438", "#569dd2", "#569d79", "#58595b", "#e4b031", "#84d2f4"],
+            "colors_6": ["#4770b3", "#267278", "#e4b031", "#50aed3", "#cad93f", "#9e9ea2"],
+            "colors_3": ["#4770b3", "#cad93f", "#65338d"],
+            "colors_2": ["#65338d", "#cad93f"],
+            "colors_more": ["#267278", "#65338d", "#4770b3", "#d21f75", "#3b3689", "#50aed3", "#48b24f", "#e57438", "#569dd2", "#569d79", "#58595b", "#e4b031", "#84d2f4", "#cad93f", "#f5c8af", "#9ac483", "#9e9ea2", "#f4dfad", "#eaf0b2", "#ba8268", "#a8c7c9", "#a385bb", "#91a9d1", "#eda5c8", "#b9dfed", "#b6e0b9", "#efac88", "#dedede"],
+            "colors_corporate_target": ["#4770b3", "#000000"],
+            "constant": {
+                "Active": "#2A9D8B",
+                "Expired": "#EC7234",
+                "Overdue": "#CAD940",
+                "Signed": "#84D1F4",
+                "Previous Year": "#65308C",
+                "Early": "#4870B2",
+                "Late": "#50ACD2",
+                "Late in Quarter": "#E3AF31",
+                "Late in Quarters": "#E3AF31",
+                "Ontime": "#267278",
+                "Annual": "#4870B3",
+                "Multi-Year": "#CAD940",
+                "Direct": "#267278",
+                "Partner": "#E57438"
+            },
+             "quartersColors": ["#4770b3","#b9d11f", "#569dd2", "#2d7135", "#7a1ca6", "#40b5e2", "#d6007d", "#d15d1f", "#8e1f1f", "#58595b","#6b2f83"],
+             "quartersDescColors": {
+                 "#4770b3": "rgba(71,112,179,0.2)",
+                 "#b9d11f": "rgba(185,209,31,0.2)",
+                 "#569dd2": "rgba(86,157,210,0.2)",
+                 "#2d7135": "rgba(45,113,53,0.2)",
+                 "#7a1ca6": "rgba(122,228,166,0.2)",
+                 "#40b5e2": "rgba(64,181,226,0.2)",
+                 "#d6007d": "rgba(214,0,125,0.2)",
+                 "#d15d1f": "rgba(209,93,31,0.2)",
+                 "#8e1f1f": "rgba(142,31,31,0.2)",
+                 "#58595b": "rgba(88,89,91,0.2)",
+                 "#6b2f83": "rgba(107,47,131,0.2)"
+             }
+        }
+    },
+    "opportunitiesData": {
+        "all": [{
+            "title": "",
+            "description": "",
+            "type": "pie",
+            "data-key": "period",
+            "keys": ["Attach", "Renew", "Refresh"],
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked",
+            "data-key": "period",
+            "keys": ["Attach", "Renew", "Refresh"],
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked_horizontal",
+            "data-key": "spc",
+            "keys": ["Attach", "Renew", "Refresh"],
+            "categories-main": ["Total Opportunities by Sales Levels", "Total Opportunities by Partners", "Total Opportunities by Customers", "Total Opportunities by Account Managers"],
+            "categories": ["Total Opportunities by Sales Levels", "Total Opportunities by Partners", "Total Opportunities by Customers", "Total Opportunities by Account Managers"],
+            "data": []
+        }],
+        "asset": [{
+                "title": "",
+                "type": "pie",
+                "data-key": "period",
+                "keys": ["Attach", "Renew", "Refresh"],
+                "data": [],
+                "data_net": []
+            }, {
+                "title": "",
+                "type": "bar_stacked",
+                "data-key": "period",
+                "keys": ["Attach", "Renew", "Refresh"],
+                "data": [],
+                "data_net": [],
+                "showFiscalData" : ["FM", "FQ", "FY"],
+                "selectedFiscal" : "FQ"
+            }, {
+                "title": "",
+                "type": "bar_stacked_horizontal",
+                "data-key": "spc",
+                "keys": ["Attach", "Renew", "Refresh"],
+                "categories-main": ["Asset View by Sales Levels", "Asset View by Partners", "Asset View by Customers", "Asset View by Account Managers"],
+                "categories": ["Asset View by Sales Levels", "Asset View by Partners", "Asset View by Customers", "Asset View by Account Managers"],
+                "data": [],
+                "data_net": []
+            }],
+            "refresh_shipment": [{
+                "title": "",
+                "description": "",
+                "type": "pie",
+                "data-key": "period",
+                "keys": ["Collaboration", "Computing Systems", "Enterprise Routing", "IOT Software", "Mobility", "Security", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+                "data": [],
+                "data_net": []
+    
+            }, {
+                "title": "",
+                "description": "",
+                "type": "bar_stacked",
+                "keys": ["Collaboration", "Computing Systems", "Enterprise Routing", "IOT Software", "Mobility", "Security", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+                "data-key": "period",
+                "data": [],
+                "data_net": [],
+                "showFiscalData" : ["FM", "FQ", "FY"],
+                "selectedFiscal" : "FQ"
+    
+            }, {
+                "title": "",
+                "description": "",
+                "type": "bar_stacked_double_horizontal",
+                "data-key": "spc",
+                "categories-main": ["Refresh by Sales Levels", "Refresh by Partners", "Refresh by Customers", "Refresh by Account Managers"],
+                "categories": ["Refresh by Sales Levels", "Refresh by Partners", "Refresh by Customers", "Refresh by Account Managers"],
+                "keys": ["Collaboration", "Computing Systems", "Enterprise Routing", "IOT Software", "Mobility", "Security", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+                "data": [],
+                "data_net": []
+            }],
+            "refresh_eos": [{
+                "title": "",
+                "description": "",
+                "type": "pie",
+                "data-key": "period",
+                "keys": ["Collaboration", "Computing Systems", "Enterprise Routing", "IOT Software", "Mobility", "Security", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+                "data": [],
+                "data_net": []
+            }, {
+                "title": "",
+                "description": "",
+                "type": "bar_stacked",
+                "keys": ["Collaboration", "Computing Systems", "Enterprise Routing", "IOT Software", "Mobility", "Security", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+                "data-key": "period",
+                "data": [],
+                "data_net": [],
+                "showFiscalData" : ["FM", "FQ", "FY"],
+                "selectedFiscal" : "FQ"
+            }, {
+                "title": "",
+                "description": "",
+                "type": "bar_stacked_double_horizontal",
+                "data-key": "spc",
+                "categories-main": ["Opportunities by Sales Levels", "Opportunities by Partners", "Opportunities by Customers", "Opportunities by Account Managers"],
+                "categories": ["Opportunities by Sales Levels", "Opportunities by Partners", "Opportunities by Customers", "Opportunities by Account Managers"],
+                "keys": ["Collaboration", "Computing Systems", "Enterprise Routing", "IOT Software", "Mobility", "Security", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+                "data": [],
+                "data_net": []
+            }],
+            "refresh_ldos": [{
+                "title": "",
+                "description": "",
+                "type": "pie",
+                "data-key": "period",
+                "keys": ["Collaboration", "Computing Systems", "Enterprise Routing", "IOT Software", "Mobility", "Security", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+                "data": [],
+                "data_net": []
+    
+            }, {
+                "title": "",
+                "description": "",
+                "type": "bar_stacked",
+                "keys": ["Collaboration", "Computing Systems", "Enterprise Routing", "IOT Software", "Mobility", "Security", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+                "data-key": "period",
+                "data": [],
+                "data_net": [],
+                "showFiscalData" : ["FM", "FQ", "FY"],
+                "selectedFiscal" : "FQ"
+            }, {
+                "title": "",
+                "description": "",
+                "type": "bar_stacked_double_horizontal",
+                "data-key": "spc",
+                "categories-main": ["Opportunities by Sales Levels", "Opportunities by Partners", "Opportunities by Customers", "Opportunities by Account Managers"],
+                "categories": ["Opportunities by Sales Levels", "Opportunities by Partners", "Opportunities by Customers", "Opportunities by Account Managers"],
+                "keys": ["Collaboration", "Computing Systems", "Enterprise Routing", "IOT Software", "Mobility", "Security", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+                "data": [],
+                "data_net": []
+            }],
+
+    "subscr_security": [{
+            "title": "",
+            "description": "",
+            "type": "pie",
+            "keys": ["Advanced Threat Security", "Network Security", "Policy & Access", "Web Security", "Conferencing", "Email Security", "Contact Center", "Open", "TP Multiparty Conferencing", "UC Endpoints", "UC Infrastructure Applications"],
+            "data-key": "period",
+            "data": [],
+            "data_net": []
+        },
+        {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked",
+            "keys": ["Advanced Threat Security", "Network Security", "Policy & Access", "Web Security", "Conferencing", "Email Security", "Contact Center", "Open", "TP Multiparty Conferencing", "UC Endpoints", "UC Infrastructure Applications"],
+            "data-key": "period",
+            "data": [],
+            "data_net": [],
+            "showFiscalData" : ["FM", "FQ", "FY"],
+            "selectedFiscal" : "FQ"
+        },
+        {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked_horizontal",
+            "keys": ["Advanced Threat Security", "Network Security", "Policy & Access", "Web Security", "Conferencing", "Email Security", "Contact Center", "Open", "TP Multiparty Conferencing", "UC Endpoints", "UC Infrastructure Applications"],
+            "data-key": "spc",
+            "data": [],
+            "data_net": [],
+            "categories-main": ["Security Subscription by Sales Levels", "Security Subscription by Partners", "Security Subscription by Customers", "Security Subscription by Account Managers"],
+            "categories":  ["Security Subscription by Sales Levels", "Security Subscription by Partners", "Security Subscription by Customers", "Security Subscription by Account Managers"]
+    }],
+
+    "subscr_collaboration": [{
+        "title": "",
+        "description": "",
+        "type": "pie",
+        "keys": ["Advanced Threat Security", "Network Security", "Policy & Access", "Web Security", "Conferencing", "Email Security", "Contact Center", "Open", "TP Multiparty Conferencing", "UC Endpoints", "UC Infrastructure Applications"],
+        "data-key": "period",
+        "data": [],
+        "data_net": []
+    },
+    {
+        "title": "",
+        "description": "",
+        "type": "bar_stacked",
+        "keys": ["Advanced Threat Security", "Network Security", "Policy & Access", "Web Security", "Conferencing", "Email Security", "Contact Center", "Open", "TP Multiparty Conferencing", "UC Endpoints", "UC Infrastructure Applications"],
+        "data-key": "period",
+        "data": [],
+        "data_net": [],
+        "showFiscalData" : ["FM", "FQ", "FY"],
+        "selectedFiscal" : "FQ"
+    },
+    {
+        "title": "",
+        "description": "",
+        "type": "bar_stacked_horizontal",
+        "keys": ["Advanced Threat Security", "Network Security", "Policy & Access", "Web Security", "Conferencing", "Email Security", "Contact Center", "Open", "TP Multiparty Conferencing", "UC Endpoints", "UC Infrastructure Applications"],
+        "data-key": "spc",
+        "data": [],
+        "data_net": [],
+        "categories-main": ["Collab Subscription by  Sales Levels", "Collab Subscription by  Partners", "Collab Subscription by  Customers", "Collab Subscription by Account Managers"],
+        "categories":  ["Collab Subscription by  Sales Levels", "Collab Subscription by  Partners", "Collab Subscription by  Customers", "Collab Subscription by Account Managers"]
+    }],
+
+    "subscr_other": [{
+        "title": "",
+        "description": "",
+        "type": "pie",
+        "keys": ["Compute", "Networking", "Routing", "Switching", "Wireless"],
+        "data-key": "period",
+        "data": [],
+        "data_net": []
+    },
+    {
+        "title": "",
+        "description": "",
+        "type": "bar_stacked",
+        "keys": ["Compute", "Networking", "Routing", "Switching", "Wireless"],
+        "data-key": "period",
+        "data": [],
+        "data_net": [],
+        "showFiscalData" : ["FM", "FQ", "FY"],
+        "selectedFiscal" : "FQ"
+    },
+    {
+        "title": "",
+        "description": "",
+        "type": "bar_stacked_horizontal",
+        "keys": ["Compute", "Networking", "Routing", "Switching", "Wireless"],
+        "data-key": "spc",
+        "data": [],
+        "data_net": [],
+        "categories-main": ["Other Subscription by  Sales Levels", "Other Subscription by  Partners", "Other Subscription by  Customers", "Other Subscription by Account Managers"],
+        "categories":  ["Other Subscription by  Sales Levels", "Other Subscription by  Partners", "Other Subscription by  Customers", "Other Subscription by Account Managers"]
+    }],
+
+        "totalRenew": [{
+            "title": "",
+            "description": "",
+            "type": "pie",
+            "data-key": "period",
+            "keys": ["Expired", "Upcoming Renewal"],
+            "data_net": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked",
+            "keys": ["Expired", "Upcoming Renewal"],
+            "data-key": "period",
+            "data_net": [],
+            "showFiscalData" : ["FM", "FQ", "FY"],
+            "selectedFiscal" : "FQ"
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked_horizontal",
+            "data-key": "spc",
+            "categories-main": ["Renewal by Sales Levels", "Renewal by Partners", "Renewal by Customers", "Renewal by Account Managers"],
+            "categories": ["Renewal by Sales Levels", "Renewal by Partners", "Renewal by Customers", "Renewal by Account Managers"],
+            "keys": ["Expired", "Upcoming Renewal"],
+            "data_net": []
+        }],
+        "tsRenew": [{
+            "title": "",
+            "description": "",
+            "type": "pie",
+            "data-key": "period",
+            "keys": ["Expired", "Upcoming Renewal"],
+            "data": [],
+            "data_net": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked",
+            "keys": ["Expired", "Upcoming Renewal"],
+            "data-key": "period",
+            "data": [],
+            "data_net": [],
+            "showFiscalData" : ["FM", "FQ", "FY"],
+            "selectedFiscal" : "FQ"
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked_horizontal",
+            "data-key": "spc",
+            "categories-main": ["Renewal by Sales Levels", "Renewal by Partners", "Renewal by Customers", "Renewal by Account Managers"],
+            "categories": ["Renewal by Sales Levels", "Renewal by Partners", "Renewal by Customers", "Renewal by Account Managers"],
+            "keys": ["Expired", "Upcoming Renewal"],
+            "data": [],
+            "data_net": []
+        }],
+        "swssRenew": [{
+            "title": "SWSS Renewal by Type",
+            "description": "",
+            "type": "pie",
+            "data-key": "period",
+            "keys": ["Expired", "Upcoming Renewal"],
+            "data": [],
+            "categories":["SWSS Renewal by Type"],
+            "data_net": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked",
+            "keys": ["Expired", "Upcoming Renewal"],
+            "data-key": "period",
+            "data": [],
+            "data_net": [],
+            "showFiscalData" : ["FM", "FQ", "FY"],
+            "selectedFiscal" : "FQ"
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked_horizontal",
+            "data-key": "spc",
+            "categories-main":[" SWSS Renewal by Sales Levels", "SWSS Renewal by Partners", "SWSS  Renewal by Customers", "SWSS Renewal by Account Managers"],
+            "categories":["SWSS Renewal by Sales Levels", "SWSS  Renewal by Partners", "SWSS Renewal by Customers", "SWSS Renewal by Account Managers"],
+            "keys": ["Expired", "Upcoming Renewal"],
+            "data": [],
+            "data_net": []
+        }],
+        "asRenew": [
+            {
+                "title":"AS Renew by Current, Over-due & Expired",
+                "description":"",
+                "type":"pie",
+                "customorder": ["Current", "Over-due", "Expired"],
+                "data-key":"period",
+                "keys": [],
+                "data_net":[]
+            },
+            {
+                "title": "AS Renew by Period- FQ",
+                "description": "",
+                "type": "bar_stacked",
+                "customorder": ["Current", "Over-due", "Expired"],
+                "keys": [],
+                "data-key": "period",
+                "data_net": [],
+                "showFiscalData" : ["FM", "FQ", "FY"],
+                "selectedFiscal" : "FQ"
+            },
+            {
+                "title": "",
+                "description": "",
+                "type": "bar_stacked_horizontal",
+                "customorder": ["Current", "Over-due", "Expired"],
+                "data-key": "spc",
+                "categories-main":["AS Renew by Sales Levels", "AS Renew by Partners", "AS Renew by Customers", "AS Renew by Account Managers"],
+                "categories":["AS Renew by Sales Levels", "AS Renew by Partners", "AS Renew by Customers", "AS Renew by Account Managers"],
+                "keys": [],
+                "data_net": []
+            }
+        ],
+        "totalAttach": [{
+            "title": "",
+            "description": "",
+            "type": "pie",
+            "data-key": "period",
+            "keys": ["Mobility", "Enterprise Routing", "Collaboration", "Security", "Computing Systems", "IOT Software", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked",
+            "data-key": "period",
+            "keys": ["Mobility", "Enterprise Routing", "Collaboration", "Security", "Computing Systems", "IOT Software", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+            "data": [],
+            "showFiscalData" : ["FM", "FQ", "FY"],
+            "selectedFiscal" : "FQ"
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked_horizontal",
+            "data-key": "spc",
+            "categories-main": ["Total Attach by Sales Levels", "Total Attach by Partners", "Total Attach by Customers", "Total Attach by Account Managers"],
+            "categories": ["Total Attach by Sales Levels", "Total Attach by Partners", "Total Attach by Customers", "Total Attach by Account Managers"],
+            "keys": ["Mobility", "Enterprise Routing", "Collaboration", "Security", "Computing Systems", "IOT Software", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+            "data": []
+        }],
+        "tsAttach": [{
+            "title": "Unattached Shipments by",
+            "description": "",
+            "type": "pie",
+            "categories": ["Unattached Shipments by Warranty Type","Unattached Shipments by Architecture","Unattached Shipments by Aging"],
+            "data-key": "period",
+            "keys": ["Mobility", "Enterprise Routing", "Collaboration", "Security", "Computing Systems", "IOT Software", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked",
+            "data-key": "period",
+            "keys": ["Mobility", "Enterprise Routing", "Collaboration", "Security", "Computing Systems", "IOT Software", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+            "data": [],
+            "showFiscalData" : ["FM", "FQ", "FY"],
+            "selectedFiscal" : "FQ"
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked_horizontal",
+            "data-key": "spc",
+            "categories-main": ["Unattached Shipments by Sales Levels", "Unattached Shipments by Partners", "Unattached Shipments by Customers", "Unattached Shipments by Account Managers"],
+            "categories": ["Unattached Shipments by Sales Levels", "Unattached Shipments by Partners", "Unattached Shipments by Customers", "Unattached Shipments by Account Managers"],
+            "keys": ["Mobility", "Enterprise Routing", "Collaboration", "Security", "Computing Systems", "IOT Software", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+            "data": []
+        }],
+        "swssAttach": [{
+            "title": "",
+            "description": "",
+            "type": "pie",
+            "data-key": "period",
+            "categories": ["SWSS Attach by Architecture", "SWSS Attach Aging"],
+            "keys": ["Mobility", "Enterprise Routing", "Collaboration", "Security", "Computing Systems", "IOT Software", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+            "data": [],
+            "customorder": ["< 1 Month", "1-3 Months", "> 3 Months"]
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked",
+            "data-key": "period",
+            "keys": ["Mobility", "Enterprise Routing", "Collaboration", "Security", "Computing Systems", "IOT Software", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+            "data": [],
+            "showFiscalData" : ["FM", "FQ", "FY"],
+            "selectedFiscal" : "FQ"
+            
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked_horizontal",
+            "data-key": "spc",
+            "categories-main": ["SWSS Attach by Sales Levels", "SWSS Attach by Partners", "SWSS Attach by Customers", "SWSS Attach by Account Managers"],
+            "categories": ["SWSS Attach by Sales Levels", "SWSS Attach by Partners", "SWSS Attach by Customers", "SWSS Attach by Account Managers"],
+            "keys": ["Mobility", "Enterprise Routing", "Collaboration", "Security", "Computing Systems", "IOT Software", "Service Provider Routing", "SP Video Infrastructure", "SP Video Software and Solutions", "Switching", "Wireless", "Other", "IOT", "Routing", "Switching & Wireless", "Emerging/home Networking"],
+            "data": [],
+            "customorder": ["< 1 Month", "1-3 Months", "> 3 Months"]
+        }],
+        "drs": [{
+            "title": "",
+            "description": "",
+            "data-key": "overview",
+            "type": "bar_double_horizontal_drs",
+            "data": [],
+            "data_net": []
+        }, {
+            "title": "",
+            "description": "",
+            "data-key": "sfdcBookings",
+            "type": "bar_stacked",
+            "keys": [],
+            "categories-main": ["Shipment History", "SFDC Booked Deals"],
+            "categories": ["Shipment History", "SFDC Booked Deals"],
+            "currentQuarter": "",
+            "shipment_data":{"data_net": [], "data":[]},
+            "sfdc_data":[],
+            "info": "future"
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_double_horizontal",
+            "data-key": "spc",
+            "keys": [],
+            "categories-main": ["Opportunities by Sales Levels", "Opportunities by Partners", "Opportunities by Customers", "Opportunities by Account Managers"],
+            "categories": ["Opportunities by Sales Levels", "Opportunities by Partners", "Opportunities by Customers"],
+            "data": [],
+            "data_net": []
+        }],
+        "ciscoOne": [{
+            "title": "",
+            "description": "",
+            "type": "pie",
+            "data-key": "opportunity",
+            "activeCategory": 0,
+            "categories": ["Cisco ONE Migration Opportunities by Type", "Cisco ONE Migration Opportunities by Suite"],
+            "keys": [],
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "data-key": "sfdcBookings",
+            "type": "bar_stacked",
+            "keys": [],
+            "currentQuarter": "",
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked_horizontal",
+            "data-key": "spc",
+            "keys": [],
+            "categories-main": ["Cisco ONE Migration Opportunities by Sales Levels", "Cisco ONE Migration Opportunities by Partners", "Cisco ONE Migration Opportunities by Customers", "Cisco ONE Migration Opportunities by Account Managers"],
+            "categories": ["Cisco ONE Migration Opportunities by Sales Levels", "Cisco ONE Migration Opportunities by Partners", "Cisco ONE Migration Opportunities by Customers", "Cisco ONE Migration Opportunities by Account Managers"],
+            "data": []
+        }]
+    },
+    "performanceData": {
+        "refresh_shipment": [{
+            "title": "",
+            "description": "",
+            "type": "bar_double",
+            "e-key": "bar_double",
+            "data-key": "actSfdc",
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "line",
+            "e-key": "line",
+            "data-key": "sfdcBookings",
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar",
+            "e-key": "bar",
+            "data-key": "perfSummary",
+            "data": []
+        }],
+        "refresh_eos": [{
+            "title": "",
+            "description": "",
+            "type": "bar_double",
+            "e-key": "bar_double",
+            "data-key": "actSfdc",
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "line",
+            "e-key": "line",
+            "data-key": "sfdcBookings",
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar",
+            "e-key": "bar",
+            "data-key": "perfSummary",
+            "data": []
+        }],
+        "refresh_ldos": [{
+            "title": "",
+            "description": "",
+            "type": "bar_double",
+            "e-key": "bar_double",
+            "data-key": "actSfdc",
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "line",
+            "e-key": "line",
+            "data-key": "sfdcBookings",
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar",
+            "e-key": "bar",
+            "data-key": "perfSummary",
+            "data": []
+        }],
+        "tsRenew": [{
+            "title": "",
+            "descriptions": ["In Quarter Renewal Rate", "Renewal Rate Progression - Quarterly Comparison", "Renewal Rate by Sales Levels"],
+            "type": "bar",
+            "types": ["bar", "line_chart_rr", "line"],
+            "e-key": "bar",
+            "hasSub": true,
+            "expanded": 0,
+            "data-key": "totalRenewalRateProgression",
+            "categories": ["In Quarter Renewal Rate", "Renewal Rate Progression - Quarterly Comparison", "Renewal Rate by Sales Levels"],
+            "data": []
+        }, {
+            "title": "",
+            "descriptions": ["<p><b>Early</b> - Transaction date of contract renewal is in a quarter prior to the quarter when the contract line is scheduled to expire.</p><p><b>Ontime</b> - Transaction date of contract renewal is within the quarter when it is scheduled to expire and on/before it expires.</p><p><b>Late in Quarter</b> - Transaction date of contract renewal is after the day it expires, but within quarter of expiration.</p><p><b>Late</b> - Transaction date of contract renewal in any quarter after the contract line expiration quarter.</p>"],
+            "type": "bar_stacked",
+            "e-key": "bar_stacked",
+            "data-key": "renewalBookingsByQuarter",
+            "currentQuarter": "",
+            "data": []
+        }, {
+            "title": "",
+            "descriptions": [
+            "<p><b>Early</b> - Transaction date of contract renewal is in a quarter prior to the quarter when the contract line is scheduled to expire.</p><p><b>Ontime</b> - Transaction date of contract renewal is within the quarter when it is scheduled to expire and on/before it expires.</p><p><b>Late in Quarter</b> - Transaction date of contract renewal is after the day it expires, but within quarter of expiration.</p><p><b>Late</b> - Transaction date of contract renewal in any quarter after the contract line expiration quarter.</p>"
+            
+        ],
+            "type": "bar_stacked_horizontal",
+            "e-key": "bar_stacked_horizontal",
+            "data-tabs": true,
+            "data-custom-func": "renew",
+            "data-key": "renewalBookingsByQuarter",
+            "categories": ["TS Renewal Bookings by Sales Levels", "TS Renewal Bookings by Customers"],
+            "data": []
+        }],
+        "tsRenewDrill": [{
+            "title": "Renewal Rate Progression - Quarterly Comparison",
+            "description": "",
+            "type": "line_chart_rr",
+            "e-key": "line_chart_rr",
+            "hasSub": true,
+            "data-key": "inQuarterRenewalRate",
+            "categories": [],
+            "expanded": 0,
+            "data": [],
+            "keys": ["Services Renewed", "Total Renewal Opportunity"]
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked",
+            "e-key": "bar_stacked",
+            "data-key": "renewalBookingsByQuarter",
+            "currentQuarter": "",
+            "data": []
+        }, {
+            "title": "",
+            "description": "",
+            "type": "bar_stacked_horizontal",
+            "e-key": "bar_stacked_horizontal",
+            "data-tabs": true,
+            "data-custom-func": "renew",
+            "data-key": "renewalBookingsByQuarter",
+            "categories": ["TS Renewal Bookings by Sales Levels", "TS Renewal Bookings by Customers"],
+            "data": []
+        }],
+        "totalRenew": [{
+            "title": "",
+            "descriptions": ["In Quarter Total Renewal Rate", "Total Renewal Rate Progression - Quarterly Comparison", "Total Renewal Rate by Sales Levels"],
+            "type": "bar",
+            "types": ["bar", "line_chart_rr", "line"],
+            "e-key": "bar",
+            "hasSub": true,
+            "expanded": 0,
+            "data-key": "totalRenewalRateProgression",
+            "categories": ["In Quarter Total Renewal Rate", "Total Renewal Rate Progression - Quarterly Comparison", "Total Renewal Rate by Sales Levels"],
+            "data": []
+        }, {
+            "title": "",
+            "descriptions": ["<p><b>Early</b> - Transaction date of contract renewal is in a quarter prior to the quarter when the contract line is scheduled to expire.</p><p><b>Ontime</b> - Transaction date of contract renewal is within the quarter when it is scheduled to expire and on/before it expires.</p><p><b>Late in Quarter</b> - Transaction date of contract renewal is after the day it expires, but within quarter of expiration.</p><p><b>Late</b> - Transaction date of contract renewal in any quarter after the contract line expiration quarter.</p>"],
+            "type": "bar_stacked",
+            "e-key": "bar_stacked",
+            "data-key": "renewalBookingsByQuarter",
+            "currentQuarter": "",
+            "data": []
+        }, {
+            "title": "",
+            "descriptions": [
+            "<p><b>Early</b> - Transaction date of contract renewal is in a quarter prior to the quarter when the contract line is scheduled to expire.</p><p><b>Ontime</b> - Transaction date of contract renewal is within the quarter when it is scheduled to expire and on/before it expires.</p><p><b>Late in Quarter</b> - Transaction date of contract renewal is after the day it expires, but within quarter of expiration.</p><p><b>Late</b> - Transaction date of contract renewal in any quarter after the contract line expiration quarter.</p>"
+        ],
+            "type": "bar_stacked_horizontal",
+            "e-key": "bar_stacked_horizontal",
+            "data-tabs": true,
+            "data-custom-func": "renew",
+            "data-key": "renewalBookingsByQuarter",
+            "categories": ["Total Renewal Bookings by Sales Levels", "Total Renewal Bookings by Customers"],
+            "data": []
+        }],
+        "asRenew": [
+            {
+                "title": "AS Renew Bookings by Sales Levels",
+                "description": "",
+                "type": "line",
+                "e-key": "3line",
+                "data-key": "bookingsBySalesLevel",
+                "data": []
+            },
+            {
+                "title": "",
+                "description": "",
+                "type": "bar_stacked",
+                "e-key": "bar_stacked",
+                "keys": ["On Time", "Late", "Missed", "Remaining"],
+                "data-key": "annualMultiYearAndBreakdown",
+                "currentQuarter": "",
+                "categories":["AS Annual/Multi Year Renewals", "AS Renew Bookings Breakdown ($)"],
+                "data": []
+            },
+            {
+                "title": "",
+                "description": "",
+                "type": "line",
+                "e-key": "line",
+                "data-custom-func": "renew",
+                "data-key": "realizationAndConversionRates",
+                "categories":["Renewal Realization Rate (%)", "Renewal Conversion Rate (%)"],
+                "data": []
+            }
+        ],
+        "totalAttach": [{
+            "title": "",
+            "descriptions": [
+            "Total Attach Rate by Sales Levels",
+            "In Quarter Total Attach Rate"],
+            "type": "bar_target",
+            "types": ["bar_target","bar"],
+            "e-key": "bar_target",
+            "data-key": "corporateARBySales",
+            "unique_key": "corporate_attach_rate",
+            "hasNextSalesLevel": true,
+            "categories": ["Total Attach Rate by Sales Levels","In Quarter Attach Rate"],
+            "data": [],
+            "data_net": [],
+            "link": "https://cisco.jiveon.com/groups/attach-rate/"
+        }, {
+            "title": "Total Attach Rate by Months",
+            "description": ["Total Attach Rate by Months"],
+            "type": "line",
+            "e-key": "line",
+            "data-key": "corporateARByMonths",
+            "unique_key": "corporate_attach_rate",
+            "currentQuarter": "",
+            "data": [],
+            "data_net": []
+        }, {
+            "title": "In Quarter Total Attach Rate Progression Quarterly Comparision",
+            "descriptions": [
+            "<p>In Quarter Total Attach Rate Progression - Quarterly Comparision</p>"],
+            "type": "line_chart_rr",
+            "types": ["line_chart_rr"],
+            "e-key": "line_chart_rr",
+            "data-custom-func": "attach-perf-benchmark",
+            "data-key": "arQuarterlyProgression",
+            "data": [],
+            "expanded": 0,
+            "keys": ["Services Sold", "Total services"]
+        }],
+        "tsAttach": [{
+            "title": "",
+            "descriptions": ["<p><b>Corporate 15/12 Attach Rate</b></p><p>The 15/12 metric is a standard corporate view for attach rate. 15 months to attach service are divided by 12 months of shipments. The 3 recent months of shipment are not included, as the calculation allows for 90 days beyond the 12 months of shipments to attach services, in order to maximize the attach rate. The 15/12 attach rate is a rolling metric, which means that every time you look at it, you are looking at prior 15 months that align with a given month.</p><p><b>Example</b>-  Let’s imagine that we want to inspect the 15/12 attach rate for July FY17. To do that, we need to look at products shipped from May FY16 through April FY 17. The service booking for this timeframe can occur anytime during the 15 month period between May FY16 through July FY17. The last 3-month period (May, June and July of FY 17) provides extra time to attach services for products shipped between May FY17 and April FY17.</p>","<p> <b>Commercial Warranty (Wholesale) –</b> OEM product without end user attributes.</br> <b>Short Term Warranty – </b> Term limited Warranties that are less than 2 years duration.</br><b>Long Term Warranty –</b>Term limited Warranties equal or greater than 2 years (currently up to 5 years).</br> <b>LIFE –</b> Warranties without a fixed term, bounded by EoL process. 5 total types, includes LLW and ELLW Warranties.</p>"],
+            "type": "bar_target",
+            "types": ["bar_target", "bar", "bar"],
+            "e-key": "bar_target",
+            "data-key": "corporateARBySales",
+            "unique_key": "corporate_attach_rate",
+            "hasNextSalesLevel": true,
+            "categories": ["Corporate 15/12 Attach Rate by Sales Levels", "Corporate 15/12 Attach Rate by Warranty Types", "In Quarter Attach Rate"],
+            "data": [],
+            "data_net": [],
+            "link": "https://cisco.jiveon.com/groups/attach-rate/"
+        }, {
+            "title": "Corporate 15/12 Attach Rate by Months",
+            "description": "Corporate 15/12 Attach Rate by Months",
+            "type": "line",
+            "e-key": "line",
+            "data-key": "corporateARByMonths",
+            "unique_key": "corporate_attach_rate",
+            "currentQuarter": "Q1FY15",
+            "data": []
+        }, {
+            "title": "",
+            "descriptions": [
+            "<p>Attach Rate Progression - Quarterly Comparison</p>",
+            "<p><b>Business Value</b>- supplemental metric to cover lack of visibility on Service Attach to recent 3 months of product shipments in 15/12 Attach Rate metric.</p><p><b>Example</b>- <br>20 items shipped in April FY17.<br>10 items had Services Attached in 10 days, another 10 items were Attached in 20 days.<br>Average Days to Attach in April FY17 = 15 days.</p>",
+            "<p><b>Business Value</b>- supplemental metric to cover lack of visibility on Service Attach to recent 3 months of product shipments in 15/12 Attach Rate metric.</p><p><b>Example</b>- <br>20 items shipped in April FY17.<br>10 items had Services Attached in 10 days, another 10 items were Attached in 20 days.<br>Average Days to Attach in April FY17 = 15 days.</p>"
+        ],
+            "type": "line_chart_rr",
+            "types": ["line_chart_rr", "square_block", "square_block"],
+            "e-key": "line_chart_rr",
+            "data-custom-func": "attach-perf-benchmark",
+            "data-key": "arQuarterlyProgression",
+            "categories": ["Attach Rate Progression Quarterly Comparision", "Average Days to Attach by Sales Levels", "Average Days to Attach by Customers"],
+            "data": [],
+            "keys": ["Services Sold", "Total services"],
+            "expanded": 0
+        }],
+        "swssAttach": [{
+            "title": "",
+            "descriptions": [
+            "SWSS Attach Rate by Sales Levels",
+            "In Quarter SWSS Attach Rate"],
+            "type": "bar_target",
+            "types": ["bar_target","bar"],
+            "e-key": "bar_target",
+            "data-key": "corporateARBySales",
+            "unique_key": "corporate_attach_rate",
+            "hasNextSalesLevel": true,
+            "categories": ["SWSS Attach Rate by Sales Levels","In Quarter Attach Rate"],
+            "data": [],
+            "data_net": [],
+            "link": "https://cisco.jiveon.com/groups/attach-rate/"
+        }, {
+            "title": "SWSS Attach Rate by Months",
+            "description": "SWSS Attach Rate by Months",
+            "type": "line",
+            "e-key": "line",
+            "data-key": "corporateARByMonths",
+            "unique_key": "corporate_attach_rate",
+            "currentQuarter": "",
+            "data": [],
+            "data_net": []
+        }, {
+            "title": "",
+            "descriptions": [
+            "<p>In Quarter SWSS Attach Rate Progression - Quarterly Comparision</p>",
+            "<p><b>Business Value</b>- supplemental metric to cover lack of visibility on Service Attach to recent 3 months of product shipments in 15/12 Attach Rate metric.</p><p><b>Example</b>- <br>20 items shipped in April FY17.<br>10 items had Services Attached in 10 days, another 10 items were Attached in 20 days.<br>Average Days to Attach in April FY17 = 15 days.</p>",
+            "<p><b>Business Value</b>- supplemental metric to cover lack of visibility on Service Attach to recent 3 months of product shipments in 15/12 Attach Rate metric.</p><p><b>Example</b>- <br>20 items shipped in April FY17.<br>10 items had Services Attached in 10 days, another 10 items were Attached in 20 days.<br>Average Days to Attach in April FY17 = 15 days.</p>"
+        ],
+            "type": "line_chart_rr",
+            "types": ["line_chart_rr", "square_block", "square_block"],
+            "e-key": "line_chart_rr",
+            "data-custom-func": "attach-perf-benchmark",
+            "data-key": "arQuarterlyProgression",
+            "categories": ["In Quarter SWSS Attach Rate Progression Quarterly Comparision", "Average Days to Attach by Sales Levels", "Average Days to Attach by Customers"],
+            "data": [],
+            "keys": ["Services Sold", "Total services"],
+            "expanded": 0
+        }],
+        "swssRenew": [{
+            "title": "",
+            "descriptions": ["In Quarter SWSS Renewal Rate", "SWSS Renewal Rate Progression - Quarterly Comparison", "SWSS Renewal Rate by Sales Levels", "SWSS Renewal Rate by Architecture"],
+            "type": "bar",
+            "types": ["bar", "line_chart_rr", "line","line"],
+            "e-key": "bar",
+            "hasSub": true,
+            "data-key": "totalRenewalRateProgression",
+            "categories": ["In Quarter SWSS Renewal Rate", "SWSS Renewal Rate Progression - Quarterly Comparison", "SWSS Renewal Rate by Sales Levels","SWSS Renewal Rate by Architecture"],
+            "data": []
+        },  {
+            "title": "",
+            "descriptions": ["<p><b>Early</b> - Transaction date of contract renewal is in a quarter prior to the quarter when the contract line is scheduled to expire.</p><p><b>Ontime</b> - Transaction date of contract renewal is within the quarter when it is scheduled to expire and on/before it expires.</p><p><b>Late in Quarter</b> - Transaction date of contract renewal is after the day it expires, but within quarter of expiration.</p><p><b>Late</b> - Transaction date of contract renewal in any quarter after the contract line expiration quarter.</p>"],
+            "type": "bar_stacked",
+            "e-key": "bar_stacked",
+            "data-key": "renewalBookingsByQuarter",
+            "currentQuarter": "",
+            "data": []
+        }, {
+            "title": "",
+            "descriptions": [
+            "<p><b>Early</b> - Transaction date of contract renewal is in a quarter prior to the quarter when the contract line is scheduled to expire.</p><p><b>Ontime</b> - Transaction date of contract renewal is within the quarter when it is scheduled to expire and on/before it expires.</p><p><b>Late in Quarter</b> - Transaction date of contract renewal is after the day it expires, but within quarter of expiration.</p><p><b>Late</b> - Transaction date of contract renewal in any quarter after the contract line expiration quarter.</p>"
+           
+        ],
+            "type": "bar_stacked_horizontal",
+            "e-key": "bar_stacked_horizontal",
+            "data-tabs": true,
+            "data-custom-func": "renew",
+            "data-key": "renewalBookingsByQuarter",
+            "categories": ["SWSS Renewal Bookings by Sales Levels", "SWSS Renewal Bookings by Customers"],
+            "data": []
+           
+            
+        }]
+    },
+    "servicesData":{
+        "tsRenew_overview": [{
+            "id": 0,
+            "title": "QTD Weekly Renewal Bookings",
+            "description": "<p>For each week within the quarter, you'll see a cumulative bookings progression. Bookings are split into Early, Late, Late in Quarter or Late designations. Trend Line shows previous year bookings</p> <p><b>Early</b> - Transaction date of contract renewal occurs in a quarter prior to the quarter when the contract line is scheduled to expire</p><p><b>On-Time </b>- Transaction date of contract renewal occurs within the quarter, either on/before it was scheduled to expire.</p><p><b>Late Within Quarter</b> - Transaction date of contract renewal occurs after the day it expires, but within quarter of expiration</p><p><b>Late</b> - Transaction date of contract renewal occurs any quarter after the contract line expiration quarter</p><p><b>Price</b> - Service Contract Net.</p>",
+            "type": "bar_stacked",
+            "data-key": "period",
+            "keys": [],
+            "sldData": [],
+            "previous_data": [],
+             "currentQuarter": ""
+        }, {
+            "id": 1,
+             "title": "Renewal by",
+            "descriptions": ["<p>Renewal Bookings for a selected quarter are broken down by either Sales Level or top 25 Customers. The Bookings are split into Early, Late, Late in Quarter or Late designations. Trend Line shows previous year bookings </p><p><b>Early:</b> Transaction date of contract renewal occurs in a quarter prior to the quarter when the contract line is scheduled to expire</p><p><b>On-Time</b>: Transaction date of contract renewal occurs within the quarter, either on/before it was scheduled to expire.</p><p><b>Late Within Quarter:</b> Transaction date of contract renewal occurs after the day it expires, but within quarter of expiration</p><p><b>Late:</b> Transaction date of contract renewal occurs any quarter after the contract line expiration quarter</p>","<p>The chart illustrates the opportunity for additional renewals within the selected Quarter.  Each Sales Level/Customer opportunity is segmented by Active, Overdue, Expired and Signed.</p><p><b>Active:</b> Contract Lines (Active status) that are expiring within current quarter.</p><p><b> Overdue:</b> Contract Lines expiring within current quarter that are past expiration date, but within 30 days grace period. </p><p><b>Expired:</b> Contract Lines expiring within current quarter that are past expiration date plus 30 days. </p><p><b>Signed:</b> Contract Lines in Signed status that are not Active yet</p>"],
+            "data-key": "period",
+            "type": "bar_stacked_horizontal",
+             "categories":["Renewal Bookings by Sales Levels", "Top 25 Renewal Bookings by Customers"],
+             "activeCategory": 1,
+             "keys": [],
+             "sldData": []
+        }, {
+            "id": 2,
+           "title": "Renewal by",
+             "descriptions": ["Opportunities by Sales Levels", "Top 25 Opportunity by Customers"],
+            "type": "bar_stacked_horizontal",
+             "data-key": "spc",
+            "keys": [],
+             "categories":["Opportunities by Sales Levels", "Top 25 Opportunity by Customers"],
+            "activeCategory": 1,
+            "sldData": []
+        }],
+        "tsRenew_booking": [{
+            "id": 0,
+            "title": "TS Renewal Bookings Annual vs Multi-Year",
+            "description": "<p>This chart compares the annualized renewal bookings versus the Multi-year renewal bookings for that specific quarter.  The triangles above each line is a comparison of the same quarter the previous year.  A green triangle means an improvement, while a red triangle means a decrease in performance.</p>",
+            "type": "bar_double",
+             "data-key": "period",
+            "keys": [],
+            "sldData": []
+        }, {
+            "id": 1 ,
+            "title": "TS Renewal Bookings by Route to Market",
+            "description": "<p>Comparison of TS Renewal Bookings between FY 2017 and FY 2016. It also segments the Renewal Bookings by either Cisco Direct or Partner led.</p>",
+            "data-key": "period",
+            "type": "bar_double_horizontal_stacked",
+             "data-key": "period",
+            "keys": [],
+            "sldData": [],
+            "years":[]
+        }, {
+            "id": 2,
+            "title": "TS Renewal Bookings by Quarter",
+            "description": "<p>Illustrates Renewal Bookings by FY Quarters.  Each quarter is segmented into Early, On-time, Late in Quarter and Late designations.</p><p><b>Early</b> - Renewal Booking occurs in a quarter prior to the quarter when the contract line is scheduled to expire_x000D_</p><p><b>On-Time</b> - Renewal Booking occurs within the quarter, either on/before it was scheduled to expire._x000D_</p><p><b>Late Within Quarter</b> - Renewal Booking occurs after the day it expires, but within quarter of expiration_x000D_</p><p><b>Late</b> - Renewal Booking occurs any quarter after the contract line expiration quarter.</p>",
+            "type": "bar_stacked",
+             "data-key": "spc",
+            "keys": [],
+            "categories":"",
+            "sldData": []
+        }],
+        "tsRenew_opportunity": [{
+            "id": 0,
+            "title": "Opportunity Overview",
+            "description": "<p>Displays Renewal opportunities (based on the Total Actionable Opportunity(TAO) definition), segmented by the contract line status. Either Active, Overdue, Expired or Signed.</p><p><b>Active:</b> Contract Lines (Active status) that are expiring within current quarter</p><p><b>Overdue:</b> Contract Lines expiring within current quarter that are past expiration date, but within 30 days grace period</p><p><b>Expired:</b> Contract Lines expiring within current quarter that are past expiration date plus 30 days</p><p><b> Signed:</b> Contract Lines in Signed status that are not Active yet</p><p> <b>Timeline:</b> Current quarter, 15 future quarters, 5 past quarters (that are not past LDoS or approaching LDoS in the next 12 months)</p>",
+            "type": "pie",
+             "data-key": "period",
+            "keys": [],
+            "sldData": []
+        }, {
+            "id": 1,
+            "title": "TS Renew Opportunity by Quarter",
+            "description": "<p>Illustrates Renewal Opportunities by FY Quarters.  Each quarter is segmented by Active, Overdue, Expired or a Signed status.</p><p><b>Active</b> - Contract Lines (Active status) that are expiring within current quarter _x000D_</p><p><b>Overdue</b> - Contract Lines expiring within current quarter that are past expiration date, but within 30 days grace period_x000D_</p><p><b>Expired</b> - Contract Lines expiring within current quarter that are past expiration date plus 30 days_x000D_</p><p><b>Signed</b> - Contract Lines in Signed status that are not Active yet.</p>",
+            "data-key": "period",
+            "type": "bar_stacked",
+             "data-key": "period",
+            "keys": [],
+            "sldData": []
+        }, {
+            "id": 2,
+            "title": "Renewal by",
+            "descriptions": ["<p>Renewal Opportunities are list by Sales Level or Top Customers and ranked by largest to smallest. The Opportunity is based on TAO definitions unless a the timeframe is filtered in the previous chart. Each individual ranking is segmented by Active, Overdue, Expired or Signed status.</p><p><b> Active:</b> Contract Lines (Active status) that are expiring within current quarter </p><p><b>Overdue:</b>Contract Lines expiring within current quarter that are past expiration date, but within 30 days grace period </p><b>Expired:</b> Contract Lines expiring within current quarter that are past expiration date plus 30 days </p><p><b>Signed:</b> Contract Lines in Signed status that are not Active yet.</p>", "Top 25 Opportunity by Customers"],
+            "type": "bar_stacked_horizontal",
+             "data-key": "spc",
+            "keys": [],
+            "categories":["Opportunities by Sales Levels", "Top 25 Opportunity by Customers"],
+            "activeCategory": 1,
+            "sldData": []
+        }],
+        "tsRenew_realization": [{
+            "activeCategory":0,
+            "categories":[],
+            "currentQuarter":"",
+            "title": "Renewal Rate Progression - Quarterly Comparison",
+            "description": "<p>The chart looks at the renewal opportunities for one specific FY Quarter and captures the percentages of those renewals that occurred early (previous 2 quarters), the renewal quarter (in gray) and the late renewals (following 4 quarters).</p>",
+            "type": "line_chart_rr",
+            "disableExpandIcon":true,
+            "expanded": 1,
+            "data-key": "period",
+            "keys": [],
+            "sldData": [],
+            "viewType":"chart",
+            "realization":true
+        }],
+        "tsAttach_overview": [{
+            "id": 0,
+             "title": "QTD Weekly Attach Service Sold",
+            "description": "<p>The chart captures Attach Service Sold, by week, within the selected quarter.  The solid line reflects the previous years performance. The dashed line labeled Target, is the targeted attached rate goal for that particular quarter.</p>",
+            "type": "bar_stacked",
+             "data-key": "period",
+            "keys": [],
+            "sldData": [],
+            "previous_data": [],
+             "currentQuarter": "",
+            "target":""
+        }, {
+            "id": 1,
+             "title": "Attach by",
+            "descriptions": ["<p>Illustrates Attach Service Sold, for the selected quarter, by either Sales Level or Top Customers.  The rankings from  largest to smallest.</p>","QTD Top 25 Attach Service Sold by Customers"],
+            "data-key": "period",
+            "type": "bar_stacked_horizontal",
+             "categories":["Attach Service Sold by Sales Levels", "QTD Top 25 Attach Service Sold by Customers"],
+             "activeCategory": 1,
+             "keys": [],
+             "sldData": []
+        }, {
+            "id": 2,
+           "title": "Attach by",
+             "descriptions": ["<p>Unattached items, based on the 15/12 attached formula, ranked by largest to smallest.  Each individual line is segmented by Architecture.</p>", "Unattached Shipments by Customers"],
+            "type": "bar_stacked_horizontal",
+             "data-key": "spc",
+            "keys": [],
+             "categories":["Unattached Shipments by Sales Levels", "Unattached Shipments by Customers"],
+            "activeCategory": 1,
+            "sldData": []
+        }],
+        "tsAttach_booking": [{
+            "id": 0,
+            "title": "TS Attach Service Sold - Annual vs Multi-Year",
+            "description": "TS Attach Service Sold - Annual vs Multi-Year",
+            "type": "bar_double",
+             "data-key": "period",
+            "keys": [],
+            "sldData": []
+        }, {
+            "id": 1 ,
+            "title": "TS Attach Service Sold by Route to Market",
+            "description": "<p>Comparison of TS Attach Service Sold between FY 2017 and FY 2016. It also segments the Attach Service Sold by either Cisco Direct or Partner led.</p>",
+            "data-key": "period",
+            "type": "bar_double_horizontal_stacked",
+             "data-key": "period",
+            "keys": [],
+            "sldData": [],
+            "years":[]
+        }, {
+            "id": 2,
+            "title": "Service Sold by Shipment Month",
+            "description": "<p>Services sold or not sold for products booked in those specific months.</p>",
+            "type": "bar_stacked",
+             "data-key": "spc",
+            "keys": [],
+            "categories":"",
+            "currentMonth":"",
+            "sldData": []
+        }],
+        "tsAttach_opportunity": [{
+            "id": 0,
+            "title": "Unattached Shipments by Architecture",
+            "description": "<p>Unattached (uncovered) items, shipped over the last 15 months, that are segmented by Architecture.</p>",
+            "type": "pie",
+             "data-key": "period",
+            "keys": [],
+            "sldData": []
+        }, {
+            "id": 1,
+            "title": "Unattached Shipments by Period",
+            "description": "<p>Chart illustrates currently Unattached (Uncovered) items, shipped in a specific month and segmented by Architecture.</p>",
+            "data-key": "period",
+            "type": "bar_stacked",
+             "data-key": "period",
+            "keys": [],
+            "currentMonth":"",
+            "sldData": []
+        }, {
+            "id": 2,
+            "title": "Attach by",
+            "descriptions": ["<p>Unattached items that were shipped within the last 15 months, by either Sales Level or Top Customers and ranked by largest to smallest.  Each individual ranking is segmented by Architecture.</p>", "Unattached Shipments by Customers"],
+            "type": "bar_stacked_horizontal",
+             "data-key": "spc",
+            "keys": [],
+            "categories":["Unattached Shipments by Sales Levels", "Unattached Shipments by Customers"],
+            "activeCategory": 1,
+            "sldData": []
+        }],"tsAttach_realization": [{
+            "title": "Corporate 15/12 Attach Rate",
+            "descriptions": ["<p>The 15/12 metric is a standard corporate view for attach rate. 15 months to attach service are divided by 12 months of shipments. The 3 recent months of shipment are not included, as the calculation allows for 90 days beyond the 12 months of shipments to attach services, in order to maximize the attach rate. The 15/12 attach rate is a rolling metric, which means that every time you look at it, you are looking at prior 15 months that align with a given month.</p><p><b>Example:</b>  Let’s imagine that we want to inspect the 15/12 attach rate for July FY17. To do that, we need to look at products shipped from May FY16 through April FY 17.  The service booking for this timeframe can occur anytime during the 15 month period between May FY16 through July FY17.  The last 3-month period (May, June and July of FY 17) provides extra time to attach services for products shipped between May FY17 and April FY17.</p>", "<p>This is a quarterly view of product shipped and new services attached within a specific quarter.  The green/red triangles compares the quarter with the previous years quarter.  Green means it's increased and red means it's decreased.</p>", "<p>This graph illustrates the Attach rate by month and compare it with the different, selectable nodes.</p>"],
+            "unique_key": "corporate_attach_rate",
+            "expanded": true,
+            "disableExpandIcon": true,
+            "categories":["Corporate 15/12 Attach Rate", "In Quarter Attach Rate", "Attach Rate by Sales Levels"],
+            "activeCategory":0,
+            "types": ["bar", "bar", "line"],
+            "type": "bar",
+            "data": [],
+            "data_net":[]
+        }]
+    },
+    "chartListViewLabel": {
+        "Asset View by Product": "Product Type",
+        "Asset View by Processing Date- FQ": "Fiscal Quarter",
+        "Asset View by Processing Date- FY": "Fiscal Year",
+        "Asset View by Processing Date- FM": "Fiscal Month",
+        "Asset View by Sales Levels": "Sales Levels",
+        "Asset View by Partners": "Partners",
+        "Asset View by Customers": "Customers",
+        "Asset View by Account Managers": "Account Managers",
+        "Total Opportunities by Type": "Opportunity Type",
+        "Total Opportunities by Period": "Period",
+        "Total Opportunities by Sales Levels": "Sales Levels",
+        "Total Opportunities by Partners": "Partners",
+        "Total Opportunities by Customers": "Customers",
+        "Total Opportunities by Account Managers": "Account Managers",
+        "Refresh by Architecture": "Architectures",
+        "Opportunity by Ship Period": "Architectures",
+        "Refresh by Sales Levels": "Sales Levels",
+        "Refresh by Partners": "Partners",
+        "Refresh by Customers": "Customers",
+        "Refresh by Period": "Architectures",
+        "Refresh SFDC Bookings" : "Period",
+        "Actionable Opportunity vs. SFDC Pipeline ": "Period",
+        "SFDC Booked Deals": "Architectures",
+        "Age of Install Summary": "Period",
+        "Opportunities by EOS Period": "Architectures",
+        "Opportunities by Sales Levels": "Sales Levels",
+        "Opportunities by Partners": "Partners",
+        "Opportunities by Customers": "Customers",
+        "Opportunities by LDOS Period- FQ": "Architectures",
+        "Opportunities by LDOS Period- FM": "Architectures",
+        "Opportunities by LDOS Period- FY": "Architectures",
+        
+        "Security Subscription by Sub BEs": "Sub BEs",
+        "Security Subscription by Contract Expiry": "Sub BEs",
+        "Collab Subscription by Sub BEs": "Sub BEs",
+        "Collab Subscription by Contract Expiry": "Sub BEs",
+        "Other Subscription by BEs": "BEs",
+        "Security Subscription by Contract/Term Expiry- FQ": "Sub BEs",
+        "Security Subscription by Contract/Term Expiry- FY": "Sub BEs",
+        "Security Subscription by Contract/Term Expiry- FM": "Sub BEs",
+        "Collab Subscription by Contract/Term Expiry- FQ": "Sub BEs",
+        "Collab Subscription by Contract/Term Expiry- FY": "Sub BEs",
+        "Collab Subscription by Contract/Term Expiry- FM": "Sub BEs",
+        "Other Subscription by Contract/Term Expiry- FQ": "BEs",
+        "Other Subscription by Contract/Term Expiry- FY": "BEs",
+        "Other Subscription by Contract/Term Expiry- FM": "BEs",
+        
+        "Renewal by Type": "Opportunity Type",
+        "Total Renewal by Period- FQ": "Fiscal Quarter",
+        "Total Renewal by Period- FY": "Fiscal Year",
+        "Total Renewal by Period- FM": "Fiscal Month",
+        "Renewal by Sales Levels": "Sales Levels",
+        "TS Renewal by Period- FQ": "Fiscal Quarter",
+        "TS Renewal by Period- FY": "Fiscal Year",
+        "TS Renewal by Period- FM": "Fiscal Month",
+        "Renewal by Partners": "Partners",
+        "Renewal by Customers": "Customers",
+        "In Quarter Renewal Rate": "Period",
+        "Renewal Rate by Sales Levels": "Period",
+        "TS Renewal Bookings by Quarter": "Period",
+        "TS Renewal Bookings by Sales Levels": "Sales Levels",
+        "TS Renewal Bookings by Partners": "Partners",
+        "TS Renewal Bookings by Customers": "Customers",
+        "SWSS Renewal Bookings by Quarter":"Period",
+        "SWSS Renewal by Type": "Opportunity Type",
+        "SWSS Renewal by Period- FQ": "Fiscal Quarter",
+        "SWSS Renewal by Period- FY": "Fiscal Year",
+        "SWSS Renewal by Period- FM": "Fiscal Month",
+        "SWSS Renewal by Sales Levels": "Sales Levels",
+        "SWSS Renewal by Partners": "Partners",
+        "SWSS Renewal by Customers": "Customers",
+        "SWSS Renew by Architecture": "Period",
+        "SWSS Renew Breakdown ($)": "Period",
+        "SWSS Renew Breakdown (%)": "Period",
+        "AS Renew by Period- FQ": "Fiscal Quarter",
+        "AS Renew by Period- FY": "Fiscal Year",
+        "AS Renew by Period- FM": "Fiscal Month",
+        "AS Renew by Sales Levels": "Sales Levels",
+        "AS Renew by Partners": "Partners",
+        "AS Renew by Customers": "Customers",
+        "AS Renew by Current, Overdue & Expired": "Renewals",
+        "AS Renew Bookings by Sales Levels": "Sales Levels",
+        "AS Annual/Multi Year Renewals": "Period",
+        "AS Renew Bookings Breakdown ($)": "Period",
+        "Renewal Realization Rate (%)": "Period",
+        "Compare Renewal Realization Rate (%)": "Period",
+        "Renewal Conversion Rate (%)": "Period",
+        "Compare Renewal Conversion Rate (%)": "Period",
+        "Total Attach by Type": "Opportunity Type",
+        "Total Attach by Period- FQ": "Fiscal Quarter",
+        "Total Attach by Period- FY": "Fiscal Year",
+        "Total Attach by Period- FM": "Fiscal Month",
+        
+        "Total Attach by Sales Levels": "Sales Levels",
+        "Total Attach by Partners": "Partners",
+        "Total Attach by Customers": "Customers",
+        "Unattached Shipments by Architecture": "Architectures",
+        "Unattached Shipments by Period- FQ": "Fiscal Quarter",
+        "Unattached Shipments by Period- FY": "Fiscal Year",
+        "Unattached Shipments by Period- FM": "Fiscal Month",
+        "Unattached Shipments by Sales Levels": "Sales Levels",
+        "Unattached Shipments by Partners": "Partners",
+        "Unattached Shipments by Customers": "Customers",
+        "Service Sold by Month": "Period",
+        "Service Sold by Shipment Month": "Period",
+        "New Bookings by Sales Levels": "Sales Levels",
+        "New Bookings by Customers": "Customers",
+        "SWSS Attach Aging": "Aging Buckets",
+        "SWSS Attach by Period - FQ": "Fiscal Quarter",
+        "SWSS Attach by Period - FY": "Fiscal Year",
+        "SWSS Attach by Period - FM": "Fiscal Month",
+        "SWSS Attach by Sales Levels": "Sales Levels",
+        "SWSS Attach by Partners": "Partners",
+        "SWSS Attach by Customers": "Customers",
+        "SWSS Attach by Architecture": "Period",
+        "SWSS Attach Performance ($)": "Period",
+        "Opportunities Overview": "Architectures",
+        "Shipment History": "Architectures",
+        "Opportunities by Account Managers": "Account Managers",
+        "Cisco ONE Migration Opportunities by Suite": "Suites",
+        "Cisco ONE Shipment by Quarter (Performance)": "Period",
+        "Cisco ONE Licenses Sold by Quarter": "Period",
+        "Cisco ONE Migration Opportunities by Sales Levels": "Sales Levels",
+        "Cisco ONE Migration Opportunities by Partners": "Partners",
+        "Cisco ONE Migration Opportunities by Customers": "Customers",
+        "QTD Weekly Renewal Bookings": "Period",
+        "Top 25 Renewal Bookings by Sales Levels": "Sales Levels",
+        "Top 25 Renewal Bookings by Customers": "Customers",
+        "Top 25 Opportunity by Customers": "Customers",
+        "TS Renewal Bookings Annual vs Multi-Year": "Period",
+        "TS Renewal Bookings by Route to Market": "Market",
+        "Opportunity Overview": "Opportunity Type",
+        "TS Renew Opportunity by Quarter": "Period",
+        "Top 25 Opportunity by Sales Levels": "Sales Levels",
+        "Renewal Rate Progression - Quarterly Comparison": "Fiscal Qtr ID",
+        "QTD Weekly Attach Service Sold": "Period",
+        "Attached Service Sold by Sales Levels": "Sales Levels",
+        "QTD Top 25 Attach Service Sold by Customers": "Customers",
+        "TS Attach Service Sold - Annual vs Multi-Year": "Period",
+        "TS Attach Service Sold by Route to Market": "Market",
+        "Unattached Shipments by Age": "Aging Buckets",
+        "Corporate 15/12 Attach Rate by Sales Levels": "Sales Levels",
+        "Corporate 15/12 Attach Rate by Warranty Types": "Warranty Types",
+        "In Quarter Attach Rate": "AR Quarter",
+        "Corporate 15/12 Attach Rate by Months": "Period",
+        "SWSS Attach Rate by Sales Levels": "Sales Levels",
+        "In Quarter SWSS Attach Rate": "AR Quarter",
+         "Total Attach Rate by Sales Levels": "Sales Levels",
+        "In Quarter Total Attach Rate": "AR Quarter",
+        "Total Attach Rate by Months": "Period",
+        "SWSS Attach Rate by Months": "Period",
+        "In Quarter Total Renewal Rate" : "Period",
+        "Total Renewal Rate by Sales Levels": "Period",
+        "In Quarter SWSS Renewal Rate" : "Period",
+        "SWSS Renewal Rate by Sales Levels": "Period",
+        "SWSS Renewal Rate by Architecture": "Period"
+    }
+}

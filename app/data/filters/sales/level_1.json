@@ -1,0 +1,30 @@
+{
+    "selected": "",
+    "values": [
+        {
+            "id": -1,
+            "title": "All",
+            "value": "*"
+        }, {
+            "id": 0,
+            "title": "APJ",
+            "value": "APJ"
+        }, {
+            "id": 1,
+            "title": "Americas",
+            "value": "Americas"
+        }, {
+            "id": 2,
+            "title": "EMEAR-REGION",
+            "value": "EMEAR-REGION"
+        }, {
+            "id": 3,
+            "title": "GLOBAL SERVICE PROVIDER",
+            "value": "GLOBAL SERVICE PROVIDER"
+        }, {
+            "id": 4,
+            "title": "GREATER_CHINA",
+            "value": "GREATER_CHINA"
+        }
+    ]
+}

@@ -1,0 +1,238 @@
+<div id="wrapper" ng-class="{
+    'sidebar-active'
+            : sidebarActive, 'mobileAppliedFiltersActive' : mobileAppliedFiltersActive}" onclick="void(0);" class="secondChanceRefreshGrid {{opportunitiesActive + ' ' + subopportunity + ' ' + opportunitiesView}}">
+<!-- <filter-detail get-data="getData()" sidebar-active-toggle="sidebarActiveToggle()" template="views/filters.html"></filter-detail> -->
+<div>
+    <filter-detail></filter-detail>
+</div>
+<div class="filter-strip dark-blue campaign-collaboration-refresh clearfix" id="breadcrumb">
+    <div class="container-fluid">
+            <div class="row subHeaderWrap secondChanceSubHeader">
+                <div class="col-xs-12 col-md-3">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="">Campaigns</a></li>
+                        <li class="breadcrumb-item active">Second Chance</li>
+                    </ol>
+                    <p>Second Chance</p> 
+                </div>
+                <div class="col-xs-12 col-md-9">                   
+                    <div class="securityBtn pull-right"> 
+                        <a target="_blank" href="" uib-tooltip="Coming Soon" class="button blue-stroke disabled"><span>Sales Kit</span></a> 
+                        <a ng-click="openSecondChanceDefinition();" class="button blue-stroke marginL10"><span>Definition</span></a>
+                    </div> 
+                    <div class="text-right pull-right securityValue">
+                        <h4>Opportunity Amount ($)</h4>
+                        <h3 class="digit">{{header.opportunity_total|formatGridValue}}</h3>
+                    </div>
+                    <div class="pull-right text-right securityValueTotal">
+                        <h4># of Partners</h4>
+                        <h3 class="digit">{{header.no_of_partners|formatGridValue}}</h3>
+                    </div>
+                    <div class="pull-right text-right securityValueTotal">
+                        <h4># of Customers</h4>
+                        <h3 class="digit">{{header.no_of_customers|formatGridValue}}</h3>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+    
+ <div class="securitySlider clearfix" id="subheader">
+ 	<div class="container-fluid">
+ 		<div class="row subHeaderWrap">
+ 			<div class="col-xs-12 opportunity-total">
+               <ul>
+               		<li ng-repeat="d in slides">
+			            <h5>{{d.title}}<span>{{d.yearRange}}</span></h5>
+			            <ul>
+                            <li>
+                                <span>${{d.dataset|formatValue}}</span>
+                            </li>
+                        </ul>
+                    </li>
+               </ul>
+            </div>
+        </div>
+    </div>
+</div> 
+
+ <!-- Second Chance filter container  -->
+<div class="security-filter-strip clearfix" id="actions">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-7 clearfix" style="position:relative;">                
+                <div class="container-fluid filter-switch">
+                    <!-- Opportunities/Performance switch -->
+                    <div class="row">
+                        <div class="flexible-div">
+                            <div class="col-xs-12 paddingR0">
+                                <ul class="filter-opt pull-left">
+                                    <li class="dropdown">
+                                        <a href="" id="menu-toggle" class="show-filter" ng-click="sidebarActiveToggle(true); mobileAppliedFiltersActive = false;" ng-show="!sidebarActive">
+                                            <!-- <span class="ico-filter_bg count" count="{{appliedFiltersCount}}">-->
+                                            <span class="ico-filter_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="opt-head"><span>Show</span> Filters</span>
+                                        </a>
+                                        <a href="" id="menu-toggle" class="show-filter" ng-click="sidebarActiveToggle(false);" ng-show="sidebarActive">
+                                            <span class="ico-filter_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="opt-head"><span>Hide</span> Filters</span>
+                                        </a>
+                                    </li>
+                                    <li><span class="separater"></span></li>
+                                    <li class="dropdown">
+                                        <!--<a href="" class="hidden-lg opt-head view-applied" ng-click="openViewApplied(); mobileAppliedFiltersActive = true;"  ng-class="{'disabled':allowGenerateCollab()}" >View Applied</a>-->
+                                        <a href="" class="hidden-lg opt-head view-applied" ng-click="openViewApplied(); mobileAppliedFiltersActive = true;">View Applied</a>
+                                         <a href="" ng-click = "openViewApplied(appliedFilters)" class="visible-lg opt-head view-applied">View Applied ({{appliedFiltersCount}})</a>
+
+                                    </li>
+                                </ul>
+                                <ul class="filter-opt pull-left">
+                                    <li>
+                                        <span class="separator"></span>
+                                    </li>
+                                    <li class="opportunityRange">
+                                        <a href="" class="back-Performance" ng-click="openOpportunityRangeSlider()">
+                                            <span class="ico-range-bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="opt-head"><span>Opportunity</span> Range</span>
+                                        </a>
+                                    </li>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+                                 
+            <div class="col-sm-2 text-right toggleArea paddingR0" ng-hide="APIError">
+                <div class="total-asset-view secondChance-totalAsset">
+                    <div class="change-switch clearfix">
+                        <span class="slide-view">
+                            <span>Sales Account</span>
+                             View
+                        </span>
+                        <label class="switch">
+                            <input type="checkbox" ng-init="globalView = false" ng-click="toggleSavGlobalView()" />
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="slide-view global-view">
+                            <span>Global</span><br>
+                             View
+                        </span>
+                    </div>
+                </div> 
+                </div>
+                <div class="col-sm-3 text-right downloadArea paddingL0" ng-hide="APIError">
+                <div class="downloadTable" ng-mouseover="reports=true" ng-mouseleave="reports=false"> <a class="actionBtn" href="javascript:void(0)"><p>Actions</p><span class="ico-dropdown"></span></a>
+                    <div class="dropdown-menu blue-dropdown" ng-model="reports" ng-show="reports">
+                        <span class="ico-arrow-up">
+                            <span class="path1"></span><span class="path2"></span>
+                        </span> 
+                        <ul>                                                 
+                            <li data-ng-class="{'disabled':  checkboxCount === 0 || checkboxCount > 1 || lineCountSelected > 300000}" class="no-border">
+                                <a ng-click="openRequestReport('Request Smart IB Report')">Request Smart IB Report
+                                    <span ng-show="checkboxCount > 1">(Select only one account)</span><span class="head-desc">Smart IB report contains ALL customer data, with no other filters taken into account. Maximum 300k lines can be selected.</span>
+                                    <span ng-show="lineCountSelected > 0 && lineCountSelected <= 300000">{{lineCountSelected | formatGridValue}} out of 300K lines selected for download</span>
+                                    <span ng-show="lineCountSelected > 300000"  class="line-counts">
+                                        <span class="ico-danger">
+                                            <span class="path1"></span><span class="path2"></span>
+                                        </span>
+                                        <span class="text-warning">{{lineCountSelected | formatGridValue}} out of 300K lines selected for download</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li data-ng-class="{'disabled': checkboxCount === 0 || checkboxCount > 1 || lineCountSelected > 500000}">
+                                <a href="javascript:void(0);"
+                                   ng-click="openRequestReport('Request Customer Detail Report')">
+                                    Request Customer Details Report
+                                    <span ng-show="checkboxCount > 1">(Select only one account)</span><span class="head-desc">Customer Detail report contains ONLY data based on all filters applied. Maximum 500k lines can be selected</span>
+                                    <span ng-show="lineCountSelected > 0 && lineCountSelected <= 500000">{{lineCountSelected | formatGridValue}} out of 500K lines selected for download</span>
+                                    <span ng-show="lineCountSelected > 500000"  class="line-counts">
+                                        <span class="ico-danger">
+                                            <span class="path1"></span><span class="path2"></span>
+                                        </span>
+                                        <span class="text-warning">{{lineCountSelected | formatGridValue}} out of 500K lines selected for download</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a ng-click="onBtExport()">Download CSV File</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <span ng-hide="lineCountSelected > 0">You can select up to 500K lines for download</span>
+                <span ng-show="lineCountSelected > 0 && lineCountSelected <= 500000">{{lineCountSelected | formatGridValue}} has been selected for download</span>
+                <span ng-show="lineCountSelected > 500000"  class="line-counts">
+                    <span class="ico-danger">
+                        <span class="path1"></span><span class="path2"></span>
+                    </span>
+                    <span class="text-warning">{{lineCountSelected | formatGridValue}} has been selected for download</span>
+                </span>
+            </div>
+        </div> 
+    </div>
+</div>   
+
+<!-- Second Chance filter container end -->
+<!--ag grid plugin initialize for table  -->
+    <div ag-grid="gridOptions" ng-hide="APIError" id="ag-grid" class="ag-fresh secondChanceTable" style="width:100%;"></div>
+    <div class="agGrid-footerLText"><p>Data Shown in List Prices</p></div>
+    <div class="paginationSize" ng-hide="APIError" id="paginationHeight">
+        <label>View</label>
+          <select ng-model="dropdownsize" id="page-size" ng-change="onPageSizeChanged(dropdownsize)">
+          <option ng-repeat="option in paginationValues" value="{{option}}">{{option}}</option>
+        </select>     
+    </div>
+
+     <!-- row -->
+     <div class="row" ng-show="$root.accessIssue == 'timeout'">
+         <div class="col-sm-12">
+             <div class="page-level-msg error">
+                 <div class="error-ico">
+                     <img class="timeout" src="images/timeout.fab0c1c1.svg" alt="" /></div>
+                 <span class="error-msg">Time Out!</span>
+                 <span class="grey-text">Your session has timed out due to inactivity.<br>Please click to Sign In again.</span>
+                 <a href="" ng-click="logout()" class="button filled-btn blue"><span>Sign In</span></a>
+             </div>
+         </div>
+     </div>
+     <!--System down message starts here-->
+     <div class="row" ng-show="$root.accessIssue == 'systemdown'">
+         <div class="col-sm-12">
+             <div class="page-level-msg error">
+                 <div class="error-ico">
+                     <img class="systemdown" src="images/systemdown.5a263923.svg" alt="" /></div>
+                 <span class="error-msg">System is down for data updates!</span>
+                 <span class="grey-text">Please check back after some time.</span>
+             </div>
+         </div>
+     </div>
+     <!--System down message ends here-->
+     <!--No Data available message starts here-->
+     <div class="row" ng-show="APIError">
+         <div class="col-sm-12">
+             <div class="page-level-msg error">
+                 <div class="error-ico">
+                     <img class="nodata" src="images/nodata.d25a050a.svg" alt="" /></div>
+                 <span class="error-msg">No Data Available!</span>
+                 <span class="grey-text">Currently, there is no data available for your selection.</span>
+                 <span>You may want to review your filters.</span>
+                 <a href="" class="button filled-btn blue" ng-click="filtersServ.sidebarActive = true; sidebarActiveToggle();"><span>Review Filters</span></a>
+             </div>
+         </div>
+     </div>
+     <!--No Data available message ends here-->
+     <!--No access error starts here-->
+     <div class="row">
+         <div class="col-sm-12"  ng-show="$root.accessIssue == 'noaccess'">
+             <div class="page-level-msg error no-access">
+                 <div class="error-ico">
+                     <img class="noaccess" src="images/noaccess.d98cf106.svg" alt="" /></div>
+                 <span class="error-msg">No Access</span>
+                 <span class="grey-text">You are not authorized to view this page. </span>
+                 <span class="grey-text">For instructions on how to request access, </br>please visit the Cisco SalesConnect Access Guide webpage. </span>
+                 <a class="link-text" target="_blank" href="https://www.cisco.com/c/dam/en/us/products/se/2017/4/Collateral/Cisco_Ready_Access_Guide.pdf">Enrollment Guide</a>
+                 <a target="_blank" href="https://salesconnect.cisco.com/c/r/salesconnect/index.html#/content-detail/b5e2cb9a-25f3-4f59-9ae2-8ba3fe1326f5" class="button filled-btn blue"><span>For additional information - go to SalesConnect</span></a>
+             </div>
+         </div>
+     </div>
+     <!--No access error ends here-->
+</div>

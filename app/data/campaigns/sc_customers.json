@@ -1,0 +1,90 @@
+{
+  "participants": [
+    {
+      "group": "Electronic Arts",
+      "savID": "281929102",
+      "salesLevel": "COMMERCIAL CANADA",
+      "totalOpportunity": 190666.24,
+      "tsRenew": 13643226.26,
+      "tsAttach": 12450927.26,
+      "swssAttach": 1132341.42,
+      "swssRenew": 1671347.24,
+      "line_count": 80000,
+      "subParticipants": [
+        {}
+      ]
+    },
+    {
+      "group": "Health Quest",
+      "savID": "213298102",
+      "salesLevel": "COMMERCIAL CANADA",
+      "totalOpportunity": 180564.00,
+      "tsRenew": 23643226.26,
+      "tsAttach": 82450927.26,
+      "swssAttach": 4132341.42,
+      "swssRenew": 4671347.24,
+      "line_count": 70000,
+      "subParticipants": [
+        {}
+      ]
+    },
+    {
+      "group": "Apple APJ",
+      "savID": "291028192",
+      "salesLevel": "COMMERCIAL CANADA",
+      "totalOpportunity": 182124,
+      "tsRenew": 23643226.26,
+      "tsAttach": 52450927.26,
+      "swssAttach": 4132341.42,
+      "swssRenew": 4671347.24,
+      "line_count": 300000,
+      "subParticipants": [
+        {}
+      ]
+    },
+    {
+      "group": "UK-COM-ANOMALIES",
+      "savID": "229102281",
+      "salesLevel": "COMMERCIAL CANADA",
+      "totalOpportunity": 320502.26,
+      "tsRenew": 73643226.26,
+      "tsAttach": 32450927.26,
+      "swssAttach": 4132341.42,
+      "swssRenew": 4671347.24,
+      "line_count": 500000,
+      "subParticipants": [
+        {}
+      ]
+    },
+    {
+      "group": "EMC CORPORATION",
+      "savID": "232981021",
+      "salesLevel": "COMMERCIAL CANADA",
+      "totalOpportunity": 43563456,
+      "tsRenew": 13643226.26,
+      "tsAttach": 12450927.26,
+      "swssAttach": 1132341.42,
+      "swssRenew": 4671347.24,
+      "line_count": 55000,
+      "subParticipants": [
+        {}
+      ]
+    },
+    {
+      "group": "MOBILE TELESYSTEMS",
+      "savID": "281929102",
+      "salesLevel": "COMMERCIAL CANADA",
+      "totalOpportunity": 190666.24,
+      "tsRenew": 23643226.26,
+      "tsAttach": 32450927.26,
+      "swssAttach": 2132341.42,
+      "swssRenew": 2671347.24,
+      "line_count": 30000,
+      "subParticipants": [
+        {}
+      ]
+    }
+  ]
+}
+
+

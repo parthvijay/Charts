@@ -1,0 +1,41 @@
+{
+    "firstStep": {
+        "account": [
+            {
+                "id": 1,
+                "name": "Health Quest",
+                "address": "123 Main St. San Francisco CA USA"
+            },
+            {
+                "id": 2,
+                "name": "Health Quest Belmont (HQ)",
+                "address": "1250 Prospect Streer Ocean Level CA USA"
+            },
+            {
+                "id": 3,
+                "name": "Health Quest La Jolla",
+                "address": "1230 Peachtree St. NE Atlanta"
+            }
+        ],
+        "opportunity_stage": [
+            {
+                "id": 1,
+                "name": "Prospect"
+            },
+            {
+                "id": 2,
+                "name": "Qualification"
+            }
+        ],
+        "forecast_status": [
+            {
+                "id": 1,
+                "name": "Commit"
+            },
+            {
+                "id": 2,
+                "name": "Upside"
+            }
+        ]
+    }
+}

@@ -1,0 +1,77 @@
+[
+    {
+        "title": "Sales Levels",
+        "filters": [
+        ]
+    },
+    {
+        "title": "Architecture",
+        "filters": [
+            {
+                "id": 1,
+                "title": "Collaboration",
+                "checked": true
+            },
+            {
+                "id": 2,
+                "title": "Computing Systems",
+                "checked": true
+            },
+            {
+                "id": 3,
+                "title": "Enterprise Routing",
+                "checked": true
+            },
+            {
+                "id": 4,
+                "title": "IOT Software",
+                "checked": true
+            },
+            {
+                "id": 5,
+                "title": "Mobility",
+                "checked": true
+            },
+            {
+                "id": 6,
+                "title": "Other",
+                "checked": true
+            },
+            {
+                "id": 7,
+                "title": "Security",
+                "checked": true
+            },
+            {
+                "id": 8,
+                "title": "Service Provider Routing",
+                "checked": true
+            },
+            {
+                "id": 9,
+                "title": "SP Video Infrastructure",
+                "checked": true
+            },
+            {
+                "id": 10,
+                "title": "SP Video Software and Solution",
+                "checked": true
+            },
+            {
+                "id": 11,
+                "title": "Switching",
+                "checked": true
+            },
+            {
+                "id": 12,
+                "title": "Wireless",
+                "checked": true
+            }
+        ]
+    },
+    {
+        "title": "Sales Period",
+        "filters": [
+        ]
+    }
+]

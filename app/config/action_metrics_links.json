@@ -1,0 +1,42 @@
+[
+    {
+        "title": ".11ac WLAN (Adv Analytics Readiness)",
+        "link": "http://wwwin.cisco.com/c/cec/prods-industry/selling-en/solutions-campus.html"
+    },
+    {
+        "title": "ISR4K Penetration",
+        "link": "http://wwwin.cisco.com/c/cec/prods-industry/selling-en/solutions-branch/iwan.html"
+    },
+    {
+        "title": "LAN Capability (TrustSec Readiness)",
+        "link": "https://cisco.jiveon.com/groups/network-as-a-sensor/pages/overview"
+    },
+    {
+        "title": "Legacy ASA",
+        "link": "https://cisco.jiveon.com/groups/asa-security-migration"
+    },
+    {
+        "title": "Naked ASA",
+        "link": "https://cisco.jiveon.com/groups/asa-security-migration"
+    },
+    {
+        "title": "Modern DCS",
+        "link": "https://cisco.jiveon.com/docs/DOC-1332343"
+    },
+    {
+        "title": "Modern MDS",
+        "link": ""
+    },
+    {
+        "title": "Modern UCS",
+        "link": "https://cisco.jiveon.com/docs/DOC-1118531"
+    },
+    {
+        "title": "Theather Collab Index",
+        "link": ""
+    },
+    {
+        "title": "Your Collab Index",
+        "link": "http://refreshcollab.cisco.com/webportal/home"
+    }
+]

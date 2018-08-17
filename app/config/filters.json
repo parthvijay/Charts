@@ -1,0 +1,187 @@
+[
+    {
+        "title": "Sales",
+        "slug": "sales",
+        "active": true,
+        "progressive": true,
+        "type": "dropdown",
+        "levels_name": ["Sales Level 1", "Sales Level 2", "Sales Level 3", "Sales Level 4", "Sales Level 5", "Sales Level 6", "Account Manager", "SAV Account"],
+        "searchable": [false, false, false, false, false, false, true, true],
+        "selected": [],
+        "API_call": [true, false, false, false, false, false, false, false],
+        "new_func_call" :  [false, false, false, false, false, false, false, false],
+        "full_levels": [],
+        "levels": []
+    },
+    {
+        "title": "Account",
+        "slug": "account",
+        "active": false,
+        "progressive": false,
+        "type": "dropdown",
+        "levels_name": ["GU Name", "SAV Account", "Install Site", "Country", "Segment", "Vertical Market", "Partner", "Territory Coverage"],
+        "selected": [],
+        "searchable": [false, false, true, false, false, false, false, false],
+        "search_api": [true, true, false, false, false, false, true, false],
+        "API_call": [false, true, false, true, true, false, true, true],
+        "new_func_call" :  [true , false, true, false, false, true, false, false],
+        "full_levels": [],
+        "levels": [
+            [{}],
+            [],
+            [],
+            [],
+            [],
+            [{}],
+            [],
+            []
+        ]
+    },
+    {
+        "title": "Product",
+        "slug": "product",
+        "active": false,
+        "progressive": true,
+        "type": "dropdown",
+        "levels_name": ["Architecture", "Sub-Architecture", "Product Family", "Product ID", "Product Type", "Warranty","Suite", "Asset Type"],
+        "selected": [],
+        "searchable": [false, false, false, false, false, false, false, false],
+        "search_api": [false, false, true, true, false, false, false, false],
+        "API_call": [true, false, false, false, true, true, false, true],
+        "new_func_call" :  [false, false, false, false, false, false, true, true],
+        "full_levels": [],
+        "levels": [[], [], [], [], [], [],            
+            [{}],            
+            [   
+                {
+                    "keys": "Hardware"
+                },
+                {
+                    "keys": "Subscription - T&C"
+                },
+                {
+                    "keys": "Subscription - SaaS"
+                },
+                {
+                    "keys": "Perpetual Software"
+                }
+            ]]
+    },
+    {
+        "title": "Services",
+        "slug": "services",
+        "active": false,
+        "progressive": true,
+        "type": "dropdown",
+        "levels_name": ["Contract Type", "Contract Number", "Service SO"],
+        "searchable": [false, false, false],
+        "search_api": [true, true, true],
+        "disabled": [false, false, false],
+        "selected": [],
+        "full_levels": [],
+        "selected_values": [],
+        "API_call": [false, false, false],
+        "new_func_call" :  [true, true, true],
+        "levels": [
+            [{}],
+            [{}],
+            [{}]
+        ]
+    },
+    {
+        "title": "Dates",
+        "type": "date",
+        "active": false,
+        "categories": [
+            {
+                "title": "EoS Date",
+                "dates": "relativeDate",
+                "position": "Relative Date within",
+                "rangeFrom": "",
+                "rangeTo": "",
+                "period": ["Months","Quarters","Years"],
+                "selected":"Months",
+                "disabled": [false, false, false, false]
+            },
+            {
+                "title": "LDoS Date",
+                "dates": "relativeDate",
+                "position": "Relative Date within",
+                "rangeFrom": "",
+                "rangeTo": "",
+                "period": ["Months","Quarters","Years"],
+                "selected":"Months",
+                "disabled": [false, false, false, false]
+            },
+            {
+                "title": "Shipment / Processing Date",
+                "dates": "relativeDate",
+                "position": "Relative Date within",
+                "rangeFrom": "",
+                "rangeTo": "",
+                "period": ["Months","Quarters","Years"],
+                "selected":"Months",
+                "disabled": [false, false, false, false]
+            },
+            {
+                "title": "Covered Line / Term End Date",
+                "dates": "relativeDate",
+                "position": "Relative Date within",
+                "rangeFrom": "",
+                "rangeTo": "",
+                "period": ["Months","Quarters","Years"],
+                "selected":"Months",
+                "disabled": [false, false, false, false]
+            }
+        ]
+    },
+    {
+        "title": "Status",
+        "type": "status",
+        "active": false,
+        "categories": [
+            {
+                "title": "Coverage",
+                "selected": "All"
+            },
+            {
+                "title": "Network Collection",
+                "selected": "All"
+            },
+            {
+                "title": "SWEEPs Contracts",
+                "selected": "No"
+            }
+        ],
+        "options": ["All", "Yes", "No"]
+    },
+    {
+        "title": "Dataset",
+        "type": "dataset",
+        "active": false,
+        "categories": [
+            {
+                "title": "Covered IB Shipment/Processing FY Range",
+                "years": {
+                    "from": "1997",
+                    "to": "2019"
+                },
+                "default_years": {
+                    "from": "1997",
+                    "to": "2019"
+                }
+            },
+            {
+                "title": "Uncovered IB Shipment FY Range",
+                "years": {
+                    "from": "2013",
+                    "to": "2019"
+                },
+                "default_years": {
+                    "from": "2013",
+                    "to": "2019"
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "title": "TS Attach",
+        "minValue": 0,
+        "maxValue": 500
+    },
+    {
+        "title": "TS Renew",
+        "minValue": 0,
+        "maxValue": 500
+    },
+    {
+        "title": "SWSS Attach",
+        "minValue": 0,
+        "maxValue": 500
+    },
+    {
+        "title": "SWSS Renew",
+        "minValue": 0,
+        "maxValue": 500
+    }
+]

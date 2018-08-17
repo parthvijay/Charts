@@ -1,0 +1,13 @@
+{
+  "name": "d3-tip",
+  "homepage": "https://github.com/VACLab/d3-tip",
+  "_release": "0a683b55ab",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0a683b55ab4ee6fb3d158e7e19f7584d27208ead"
+  },
+  "_source": "https://github.com/VACLab/d3-tip.git",
+  "_target": "*",
+  "_originalSource": "VACLab/d3-tip"
+}

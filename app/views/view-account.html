@@ -1,0 +1,192 @@
+<div id="wrapper" ng-class="{
+            'sidebar-active'
+            : sidebarActive, 'mobileAppliedFiltersActive' : mobileAppliedFiltersActive}" onclick="void(0);"class="view-account">
+    <!-- Sidebar -->
+    <!-- <div id="sidebar-wrapper" class="filter-tab">
+        <filter-detail></filter-detail>
+    </div> -->
+
+<!-- View Account -->
+
+<div id="page-content-wrapper">
+        <div class="freezed-container">
+            <div class="grey-background">
+                    <div class="clearfix" style="position:relative;">
+                        <div class="container-fluid filter-switch">
+                            <!-- Opportunities/Performance switch -->
+                            <div class="row marginT10 marginB10">
+                                <div class="col-xs-12">
+                                    <a href="javascript:void(0)" class="refresh-back-btn marginT5" ng-click="goBackToRefresh()"><span class="ico-left-arrow-sm hvr-icon-pop"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+									<span class="back-btn-txt" ng-if="isComingFromRenew() !== 'drs'">{{isComingFromRenew() | capitalize}} by Customer</span>
+                                    <span class="back-btn-txt" ng-if="isComingFromRenew() === 'drs'">{{isComingFromRenew() | uppercase}} by Customer</span>
+
+									</a>
+                                </div>
+                            </div>
+                            <!-- <div class="row">
+                                <div class="col-xs-12 paddingR0 view-account">
+                                    <ul class="filter-opt inner-filter pull-left">
+                                        <li>
+                                            <a href="" id="menu-toggle" class="show-filter" ng-click="sidebarActiveToggle(true); mobileAppliedFiltersActive = false;" ng-show="!sidebarActive">
+                                                <span class="ico-filter_bg count" count="{{appliedFilters.length}}"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="opt-head"><span>Show</span> Filters</span></a>
+                                            <a href="" id="menu-toggle" class="show-filter" ng-click="sidebarActiveToggle(false);" ng-show="sidebarActive">
+                                                <span class="ico-filter_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span><span class="opt-head"><span>Hide</span> Filters</span></a>
+
+                                        </li>
+                                        <li><span class="separater"></span></li>
+                                        <li class="dropdown">
+                                            <a href="" class="hidden-lg opt-head view-applied" ng-click="sidebarActiveToggle(true); mobileAppliedFiltersActive = true;">View Applied ({{appliedFilters.length}})</a>
+                                            <a href="" class="visible-lg opt-head view-applied">View Applied ({{appliedFilters.length}})</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="container-fluid tabContent" >
+                            <div class="steps-container">
+                                <div class="steps-heading" ng-show="!$root.accessIssue">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="steps-head-left">
+                                                <a class="paddingT5" href="javascript:void(0)">{{data.name}}</a>
+                                            </div>
+                                            <div class="steps-head-right">
+                                                <!--<div class="search-sec"><input type="text" placeholder="Search"><span class="ico-search"></span></div>-->
+                                                <div class="form-group heading-dropdown marginR0">
+                                                    <label for="OpportunityStage">Best Site GU</label>
+                                                    <div class="input-drop select-input input-dropdown">
+                                                        <ol class="nya-bs-select" ng-model="selectedGUmodel" title="Select" data-selected-text-format="values" ng-change="sumObjects('noUpdate')">
+                                                            <li class="nya-bs-option" nya-bs-option="g in areas">
+                                                                <a>{{g.gu_name}}</a>
+                                                                <!--                                            <input type="checkbox" ng-model="g.checked" id="{{g.gu_name}}" />
+                                                                                                            <label for="{{g.gu_name}}">
+                                                                                                                <span></span>
+                                                                                                                <a>{{g.gu_name}}</a>
+                                                                                                            </label>-->
+                                                            </li>
+                                                            <!--<a class="button filled-btn blue marginB10" ng-click="sumObjects()">Apply</a>-->
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                                <!--<ul class="filter-opt filter-opt-list view-filter paddingT5">
+                                                    <li><a href="">Available</a></li>
+                                                    <li class="active"><a href="javascript:void(0)">Pipeline</a></li>
+                                                </ul>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="steps-detail" ng-show="!$root.accessIssue">
+                                    <div class="row">
+                                        <div class="col-xs-12 text-right paddingR0">
+                                            <div class="usd-value paddingR15">Value shown in USD</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="view-detail-chart">
+                                                <pie-chart-customer-detail data="pieData" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div ng-show="showTotalAndSelected == 'renew'" class="row view-chart-detail">
+                                                <div class="col-xs-5">
+                                                    <div class="chart-detail-info">
+                                                        <h6>${{metaData.totalOpportunity| formatGridValue}}</h6>
+                                                        <span>{{listNet}}</span>
+                                                    </div>
+                                                    <div class="chart-detail-info">
+                                                        <h6>${{metaData.inPipeline| formatGridValue}}</h6>
+                                                        <span><span class="mandatory" ng-show="disclaimer">*</span> In Pipeline</span>
+                                                    </div>
+                                                    <div class="chart-detail-info">
+                                                        <h6>${{metaData.availableForPipeline| formatGridValue}}</h6>
+                                                        <span>Not in Pipeline</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-7">
+                                                    <div class="chart-detail-info">
+                                                        <h6>{{metaData.totalContracts}}</h6>
+                                                        <span>Total Contracts <a ng-click="tolContract();" href="javascript:void(0)">Details</a></span>
+                                                    </div>
+                                                    <div class="chart-detail-info">
+                                                        <h6>{{contractSelected}}</h6>
+                                                        <span>Contracts Selected</span>
+                                                    </div>
+                                                    <div class="chart-detail-info">
+                                                        <h6>{{metaData.lineItems}}</h6>
+                                                        <span>Line Items Selected</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div ng-show="showTotalAndSelected == 'refresh' || showTotalAndSelected == 'attach'|| showTotalAndSelected == 'drs'" class="row view-chart-detail">
+                                                <div class="col-xs-5">
+                                                    <div class="chart-detail-info">
+                                                        <h6>{{metaData.lineItems}}</h6>
+                                                        <span>Line Items Selected</span>
+                                                    </div>
+                                                    <div class="chart-detail-info">
+                                                        <h6>${{metaData.inPipeline| formatGridValue}}</h6>
+                                                        <span><span class="mandatory" ng-show="disclaimer">*</span> In Pipeline</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-7">
+                                                    <div class="chart-detail-info">
+                                                        <h6>${{metaData.totalOpportunity| formatGridValue}}</h6>
+                                                        <span>{{listNet}}</span>
+                                                    </div>
+                                                    <div class="chart-detail-info">
+                                                        <h6>${{metaData.availableForPipeline| formatGridValue}}</h6>
+                                                        <span>Not in Pipeline</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- adding div for error handling :- ashley (DE132823)-->
+                                <div class="steps-detail">
+                                <!--System down message starts here-->
+                                    <div class="row" ng-show="$root.accessIssue == 'systemdown'">
+                                        <div class="col-sm-12">
+                                            <div class="page-level-msg error">
+                                                <div class="error-ico">
+                                                    <img class="systemdown" src="images/systemdown.svg" alt="" /></div>
+                                                <span class="error-msg">System is down for data updates!</span>
+                                                <span class="grey-text">Please check back after some time.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--System down message ends here-->
+                                    <!--No Data available message starts here-->
+                                    <div class="row" ng-show="$root.accessIssue == 'nodata'">
+                                        <div class="col-sm-12">
+                                            <div class="page-level-msg error">
+                                                <div class="error-ico">
+                                                    <img class="nodata" src="images/nodata.svg" alt="" /></div>
+                                                <span class="error-msg">No Data Available!</span>
+                                                <span class="grey-text">Currently, there is no data available for your selection.</span>
+                                                <span>You may want to review your filters.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <div class="clearfix marginT10 marginB30 text-right view-detail-btn" ng-show="!$root.accessIssue">
+                                <span class="disclaimer" ng-show="disclaimer"><span class="mandatory">*</span> <strong>Disclaimer:</strong> Values might not be updated immediately</span>
+                                <a ng-click="goBackToRefresh()" class="button stroke-btn blue marginB10 marginR10">Cancel</a>
+                                <a ng-disabled="proxyUser" ng-click="createPipeline(showTotalAndSelected)"  class="button filled-btn blue marginB10">Create Pipeline</a>
+
+                                <div class="view-detail-message" ng-if="foreCastingError">
+                                    <p class="view-message pull-right">You do not enough rights to create pipeline for this customer. In order to create pipeline for this customer, you need to have Forecasting Position.</p>
+                                </div>
+                            </div>
+
+            </div>
+        
+    </div></div>
+    <!-- View Account End-->

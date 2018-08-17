@@ -1,0 +1,18 @@
+<div class="modal-body text-center">
+    <a href="javascript:void(0)" class="modal-close" data-dismiss="modal" aria-label="Close"  ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    
+    <div class="page-level-msg error marginT30 marginB15">
+         <div class="error-ico">
+             <div class="spin-wrap">
+                <div class="grey-circle"></div>
+                <div class="pie spinner"></div>
+                <div class="pie filler"></div>
+                <div class="mask"></div>
+            </div>
+             <!--<img class="about-timeout" src="images/about-timeout.svg" alt=""/>-->
+         </div>
+         <span class="error-msg">Your session is about to expire.</span>
+         <span class="grey-text">You will be logged out in {{timer}} seconds.<br>Do you want to continue the session?</span>
+         <a ng-click="cancel()" href="" class="button filled-btn blue"><span>Yes, keep me signed in</span></a>
+     </div>
+</div>

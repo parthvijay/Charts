@@ -1,0 +1,745 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?hb4xzv');
+  src:  url('../fonts/icomoon.eot?hb4xzv#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?hb4xzv') format('truetype'),
+    url('../fonts/icomoon.woff?hb4xzv') format('woff'),
+    url('../fonts/icomoon.svg?hb4xzv#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ico-"], [class*=" ico-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-add:before {
+  content: "\e900";
+  color: #58585b;
+}
+.ico-add_bg .path1:before {
+  content: "\e901";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-add_bg .path2:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-announcement .path1:before {
+  content: "\e903";
+  color: rgb(255, 255, 255);
+}
+.ico-announcement .path2:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(88, 89, 91);
+}
+.ico-announcement .path3:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(88, 89, 91);
+}
+.ico-app .path1:before {
+  content: "\e906";
+  color: rgb(255, 255, 255);
+}
+.ico-app .path2:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-app .path3:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-arrow_collapse:before {
+  content: "\e909";
+}
+.ico-arrow_collapse_bg .path1:before {
+  content: "\e90a";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-arrow_collapse_bg .path2:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-arrow_expand:before {
+  content: "\e90c";
+}
+.ico-arrow_expand_bg .path1:before {
+  content: "\e90d";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-arrow_expand_bg .path2:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-back:before {
+  content: "\e90f";
+  color: #58585b;
+}
+.ico-back-round .path1:before {
+  content: "\e910";
+  color: rgb(3, 154, 211);
+}
+.ico-back-round .path2:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(221, 221, 220);
+}
+.ico-back-round .path3:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(3, 154, 211);
+}
+.ico-bar_graph:before {
+  content: "\e913";
+  color: #58585b;
+}
+.ico-bar_graph_bg .path1:before {
+  content: "\e914";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-bar_graph_bg .path2:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-bookmark:before {
+  content: "\e916";
+  color: #039cd6;
+}
+.ico-bookmark_pressed .path1:before {
+  content: "\e917";
+  color: rgb(3, 156, 214);
+}
+.ico-bookmark_pressed .path2:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.ico-bookmark_round .path1:before {
+  content: "\e919";
+  color: rgb(255, 255, 255);
+}
+.ico-bookmark_round .path2:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(3, 152, 204);
+}
+.ico-bookmark_round .path3:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(3, 156, 214);
+}
+.ico-calendar:before {
+  content: "\e91c";
+  color: #58585b;
+}
+.ico-chart .path1:before {
+  content: "\e91d";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-chart .path2:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-checkbox .path1:before {
+  content: "\e91f";
+  color: rgb(255, 255, 255);
+}
+.ico-checkbox .path2:before {
+  content: "\e920";
+  margin-left: -1em;
+  color: rgb(152, 152, 152);
+}
+.ico-checkbox-disable .path1:before {
+  content: "\e921";
+  color: rgb(255, 255, 255);
+}
+.ico-checkbox-disable .path2:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(204, 204, 204);
+}
+.ico-checkbox-selected .path1:before {
+  content: "\e923";
+  color: rgb(12, 158, 217);
+}
+.ico-checkbox-selected .path2:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.ico-clock:before {
+  content: "\e925";
+  color: #9c9ca1;
+}
+.ico-close:before {
+  content: "\e926";
+  color: #58585b;
+}
+.ico-close_bg .path1:before {
+  content: "\e927";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-close_bg .path2:before {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-collapse:before {
+  content: "\e929";
+  color: #58585b;
+}
+.ico-collapse_arrow:before {
+  content: "\e92a";
+  color: #58585b;
+}
+.ico-collapse_bg .path1:before {
+  content: "\e92b";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-collapse_bg .path2:before {
+  content: "\e92c";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-collapse_tile:before {
+  content: "\e92d";
+  color: #58585b;
+}
+.ico-collapse_tile_bg .path1:before {
+  content: "\e92e";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-collapse_tile_bg .path2:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-confirmation:before {
+  content: "\e930";
+  color: #58595b;
+}
+.ico-copy-link:before {
+  content: "\e931";
+  color: #58585b;
+}
+.ico-copy-link_bg .path1:before {
+  content: "\e932";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-copy-link_bg .path2:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-danger .path1:before {
+  content: "\e934";
+  color: rgb(200, 36, 57);
+}
+.ico-danger .path2:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.ico-delete .path1:before {
+  content: "\e936";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-delete .path2:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-disqualify:before {
+  content: "\e938";
+  color: #58585b;
+}
+.ico-disqualify_bg .path1:before {
+  content: "\e939";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-disqualify_bg .path2:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-donut_graph:before {
+  content: "\e93b";
+  color: #58585b;
+}
+.ico-donut_graph_bg .path1:before {
+  content: "\e93c";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-donut_graph_bg .path2:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-down:before {
+  content: "\e93e";
+  color: #58585b;
+}
+.ico-down_bg .path1:before {
+  content: "\e93f";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-down_bg .path2:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(90, 89, 92);
+}
+.ico-dropdown:before {
+  content: "\e941";
+  color: #58585b;
+}
+.ico-dropdown_bg .path1:before {
+  content: "\e942";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-dropdown_bg .path2:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-edit .path1:before {
+  content: "\e944";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-edit .path2:before {
+  content: "\e945";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-error-shadow .path1:before {
+  content: "\e946";
+  color: rgb(200, 36, 57);
+}
+.ico-error-shadow .path2:before {
+  content: "\e947";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.ico-error-shadow .path3:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+  opacity: 0.2;
+}
+.ico-expand:before {
+  content: "\e949";
+  color: #58585b;
+}
+.ico-expand_arrow:before {
+  content: "\e94a";
+  color: #58585b;
+}
+.ico-expand_bg .path1:before {
+  content: "\e94b";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-expand_bg .path2:before {
+  content: "\e94c";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-expand_tile:before {
+  content: "\e94d";
+  color: #58585b;
+}
+.ico-expand_tile_bg .path1:before {
+  content: "\e94e";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-expand_tile_bg .path2:before {
+  content: "\e94f";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-faded-arrow:before {
+  content: "\e950";
+  color: #6d6d70;
+}
+.ico-feedback .path1:before {
+  content: "\e951";
+  color: rgb(255, 255, 255);
+}
+.ico-feedback .path2:before {
+  content: "\e952";
+  margin-left: -1em;
+  color: rgb(3, 152, 204);
+}
+.ico-feedback .path3:before {
+  content: "\e953";
+  margin-left: -1em;
+  color: rgb(255, 110, 0);
+}
+.ico-feedback .path4:before {
+  content: "\e954";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-filter:before {
+  content: "\e955";
+  color: #58585b;
+}
+.ico-filter_bg .path1:before {
+  content: "\e956";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-filter_bg .path2:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-go:before {
+  content: "\e958";
+  color: #fff;
+}
+.ico-grid .path1:before {
+  content: "\e959";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-grid .path2:before {
+  content: "\e95a";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-help .path1:before {
+  content: "\e95b";
+  color: rgb(255, 255, 255);
+}
+.ico-help .path2:before {
+  content: "\e95c";
+  margin-left: -1em;
+  color: rgb(88, 89, 91);
+}
+.ico-help .path3:before {
+  content: "\e95d";
+  margin-left: -1em;
+  color: rgb(88, 89, 91);
+}
+.ico-hor-chart:before {
+  content: "\e95e";
+  color: #59595c;
+}
+.ico-hor-chart_bg .path1:before {
+  content: "\e95f";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-hor-chart_bg .path2:before {
+  content: "\e960";
+  margin-left: -1em;
+  color: rgb(89, 89, 92);
+}
+.ico-info:before {
+  content: "\e961";
+  color: #58585b;
+}
+.ico-left-arrow:before {
+  content: "\e962";
+  color: #58585b;
+}
+.ico-left-arrow-sm .path1:before {
+  content: "\e963";
+  color: rgb(255, 255, 255);
+}
+.ico-left-arrow-sm .path2:before {
+  content: "\e964";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-left-arrow-sm .path3:before {
+  content: "\e965";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-left-round .path1:before {
+  content: "\e966";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-left-round .path2:before {
+  content: "\e967";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-line-chart:before {
+  content: "\e968";
+  color: #59595c;
+}
+.ico-line-chart_bg .path1:before {
+  content: "\e969";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-line-chart_bg .path2:before {
+  content: "\e96a";
+  margin-left: -1em;
+  color: rgb(89, 89, 92);
+}
+.ico-list:before {
+  content: "\e96b";
+  color: #58585b;
+}
+.ico-list_bg .path1:before {
+  content: "\e96c";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-list_bg .path2:before {
+  content: "\e96d";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-more:before {
+  content: "\e96e";
+  color: #58585b;
+}
+.ico-more_action:before {
+  content: "\e96f";
+  color: #58585b;
+}
+.ico-more_action_bg .path1:before {
+  content: "\e970";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-more_action_bg .path2:before {
+  content: "\e971";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-more_bg .path1:before {
+  content: "\e972";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-more_bg .path2:before {
+  content: "\e973";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-next-double:before {
+  content: "\e974";
+  color: #58585b;
+}
+.ico-next-single:before {
+  content: "\e975";
+  color: #58585b;
+}
+.ico-pie-chart .path1:before {
+  content: "\e976";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-pie-chart .path2:before {
+  content: "\e977";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-pie-chart_bg:before {
+  content: "\e978";
+  color: #58585b;
+}
+.ico-previous-double:before {
+  content: "\e979";
+  color: #58585b;
+}
+.ico-previous-single:before {
+  content: "\e97a";
+  color: #58585b;
+}
+.ico-qualify:before {
+  content: "\e97b";
+  color: #58585b;
+}
+.ico-qualify_bg .path1:before {
+  content: "\e97c";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-qualify_bg .path2:before {
+  content: "\e97d";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-report .path1:before {
+  content: "\e97e";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-report .path2:before {
+  content: "\e97f";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-right-arrow:before {
+  content: "\e980";
+  color: #58585b;
+}
+.ico-right-round .path1:before {
+  content: "\e981";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-right-round .path2:before {
+  content: "\e982";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-sandwich .path1:before {
+  content: "\e983";
+  color: rgb(88, 88, 91);
+}
+.ico-sandwich .path2:before {
+  content: "\e984";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.ico-saved:before {
+  content: "\e985";
+  color: #42a948;
+}
+.ico-search:before {
+  content: "\e986";
+  color: #58585b;
+}
+.ico-share .path1:before {
+  content: "\e987";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-share .path2:before {
+  content: "\e988";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-shredder:before {
+  content: "\e989";
+  color: #585858;
+}
+.ico-star .path1:before {
+  content: "\e98a";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-star .path2:before {
+  content: "\e98b";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-success .path1:before {
+  content: "\e98c";
+  color: rgb(82, 183, 0);
+}
+.ico-success .path2:before {
+  content: "\e98d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.ico-tile:before {
+  content: "\e98e";
+  color: #58585b;
+}
+.ico-tile_bg .path1:before {
+  content: "\e98f";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-tile_bg .path2:before {
+  content: "\e990";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-trending_chart:before {
+  content: "\e991";
+  color: #58585b;
+}
+.ico-trending_chart_bg .path1:before {
+  content: "\e992";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-trending_chart_bg .path2:before {
+  content: "\e993";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-up:before {
+  content: "\e994";
+  color: #58585b;
+}
+.ico-up_bg .path1:before {
+  content: "\e995";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-up_bg .path2:before {
+  content: "\e996";
+  margin-left: -1em;
+  color: rgb(90, 89, 92);
+}
+.ico-view_more .path1:before {
+  content: "\e997";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-view_more .path2:before {
+  content: "\e998";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}
+.ico-waterfall:before {
+  content: "\e999";
+  color: #58585b;
+}
+.ico-waterfall_bg .path1:before {
+  content: "\e99a";
+  color: rgb(89, 89, 92);
+  opacity: 0.1;
+}
+.ico-waterfall_bg .path2:before {
+  content: "\e99b";
+  margin-left: -1em;
+  color: rgb(88, 88, 91);
+}

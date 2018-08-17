@@ -1,0 +1,90 @@
+[
+    {
+        "title": "Digital Ready Sales Campaign",
+        "link": "http://cisco.folloze.com/public/prism/44269?token=eea71ff636",
+        "image": "images/sales_kit/sales.jpg",
+        "category": "DRS",
+        "ratings": [2, 3],
+        "website": "salesconnect.cisco.com",
+        "updated": "03 Feb 2016",
+        "language": "English",
+        "source": "Sales Enablement"
+    },
+    {
+        "title": "Network as a Sensor & Enforcer",
+        "link": "https://cisco.jiveon.com/groups/network-as-a-sensor/pages/overview",
+        "image": "images/sales_kit/cis_ready_drs_flow_1-58.svg",
+        "category": "Enterprise Network",
+        "ratings": [2, 3, 5, 3],
+        "website": "salesconnect.cisco.com",
+        "updated": "04 April 2016",
+        "language": "English",
+        "source": "Sales Enablement"
+    },
+    {
+        "title": "Solutions Campus",
+        "link": "http://wwwin.cisco.com/c/cec/prods-industry/selling-en/solutions-campus.html",
+        "image": "images/sales_kit/cis_ready_drs_flow_1-59.svg",
+        "category": "Wireless",
+        "ratings": [2, 3, 1],
+        "website": "salesconnect.cisco.com",
+        "updated": "11 May 2016",
+        "language": "English",
+        "source": "Sales Enablement"
+    },
+    {
+        "title": "IWAN (Branch)",
+        "link": "http://wwwin.cisco.com/c/cec/prods-industry/selling-en/solutions-branch/iwan.html",
+        "image": "images/sales_kit/cis_ready_drs_flow_1-63.svg",
+        "category": "Enterprise Routing",
+        "ratings": [2, 3, 5, 3],
+        "website": "salesconnect.cisco.com",
+        "updated": "07 Jun 2016",
+        "language": "English",
+        "source": "Sales Enablement"
+    },
+    {
+        "title": "ASA Security Migration",
+        "link": "https://cisco.jiveon.com/groups/asa-security-migration",
+        "image": "images/sales_kit/cis_ready_drs_flow_1-62.svg",
+        "category": "Security",
+        "ratings": [2, 3],
+        "website": "salesconnect.cisco.com",
+        "updated": "13 Jun 2016",
+        "language": "English",
+        "source": "Sales Enablement"
+    },
+    {
+        "title": "Modernize Your Installed Base",
+        "link": "http://refreshcollab.cisco.com/webportal/home",
+        "image": "images/sales_kit/cis_ready_drs_flow_1-61.svg",
+        "category": "Collaboration",
+        "ratings": [2],
+        "website": "salesconnect.cisco.com",
+        "updated": "14 Sep 2016",
+        "language": "English",
+        "source": "Sales Enablement"
+    },
+    {
+        "title": "UCS Refresh",
+        "link": "https://cisco.jiveon.com/docs/DOC-1118531",
+        "image": "images/sales_kit/cis_ready_drs_flow_1-63.svg",
+        "category": "Computing System",
+        "ratings": [5],
+        "website": "salesconnect.cisco.com",
+        "updated": "03 Feb 2016",
+        "language": "English",
+        "source": "Sales Enablement"
+    },
+    {
+        "title": "Nexus Refresh",
+        "link": "https://cisco.jiveon.com/docs/DOC-1332343",
+        "image": "images/sales_kit/cis_ready_drs_flow_1-59.svg",
+        "category": "Data Center Switching",
+        "ratings": [2, 1],
+        "website": "salesconnect.cisco.com",
+        "updated": "03 Feb 2016",
+        "language": "English",
+        "source": "Sales Enablement"
+    }
+]

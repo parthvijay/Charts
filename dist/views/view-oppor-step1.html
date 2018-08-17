@@ -1,0 +1,154 @@
+<div id="wrapper" ng-class="{
+            'sidebar-active'
+            : filtersServ.sidebarActive, 'mobileAppliedFiltersActive' : filtersServ.mobileAppliedFiltersActive}" onclick="void(0);" class="view-account">
+    <div id="page-content-wrapper">
+    <div class="freezed-container">
+        <div class="grey-background">
+<!-- Page Content -->
+<div class="clearfix" style="position:relative;" ng-show="!$root.accessIssue || $root.accessIssue == 'nodata'">
+    <div class="container-fluid filter-switch">
+        <!-- Opportunities/Performance switch -->
+        <div class="row marginT10 marginB10">
+            <div class="col-xs-12">
+                <a href="javascript:void(0)" class="refresh-back-btn marginT5" ng-click="goBackToRefresh()"><span class="ico-left-arrow-sm hvr-icon-pop"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                <span class="back-btn-txt" ng-if="isComingFromRenew() !== 'drs'">{{isComingFromRenew() | capitalize}} by Customer</span>
+                    <span class="back-btn-txt" ng-if="isComingFromRenew() === 'drs'">{{isComingFromRenew() | uppercase}} by Customer</span>
+                </a>
+        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div><!--freezed-container-->
+    <div class="container-fluid tabContent">
+        <form id="formFirstStep" ng-submit="" ng-init="steps.formFirstStep.opportunity = 'New Opportunity'">
+            <div class="steps-container">
+                <div class="steps-heading">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3>Convert to Pipeline - Step 1 of 3</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="steps-detail">
+                    <div class="required-field"><span class="mandatory">* </span> Required Field</div>
+                    <div class="block-left">
+                        <div class="block-left-name">
+                            <p class="marginB10">Name Opportunity?</p>
+                            <div class="block-left-det">
+                                <div class="block-option">
+                                    <input type="radio" id="filters_0_1" ng-model="steps.formFirstStep.opportunity" value="New Opportunity" />
+                                    <label for="filters_0_1"><span></span><span class="input-txt">New Opportunity</span></label></div>
+                                <div class="block-option"><input disabled="disabled" type="radio" id="filters_1_1" ng-model="steps.formFirstStep.opportunity" value="Add to Existing Opportunity" />
+                                    <label for="filters_1_1" ><span></span><span class="input-txt">Add to Existing Opportunity <i>(Coming Soon)</i></span></label>
+                                    <div class="input-drop disable"><input disabled="disabled" ng-disabled="true" type="text" placeholder="Select or Search" />
+                                        <span class="ico-dropdown"></span><span class="ico-search"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-right row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="OpportunityName">Opportunity Name<span class="mandatory">*</span></label>
+                                <div class="input-drop">
+                                    <input name="opp_name" type="text" ng-model="steps.formFirstStep.opp_name" value="" maxlength="45" required />  
+                                </div>
+                            </div>                          
+                            <div class="block-column">
+                                <div class="form-group">
+                                    <label for="Description">Description</label>
+                                    <textarea name="description" rows="3" ng-model="steps.formFirstStep.description"  maxlength="300"></textarea>
+                                    <span class="oppo-acnt-txt"><b>Note:</b> Max 300 characters.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="block-column calander-col">
+                                <div class="form-group">
+                                    <label for="ExpectedBook">Expected Book Date<span class="mandatory">*</span></label>
+                                    <div class="input-drop" ng-class="{'input-datepicker': popup1.opened}" >
+                                        <p class="input-group calender-input">
+                                            <input type="text" placeholder="Select a Date" class="" uib-datepicker-popup="{{format}}" ng-model="steps.formFirstStep.dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" ng-click="open1()" readonly/>
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default calender-btn" ng-click="open1()"><i class="ico-calendar"></i></button>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script  type="text/ng-template" id="customTemplate.html" >
+                                   <a >
+                                   <span ng-bind-html="match.model.accountName | uibTypeaheadHighlight:query"></span>
+                                   <br/>
+                                   <small  class="samll-data">{{match.model.city}}, {{match.model.state}}, {{match.model.country}}, {{match.model.zipCode}}</small>
+                                      </a>
+                            </script>
+                            <div class="block-column account">
+                                <div class="form-group">
+                                    <label for="Account">Account<span class="mandatory">*</span></label>
+                                    <div class="input-drop search">
+                                        <input type="text" ng-model="steps.formFirstStep.accDetails" placeholder="Select" uib-typeahead="state as state.accountName for state in oppAccount | filter:$viewValue" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="selectAccount($item)" typeahead-min-length="0" >
+                                         </span><span class="ico-search"></span>
+                                    </div>
+                                </div>
+                                <span class="oppo-acnt-txt" ng-show="steps.formFirstStep.accOwner">Account Owner: {{steps.formFirstStep.accOwner}} </span>
+                            </div>
+                           
+                            <div class="block-column" ng-if="steps.formFirstStep.accName" >
+                                <div class="form-group">
+                                    <label for="OpportunityOwner">Opportunity Owner<span class="mandatory">*</span></label>
+                                    <div class="input-drop block-input input-dropdown">
+                                        <ol class="nya-bs-select" ng-model="steps.formFirstStep.selectedOwner" title="Select">
+    
+
+                                            <li data-value="owner" class="nya-bs-option" nya-bs-option="owner in oppOwnerList" ng-click="selectOwner(owner)"><a><span>{{owner.firstName}} , {{owner.lastName}}<span ng-if="owner.accountOwnerFlag === 'Y'">(Account Owner)</span><br/> <small class="samll-data">{{owner.territory}}</small></span></a>
+
+                                            </li>
+                                    
+                                         </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block-column marginT15">
+                                <div class="form-group">
+                                    <label for="OpportunityStage">Opportunity Stage<span class="mandatory">*</span></label>
+                                    <div class="input-drop select-input input-dropdown" disabled="!enableOwner">
+                                        <ol class="nya-bs-select" ng-model="steps.formFirstStep.selectedStage" title="Select" disabled="!enableOwner">
+                                            <li class="nya-bs-option" nya-bs-option="stage in oppStage" data-value="stage.name">
+                                                <a>{{stage.name}}</a>
+                                            </li>                                       
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-column marginT15" ng-if="steps.formFirstStep.selectedStage == '2 - Qualification'">                           
+                                <div class="form-group">
+                                    <label for="ForecastStatus">Forecast Status<span class="mandatory">*</span></label>
+                                    <div class="input-drop select-input input-dropdown ">
+                                        <ol class="nya-bs-select" ng-model="steps.formFirstStep.selectedStatus" title="Select">
+                                            <li class="nya-bs-option" nya-bs-option="status in oppForecast" data-value="status.name">
+                                                <a>{{status.name}}</a>
+                                            </li>                                       
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix marginT10 marginB30 text-right view-detail-btn">
+                <a ng-click="changeLocation('/view-account', showTotalAndSelected)"  class="button stroke-btn blue marginR10 marginB10">Cancel</a>
+                <a ng-click="changeLocation('/view-oppor-step2')" class="button filled-btn blue marginB10" ng-show="infoValidated">Next</a>
+                <a class="button filled-btn blue marginB10" ng-disabled="!isInfoValid()" ng-show="!infoValidated">Next</a>
+            </div>  
+        <!--steps-container-->
+    </form> 
+</div>
+</div>  
+</div>

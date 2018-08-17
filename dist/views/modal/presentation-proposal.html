@@ -1,0 +1,133 @@
+<div class="modal-header collab-presentation-header">        
+    <h1>Create Collab Presentation and Proposal<a href="javascript:void(0)" class="modal-close" ng-click="cancel()"><span class="ico-close_bg"><span class="path1 hvr-icon-pop"></span><span class="path2"></span></span></a>
+    </h1>
+</div>
+<div class="modal-body paddingL0 paddingR0 collab-presentation-popup">
+    <form name="presentationProposalForm" class="popup-form" novalidate><!-- Create Presentation and Proposal -->
+            <div class="save-form">
+                <div class="popup-form-left">
+                    <div class="select-option-left">
+                        <h4>Select a</h4>
+                        <div class="form-group">
+                          <input type="radio" id="filters_0" value="UC" ng-model="collateral.selected" ng-click="video=''"/>
+                            <label for="filters_0"><span></span></label>
+                           <span class="input-txt">UC</span>
+               <span class="mandatory">*</span>
+                        </div>
+                        <div class="form-group">
+                          <input type="radio" id="filters_1" value="Video" ng-model="collateral.selected" ng-click="uc=''"/>
+                            <label for="filters_1"><span></span></label>
+                            <span class="input-txt">Video</span>
+                <span class="mandatory">*</span>
+                        </div>
+                    </div>
+             <div class="lang-col">
+                    <div class="form-group clearfix">
+                        <input type="checkbox" id="requestproposal" ng-model="collateral.requestProposalCheckbox" ng-change="resetDropdown('proposalLanguage');" />
+                        <label for="requestproposal" class="control-label bookmark-global"><span></span>Request Proposal</label>
+                        </div>    
+                        <div class="form-group clearfix">
+                        <div class="indent-input">
+                            <div class="input-drop select-input input-dropdown" ng-click = "click()">
+                                <label class="control-label">Select a Language<span class="mandatory">*</span></label>
+                                <ol class="nya-bs-select" ng-model="collateral.proposalLanguage" data-ng-class="{'disabledList':!collateral.requestProposalCheckbox}" data-title="Select"  disabled="!collateral.requestProposalCheckbox">
+                                        <li data-value="" class="nya-bs-option">
+                                                <a>
+                                                 Select
+                                                </a>
+                                              </li>
+                                        <li nya-bs-option="language in languages" data-value="language.name" class="nya-bs-option">
+                                          <a>
+                                            {{language.name}}
+                                          </a>
+                                        </li>
+                                      </ol>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="lang-col">
+                    <div class="form-group top-divider clearfix">
+                        <input type="checkbox" id="requestpresentation" ng-model="collateral.requestPresentationCheckbox" ng-change="resetDropdown('presentationLanguage');" />
+                        <label for="requestpresentation" class="control-label bookmark-global"><span></span>Request Presentation</label>
+                        </div>  
+                        <div class="form-group clearfix">
+                        <div class="indent-input">
+                            <div class="input-drop select-input input-dropdown">
+                                <label class="control-label">Select a Language<span class="mandatory">*</span></label>
+                                <ol class="nya-bs-select" ng-model="collateral.presentationLanguage" data-ng-class="{'disabledList':!collateral.requestPresentationCheckbox}"data-title="Select" disabled="!collateral.requestPresentationCheckbox">
+                                        <li data-value="" class="nya-bs-option">
+                                                <a>
+                                                 Select
+                                                </a>
+                                              </li>
+                                        <li nya-bs-option="language in languages" data-value="language.name" class="nya-bs-option">
+                                          <a>
+                                            {{language.name}}
+                                          </a>
+                                        </li>
+                                      </ol>
+                                   </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-form-right">
+                    <div class="form-group popup-form-field" ng-class="{'has-error': presentationProposalForm.proposed.$error.maxlength}">
+                        <label class="control-label">Proposed For</label>
+                        <input type="text" name="proposed" class="form-control" ng-maxlength="200" ng-model="collateral.proposedFor">
+                    </div>
+                    <div class="form-group popup-form-field" ng-class="{'has-error': presentationProposalForm.presentedTo.$error.maxlength || presentationProposalForm.presentedTo.$error.required || presentationProposalForm.presentedTo.$touched}">
+                        <label class="control-label">Presented To<span class="mandatory">*</span></label>
+                        <input type="text" name="presentedTo" class="form-control" ng-maxlength="200" ng-model="collateral.presentedTo" required>
+                    </div>
+                    <div class="form-group  popup-form-field" ng-class="{'has-error': presentationProposalForm.greetingName.$error.maxlength || presentationProposalForm.greetingName.$error.required || presentationProposalForm.greetingName.$touched}">
+                        <label class="control-label">Greeting Name<span class="mandatory">*</span></label>
+                        <input type="text" name="greetingName" class="form-control" ng-model="collateral.greetingName" ng-maxlength="200" required>
+                    </div>
+                    <div class="form-group  popup-form-field" ng-class="{'has-error': presentationProposalForm.contactTitle.$error.maxlength || presentationProposalForm.contactTitle.$error.required || presentationProposalForm.contactTitle.$touched}">
+                        <label class="control-label">Contact Title<span class="mandatory">*</span></label>
+                        <input type="text" name="contactTitle" class="form-control" ng-model="collateral.contactTitle" ng-maxlength="200" required>
+                    </div>
+                    <div class="form-group  popup-form-field" ng-class="{'has-error': presentationProposalForm.presentedBy.$error.maxlength}">
+                        <label class="control-label">Presented By</label>
+                        <input type="text" name="presentedBy" class="form-control" ng-model="collateral.presentedBy" ng-maxlength="200">
+                    </div>
+                    <div class="form-group  popup-form-field" ng-class="{'has-error': presentationProposalForm.presentersTitle.$error.maxlength}">
+                        <label class="control-label">Presenter’s Title</label>
+                        <input type="text" name="presentersTitle" class="form-control" ng-model="collateral.presentersTitle" ng-maxlength="200">
+                    </div>
+                    <div class="form-group  popup-form-field" ng-class="{'has-error': presentationProposalForm.presentersCompany.$error.maxlength}">
+                        <label class="control-label">Presenter’s Company</label>
+                        <input type="text" name="presentersCompany" class="form-control" ng-model="collateral.presentersCompany" ng-maxlength="200">
+                    </div>
+                    <div class="form-group  popup-form-field" ng-class="{'has-error': presentationProposalForm.presentersEmail.$invalid}">
+                        <label class="control-label">Presenter’s Email</label>
+                        <input type="email" name="presentersEmail" class="form-control" ng-model="collateral.presentersEmail">
+                    </div>
+                    <div class="form-group  popup-form-field" ng-class="{'has-error':presentationProposalForm.presentersPhone.$invalid}">
+                        <label class="control-label">Presenter’s Phone #</label>
+                        <input type="text" name="presentersPhone" class="form-control" ng-model="collateral.presentersPhone"
+                               ng-pattern="/^[0-9]*$/">
+                    </div>
+                    <div class="form-group  popup-form-field calander-col clearfix">
+                        <label class="control-label">Proposal Date</label>
+                        <div class="input-drop date-input" data-ng-class="{'input-datepicker': popup.opened}">
+                            <p class="input-group calender-input">
+                                <input type="text" placeholder="Select a Date" uib-datepicker-popup="dd-MMM-yyyy" ng-model="collateral.proposalDate" ng-click="open()" is-open="popup.opened" readonly="readonly" datepicker-options="dateOptionsProposalDate"  close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false"/>
+                                <span class="input-group-btn">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default calender-btn" ng-click="open()"><i class="ico-calendar"></i> </button>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <!--form-group calander-col-->
+                </div>
+            </div>
+    </form>
+</div><!-- Modal Body -->
+<div class="clearfix text-right modal-footer">
+    <a href="javascript:void(0)" class="button stroke-btn blue marginR10 marginB10" ng-click="cancel()">Cancel</a>
+    <a href="javascript:void(0)" class="button filled-btn blue marginB10" ng-click="requestCollateral()" ng-disabled="!presentationProposalForm.$valid || requireCheckbox()">Request Collateral</a>
+</div>
